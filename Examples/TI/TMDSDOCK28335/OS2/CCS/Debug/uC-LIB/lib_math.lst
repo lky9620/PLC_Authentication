@@ -1,0 +1,798 @@
+TMS320C2000 Assembler PC v20.2.1 Mon Jan  4 16:08:35 2021
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+lib_math.asm                                                         PAGE    1
+
+       1              ;***************************************************************
+       2              ;* TMS320C2000 G3 C/C++ Codegen                               PC v20.2.1.LTS *
+       3              ;* Date/Time created: Mon Jan  4 16:08:35 2021                 *
+       4              ;***************************************************************
+       5                      .compiler_opts --abi=coffabi --diag_wrap=off --float_support=fpu32 --hll_source=on --mem_model:code=f
+       6                      .asg    XAR2, FP
+       7              
+       8              $C$DW$CU        .dwtag  DW_TAG_compile_unit
+       9                      .dwattr $C$DW$CU, DW_AT_name("C:/ti/Workspace/PLC_certificate/ImitatePLC/Software/uC-LIB/lib_math.c")
+      10                      .dwattr $C$DW$CU, DW_AT_producer("TI TMS320C2000 G3 C/C++ Codegen PC v20.2.1.LTS Copyright (c) 1996-2
+      11                      .dwattr $C$DW$CU, DW_AT_TI_version(0x01)
+      12                      .dwattr $C$DW$CU, DW_AT_comp_dir("C:\ti\Workspace\PLC_certificate\ImitatePLC\Examples\TI\TMDSDOCK2833
+      13              
+      14              $C$DW$1 .dwtag  DW_TAG_subprogram
+      15                      .dwattr $C$DW$1, DW_AT_name("CPU_SR_Restore")
+      16                      .dwattr $C$DW$1, DW_AT_TI_symbol_name("_CPU_SR_Restore")
+      17                      .dwattr $C$DW$1, DW_AT_declaration
+      18                      .dwattr $C$DW$1, DW_AT_external
+      19              $C$DW$2 .dwtag  DW_TAG_formal_parameter
+      20                      .dwattr $C$DW$2, DW_AT_type(*$C$DW$T$20)
+      21              
+      22                      .dwendtag $C$DW$1
+      23              
+      24              
+      25              $C$DW$3 .dwtag  DW_TAG_subprogram
+      26                      .dwattr $C$DW$3, DW_AT_name("CPU_SR_Save")
+      27                      .dwattr $C$DW$3, DW_AT_TI_symbol_name("_CPU_SR_Save")
+      28                      .dwattr $C$DW$3, DW_AT_type(*$C$DW$T$20)
+      29                      .dwattr $C$DW$3, DW_AT_declaration
+      30                      .dwattr $C$DW$3, DW_AT_external
+      31                      .dwendtag $C$DW$3
+      32              
+      33                      .global _Math_RandSeedCur
+      34 00000000       _Math_RandSeedCur:      .usect  ".ebss",2,1,1
+      35              $C$DW$4 .dwtag  DW_TAG_variable
+      36                      .dwattr $C$DW$4, DW_AT_name("Math_RandSeedCur")
+      37                      .dwattr $C$DW$4, DW_AT_TI_symbol_name("_Math_RandSeedCur")
+      38                      .dwattr $C$DW$4, DW_AT_location[DW_OP_addr _Math_RandSeedCur]
+      39                      .dwattr $C$DW$4, DW_AT_type(*$C$DW$T$25)
+      40                      .dwattr $C$DW$4, DW_AT_external
+      41              
+      42                      .sblock ".ebss"
+      43              ;       C:\ti\ccs1011\ccs\tools\compiler\ti-cgt-c2000_20.2.1.LTS\bin\ac2000.exe -@C:\\Users\\LEEKEO~1\\AppDat
+      44 00000000               .sect   ".text"
+      45                      .clink
+      46                      .global _Math_Init
+      47              
+      48              $C$DW$5 .dwtag  DW_TAG_subprogram
+      49                      .dwattr $C$DW$5, DW_AT_name("Math_Init")
+      50                      .dwattr $C$DW$5, DW_AT_low_pc(_Math_Init)
+      51                      .dwattr $C$DW$5, DW_AT_high_pc(0x00)
+      52                      .dwattr $C$DW$5, DW_AT_TI_symbol_name("_Math_Init")
+      53                      .dwattr $C$DW$5, DW_AT_external
+      54                      .dwattr $C$DW$5, DW_AT_TI_begin_file("C:/ti/Workspace/PLC_certificate/ImitatePLC/Software/uC-LIB/lib_
+      55                      .dwattr $C$DW$5, DW_AT_TI_begin_line(0x93)
+TMS320C2000 Assembler PC v20.2.1 Mon Jan  4 16:08:35 2021
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+lib_math.asm                                                         PAGE    2
+
+      56                      .dwattr $C$DW$5, DW_AT_TI_begin_column(0x07)
+      57                      .dwattr $C$DW$5, DW_AT_TI_max_frame_size(-2)
+      58                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/ImitatePLC/Software/uC-LIB/lib_math.c",line 148,column 
+      59              
+      60                      .dwfde $C$DW$CIE, _Math_Init
+      61              
+      62              ;***************************************************************
+      63              ;* FNAME: _Math_Init                    FR SIZE:   0           *
+      64              ;*                                                             *
+      65              ;* FUNCTION ENVIRONMENT                                        *
+      66              ;*                                                             *
+      67              ;* FUNCTION PROPERTIES                                         *
+      68              ;*                            0 Parameter,  0 Auto,  0 SOE     *
+      69              ;***************************************************************
+      70              
+      71 00000000       _Math_Init:
+      72                      .dwcfi  cfa_offset, -2
+      73                      .dwcfi  save_reg_to_mem, 26, 0
+      74                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/ImitatePLC/Software/uC-LIB/lib_math.c",line 149,column 
+      75 00000000 0201          MOVB      ACC,#1                ; [CPU_ALU] |149| 
+      76              $C$DW$6 .dwtag  DW_TAG_TI_branch
+      77                      .dwattr $C$DW$6, DW_AT_low_pc(0x00)
+      78                      .dwattr $C$DW$6, DW_AT_name("_Math_RandSetSeed")
+      79                      .dwattr $C$DW$6, DW_AT_TI_call
+      80              
+      81 00000001 7640'         LCR       #_Math_RandSetSeed    ; [CPU_ALU] |149| 
+         00000002 0004 
+      82                      ; call occurs [#_Math_RandSetSeed] ; [] |149| 
+      83                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/ImitatePLC/Software/uC-LIB/lib_math.c",line 150,column 
+      84              $C$DW$7 .dwtag  DW_TAG_TI_branch
+      85                      .dwattr $C$DW$7, DW_AT_low_pc(0x00)
+      86                      .dwattr $C$DW$7, DW_AT_TI_return
+      87              
+      88 00000003 0006          LRETR     ; [CPU_ALU] 
+      89                      ; return occurs ; [] 
+      90                      .dwattr $C$DW$5, DW_AT_TI_end_file("C:/ti/Workspace/PLC_certificate/ImitatePLC/Software/uC-LIB/lib_ma
+      91                      .dwattr $C$DW$5, DW_AT_TI_end_line(0x96)
+      92                      .dwattr $C$DW$5, DW_AT_TI_end_column(0x01)
+      93                      .dwendentry
+      94                      .dwendtag $C$DW$5
+      95              
+      96 00000004               .sect   ".text"
+      97                      .clink
+      98                      .global _Math_RandSetSeed
+      99              
+     100              $C$DW$8 .dwtag  DW_TAG_subprogram
+     101                      .dwattr $C$DW$8, DW_AT_name("Math_RandSetSeed")
+     102                      .dwattr $C$DW$8, DW_AT_low_pc(_Math_RandSetSeed)
+     103                      .dwattr $C$DW$8, DW_AT_high_pc(0x00)
+     104                      .dwattr $C$DW$8, DW_AT_TI_symbol_name("_Math_RandSetSeed")
+     105                      .dwattr $C$DW$8, DW_AT_external
+     106                      .dwattr $C$DW$8, DW_AT_TI_begin_file("C:/ti/Workspace/PLC_certificate/ImitatePLC/Software/uC-LIB/lib_
+     107                      .dwattr $C$DW$8, DW_AT_TI_begin_line(0xaf)
+     108                      .dwattr $C$DW$8, DW_AT_TI_begin_column(0x07)
+     109                      .dwattr $C$DW$8, DW_AT_TI_max_frame_size(-6)
+TMS320C2000 Assembler PC v20.2.1 Mon Jan  4 16:08:35 2021
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+lib_math.asm                                                         PAGE    3
+
+     110                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/ImitatePLC/Software/uC-LIB/lib_math.c",line 176,column 
+     111              
+     112                      .dwfde $C$DW$CIE, _Math_RandSetSeed
+     113              $C$DW$9 .dwtag  DW_TAG_formal_parameter
+     114                      .dwattr $C$DW$9, DW_AT_name("seed")
+     115                      .dwattr $C$DW$9, DW_AT_TI_symbol_name("_seed")
+     116                      .dwattr $C$DW$9, DW_AT_type(*$C$DW$T$25)
+     117                      .dwattr $C$DW$9, DW_AT_location[DW_OP_reg0]
+     118              
+     119              
+     120              ;***************************************************************
+     121              ;* FNAME: _Math_RandSetSeed             FR SIZE:   4           *
+     122              ;*                                                             *
+     123              ;* FUNCTION ENVIRONMENT                                        *
+     124              ;*                                                             *
+     125              ;* FUNCTION PROPERTIES                                         *
+     126              ;*                            0 Parameter,  3 Auto,  0 SOE     *
+     127              ;***************************************************************
+     128              
+     129 00000004       _Math_RandSetSeed:
+     130                      .dwcfi  cfa_offset, -2
+     131                      .dwcfi  save_reg_to_mem, 26, 0
+     132 00000004 FE04          ADDB      SP,#4                 ; [CPU_ARAU] 
+     133                      .dwcfi  cfa_offset, -6
+     134              $C$DW$10        .dwtag  DW_TAG_variable
+     135                      .dwattr $C$DW$10, DW_AT_name("seed")
+     136                      .dwattr $C$DW$10, DW_AT_TI_symbol_name("_seed")
+     137                      .dwattr $C$DW$10, DW_AT_type(*$C$DW$T$25)
+     138                      .dwattr $C$DW$10, DW_AT_location[DW_OP_breg20 -2]
+     139              
+     140              $C$DW$11        .dwtag  DW_TAG_variable
+     141                      .dwattr $C$DW$11, DW_AT_name("cpu_sr")
+     142                      .dwattr $C$DW$11, DW_AT_TI_symbol_name("_cpu_sr")
+     143                      .dwattr $C$DW$11, DW_AT_type(*$C$DW$T$20)
+     144                      .dwattr $C$DW$11, DW_AT_location[DW_OP_breg20 -3]
+     145              
+     146 00000005 1E42          MOVL      *-SP[2],ACC           ; [CPU_ALU] |176| 
+     147                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/ImitatePLC/Software/uC-LIB/lib_math.c",line 177,column 
+     148 00000006 2B43          MOV       *-SP[3],#0            ; [CPU_ALU] |177| 
+     149                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/ImitatePLC/Software/uC-LIB/lib_math.c",line 180,column 
+     150              $C$DW$12        .dwtag  DW_TAG_TI_branch
+     151                      .dwattr $C$DW$12, DW_AT_low_pc(0x00)
+     152                      .dwattr $C$DW$12, DW_AT_name("_CPU_SR_Save")
+     153                      .dwattr $C$DW$12, DW_AT_TI_call
+     154              
+     155 00000007 7640!         LCR       #_CPU_SR_Save         ; [CPU_ALU] |180| 
+         00000008 0000 
+     156                      ; call occurs [#_CPU_SR_Save] ; [] |180| 
+     157 00000009 9643          MOV       *-SP[3],AL            ; [CPU_ALU] |180| 
+     158                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/ImitatePLC/Software/uC-LIB/lib_math.c",line 181,column 
+     159 0000000a 761F-         MOVW      DP,#_Math_RandSeedCur ; [CPU_ARAU] 
+         0000000b 0000 
+     160 0000000c 0642          MOVL      ACC,*-SP[2]           ; [CPU_ALU] |181| 
+     161 0000000d 1E00-         MOVL      @_Math_RandSeedCur,ACC ; [CPU_ALU] |181| 
+     162                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/ImitatePLC/Software/uC-LIB/lib_math.c",line 182,column 
+TMS320C2000 Assembler PC v20.2.1 Mon Jan  4 16:08:35 2021
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+lib_math.asm                                                         PAGE    4
+
+     163 0000000e 9243          MOV       AL,*-SP[3]            ; [CPU_ALU] |182| 
+     164              $C$DW$13        .dwtag  DW_TAG_TI_branch
+     165                      .dwattr $C$DW$13, DW_AT_low_pc(0x00)
+     166                      .dwattr $C$DW$13, DW_AT_name("_CPU_SR_Restore")
+     167                      .dwattr $C$DW$13, DW_AT_TI_call
+     168              
+     169 0000000f 7640!         LCR       #_CPU_SR_Restore      ; [CPU_ALU] |182| 
+         00000010 0000 
+     170                      ; call occurs [#_CPU_SR_Restore] ; [] |182| 
+     171                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/ImitatePLC/Software/uC-LIB/lib_math.c",line 183,column 
+     172 00000011 FE84          SUBB      SP,#4                 ; [CPU_ARAU] 
+     173                      .dwcfi  cfa_offset, -2
+     174              $C$DW$14        .dwtag  DW_TAG_TI_branch
+     175                      .dwattr $C$DW$14, DW_AT_low_pc(0x00)
+     176                      .dwattr $C$DW$14, DW_AT_TI_return
+     177              
+     178 00000012 0006          LRETR     ; [CPU_ALU] 
+     179                      ; return occurs ; [] 
+     180                      .dwattr $C$DW$8, DW_AT_TI_end_file("C:/ti/Workspace/PLC_certificate/ImitatePLC/Software/uC-LIB/lib_ma
+     181                      .dwattr $C$DW$8, DW_AT_TI_end_line(0xb7)
+     182                      .dwattr $C$DW$8, DW_AT_TI_end_column(0x01)
+     183                      .dwendentry
+     184                      .dwendtag $C$DW$8
+     185              
+     186 00000013               .sect   ".text"
+     187                      .clink
+     188                      .global _Math_Rand
+     189              
+     190              $C$DW$15        .dwtag  DW_TAG_subprogram
+     191                      .dwattr $C$DW$15, DW_AT_name("Math_Rand")
+     192                      .dwattr $C$DW$15, DW_AT_low_pc(_Math_Rand)
+     193                      .dwattr $C$DW$15, DW_AT_high_pc(0x00)
+     194                      .dwattr $C$DW$15, DW_AT_TI_symbol_name("_Math_Rand")
+     195                      .dwattr $C$DW$15, DW_AT_external
+     196                      .dwattr $C$DW$15, DW_AT_type(*$C$DW$T$25)
+     197                      .dwattr $C$DW$15, DW_AT_TI_begin_file("C:/ti/Workspace/PLC_certificate/ImitatePLC/Software/uC-LIB/lib
+     198                      .dwattr $C$DW$15, DW_AT_TI_begin_line(0xd7)
+     199                      .dwattr $C$DW$15, DW_AT_TI_begin_column(0x0b)
+     200                      .dwattr $C$DW$15, DW_AT_TI_max_frame_size(-8)
+     201                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/ImitatePLC/Software/uC-LIB/lib_math.c",line 216,column 
+     202              
+     203                      .dwfde $C$DW$CIE, _Math_Rand
+     204              
+     205              ;***************************************************************
+     206              ;* FNAME: _Math_Rand                    FR SIZE:   6           *
+     207              ;*                                                             *
+     208              ;* FUNCTION ENVIRONMENT                                        *
+     209              ;*                                                             *
+     210              ;* FUNCTION PROPERTIES                                         *
+     211              ;*                            0 Parameter,  5 Auto,  0 SOE     *
+     212              ;***************************************************************
+     213              
+     214 00000013       _Math_Rand:
+     215                      .dwcfi  cfa_offset, -2
+     216                      .dwcfi  save_reg_to_mem, 26, 0
+TMS320C2000 Assembler PC v20.2.1 Mon Jan  4 16:08:35 2021
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+lib_math.asm                                                         PAGE    5
+
+     217 00000013 FE06          ADDB      SP,#6                 ; [CPU_ARAU] 
+     218                      .dwcfi  cfa_offset, -8
+     219              $C$DW$16        .dwtag  DW_TAG_variable
+     220                      .dwattr $C$DW$16, DW_AT_name("seed")
+     221                      .dwattr $C$DW$16, DW_AT_TI_symbol_name("_seed")
+     222                      .dwattr $C$DW$16, DW_AT_type(*$C$DW$T$25)
+     223                      .dwattr $C$DW$16, DW_AT_location[DW_OP_breg20 -2]
+     224              
+     225              $C$DW$17        .dwtag  DW_TAG_variable
+     226                      .dwattr $C$DW$17, DW_AT_name("rand_nbr")
+     227                      .dwattr $C$DW$17, DW_AT_TI_symbol_name("_rand_nbr")
+     228                      .dwattr $C$DW$17, DW_AT_type(*$C$DW$T$25)
+     229                      .dwattr $C$DW$17, DW_AT_location[DW_OP_breg20 -4]
+     230              
+     231              $C$DW$18        .dwtag  DW_TAG_variable
+     232                      .dwattr $C$DW$18, DW_AT_name("cpu_sr")
+     233                      .dwattr $C$DW$18, DW_AT_TI_symbol_name("_cpu_sr")
+     234                      .dwattr $C$DW$18, DW_AT_type(*$C$DW$T$20)
+     235                      .dwattr $C$DW$18, DW_AT_location[DW_OP_breg20 -5]
+     236              
+     237                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/ImitatePLC/Software/uC-LIB/lib_math.c",line 219,column 
+     238 00000014 2B45          MOV       *-SP[5],#0            ; [CPU_ALU] |219| 
+     239                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/ImitatePLC/Software/uC-LIB/lib_math.c",line 222,column 
+     240              $C$DW$19        .dwtag  DW_TAG_TI_branch
+     241                      .dwattr $C$DW$19, DW_AT_low_pc(0x00)
+     242                      .dwattr $C$DW$19, DW_AT_name("_CPU_SR_Save")
+     243                      .dwattr $C$DW$19, DW_AT_TI_call
+     244              
+     245 00000015 7640!         LCR       #_CPU_SR_Save         ; [CPU_ALU] |222| 
+         00000016 0000 
+     246                      ; call occurs [#_CPU_SR_Save] ; [] |222| 
+     247 00000017 9645          MOV       *-SP[5],AL            ; [CPU_ALU] |222| 
+     248                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/ImitatePLC/Software/uC-LIB/lib_math.c",line 223,column 
+     249 00000018 761F-         MOVW      DP,#_Math_RandSeedCur ; [CPU_ARAU] 
+         00000019 0000 
+     250 0000001a 0600-         MOVL      ACC,@_Math_RandSeedCur ; [CPU_ALU] |223| 
+     251 0000001b 1E42          MOVL      *-SP[2],ACC           ; [CPU_ALU] |223| 
+     252                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/ImitatePLC/Software/uC-LIB/lib_math.c",line 224,column 
+     253              $C$DW$20        .dwtag  DW_TAG_TI_branch
+     254                      .dwattr $C$DW$20, DW_AT_low_pc(0x00)
+     255                      .dwattr $C$DW$20, DW_AT_name("_Math_RandSeed")
+     256                      .dwattr $C$DW$20, DW_AT_TI_call
+     257              
+     258 0000001c 7640'         LCR       #_Math_RandSeed       ; [CPU_ALU] |224| 
+         0000001d 0028 
+     259                      ; call occurs [#_Math_RandSeed] ; [] |224| 
+     260 0000001e 1E44          MOVL      *-SP[4],ACC           ; [CPU_ALU] |224| 
+     261                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/ImitatePLC/Software/uC-LIB/lib_math.c",line 225,column 
+     262 0000001f 761F-         MOVW      DP,#_Math_RandSeedCur ; [CPU_ARAU] 
+         00000020 0000 
+     263 00000021 1E00-         MOVL      @_Math_RandSeedCur,ACC ; [CPU_ALU] |225| 
+     264                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/ImitatePLC/Software/uC-LIB/lib_math.c",line 226,column 
+     265 00000022 9245          MOV       AL,*-SP[5]            ; [CPU_ALU] |226| 
+     266              $C$DW$21        .dwtag  DW_TAG_TI_branch
+     267                      .dwattr $C$DW$21, DW_AT_low_pc(0x00)
+TMS320C2000 Assembler PC v20.2.1 Mon Jan  4 16:08:35 2021
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+lib_math.asm                                                         PAGE    6
+
+     268                      .dwattr $C$DW$21, DW_AT_name("_CPU_SR_Restore")
+     269                      .dwattr $C$DW$21, DW_AT_TI_call
+     270              
+     271 00000023 7640!         LCR       #_CPU_SR_Restore      ; [CPU_ALU] |226| 
+         00000024 0000 
+     272                      ; call occurs [#_CPU_SR_Restore] ; [] |226| 
+     273                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/ImitatePLC/Software/uC-LIB/lib_math.c",line 228,column 
+     274 00000025 0644          MOVL      ACC,*-SP[4]           ; [CPU_ALU] |228| 
+     275                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/ImitatePLC/Software/uC-LIB/lib_math.c",line 229,column 
+     276 00000026 FE86          SUBB      SP,#6                 ; [CPU_ARAU] 
+     277                      .dwcfi  cfa_offset, -2
+     278              $C$DW$22        .dwtag  DW_TAG_TI_branch
+     279                      .dwattr $C$DW$22, DW_AT_low_pc(0x00)
+     280                      .dwattr $C$DW$22, DW_AT_TI_return
+     281              
+     282 00000027 0006          LRETR     ; [CPU_ALU] 
+     283                      ; return occurs ; [] 
+     284                      .dwattr $C$DW$15, DW_AT_TI_end_file("C:/ti/Workspace/PLC_certificate/ImitatePLC/Software/uC-LIB/lib_m
+     285                      .dwattr $C$DW$15, DW_AT_TI_end_line(0xe5)
+     286                      .dwattr $C$DW$15, DW_AT_TI_end_column(0x01)
+     287                      .dwendentry
+     288                      .dwendtag $C$DW$15
+     289              
+     290 00000028               .sect   ".text"
+     291                      .clink
+     292                      .global _Math_RandSeed
+     293              
+     294              $C$DW$23        .dwtag  DW_TAG_subprogram
+     295                      .dwattr $C$DW$23, DW_AT_name("Math_RandSeed")
+     296                      .dwattr $C$DW$23, DW_AT_low_pc(_Math_RandSeed)
+     297                      .dwattr $C$DW$23, DW_AT_high_pc(0x00)
+     298                      .dwattr $C$DW$23, DW_AT_TI_symbol_name("_Math_RandSeed")
+     299                      .dwattr $C$DW$23, DW_AT_external
+     300                      .dwattr $C$DW$23, DW_AT_type(*$C$DW$T$25)
+     301                      .dwattr $C$DW$23, DW_AT_TI_begin_file("C:/ti/Workspace/PLC_certificate/ImitatePLC/Software/uC-LIB/lib
+     302                      .dwattr $C$DW$23, DW_AT_TI_begin_line(0x110)
+     303                      .dwattr $C$DW$23, DW_AT_TI_begin_column(0x0b)
+     304                      .dwattr $C$DW$23, DW_AT_TI_max_frame_size(-6)
+     305                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/ImitatePLC/Software/uC-LIB/lib_math.c",line 273,column 
+     306              
+     307                      .dwfde $C$DW$CIE, _Math_RandSeed
+     308              $C$DW$24        .dwtag  DW_TAG_formal_parameter
+     309                      .dwattr $C$DW$24, DW_AT_name("seed")
+     310                      .dwattr $C$DW$24, DW_AT_TI_symbol_name("_seed")
+     311                      .dwattr $C$DW$24, DW_AT_type(*$C$DW$T$25)
+     312                      .dwattr $C$DW$24, DW_AT_location[DW_OP_reg0]
+     313              
+     314              
+     315              ;***************************************************************
+     316              ;* FNAME: _Math_RandSeed                FR SIZE:   4           *
+     317              ;*                                                             *
+     318              ;* FUNCTION ENVIRONMENT                                        *
+     319              ;*                                                             *
+     320              ;* FUNCTION PROPERTIES                                         *
+     321              ;*                            0 Parameter,  4 Auto,  0 SOE     *
+TMS320C2000 Assembler PC v20.2.1 Mon Jan  4 16:08:35 2021
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+lib_math.asm                                                         PAGE    7
+
+     322              ;***************************************************************
+     323              
+     324 00000028       _Math_RandSeed:
+     325                      .dwcfi  cfa_offset, -2
+     326                      .dwcfi  save_reg_to_mem, 26, 0
+     327 00000028 FE04          ADDB      SP,#4                 ; [CPU_ARAU] 
+     328                      .dwcfi  cfa_offset, -6
+     329              $C$DW$25        .dwtag  DW_TAG_variable
+     330                      .dwattr $C$DW$25, DW_AT_name("seed")
+     331                      .dwattr $C$DW$25, DW_AT_TI_symbol_name("_seed")
+     332                      .dwattr $C$DW$25, DW_AT_type(*$C$DW$T$25)
+     333                      .dwattr $C$DW$25, DW_AT_location[DW_OP_breg20 -2]
+     334              
+     335              $C$DW$26        .dwtag  DW_TAG_variable
+     336                      .dwattr $C$DW$26, DW_AT_name("rand_nbr")
+     337                      .dwattr $C$DW$26, DW_AT_TI_symbol_name("_rand_nbr")
+     338                      .dwattr $C$DW$26, DW_AT_type(*$C$DW$T$25)
+     339                      .dwattr $C$DW$26, DW_AT_location[DW_OP_breg20 -4]
+     340              
+     341 00000029 1E42          MOVL      *-SP[2],ACC           ; [CPU_ALU] |273| 
+     342                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/ImitatePLC/Software/uC-LIB/lib_math.c",line 277,column 
+     343 0000002a 28A9          MOV       AL,#20077             ; [CPU_ALU] |277| 
+         0000002b 4E6D 
+     344 0000002c 28A8          MOV       AH,#16838             ; [CPU_ALU] |277| 
+         0000002d 41C6 
+     345 0000002e 1EAC          MOVL      XT,ACC                ; [CPU_ALU] |277| 
+     346 0000002f 5644          IMPYL     ACC,XT,*-SP[2]        ; [CPU_ALU] |277| 
+         00000030 0042 
+     347 00000031 FF10          ADD       ACC,#12345 << 0       ; [CPU_ALU] |277| 
+         00000032 3039 
+     348 00000033 18A8          AND       AH,#32767             ; [CPU_ALU] |277| 
+         00000034 7FFF 
+     349 00000035 1E44          MOVL      *-SP[4],ACC           ; [CPU_ALU] |277| 
+     350                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/ImitatePLC/Software/uC-LIB/lib_math.c",line 279,column 
+     351                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/ImitatePLC/Software/uC-LIB/lib_math.c",line 280,column 
+     352 00000036 FE84          SUBB      SP,#4                 ; [CPU_ARAU] 
+     353                      .dwcfi  cfa_offset, -2
+     354              $C$DW$27        .dwtag  DW_TAG_TI_branch
+     355                      .dwattr $C$DW$27, DW_AT_low_pc(0x00)
+     356                      .dwattr $C$DW$27, DW_AT_TI_return
+     357              
+     358 00000037 0006          LRETR     ; [CPU_ALU] 
+     359                      ; return occurs ; [] 
+     360                      .dwattr $C$DW$23, DW_AT_TI_end_file("C:/ti/Workspace/PLC_certificate/ImitatePLC/Software/uC-LIB/lib_m
+     361                      .dwattr $C$DW$23, DW_AT_TI_end_line(0x118)
+     362                      .dwattr $C$DW$23, DW_AT_TI_end_column(0x01)
+     363                      .dwendentry
+     364                      .dwendtag $C$DW$23
+     365              
+     366              ;**************************************************************
+     367              ;* UNDEFINED EXTERNAL REFERENCES                              *
+     368              ;**************************************************************
+     369                      .global _CPU_SR_Restore
+     370                      .global _CPU_SR_Save
+     371              
+TMS320C2000 Assembler PC v20.2.1 Mon Jan  4 16:08:35 2021
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+lib_math.asm                                                         PAGE    8
+
+     372              ;***************************************************************
+     373              ;* TYPE INFORMATION                                            *
+     374              ;***************************************************************
+     375              $C$DW$T$2       .dwtag  DW_TAG_unspecified_type
+     376                      .dwattr $C$DW$T$2, DW_AT_name("void")
+     377              
+     378              $C$DW$T$4       .dwtag  DW_TAG_base_type
+     379                      .dwattr $C$DW$T$4, DW_AT_encoding(DW_ATE_boolean)
+     380                      .dwattr $C$DW$T$4, DW_AT_name("bool")
+     381                      .dwattr $C$DW$T$4, DW_AT_byte_size(0x01)
+     382              
+     383              $C$DW$T$5       .dwtag  DW_TAG_base_type
+     384                      .dwattr $C$DW$T$5, DW_AT_encoding(DW_ATE_signed_char)
+     385                      .dwattr $C$DW$T$5, DW_AT_name("signed char")
+     386                      .dwattr $C$DW$T$5, DW_AT_byte_size(0x01)
+     387              
+     388              $C$DW$T$6       .dwtag  DW_TAG_base_type
+     389                      .dwattr $C$DW$T$6, DW_AT_encoding(DW_ATE_unsigned_char)
+     390                      .dwattr $C$DW$T$6, DW_AT_name("unsigned char")
+     391                      .dwattr $C$DW$T$6, DW_AT_byte_size(0x01)
+     392              
+     393              $C$DW$T$7       .dwtag  DW_TAG_base_type
+     394                      .dwattr $C$DW$T$7, DW_AT_encoding(DW_ATE_signed_char)
+     395                      .dwattr $C$DW$T$7, DW_AT_name("wchar_t")
+     396                      .dwattr $C$DW$T$7, DW_AT_byte_size(0x01)
+     397              
+     398              $C$DW$T$8       .dwtag  DW_TAG_base_type
+     399                      .dwattr $C$DW$T$8, DW_AT_encoding(DW_ATE_signed)
+     400                      .dwattr $C$DW$T$8, DW_AT_name("short")
+     401                      .dwattr $C$DW$T$8, DW_AT_byte_size(0x01)
+     402              
+     403              $C$DW$T$9       .dwtag  DW_TAG_base_type
+     404                      .dwattr $C$DW$T$9, DW_AT_encoding(DW_ATE_unsigned)
+     405                      .dwattr $C$DW$T$9, DW_AT_name("unsigned short")
+     406                      .dwattr $C$DW$T$9, DW_AT_byte_size(0x01)
+     407              
+     408              $C$DW$T$19      .dwtag  DW_TAG_typedef
+     409                      .dwattr $C$DW$T$19, DW_AT_name("CPU_INT16U")
+     410                      .dwattr $C$DW$T$19, DW_AT_type(*$C$DW$T$9)
+     411                      .dwattr $C$DW$T$19, DW_AT_language(DW_LANG_C)
+     412              
+     413              $C$DW$T$20      .dwtag  DW_TAG_typedef
+     414                      .dwattr $C$DW$T$20, DW_AT_name("CPU_SR")
+     415                      .dwattr $C$DW$T$20, DW_AT_type(*$C$DW$T$19)
+     416                      .dwattr $C$DW$T$20, DW_AT_language(DW_LANG_C)
+     417              
+     418              $C$DW$T$10      .dwtag  DW_TAG_base_type
+     419                      .dwattr $C$DW$T$10, DW_AT_encoding(DW_ATE_signed)
+     420                      .dwattr $C$DW$T$10, DW_AT_name("int")
+     421                      .dwattr $C$DW$T$10, DW_AT_byte_size(0x01)
+     422              
+     423              $C$DW$T$11      .dwtag  DW_TAG_base_type
+     424                      .dwattr $C$DW$T$11, DW_AT_encoding(DW_ATE_unsigned)
+     425                      .dwattr $C$DW$T$11, DW_AT_name("unsigned int")
+     426                      .dwattr $C$DW$T$11, DW_AT_byte_size(0x01)
+TMS320C2000 Assembler PC v20.2.1 Mon Jan  4 16:08:35 2021
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+lib_math.asm                                                         PAGE    9
+
+     427              
+     428              $C$DW$T$12      .dwtag  DW_TAG_base_type
+     429                      .dwattr $C$DW$T$12, DW_AT_encoding(DW_ATE_signed)
+     430                      .dwattr $C$DW$T$12, DW_AT_name("long")
+     431                      .dwattr $C$DW$T$12, DW_AT_byte_size(0x02)
+     432              
+     433              $C$DW$T$13      .dwtag  DW_TAG_base_type
+     434                      .dwattr $C$DW$T$13, DW_AT_encoding(DW_ATE_unsigned)
+     435                      .dwattr $C$DW$T$13, DW_AT_name("unsigned long")
+     436                      .dwattr $C$DW$T$13, DW_AT_byte_size(0x02)
+     437              
+     438              $C$DW$T$24      .dwtag  DW_TAG_typedef
+     439                      .dwattr $C$DW$T$24, DW_AT_name("CPU_INT32U")
+     440                      .dwattr $C$DW$T$24, DW_AT_type(*$C$DW$T$13)
+     441                      .dwattr $C$DW$T$24, DW_AT_language(DW_LANG_C)
+     442              
+     443              $C$DW$T$25      .dwtag  DW_TAG_typedef
+     444                      .dwattr $C$DW$T$25, DW_AT_name("RAND_NBR")
+     445                      .dwattr $C$DW$T$25, DW_AT_type(*$C$DW$T$24)
+     446                      .dwattr $C$DW$T$25, DW_AT_language(DW_LANG_C)
+     447              
+     448              $C$DW$T$14      .dwtag  DW_TAG_base_type
+     449                      .dwattr $C$DW$T$14, DW_AT_encoding(DW_ATE_signed)
+     450                      .dwattr $C$DW$T$14, DW_AT_name("long long")
+     451                      .dwattr $C$DW$T$14, DW_AT_byte_size(0x04)
+     452              
+     453              $C$DW$T$15      .dwtag  DW_TAG_base_type
+     454                      .dwattr $C$DW$T$15, DW_AT_encoding(DW_ATE_unsigned)
+     455                      .dwattr $C$DW$T$15, DW_AT_name("unsigned long long")
+     456                      .dwattr $C$DW$T$15, DW_AT_byte_size(0x04)
+     457              
+     458              $C$DW$T$16      .dwtag  DW_TAG_base_type
+     459                      .dwattr $C$DW$T$16, DW_AT_encoding(DW_ATE_float)
+     460                      .dwattr $C$DW$T$16, DW_AT_name("float")
+     461                      .dwattr $C$DW$T$16, DW_AT_byte_size(0x02)
+     462              
+     463              $C$DW$T$17      .dwtag  DW_TAG_base_type
+     464                      .dwattr $C$DW$T$17, DW_AT_encoding(DW_ATE_float)
+     465                      .dwattr $C$DW$T$17, DW_AT_name("double")
+     466                      .dwattr $C$DW$T$17, DW_AT_byte_size(0x02)
+     467              
+     468              $C$DW$T$18      .dwtag  DW_TAG_base_type
+     469                      .dwattr $C$DW$T$18, DW_AT_encoding(DW_ATE_float)
+     470                      .dwattr $C$DW$T$18, DW_AT_name("long double")
+     471                      .dwattr $C$DW$T$18, DW_AT_byte_size(0x04)
+     472              
+     473                      .dwattr $C$DW$CU, DW_AT_language(DW_LANG_C)
+     474              
+     475              ;***************************************************************
+     476              ;* DWARF CIE ENTRIES                                           *
+     477              ;***************************************************************
+     478              
+     479              $C$DW$CIE       .dwcie 26
+     480                      .dwcfi  cfa_register, 20
+     481                      .dwcfi  cfa_offset, 0
+TMS320C2000 Assembler PC v20.2.1 Mon Jan  4 16:08:35 2021
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+lib_math.asm                                                         PAGE   10
+
+     482                      .dwcfi  same_value, 28
+     483                      .dwcfi  same_value, 6
+     484                      .dwcfi  same_value, 7
+     485                      .dwcfi  same_value, 8
+     486                      .dwcfi  same_value, 9
+     487                      .dwcfi  same_value, 10
+     488                      .dwcfi  same_value, 11
+     489                      .dwcfi  same_value, 59
+     490                      .dwcfi  same_value, 63
+     491                      .dwcfi  same_value, 67
+     492                      .dwcfi  same_value, 71
+     493                      .dwendentry
+     494              
+     495              ;***************************************************************
+     496              ;* DWARF REGISTER MAP                                          *
+     497              ;***************************************************************
+     498              
+     499              $C$DW$28        .dwtag  DW_TAG_TI_assign_register
+     500                      .dwattr $C$DW$28, DW_AT_name("AL")
+     501                      .dwattr $C$DW$28, DW_AT_location[DW_OP_reg0]
+     502              
+     503              $C$DW$29        .dwtag  DW_TAG_TI_assign_register
+     504                      .dwattr $C$DW$29, DW_AT_name("AH")
+     505                      .dwattr $C$DW$29, DW_AT_location[DW_OP_reg1]
+     506              
+     507              $C$DW$30        .dwtag  DW_TAG_TI_assign_register
+     508                      .dwattr $C$DW$30, DW_AT_name("PL")
+     509                      .dwattr $C$DW$30, DW_AT_location[DW_OP_reg2]
+     510              
+     511              $C$DW$31        .dwtag  DW_TAG_TI_assign_register
+     512                      .dwattr $C$DW$31, DW_AT_name("PH")
+     513                      .dwattr $C$DW$31, DW_AT_location[DW_OP_reg3]
+     514              
+     515              $C$DW$32        .dwtag  DW_TAG_TI_assign_register
+     516                      .dwattr $C$DW$32, DW_AT_name("SP")
+     517                      .dwattr $C$DW$32, DW_AT_location[DW_OP_reg20]
+     518              
+     519              $C$DW$33        .dwtag  DW_TAG_TI_assign_register
+     520                      .dwattr $C$DW$33, DW_AT_name("XT")
+     521                      .dwattr $C$DW$33, DW_AT_location[DW_OP_reg21]
+     522              
+     523              $C$DW$34        .dwtag  DW_TAG_TI_assign_register
+     524                      .dwattr $C$DW$34, DW_AT_name("T")
+     525                      .dwattr $C$DW$34, DW_AT_location[DW_OP_reg22]
+     526              
+     527              $C$DW$35        .dwtag  DW_TAG_TI_assign_register
+     528                      .dwattr $C$DW$35, DW_AT_name("ST0")
+     529                      .dwattr $C$DW$35, DW_AT_location[DW_OP_reg23]
+     530              
+     531              $C$DW$36        .dwtag  DW_TAG_TI_assign_register
+     532                      .dwattr $C$DW$36, DW_AT_name("ST1")
+     533                      .dwattr $C$DW$36, DW_AT_location[DW_OP_reg24]
+     534              
+     535              $C$DW$37        .dwtag  DW_TAG_TI_assign_register
+     536                      .dwattr $C$DW$37, DW_AT_name("PC")
+TMS320C2000 Assembler PC v20.2.1 Mon Jan  4 16:08:35 2021
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+lib_math.asm                                                         PAGE   11
+
+     537                      .dwattr $C$DW$37, DW_AT_location[DW_OP_reg25]
+     538              
+     539              $C$DW$38        .dwtag  DW_TAG_TI_assign_register
+     540                      .dwattr $C$DW$38, DW_AT_name("RPC")
+     541                      .dwattr $C$DW$38, DW_AT_location[DW_OP_reg26]
+     542              
+     543              $C$DW$39        .dwtag  DW_TAG_TI_assign_register
+     544                      .dwattr $C$DW$39, DW_AT_name("FP")
+     545                      .dwattr $C$DW$39, DW_AT_location[DW_OP_reg28]
+     546              
+     547              $C$DW$40        .dwtag  DW_TAG_TI_assign_register
+     548                      .dwattr $C$DW$40, DW_AT_name("DP")
+     549                      .dwattr $C$DW$40, DW_AT_location[DW_OP_reg29]
+     550              
+     551              $C$DW$41        .dwtag  DW_TAG_TI_assign_register
+     552                      .dwattr $C$DW$41, DW_AT_name("SXM")
+     553                      .dwattr $C$DW$41, DW_AT_location[DW_OP_reg30]
+     554              
+     555              $C$DW$42        .dwtag  DW_TAG_TI_assign_register
+     556                      .dwattr $C$DW$42, DW_AT_name("PM")
+     557                      .dwattr $C$DW$42, DW_AT_location[DW_OP_reg31]
+     558              
+     559              $C$DW$43        .dwtag  DW_TAG_TI_assign_register
+     560                      .dwattr $C$DW$43, DW_AT_name("OVM")
+     561                      .dwattr $C$DW$43, DW_AT_location[DW_OP_regx 0x20]
+     562              
+     563              $C$DW$44        .dwtag  DW_TAG_TI_assign_register
+     564                      .dwattr $C$DW$44, DW_AT_name("PAGE0")
+     565                      .dwattr $C$DW$44, DW_AT_location[DW_OP_regx 0x21]
+     566              
+     567              $C$DW$45        .dwtag  DW_TAG_TI_assign_register
+     568                      .dwattr $C$DW$45, DW_AT_name("AMODE")
+     569                      .dwattr $C$DW$45, DW_AT_location[DW_OP_regx 0x22]
+     570              
+     571              $C$DW$46        .dwtag  DW_TAG_TI_assign_register
+     572                      .dwattr $C$DW$46, DW_AT_name("EALLOW")
+     573                      .dwattr $C$DW$46, DW_AT_location[DW_OP_regx 0x4e]
+     574              
+     575              $C$DW$47        .dwtag  DW_TAG_TI_assign_register
+     576                      .dwattr $C$DW$47, DW_AT_name("INTM")
+     577                      .dwattr $C$DW$47, DW_AT_location[DW_OP_regx 0x23]
+     578              
+     579              $C$DW$48        .dwtag  DW_TAG_TI_assign_register
+     580                      .dwattr $C$DW$48, DW_AT_name("IFR")
+     581                      .dwattr $C$DW$48, DW_AT_location[DW_OP_regx 0x24]
+     582              
+     583              $C$DW$49        .dwtag  DW_TAG_TI_assign_register
+     584                      .dwattr $C$DW$49, DW_AT_name("IER")
+     585                      .dwattr $C$DW$49, DW_AT_location[DW_OP_regx 0x25]
+     586              
+     587              $C$DW$50        .dwtag  DW_TAG_TI_assign_register
+     588                      .dwattr $C$DW$50, DW_AT_name("V")
+     589                      .dwattr $C$DW$50, DW_AT_location[DW_OP_regx 0x26]
+     590              
+     591              $C$DW$51        .dwtag  DW_TAG_TI_assign_register
+TMS320C2000 Assembler PC v20.2.1 Mon Jan  4 16:08:35 2021
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+lib_math.asm                                                         PAGE   12
+
+     592                      .dwattr $C$DW$51, DW_AT_name("PSEUDOH")
+     593                      .dwattr $C$DW$51, DW_AT_location[DW_OP_regx 0x4c]
+     594              
+     595              $C$DW$52        .dwtag  DW_TAG_TI_assign_register
+     596                      .dwattr $C$DW$52, DW_AT_name("VOL")
+     597                      .dwattr $C$DW$52, DW_AT_location[DW_OP_regx 0x4d]
+     598              
+     599              $C$DW$53        .dwtag  DW_TAG_TI_assign_register
+     600                      .dwattr $C$DW$53, DW_AT_name("AR0")
+     601                      .dwattr $C$DW$53, DW_AT_location[DW_OP_reg4]
+     602              
+     603              $C$DW$54        .dwtag  DW_TAG_TI_assign_register
+     604                      .dwattr $C$DW$54, DW_AT_name("XAR0")
+     605                      .dwattr $C$DW$54, DW_AT_location[DW_OP_reg5]
+     606              
+     607              $C$DW$55        .dwtag  DW_TAG_TI_assign_register
+     608                      .dwattr $C$DW$55, DW_AT_name("AR1")
+     609                      .dwattr $C$DW$55, DW_AT_location[DW_OP_reg6]
+     610              
+     611              $C$DW$56        .dwtag  DW_TAG_TI_assign_register
+     612                      .dwattr $C$DW$56, DW_AT_name("XAR1")
+     613                      .dwattr $C$DW$56, DW_AT_location[DW_OP_reg7]
+     614              
+     615              $C$DW$57        .dwtag  DW_TAG_TI_assign_register
+     616                      .dwattr $C$DW$57, DW_AT_name("AR2")
+     617                      .dwattr $C$DW$57, DW_AT_location[DW_OP_reg8]
+     618              
+     619              $C$DW$58        .dwtag  DW_TAG_TI_assign_register
+     620                      .dwattr $C$DW$58, DW_AT_name("XAR2")
+     621                      .dwattr $C$DW$58, DW_AT_location[DW_OP_reg9]
+     622              
+     623              $C$DW$59        .dwtag  DW_TAG_TI_assign_register
+     624                      .dwattr $C$DW$59, DW_AT_name("AR3")
+     625                      .dwattr $C$DW$59, DW_AT_location[DW_OP_reg10]
+     626              
+     627              $C$DW$60        .dwtag  DW_TAG_TI_assign_register
+     628                      .dwattr $C$DW$60, DW_AT_name("XAR3")
+     629                      .dwattr $C$DW$60, DW_AT_location[DW_OP_reg11]
+     630              
+     631              $C$DW$61        .dwtag  DW_TAG_TI_assign_register
+     632                      .dwattr $C$DW$61, DW_AT_name("AR4")
+     633                      .dwattr $C$DW$61, DW_AT_location[DW_OP_reg12]
+     634              
+     635              $C$DW$62        .dwtag  DW_TAG_TI_assign_register
+     636                      .dwattr $C$DW$62, DW_AT_name("XAR4")
+     637                      .dwattr $C$DW$62, DW_AT_location[DW_OP_reg13]
+     638              
+     639              $C$DW$63        .dwtag  DW_TAG_TI_assign_register
+     640                      .dwattr $C$DW$63, DW_AT_name("AR5")
+     641                      .dwattr $C$DW$63, DW_AT_location[DW_OP_reg14]
+     642              
+     643              $C$DW$64        .dwtag  DW_TAG_TI_assign_register
+     644                      .dwattr $C$DW$64, DW_AT_name("XAR5")
+     645                      .dwattr $C$DW$64, DW_AT_location[DW_OP_reg15]
+     646              
+TMS320C2000 Assembler PC v20.2.1 Mon Jan  4 16:08:35 2021
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+lib_math.asm                                                         PAGE   13
+
+     647              $C$DW$65        .dwtag  DW_TAG_TI_assign_register
+     648                      .dwattr $C$DW$65, DW_AT_name("AR6")
+     649                      .dwattr $C$DW$65, DW_AT_location[DW_OP_reg16]
+     650              
+     651              $C$DW$66        .dwtag  DW_TAG_TI_assign_register
+     652                      .dwattr $C$DW$66, DW_AT_name("XAR6")
+     653                      .dwattr $C$DW$66, DW_AT_location[DW_OP_reg17]
+     654              
+     655              $C$DW$67        .dwtag  DW_TAG_TI_assign_register
+     656                      .dwattr $C$DW$67, DW_AT_name("AR7")
+     657                      .dwattr $C$DW$67, DW_AT_location[DW_OP_reg18]
+     658              
+     659              $C$DW$68        .dwtag  DW_TAG_TI_assign_register
+     660                      .dwattr $C$DW$68, DW_AT_name("XAR7")
+     661                      .dwattr $C$DW$68, DW_AT_location[DW_OP_reg19]
+     662              
+     663              $C$DW$69        .dwtag  DW_TAG_TI_assign_register
+     664                      .dwattr $C$DW$69, DW_AT_name("R0H")
+     665                      .dwattr $C$DW$69, DW_AT_location[DW_OP_regx 0x2b]
+     666              
+     667              $C$DW$70        .dwtag  DW_TAG_TI_assign_register
+     668                      .dwattr $C$DW$70, DW_AT_name("R1H")
+     669                      .dwattr $C$DW$70, DW_AT_location[DW_OP_regx 0x2f]
+     670              
+     671              $C$DW$71        .dwtag  DW_TAG_TI_assign_register
+     672                      .dwattr $C$DW$71, DW_AT_name("R2H")
+     673                      .dwattr $C$DW$71, DW_AT_location[DW_OP_regx 0x33]
+     674              
+     675              $C$DW$72        .dwtag  DW_TAG_TI_assign_register
+     676                      .dwattr $C$DW$72, DW_AT_name("R3H")
+     677                      .dwattr $C$DW$72, DW_AT_location[DW_OP_regx 0x37]
+     678              
+     679              $C$DW$73        .dwtag  DW_TAG_TI_assign_register
+     680                      .dwattr $C$DW$73, DW_AT_name("R4H")
+     681                      .dwattr $C$DW$73, DW_AT_location[DW_OP_regx 0x3b]
+     682              
+     683              $C$DW$74        .dwtag  DW_TAG_TI_assign_register
+     684                      .dwattr $C$DW$74, DW_AT_name("R5H")
+     685                      .dwattr $C$DW$74, DW_AT_location[DW_OP_regx 0x3f]
+     686              
+     687              $C$DW$75        .dwtag  DW_TAG_TI_assign_register
+     688                      .dwattr $C$DW$75, DW_AT_name("R6H")
+     689                      .dwattr $C$DW$75, DW_AT_location[DW_OP_regx 0x43]
+     690              
+     691              $C$DW$76        .dwtag  DW_TAG_TI_assign_register
+     692                      .dwattr $C$DW$76, DW_AT_name("R7H")
+     693                      .dwattr $C$DW$76, DW_AT_location[DW_OP_regx 0x47]
+     694              
+     695              $C$DW$77        .dwtag  DW_TAG_TI_assign_register
+     696                      .dwattr $C$DW$77, DW_AT_name("RB")
+     697                      .dwattr $C$DW$77, DW_AT_location[DW_OP_regx 0x4a]
+     698              
+     699              $C$DW$78        .dwtag  DW_TAG_TI_assign_register
+     700                      .dwattr $C$DW$78, DW_AT_name("STF")
+     701                      .dwattr $C$DW$78, DW_AT_location[DW_OP_regx 0x28]
+TMS320C2000 Assembler PC v20.2.1 Mon Jan  4 16:08:35 2021
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+lib_math.asm                                                         PAGE   14
+
+     702              
+     703              $C$DW$79        .dwtag  DW_TAG_TI_assign_register
+     704                      .dwattr $C$DW$79, DW_AT_name("FPUHAZ")
+     705                      .dwattr $C$DW$79, DW_AT_location[DW_OP_reg27]
+     706              
+     707              $C$DW$80        .dwtag  DW_TAG_TI_assign_register
+     708                      .dwattr $C$DW$80, DW_AT_name("STF_HWDIV")
+     709                      .dwattr $C$DW$80, DW_AT_location[DW_OP_regx 0x4f]
+     710              
+     711                      .dwendtag $C$DW$CU
+     712              
+
+No Assembly Errors, No Assembly Warnings

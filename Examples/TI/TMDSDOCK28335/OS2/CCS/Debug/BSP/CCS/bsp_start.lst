@@ -1,0 +1,112 @@
+TMS320C2000 Assembler PC v20.2.1 Mon Jan  4 16:08:33 2021
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:/ti/Workspace/PLC_certificate/ImitatePLC/Examples/TI/TMDSDOCK28335/BSP/CCS/bsp_start.asm PAGE    1
+
+       1              ;
+       2              ;********************************************************************************************************
+       3              ;                                     MICIRUM BOARD SUPPORT PACKAGE
+       4              ;
+       5              ;                             (c) Copyright 2015; Micrium, Inc.; Weston, FL
+       6              ;
+       7              ;                   All rights reserved.  Protected by international copyright laws.
+       8              ;                  Knowledge of the source code may not be used to write a similar
+       9              ;                   product.  This file may only be used in accordance with a license
+      10              ;                   and should not be redistributed in any way.
+      11              ;********************************************************************************************************
+      12              ;
+      13              
+      14              ;
+      15              ;********************************************************************************************************
+      16              ;
+      17              ;                                         BOARD SUPPORT PACKAGE
+      18              ;
+      19              *                                             Delfino 28335
+      20              *                                                on the
+      21              *                                             TMDSDOCK28335
+      22              *                                            Experimenter Kit
+      23              ;
+      24              ; Filename      : bsp_start.asm
+      25              ; Version       : V1.00
+      26              ; Programmer(s) : JFT
+      27              ;********************************************************************************************************
+      28              ;
+      29              
+      30              ;********************************************************************************************************
+      31              ;                                           PUBLIC FUNCTIONS
+      32              ;********************************************************************************************************
+      33              
+      34                  .def   _BSP_RAM_StartHere
+      35              
+      36              
+      37              ;********************************************************************************************************
+      38              ;                                       EXTERNAL GLOBAL VARIABLES
+      39              ;********************************************************************************************************
+      40              
+      41                  .ref   _c_int00                                             ; RTS entry point. Ultimately calls main().
+      42              
+      43              
+      44              ;********************************************************************************************************
+      45              ;                                                EQUATES
+      46              ;********************************************************************************************************
+      47              
+      48        7029  WDCR             .set                       0x007029
+      49        7025  WDKEY            .set                       0x007025
+      50        0068  WDCR_WDDIS       .set                       0x0068              ; See Watchdog Control Register Field Descrip
+      51              
+      52              
+      53              ;********************************************************************************************************
+      54              ;                                      CODE GENERATION DIRECTIVES
+      55              ;********************************************************************************************************
+TMS320C2000 Assembler PC v20.2.1 Mon Jan  4 16:08:33 2021
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:/ti/Workspace/PLC_certificate/ImitatePLC/Examples/TI/TMDSDOCK28335/BSP/CCS/bsp_start.asm PAGE    2
+
+      56              
+      57 00000000           .sect "ram_start"
+      58 00000000 0040'     LB      _BSP_RAM_StartHere
+         00000001 0000 
+      59              
+      60              
+      61              ;********************************************************************************************************
+      62              ;                                           BSP_RAM_StartHere()
+      63              ;
+      64              ; Description : C28x jumps into RAM Start upon RAM loading.
+      65              ;
+      66              ; Prototypes  : void  BSP_RAM_StartHere(void);
+      67              ;********************************************************************************************************
+      68              
+      69 00000000           .text
+      70                  .asmfunc
+      71 00000000       _BSP_RAM_StartHere:
+      72                                                                              ; Allow access to protected registers and reg
+      73 00000000 7622      EALLOW
+      74                                                                              ; Disable interrupts.
+      75 00000001 3B10      DINT
+      76                                                                              ; Debugger can access registers and memory in
+      77 00000002 2920      CLRC    DBGM
+      78                                                                              ; Disable Watchdog.
+      79 00000003 8D00      MOVL    XAR0, #WDCR
+         00000004 7029 
+      80 00000005 28C0      MOV     *AR0, #WDCR_WDDIS
+         00000006 0068 
+      81 00000007 8D00      MOVL    XAR0, #WDKEY
+         00000008 7025 
+      82 00000009 28C0      MOV     *AR0, #0x55
+         0000000a 0055 
+      83 0000000b 28C0      MOV     *AR0, #0xAA
+         0000000c 00AA 
+      84                                                                              ; Call c_int00().
+      85 0000000d 7640!     LCR     _c_int00
+         0000000e 0000 
+      86                  .endasmfunc
+      87              
+      88              
+      89              ;********************************************************************************************************
+      90              ;                                      CODE GENERATION DIRECTIVES
+      91              ;********************************************************************************************************
+      92              
+      93                  .end
+
+No Assembly Errors, No Assembly Warnings

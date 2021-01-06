@@ -1,0 +1,137 @@
+TMS320C2000 Assembler PC v20.2.1 Mon Jan  4 16:08:37 2021
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:/ti/Workspace/PLC_certificate/ImitatePLC/Software/uCOS-II/Ports/C28x/Generic/CCS/os_cpu_i.asm PAGE    1
+
+       1              ;
+       2              ;********************************************************************************************************
+       3              ;                                                uC/OS-II
+       4              ;                                          The Real-Time Kernel
+       5              ;
+       6              ;
+       7              ;                         (c) Copyright 2009-2015; Micrium, Inc.; Weston, FL
+       8              ;                    All rights reserved.  Protected by international copyright laws.
+       9              ;
+      10              ;                                       ASSEMBLY LANGUAGE MACROS
+      11              ;                                             TI C28x Port
+      12              ;
+      13              ; File      : OS_CPU_I.ASM
+      14              ; Version   : V2.92.11
+      15              ; By        : JFT
+      16              ;
+      17              ; LICENSING TERMS:
+      18              ; ---------------
+      19              ;           uC/OS-II is provided in source form for FREE short-term evaluation, for educational use or
+      20              ;           for peaceful research.  If you plan or intend to use uC/OS-II in a commercial application/
+      21              ;           product then, you need to contact Micrium to properly license uC/OS-II for its use in your
+      22              ;           application/product.   We provide ALL the source code for your convenience and to help you
+      23              ;           experience uC/OS-II.  The fact that the source is provided does NOT mean that you can use
+      24              ;           it commercially without paying a licensing fee.
+      25              ;
+      26              ;           Knowledge of the source code may NOT be used to develop a similar product.
+      27              ;
+      28              ;           Please help us continue to provide the embedded community with the finest software available.
+      29              ;           Your honesty is greatly appreciated.
+      30              ;
+      31              ;           You can contact us at www.micrium.com, or by phone at +1 (954) 217-2036.
+      32              ;
+      33              ; For       : TI C28x
+      34              ; Mode      : C28 Object mode
+      35              ; Toolchain : TI C/C++ Compiler
+      36              ;********************************************************************************************************
+      37              ;
+      38              
+      39              ;********************************************************************************************************
+      40              ;                                             OS_CTX_SAVE
+      41              ;
+      42              ; Description : This MACRO saves the CPU registers (i.e. CPU context) onto the current task's stack using
+      43              ;               the same order as they were saved in OSTaskStkInit().
+      44              ;********************************************************************************************************
+      45              
+      46              OS_CTX_SAVE  .macro
+      47                                                                              ; Save remaining registers.
+      48                  PUSH    AR1H:AR0H                                           ;   AR1H:AR0H
+      49                  PUSH    XAR2                                                ;   XAR2
+      50                  PUSH    XAR3                                                ;   XAR3
+      51                  PUSH    XAR4                                                ;   XAR4
+      52                  PUSH    XAR5                                                ;   XAR5
+      53                  PUSH    XAR6                                                ;   XAR6
+      54                  PUSH    XAR7                                                ;   XAR7
+      55                  PUSH    XT                                                  ;   XT
+TMS320C2000 Assembler PC v20.2.1 Mon Jan  4 16:08:37 2021
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:/ti/Workspace/PLC_certificate/ImitatePLC/Software/uCOS-II/Ports/C28x/Generic/CCS/os_cpu_i.asm PAGE    2
+
+      56                  PUSH    RPC                                                 ;   RPC
+      57              
+      58               .if .TMS320C2800_FPU32 = 1                                     ; Save FPU registers, if enabled.
+      59                  MOVZ    AR1   , @SP                                         ;   Can't use SP for indirect addressing.
+      60                  MOV32  *XAR1++, R0H                                         ;   R0H
+      61                  MOV32  *XAR1++, R1H                                         ;   R1H
+      62                  MOV32  *XAR1++, R2H                                         ;   R2H
+      63                  MOV32  *XAR1++, R3H                                         ;   R3H
+      64                  MOV32  *XAR1++, R4H                                         ;   R4H
+      65                  MOV32  *XAR1++, R5H                                         ;   R5H
+      66                  MOV32  *XAR1++, R6H                                         ;   R6H
+      67                  MOV32  *XAR1++, R7H                                         ;   R7H
+      68                  MOV32  *XAR1++, STF                                         ;   STF
+      69                  MOV     AL    , AR1                                         ;   Can't use indirect addressing with RB.
+      70                  MOV     @SP   , AL                                          ;   Restore SP.
+      71                  PUSH    RB                                                  ;   RB
+      72               .endif
+      73                  .endm
+      74              
+      75              
+      76              ;********************************************************************************************************
+      77              ;                                           OS_CTX_RESTORE
+      78              ;
+      79              ; Description : This MACRO restores the CPU registers (i.e. context) from the new task's stack in the
+      80              ;               reverse order of OS_CTX_SAVE (see above)
+      81              ;********************************************************************************************************
+      82              
+      83              OS_CTX_RESTORE  .macro
+      84               .if .TMS320C2800_FPU32 = 1                                     ; Restore FPU registers, if enabled.
+      85                  POP     RB                                                  ;   RB
+      86                  MOVZ    AR1, @SP                                            ;   Can't use SP for indirect addressing.
+      87                  MOV32   STF, *--XAR1                                        ;   STF
+      88                  MOV32   R7H, *--XAR1                                        ;   R7H
+      89                  MOV32   R6H, *--XAR1                                        ;   R6H
+      90                  MOV32   R5H, *--XAR1                                        ;   R5H
+      91                  MOV32   R4H, *--XAR1                                        ;   R4H
+      92                  MOV32   R3H, *--XAR1                                        ;   R3H
+      93                  MOV32   R2H, *--XAR1                                        ;   R2H
+      94                  MOV32   R1H, *--XAR1                                        ;   R1H
+      95                  MOV32   R0H, *--XAR1                                        ;   R0H
+      96                  MOV     AL    , AR1                                         ;   Restore SP.
+      97                  MOV     @SP   , AL
+      98               .endif
+      99                                                                              ; Restore CPU registers part 1.
+     100                  POP     RPC                                                 ;   RPC
+     101                  POP     XT                                                  ;   XT
+     102                  POP     XAR7                                                ;   XAR7
+     103                  POP     XAR6                                                ;   XAR6
+     104                  POP     XAR5                                                ;   XAR5
+     105                  POP     XAR4                                                ;   XAR4
+     106                  POP     XAR3                                                ;   XAR3
+     107                  POP     XAR2                                                ;   XAR2
+     108              
+     109                                                                              ; Overwrite saved IER in stack frame.
+     110                  MOVZ    AR0 , @SP                                           ;   Get SP.
+TMS320C2000 Assembler PC v20.2.1 Mon Jan  4 16:08:37 2021
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:/ti/Workspace/PLC_certificate/ImitatePLC/Software/uCOS-II/Ports/C28x/Generic/CCS/os_cpu_i.asm PAGE    3
+
+     111                  SUBB    XAR0, #6                                            ;   Point to old IER.
+     112                  MOVL    ACC , *XAR0                                         ;   Get old DBGSTAT:IER.
+     113                  AND     ACC, #0xFFFF << 16
+     114                  MOV     AL, IER                                             ;   Get current IER.
+     115                  MOVL   *XAR0, ACC                                           ;   Overwrite IER.
+     116              
+     117                                                                              ; Restore registers part 2.
+     118                  POP     AR1H:AR0H                                           ;   AR1H:AR0H
+     119                  .endm
+     120              
+
+No Assembly Errors, No Assembly Warnings

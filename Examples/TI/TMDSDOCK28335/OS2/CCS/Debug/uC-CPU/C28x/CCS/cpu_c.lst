@@ -1,0 +1,893 @@
+TMS320C2000 Assembler PC v20.2.1 Mon Jan  4 16:08:35 2021
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+cpu_c.asm                                                            PAGE    1
+
+       1              ;***************************************************************
+       2              ;* TMS320C2000 G3 C/C++ Codegen                               PC v20.2.1.LTS *
+       3              ;* Date/Time created: Mon Jan  4 16:08:34 2021                 *
+       4              ;***************************************************************
+       5                      .compiler_opts --abi=coffabi --diag_wrap=off --float_support=fpu32 --hll_source=on --mem_model:code=f
+       6                      .asg    XAR2, FP
+       7              
+       8              $C$DW$CU        .dwtag  DW_TAG_compile_unit
+       9                      .dwattr $C$DW$CU, DW_AT_name("C:/ti/Workspace/PLC_certificate/ImitatePLC/Software/uC-CPU/C28x/CCS/cpu
+      10                      .dwattr $C$DW$CU, DW_AT_producer("TI TMS320C2000 G3 C/C++ Codegen PC v20.2.1.LTS Copyright (c) 1996-2
+      11                      .dwattr $C$DW$CU, DW_AT_TI_version(0x01)
+      12                      .dwattr $C$DW$CU, DW_AT_comp_dir("C:\ti\Workspace\PLC_certificate\ImitatePLC\Examples\TI\TMDSDOCK2833
+      13              
+      14              $C$DW$1 .dwtag  DW_TAG_subprogram
+      15                      .dwattr $C$DW$1, DW_AT_name("CPU_SR_Restore")
+      16                      .dwattr $C$DW$1, DW_AT_TI_symbol_name("_CPU_SR_Restore")
+      17                      .dwattr $C$DW$1, DW_AT_declaration
+      18                      .dwattr $C$DW$1, DW_AT_external
+      19              $C$DW$2 .dwtag  DW_TAG_formal_parameter
+      20                      .dwattr $C$DW$2, DW_AT_type(*$C$DW$T$20)
+      21              
+      22                      .dwendtag $C$DW$1
+      23              
+      24              
+      25              $C$DW$3 .dwtag  DW_TAG_subprogram
+      26                      .dwattr $C$DW$3, DW_AT_name("CPU_SR_Save")
+      27                      .dwattr $C$DW$3, DW_AT_TI_symbol_name("_CPU_SR_Save")
+      28                      .dwattr $C$DW$3, DW_AT_type(*$C$DW$T$20)
+      29                      .dwattr $C$DW$3, DW_AT_declaration
+      30                      .dwattr $C$DW$3, DW_AT_external
+      31                      .dwendtag $C$DW$3
+      32              
+      33              ;       C:\ti\ccs1011\ccs\tools\compiler\ti-cgt-c2000_20.2.1.LTS\bin\ac2000.exe -@C:\\Users\\LEEKEO~1\\AppDat
+      34 00000000               .sect   ".text"
+      35                      .clink
+      36                      .global _CPU_IntSrcDis
+      37              
+      38              $C$DW$4 .dwtag  DW_TAG_subprogram
+      39                      .dwattr $C$DW$4, DW_AT_name("CPU_IntSrcDis")
+      40                      .dwattr $C$DW$4, DW_AT_low_pc(_CPU_IntSrcDis)
+      41                      .dwattr $C$DW$4, DW_AT_high_pc(0x00)
+      42                      .dwattr $C$DW$4, DW_AT_TI_symbol_name("_CPU_IntSrcDis")
+      43                      .dwattr $C$DW$4, DW_AT_external
+      44                      .dwattr $C$DW$4, DW_AT_TI_begin_file("C:/ti/Workspace/PLC_certificate/ImitatePLC/Software/uC-CPU/C28x
+      45                      .dwattr $C$DW$4, DW_AT_TI_begin_line(0x78)
+      46                      .dwattr $C$DW$4, DW_AT_TI_begin_column(0x07)
+      47                      .dwattr $C$DW$4, DW_AT_TI_max_frame_size(-4)
+      48                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/ImitatePLC/Software/uC-CPU/C28x/CCS/cpu_c.c",line 121,c
+      49              
+      50                      .dwfde $C$DW$CIE, _CPU_IntSrcDis
+      51              $C$DW$5 .dwtag  DW_TAG_formal_parameter
+      52                      .dwattr $C$DW$5, DW_AT_name("bit")
+      53                      .dwattr $C$DW$5, DW_AT_TI_symbol_name("_bit")
+      54                      .dwattr $C$DW$5, DW_AT_type(*$C$DW$T$23)
+      55                      .dwattr $C$DW$5, DW_AT_location[DW_OP_reg0]
+TMS320C2000 Assembler PC v20.2.1 Mon Jan  4 16:08:35 2021
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+cpu_c.asm                                                            PAGE    2
+
+      56              
+      57              
+      58              ;***************************************************************
+      59              ;* FNAME: _CPU_IntSrcDis                FR SIZE:   2           *
+      60              ;*                                                             *
+      61              ;* FUNCTION ENVIRONMENT                                        *
+      62              ;*                                                             *
+      63              ;* FUNCTION PROPERTIES                                         *
+      64              ;*                            0 Parameter,  2 Auto,  0 SOE     *
+      65              ;***************************************************************
+      66              
+      67 00000000       _CPU_IntSrcDis:
+      68                      .dwcfi  cfa_offset, -2
+      69                      .dwcfi  save_reg_to_mem, 26, 0
+      70 00000000 FE02          ADDB      SP,#2                 ; [CPU_ARAU] 
+      71                      .dwcfi  cfa_offset, -4
+      72              $C$DW$6 .dwtag  DW_TAG_variable
+      73                      .dwattr $C$DW$6, DW_AT_name("bit")
+      74                      .dwattr $C$DW$6, DW_AT_TI_symbol_name("_bit")
+      75                      .dwattr $C$DW$6, DW_AT_type(*$C$DW$T$23)
+      76                      .dwattr $C$DW$6, DW_AT_location[DW_OP_breg20 -1]
+      77              
+      78              $C$DW$7 .dwtag  DW_TAG_variable
+      79                      .dwattr $C$DW$7, DW_AT_name("cpu_sr")
+      80                      .dwattr $C$DW$7, DW_AT_TI_symbol_name("_cpu_sr")
+      81                      .dwattr $C$DW$7, DW_AT_type(*$C$DW$T$20)
+      82                      .dwattr $C$DW$7, DW_AT_location[DW_OP_breg20 -2]
+      83              
+      84 00000001 9641          MOV       *-SP[1],AL            ; [CPU_ALU] |121| 
+      85                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/ImitatePLC/Software/uC-CPU/C28x/CCS/cpu_c.c",line 122,c
+      86 00000002 2B42          MOV       *-SP[2],#0            ; [CPU_ALU] |122| 
+      87                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/ImitatePLC/Software/uC-CPU/C28x/CCS/cpu_c.c",line 125,c
+      88 00000003 5210          CMPB      AL,#16                ; [CPU_ALU] |125| 
+      89 00000004 6610          B         $C$L1,HI              ; [CPU_ALU] |125| 
+      90                      ; branchcc occurs ; [] |125| 
+      91                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/ImitatePLC/Software/uC-CPU/C28x/CCS/cpu_c.c",line 126,c
+      92              $C$DW$8 .dwtag  DW_TAG_TI_branch
+      93                      .dwattr $C$DW$8, DW_AT_low_pc(0x00)
+      94                      .dwattr $C$DW$8, DW_AT_name("_CPU_SR_Save")
+      95                      .dwattr $C$DW$8, DW_AT_TI_call
+      96              
+      97 00000005 7640!         LCR       #_CPU_SR_Save         ; [CPU_ALU] |126| 
+         00000006 0000 
+      98                      ; call occurs [#_CPU_SR_Save] ; [] |126| 
+      99 00000007 9642          MOV       *-SP[2],AL            ; [CPU_ALU] |126| 
+     100                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/ImitatePLC/Software/uC-CPU/C28x/CCS/cpu_c.c",line 127,c
+     101 00000008 9241          MOV       AL,*-SP[1]            ; [CPU_ALU] |127| 
+     102 00000009 9CFF          ADDB      AL,#-1                ; [CPU_ALU] |127| 
+     103 0000000a 2DA9          MOV       T,AL                  ; [CPU_ALU] |127| 
+     104 0000000b 9A01          MOVB      AL,#1                 ; [CPU_ALU] |127| 
+     105 0000000c FF66          LSL       AL,T                  ; [CPU_ALU] |127| 
+     106 0000000d FF5E          NOT       AL                    ; [CPU_ALU] |127| 
+     107 0000000e 20A8          MOV       AH,IER                ; [CPU_FPU] |127| 
+     108 0000000f CEA8          AND       AL,AH                 ; [CPU_ALU] |127| 
+     109 00000010 23A9          MOV       IER,AL                ; [CPU_ALU] |127| 
+TMS320C2000 Assembler PC v20.2.1 Mon Jan  4 16:08:35 2021
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+cpu_c.asm                                                            PAGE    3
+
+     110                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/ImitatePLC/Software/uC-CPU/C28x/CCS/cpu_c.c",line 128,c
+     111 00000011 9242          MOV       AL,*-SP[2]            ; [CPU_ALU] |128| 
+     112              $C$DW$9 .dwtag  DW_TAG_TI_branch
+     113                      .dwattr $C$DW$9, DW_AT_low_pc(0x00)
+     114                      .dwattr $C$DW$9, DW_AT_name("_CPU_SR_Restore")
+     115                      .dwattr $C$DW$9, DW_AT_TI_call
+     116              
+     117 00000012 7640!         LCR       #_CPU_SR_Restore      ; [CPU_ALU] |128| 
+         00000013 0000 
+     118                      ; call occurs [#_CPU_SR_Restore] ; [] |128| 
+     119                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/ImitatePLC/Software/uC-CPU/C28x/CCS/cpu_c.c",line 130,c
+     120 00000014       $C$L1:    
+     121 00000014 FE82          SUBB      SP,#2                 ; [CPU_ARAU] 
+     122                      .dwcfi  cfa_offset, -2
+     123              $C$DW$10        .dwtag  DW_TAG_TI_branch
+     124                      .dwattr $C$DW$10, DW_AT_low_pc(0x00)
+     125                      .dwattr $C$DW$10, DW_AT_TI_return
+     126              
+     127 00000015 0006          LRETR     ; [CPU_ALU] 
+     128                      ; return occurs ; [] 
+     129                      .dwattr $C$DW$4, DW_AT_TI_end_file("C:/ti/Workspace/PLC_certificate/ImitatePLC/Software/uC-CPU/C28x/C
+     130                      .dwattr $C$DW$4, DW_AT_TI_end_line(0x82)
+     131                      .dwattr $C$DW$4, DW_AT_TI_end_column(0x01)
+     132                      .dwendentry
+     133                      .dwendtag $C$DW$4
+     134              
+     135 00000016               .sect   ".text"
+     136                      .clink
+     137                      .global _CPU_IntSrcEn
+     138              
+     139              $C$DW$11        .dwtag  DW_TAG_subprogram
+     140                      .dwattr $C$DW$11, DW_AT_name("CPU_IntSrcEn")
+     141                      .dwattr $C$DW$11, DW_AT_low_pc(_CPU_IntSrcEn)
+     142                      .dwattr $C$DW$11, DW_AT_high_pc(0x00)
+     143                      .dwattr $C$DW$11, DW_AT_TI_symbol_name("_CPU_IntSrcEn")
+     144                      .dwattr $C$DW$11, DW_AT_external
+     145                      .dwattr $C$DW$11, DW_AT_TI_begin_file("C:/ti/Workspace/PLC_certificate/ImitatePLC/Software/uC-CPU/C28
+     146                      .dwattr $C$DW$11, DW_AT_TI_begin_line(0x95)
+     147                      .dwattr $C$DW$11, DW_AT_TI_begin_column(0x07)
+     148                      .dwattr $C$DW$11, DW_AT_TI_max_frame_size(-4)
+     149                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/ImitatePLC/Software/uC-CPU/C28x/CCS/cpu_c.c",line 150,c
+     150              
+     151                      .dwfde $C$DW$CIE, _CPU_IntSrcEn
+     152              $C$DW$12        .dwtag  DW_TAG_formal_parameter
+     153                      .dwattr $C$DW$12, DW_AT_name("bit")
+     154                      .dwattr $C$DW$12, DW_AT_TI_symbol_name("_bit")
+     155                      .dwattr $C$DW$12, DW_AT_type(*$C$DW$T$23)
+     156                      .dwattr $C$DW$12, DW_AT_location[DW_OP_reg0]
+     157              
+     158              
+     159              ;***************************************************************
+     160              ;* FNAME: _CPU_IntSrcEn                 FR SIZE:   2           *
+     161              ;*                                                             *
+     162              ;* FUNCTION ENVIRONMENT                                        *
+     163              ;*                                                             *
+TMS320C2000 Assembler PC v20.2.1 Mon Jan  4 16:08:35 2021
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+cpu_c.asm                                                            PAGE    4
+
+     164              ;* FUNCTION PROPERTIES                                         *
+     165              ;*                            0 Parameter,  2 Auto,  0 SOE     *
+     166              ;***************************************************************
+     167              
+     168 00000016       _CPU_IntSrcEn:
+     169                      .dwcfi  cfa_offset, -2
+     170                      .dwcfi  save_reg_to_mem, 26, 0
+     171 00000016 FE02          ADDB      SP,#2                 ; [CPU_ARAU] 
+     172                      .dwcfi  cfa_offset, -4
+     173              $C$DW$13        .dwtag  DW_TAG_variable
+     174                      .dwattr $C$DW$13, DW_AT_name("bit")
+     175                      .dwattr $C$DW$13, DW_AT_TI_symbol_name("_bit")
+     176                      .dwattr $C$DW$13, DW_AT_type(*$C$DW$T$23)
+     177                      .dwattr $C$DW$13, DW_AT_location[DW_OP_breg20 -1]
+     178              
+     179              $C$DW$14        .dwtag  DW_TAG_variable
+     180                      .dwattr $C$DW$14, DW_AT_name("cpu_sr")
+     181                      .dwattr $C$DW$14, DW_AT_TI_symbol_name("_cpu_sr")
+     182                      .dwattr $C$DW$14, DW_AT_type(*$C$DW$T$20)
+     183                      .dwattr $C$DW$14, DW_AT_location[DW_OP_breg20 -2]
+     184              
+     185 00000017 9641          MOV       *-SP[1],AL            ; [CPU_ALU] |150| 
+     186                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/ImitatePLC/Software/uC-CPU/C28x/CCS/cpu_c.c",line 151,c
+     187 00000018 2B42          MOV       *-SP[2],#0            ; [CPU_ALU] |151| 
+     188                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/ImitatePLC/Software/uC-CPU/C28x/CCS/cpu_c.c",line 154,c
+     189 00000019 5210          CMPB      AL,#16                ; [CPU_ALU] |154| 
+     190 0000001a 660F          B         $C$L2,HI              ; [CPU_ALU] |154| 
+     191                      ; branchcc occurs ; [] |154| 
+     192                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/ImitatePLC/Software/uC-CPU/C28x/CCS/cpu_c.c",line 155,c
+     193              $C$DW$15        .dwtag  DW_TAG_TI_branch
+     194                      .dwattr $C$DW$15, DW_AT_low_pc(0x00)
+     195                      .dwattr $C$DW$15, DW_AT_name("_CPU_SR_Save")
+     196                      .dwattr $C$DW$15, DW_AT_TI_call
+     197              
+     198 0000001b 7640!         LCR       #_CPU_SR_Save         ; [CPU_ALU] |155| 
+         0000001c 0000 
+     199                      ; call occurs [#_CPU_SR_Save] ; [] |155| 
+     200 0000001d 9642          MOV       *-SP[2],AL            ; [CPU_ALU] |155| 
+     201                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/ImitatePLC/Software/uC-CPU/C28x/CCS/cpu_c.c",line 156,c
+     202 0000001e 9241          MOV       AL,*-SP[1]            ; [CPU_ALU] |156| 
+     203 0000001f 9CFF          ADDB      AL,#-1                ; [CPU_ALU] |156| 
+     204 00000020 2DA9          MOV       T,AL                  ; [CPU_ALU] |156| 
+     205 00000021 9A01          MOVB      AL,#1                 ; [CPU_ALU] |156| 
+     206 00000022 FF66          LSL       AL,T                  ; [CPU_ALU] |156| 
+     207 00000023 20A8          MOV       AH,IER                ; [CPU_FPU] |156| 
+     208 00000024 CAA8          OR        AL,AH                 ; [CPU_ALU] |156| 
+     209 00000025 23A9          MOV       IER,AL                ; [CPU_ALU] |156| 
+     210                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/ImitatePLC/Software/uC-CPU/C28x/CCS/cpu_c.c",line 157,c
+     211 00000026 9242          MOV       AL,*-SP[2]            ; [CPU_ALU] |157| 
+     212              $C$DW$16        .dwtag  DW_TAG_TI_branch
+     213                      .dwattr $C$DW$16, DW_AT_low_pc(0x00)
+     214                      .dwattr $C$DW$16, DW_AT_name("_CPU_SR_Restore")
+     215                      .dwattr $C$DW$16, DW_AT_TI_call
+     216              
+     217 00000027 7640!         LCR       #_CPU_SR_Restore      ; [CPU_ALU] |157| 
+TMS320C2000 Assembler PC v20.2.1 Mon Jan  4 16:08:35 2021
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+cpu_c.asm                                                            PAGE    5
+
+         00000028 0000 
+     218                      ; call occurs [#_CPU_SR_Restore] ; [] |157| 
+     219                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/ImitatePLC/Software/uC-CPU/C28x/CCS/cpu_c.c",line 159,c
+     220 00000029       $C$L2:    
+     221 00000029 FE82          SUBB      SP,#2                 ; [CPU_ARAU] 
+     222                      .dwcfi  cfa_offset, -2
+     223              $C$DW$17        .dwtag  DW_TAG_TI_branch
+     224                      .dwattr $C$DW$17, DW_AT_low_pc(0x00)
+     225                      .dwattr $C$DW$17, DW_AT_TI_return
+     226              
+     227 0000002a 0006          LRETR     ; [CPU_ALU] 
+     228                      ; return occurs ; [] 
+     229                      .dwattr $C$DW$11, DW_AT_TI_end_file("C:/ti/Workspace/PLC_certificate/ImitatePLC/Software/uC-CPU/C28x/
+     230                      .dwattr $C$DW$11, DW_AT_TI_end_line(0x9f)
+     231                      .dwattr $C$DW$11, DW_AT_TI_end_column(0x01)
+     232                      .dwendentry
+     233                      .dwendtag $C$DW$11
+     234              
+     235 0000002b               .sect   ".text"
+     236                      .clink
+     237                      .global _CPU_IntSrcPendClr
+     238              
+     239              $C$DW$18        .dwtag  DW_TAG_subprogram
+     240                      .dwattr $C$DW$18, DW_AT_name("CPU_IntSrcPendClr")
+     241                      .dwattr $C$DW$18, DW_AT_low_pc(_CPU_IntSrcPendClr)
+     242                      .dwattr $C$DW$18, DW_AT_high_pc(0x00)
+     243                      .dwattr $C$DW$18, DW_AT_TI_symbol_name("_CPU_IntSrcPendClr")
+     244                      .dwattr $C$DW$18, DW_AT_external
+     245                      .dwattr $C$DW$18, DW_AT_TI_begin_file("C:/ti/Workspace/PLC_certificate/ImitatePLC/Software/uC-CPU/C28
+     246                      .dwattr $C$DW$18, DW_AT_TI_begin_line(0xb2)
+     247                      .dwattr $C$DW$18, DW_AT_TI_begin_column(0x07)
+     248                      .dwattr $C$DW$18, DW_AT_TI_max_frame_size(-4)
+     249                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/ImitatePLC/Software/uC-CPU/C28x/CCS/cpu_c.c",line 179,c
+     250              
+     251                      .dwfde $C$DW$CIE, _CPU_IntSrcPendClr
+     252              $C$DW$19        .dwtag  DW_TAG_formal_parameter
+     253                      .dwattr $C$DW$19, DW_AT_name("bit")
+     254                      .dwattr $C$DW$19, DW_AT_TI_symbol_name("_bit")
+     255                      .dwattr $C$DW$19, DW_AT_type(*$C$DW$T$23)
+     256                      .dwattr $C$DW$19, DW_AT_location[DW_OP_reg0]
+     257              
+     258              
+     259              ;***************************************************************
+     260              ;* FNAME: _CPU_IntSrcPendClr            FR SIZE:   2           *
+     261              ;*                                                             *
+     262              ;* FUNCTION ENVIRONMENT                                        *
+     263              ;*                                                             *
+     264              ;* FUNCTION PROPERTIES                                         *
+     265              ;*                            0 Parameter,  1 Auto,  0 SOE     *
+     266              ;***************************************************************
+     267              
+     268 0000002b       _CPU_IntSrcPendClr:
+     269                      .dwcfi  cfa_offset, -2
+     270                      .dwcfi  save_reg_to_mem, 26, 0
+     271 0000002b FE02          ADDB      SP,#2                 ; [CPU_ARAU] 
+TMS320C2000 Assembler PC v20.2.1 Mon Jan  4 16:08:35 2021
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+cpu_c.asm                                                            PAGE    6
+
+     272                      .dwcfi  cfa_offset, -4
+     273              $C$DW$20        .dwtag  DW_TAG_variable
+     274                      .dwattr $C$DW$20, DW_AT_name("bit")
+     275                      .dwattr $C$DW$20, DW_AT_TI_symbol_name("_bit")
+     276                      .dwattr $C$DW$20, DW_AT_type(*$C$DW$T$23)
+     277                      .dwattr $C$DW$20, DW_AT_location[DW_OP_breg20 -1]
+     278              
+     279 0000002c 9641          MOV       *-SP[1],AL            ; [CPU_ALU] |179| 
+     280                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/ImitatePLC/Software/uC-CPU/C28x/CCS/cpu_c.c",line 182,c
+     281 0000002d 6F31          B         $C$L19,UNC            ; [CPU_ALU] |182| 
+     282                      ; branch occurs ; [] |182| 
+     283 0000002e       $C$L3:    
+     284                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/ImitatePLC/Software/uC-CPU/C28x/CCS/cpu_c.c",line 184,c
+     285 0000002e 762F          AND IFR, #0x7FFF
+         0000002f 7FFF 
+     286                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/ImitatePLC/Software/uC-CPU/C28x/CCS/cpu_c.c",line 185,c
+     287 00000030 6F40          B         $C$L21,UNC            ; [CPU_ALU] |185| 
+     288                      ; branch occurs ; [] |185| 
+     289 00000031       $C$L4:    
+     290                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/ImitatePLC/Software/uC-CPU/C28x/CCS/cpu_c.c",line 189,c
+     291 00000031 762F          AND IFR, #0xBFFF
+         00000032 BFFF 
+     292                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/ImitatePLC/Software/uC-CPU/C28x/CCS/cpu_c.c",line 190,c
+     293 00000033 6F3D          B         $C$L21,UNC            ; [CPU_ALU] |190| 
+     294                      ; branch occurs ; [] |190| 
+     295 00000034       $C$L5:    
+     296                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/ImitatePLC/Software/uC-CPU/C28x/CCS/cpu_c.c",line 194,c
+     297 00000034 762F          AND IFR, #0xDFFF
+         00000035 DFFF 
+     298                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/ImitatePLC/Software/uC-CPU/C28x/CCS/cpu_c.c",line 195,c
+     299 00000036 6F3A          B         $C$L21,UNC            ; [CPU_ALU] |195| 
+     300                      ; branch occurs ; [] |195| 
+     301 00000037       $C$L6:    
+     302                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/ImitatePLC/Software/uC-CPU/C28x/CCS/cpu_c.c",line 199,c
+     303 00000037 762F          AND IFR, #0xEFFF
+         00000038 EFFF 
+     304                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/ImitatePLC/Software/uC-CPU/C28x/CCS/cpu_c.c",line 200,c
+     305 00000039 6F37          B         $C$L21,UNC            ; [CPU_ALU] |200| 
+     306                      ; branch occurs ; [] |200| 
+     307 0000003a       $C$L7:    
+     308                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/ImitatePLC/Software/uC-CPU/C28x/CCS/cpu_c.c",line 204,c
+     309 0000003a 762F          AND IFR, #0xF7FF
+         0000003b F7FF 
+     310                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/ImitatePLC/Software/uC-CPU/C28x/CCS/cpu_c.c",line 205,c
+     311 0000003c 6F34          B         $C$L21,UNC            ; [CPU_ALU] |205| 
+     312                      ; branch occurs ; [] |205| 
+     313 0000003d       $C$L8:    
+     314                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/ImitatePLC/Software/uC-CPU/C28x/CCS/cpu_c.c",line 209,c
+     315 0000003d 762F          AND IFR, #0xFBFF
+         0000003e FBFF 
+     316                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/ImitatePLC/Software/uC-CPU/C28x/CCS/cpu_c.c",line 210,c
+     317 0000003f 6F31          B         $C$L21,UNC            ; [CPU_ALU] |210| 
+     318                      ; branch occurs ; [] |210| 
+     319 00000040       $C$L9:    
+     320                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/ImitatePLC/Software/uC-CPU/C28x/CCS/cpu_c.c",line 214,c
+TMS320C2000 Assembler PC v20.2.1 Mon Jan  4 16:08:35 2021
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+cpu_c.asm                                                            PAGE    7
+
+     321 00000040 762F          AND IFR, #0xFDFF
+         00000041 FDFF 
+     322                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/ImitatePLC/Software/uC-CPU/C28x/CCS/cpu_c.c",line 215,c
+     323 00000042 6F2E          B         $C$L21,UNC            ; [CPU_ALU] |215| 
+     324                      ; branch occurs ; [] |215| 
+     325 00000043       $C$L10:    
+     326                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/ImitatePLC/Software/uC-CPU/C28x/CCS/cpu_c.c",line 219,c
+     327 00000043 762F          AND IFR, #0xFEFF
+         00000044 FEFF 
+     328                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/ImitatePLC/Software/uC-CPU/C28x/CCS/cpu_c.c",line 220,c
+     329 00000045 6F2B          B         $C$L21,UNC            ; [CPU_ALU] |220| 
+     330                      ; branch occurs ; [] |220| 
+     331 00000046       $C$L11:    
+     332                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/ImitatePLC/Software/uC-CPU/C28x/CCS/cpu_c.c",line 224,c
+     333 00000046 762F          AND IFR, #0xFF7F
+         00000047 FF7F 
+     334                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/ImitatePLC/Software/uC-CPU/C28x/CCS/cpu_c.c",line 225,c
+     335 00000048 6F28          B         $C$L21,UNC            ; [CPU_ALU] |225| 
+     336                      ; branch occurs ; [] |225| 
+     337 00000049       $C$L12:    
+     338                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/ImitatePLC/Software/uC-CPU/C28x/CCS/cpu_c.c",line 229,c
+     339 00000049 762F          AND IFR, #0xFFBF
+         0000004a FFBF 
+     340                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/ImitatePLC/Software/uC-CPU/C28x/CCS/cpu_c.c",line 230,c
+     341 0000004b 6F25          B         $C$L21,UNC            ; [CPU_ALU] |230| 
+     342                      ; branch occurs ; [] |230| 
+     343 0000004c       $C$L13:    
+     344                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/ImitatePLC/Software/uC-CPU/C28x/CCS/cpu_c.c",line 234,c
+     345 0000004c 762F          AND IFR, #0xFFDF
+         0000004d FFDF 
+     346                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/ImitatePLC/Software/uC-CPU/C28x/CCS/cpu_c.c",line 235,c
+     347 0000004e 6F22          B         $C$L21,UNC            ; [CPU_ALU] |235| 
+     348                      ; branch occurs ; [] |235| 
+     349 0000004f       $C$L14:    
+     350                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/ImitatePLC/Software/uC-CPU/C28x/CCS/cpu_c.c",line 239,c
+     351 0000004f 762F          AND IFR, #0xFFEF
+         00000050 FFEF 
+     352                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/ImitatePLC/Software/uC-CPU/C28x/CCS/cpu_c.c",line 240,c
+     353 00000051 6F1F          B         $C$L21,UNC            ; [CPU_ALU] |240| 
+     354                      ; branch occurs ; [] |240| 
+     355 00000052       $C$L15:    
+     356                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/ImitatePLC/Software/uC-CPU/C28x/CCS/cpu_c.c",line 244,c
+     357 00000052 762F          AND IFR, #0xFFF7
+         00000053 FFF7 
+     358                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/ImitatePLC/Software/uC-CPU/C28x/CCS/cpu_c.c",line 245,c
+     359 00000054 6F1C          B         $C$L21,UNC            ; [CPU_ALU] |245| 
+     360                      ; branch occurs ; [] |245| 
+     361 00000055       $C$L16:    
+     362                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/ImitatePLC/Software/uC-CPU/C28x/CCS/cpu_c.c",line 249,c
+     363 00000055 762F          AND IFR, #0xFFFB
+         00000056 FFFB 
+     364                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/ImitatePLC/Software/uC-CPU/C28x/CCS/cpu_c.c",line 250,c
+     365 00000057 6F19          B         $C$L21,UNC            ; [CPU_ALU] |250| 
+     366                      ; branch occurs ; [] |250| 
+     367 00000058       $C$L17:    
+TMS320C2000 Assembler PC v20.2.1 Mon Jan  4 16:08:35 2021
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+cpu_c.asm                                                            PAGE    8
+
+     368                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/ImitatePLC/Software/uC-CPU/C28x/CCS/cpu_c.c",line 254,c
+     369 00000058 762F          AND IFR, #0xFFFD
+         00000059 FFFD 
+     370                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/ImitatePLC/Software/uC-CPU/C28x/CCS/cpu_c.c",line 255,c
+     371 0000005a 6F16          B         $C$L21,UNC            ; [CPU_ALU] |255| 
+     372                      ; branch occurs ; [] |255| 
+     373 0000005b       $C$L18:    
+     374                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/ImitatePLC/Software/uC-CPU/C28x/CCS/cpu_c.c",line 259,c
+     375 0000005b 762F          AND IFR, #0xFFFE
+         0000005c FFFE 
+     376                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/ImitatePLC/Software/uC-CPU/C28x/CCS/cpu_c.c",line 260,c
+     377 0000005d 6F13          B         $C$L21,UNC            ; [CPU_ALU] |260| 
+     378                      ; branch occurs ; [] |260| 
+     379 0000005e       $C$L19:    
+     380                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/ImitatePLC/Software/uC-CPU/C28x/CCS/cpu_c.c",line 182,c
+     381 0000005e 9341          MOV       AH,*-SP[1]            ; [CPU_ALU] |182| 
+     382 0000005f 9CFF          ADDB      AL,#-1                ; [CPU_ALU] |182| 
+     383 00000060 520F          CMPB      AL,#15                ; [CPU_ALU] |182| 
+     384 00000061 6904          B         $C$L20,LOS            ; [CPU_ALU] |182| 
+     385                      ; branchcc occurs ; [] |182| 
+     386 00000062 5341          CMPB      AH,#65                ; [CPU_ALU] |182| 
+     387 00000063 61E9          B         $C$L13,EQ             ; [CPU_ALU] |182| 
+     388                      ; branchcc occurs ; [] |182| 
+     389 00000064 6F0C          B         $C$L21,UNC            ; [CPU_ALU] |182| 
+     390                      ; branch occurs ; [] |182| 
+     391 00000065       $C$L20:    
+     392 00000065 5603          MOV       ACC,AH << #1          ; [CPU_ALU] |182| 
+         00000066 01A8 
+     393 00000067 5CA9          MOVZ      AR4,AL                ; [CPU_ALU] |182| 
+     394 00000068 76C0+         MOVL      XAR7,#$C$SW1          ; [CPU_ARAU] |182| 
+         00000069 0000 
+     395 0000006a 06A7          MOVL      ACC,XAR7              ; [CPU_ALU] |182| 
+     396 0000006b DC82          SUBB      XAR4,#2               ; [CPU_ARAU] |182| 
+     397 0000006c 0DA4          ADDU      ACC,AR4               ; [CPU_ALU] |182| 
+     398 0000006d 1EA7          MOVL      XAR7,ACC              ; [CPU_ALU] |182| 
+     399 0000006e C5C7          MOVL      XAR7,*XAR7            ; [CPU_ALU] |182| 
+     400 0000006f 7620          LB        *XAR7                 ; [CPU_ALU] |182| 
+     401                      ; branch occurs ; [] |182| 
+     402 00000000               .sect   ".switch:_CPU_IntSrcPendClr"
+     403                      .clink
+     404 00000000 005B' $C$SW1: .long   $C$L18  ; 1
+         00000001 0000 
+     405 00000002 0058'         .long   $C$L17  ; 2
+         00000003 0000 
+     406 00000004 0055'         .long   $C$L16  ; 3
+         00000005 0000 
+     407 00000006 0052'         .long   $C$L15  ; 4
+         00000007 0000 
+     408 00000008 004F'         .long   $C$L14  ; 5
+         00000009 0000 
+     409 0000000a 0070'         .long   $C$L21  ; 0
+         0000000b 0000 
+     410 0000000c 0049'         .long   $C$L12  ; 7
+         0000000d 0000 
+     411 0000000e 0046'         .long   $C$L11  ; 8
+TMS320C2000 Assembler PC v20.2.1 Mon Jan  4 16:08:35 2021
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+cpu_c.asm                                                            PAGE    9
+
+         0000000f 0000 
+     412 00000010 0043'         .long   $C$L10  ; 9
+         00000011 0000 
+     413 00000012 0040'         .long   $C$L9   ; 10
+         00000013 0000 
+     414 00000014 003D'         .long   $C$L8   ; 11
+         00000015 0000 
+     415 00000016 003A'         .long   $C$L7   ; 12
+         00000017 0000 
+     416 00000018 0037'         .long   $C$L6   ; 13
+         00000019 0000 
+     417 0000001a 0034'         .long   $C$L5   ; 14
+         0000001b 0000 
+     418 0000001c 0031'         .long   $C$L4   ; 15
+         0000001d 0000 
+     419 0000001e 002E'         .long   $C$L3   ; 16
+         0000001f 0000 
+     420 00000070               .sect   ".text"
+     421 00000070       $C$L21:    
+     422 00000070 FE82          SUBB      SP,#2                 ; [CPU_ARAU] 
+     423                      .dwcfi  cfa_offset, -2
+     424 00000071 FF69          SPM       #0                    ; [CPU_ALU] 
+     425              $C$DW$21        .dwtag  DW_TAG_TI_branch
+     426                      .dwattr $C$DW$21, DW_AT_low_pc(0x00)
+     427                      .dwattr $C$DW$21, DW_AT_TI_return
+     428              
+     429 00000072 0006          LRETR     ; [CPU_ALU] 
+     430                      ; return occurs ; [] 
+     431                      .dwattr $C$DW$18, DW_AT_TI_end_file("C:/ti/Workspace/PLC_certificate/ImitatePLC/Software/uC-CPU/C28x/
+     432                      .dwattr $C$DW$18, DW_AT_TI_end_line(0x10a)
+     433                      .dwattr $C$DW$18, DW_AT_TI_end_column(0x01)
+     434                      .dwendentry
+     435                      .dwendtag $C$DW$18
+     436              
+     437              ;**************************************************************
+     438              ;* UNDEFINED EXTERNAL REFERENCES                              *
+     439              ;**************************************************************
+     440                      .global _CPU_SR_Restore
+     441                      .global _CPU_SR_Save
+     442              
+     443              ;***************************************************************
+     444              ;* TYPE INFORMATION                                            *
+     445              ;***************************************************************
+     446              $C$DW$T$2       .dwtag  DW_TAG_unspecified_type
+     447                      .dwattr $C$DW$T$2, DW_AT_name("void")
+     448              
+     449              $C$DW$T$4       .dwtag  DW_TAG_base_type
+     450                      .dwattr $C$DW$T$4, DW_AT_encoding(DW_ATE_boolean)
+     451                      .dwattr $C$DW$T$4, DW_AT_name("bool")
+     452                      .dwattr $C$DW$T$4, DW_AT_byte_size(0x01)
+     453              
+     454              $C$DW$T$5       .dwtag  DW_TAG_base_type
+     455                      .dwattr $C$DW$T$5, DW_AT_encoding(DW_ATE_signed_char)
+     456                      .dwattr $C$DW$T$5, DW_AT_name("signed char")
+     457                      .dwattr $C$DW$T$5, DW_AT_byte_size(0x01)
+TMS320C2000 Assembler PC v20.2.1 Mon Jan  4 16:08:35 2021
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+cpu_c.asm                                                            PAGE   10
+
+     458              
+     459              $C$DW$T$6       .dwtag  DW_TAG_base_type
+     460                      .dwattr $C$DW$T$6, DW_AT_encoding(DW_ATE_unsigned_char)
+     461                      .dwattr $C$DW$T$6, DW_AT_name("unsigned char")
+     462                      .dwattr $C$DW$T$6, DW_AT_byte_size(0x01)
+     463              
+     464              $C$DW$T$7       .dwtag  DW_TAG_base_type
+     465                      .dwattr $C$DW$T$7, DW_AT_encoding(DW_ATE_signed_char)
+     466                      .dwattr $C$DW$T$7, DW_AT_name("wchar_t")
+     467                      .dwattr $C$DW$T$7, DW_AT_byte_size(0x01)
+     468              
+     469              $C$DW$T$8       .dwtag  DW_TAG_base_type
+     470                      .dwattr $C$DW$T$8, DW_AT_encoding(DW_ATE_signed)
+     471                      .dwattr $C$DW$T$8, DW_AT_name("short")
+     472                      .dwattr $C$DW$T$8, DW_AT_byte_size(0x01)
+     473              
+     474              $C$DW$T$9       .dwtag  DW_TAG_base_type
+     475                      .dwattr $C$DW$T$9, DW_AT_encoding(DW_ATE_unsigned)
+     476                      .dwattr $C$DW$T$9, DW_AT_name("unsigned short")
+     477                      .dwattr $C$DW$T$9, DW_AT_byte_size(0x01)
+     478              
+     479              $C$DW$T$19      .dwtag  DW_TAG_typedef
+     480                      .dwattr $C$DW$T$19, DW_AT_name("CPU_INT16U")
+     481                      .dwattr $C$DW$T$19, DW_AT_type(*$C$DW$T$9)
+     482                      .dwattr $C$DW$T$19, DW_AT_language(DW_LANG_C)
+     483              
+     484              $C$DW$T$23      .dwtag  DW_TAG_typedef
+     485                      .dwattr $C$DW$T$23, DW_AT_name("CPU_DATA")
+     486                      .dwattr $C$DW$T$23, DW_AT_type(*$C$DW$T$19)
+     487                      .dwattr $C$DW$T$23, DW_AT_language(DW_LANG_C)
+     488              
+     489              $C$DW$T$20      .dwtag  DW_TAG_typedef
+     490                      .dwattr $C$DW$T$20, DW_AT_name("CPU_SR")
+     491                      .dwattr $C$DW$T$20, DW_AT_type(*$C$DW$T$19)
+     492                      .dwattr $C$DW$T$20, DW_AT_language(DW_LANG_C)
+     493              
+     494              $C$DW$T$10      .dwtag  DW_TAG_base_type
+     495                      .dwattr $C$DW$T$10, DW_AT_encoding(DW_ATE_signed)
+     496                      .dwattr $C$DW$T$10, DW_AT_name("int")
+     497                      .dwattr $C$DW$T$10, DW_AT_byte_size(0x01)
+     498              
+     499              $C$DW$T$11      .dwtag  DW_TAG_base_type
+     500                      .dwattr $C$DW$T$11, DW_AT_encoding(DW_ATE_unsigned)
+     501                      .dwattr $C$DW$T$11, DW_AT_name("unsigned int")
+     502                      .dwattr $C$DW$T$11, DW_AT_byte_size(0x01)
+     503              
+     504              $C$DW$T$12      .dwtag  DW_TAG_base_type
+     505                      .dwattr $C$DW$T$12, DW_AT_encoding(DW_ATE_signed)
+     506                      .dwattr $C$DW$T$12, DW_AT_name("long")
+     507                      .dwattr $C$DW$T$12, DW_AT_byte_size(0x02)
+     508              
+     509              $C$DW$T$13      .dwtag  DW_TAG_base_type
+     510                      .dwattr $C$DW$T$13, DW_AT_encoding(DW_ATE_unsigned)
+     511                      .dwattr $C$DW$T$13, DW_AT_name("unsigned long")
+     512                      .dwattr $C$DW$T$13, DW_AT_byte_size(0x02)
+TMS320C2000 Assembler PC v20.2.1 Mon Jan  4 16:08:35 2021
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+cpu_c.asm                                                            PAGE   11
+
+     513              
+     514              $C$DW$T$14      .dwtag  DW_TAG_base_type
+     515                      .dwattr $C$DW$T$14, DW_AT_encoding(DW_ATE_signed)
+     516                      .dwattr $C$DW$T$14, DW_AT_name("long long")
+     517                      .dwattr $C$DW$T$14, DW_AT_byte_size(0x04)
+     518              
+     519              $C$DW$T$15      .dwtag  DW_TAG_base_type
+     520                      .dwattr $C$DW$T$15, DW_AT_encoding(DW_ATE_unsigned)
+     521                      .dwattr $C$DW$T$15, DW_AT_name("unsigned long long")
+     522                      .dwattr $C$DW$T$15, DW_AT_byte_size(0x04)
+     523              
+     524              $C$DW$T$16      .dwtag  DW_TAG_base_type
+     525                      .dwattr $C$DW$T$16, DW_AT_encoding(DW_ATE_float)
+     526                      .dwattr $C$DW$T$16, DW_AT_name("float")
+     527                      .dwattr $C$DW$T$16, DW_AT_byte_size(0x02)
+     528              
+     529              $C$DW$T$17      .dwtag  DW_TAG_base_type
+     530                      .dwattr $C$DW$T$17, DW_AT_encoding(DW_ATE_float)
+     531                      .dwattr $C$DW$T$17, DW_AT_name("double")
+     532                      .dwattr $C$DW$T$17, DW_AT_byte_size(0x02)
+     533              
+     534              $C$DW$T$18      .dwtag  DW_TAG_base_type
+     535                      .dwattr $C$DW$T$18, DW_AT_encoding(DW_ATE_float)
+     536                      .dwattr $C$DW$T$18, DW_AT_name("long double")
+     537                      .dwattr $C$DW$T$18, DW_AT_byte_size(0x04)
+     538              
+     539                      .dwattr $C$DW$CU, DW_AT_language(DW_LANG_C)
+     540              
+     541              ;***************************************************************
+     542              ;* DWARF CIE ENTRIES                                           *
+     543              ;***************************************************************
+     544              
+     545              $C$DW$CIE       .dwcie 26
+     546                      .dwcfi  cfa_register, 20
+     547                      .dwcfi  cfa_offset, 0
+     548                      .dwcfi  same_value, 28
+     549                      .dwcfi  same_value, 6
+     550                      .dwcfi  same_value, 7
+     551                      .dwcfi  same_value, 8
+     552                      .dwcfi  same_value, 9
+     553                      .dwcfi  same_value, 10
+     554                      .dwcfi  same_value, 11
+     555                      .dwcfi  same_value, 59
+     556                      .dwcfi  same_value, 63
+     557                      .dwcfi  same_value, 67
+     558                      .dwcfi  same_value, 71
+     559                      .dwendentry
+     560              
+     561              ;***************************************************************
+     562              ;* DWARF REGISTER MAP                                          *
+     563              ;***************************************************************
+     564              
+     565              $C$DW$22        .dwtag  DW_TAG_TI_assign_register
+     566                      .dwattr $C$DW$22, DW_AT_name("AL")
+     567                      .dwattr $C$DW$22, DW_AT_location[DW_OP_reg0]
+TMS320C2000 Assembler PC v20.2.1 Mon Jan  4 16:08:35 2021
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+cpu_c.asm                                                            PAGE   12
+
+     568              
+     569              $C$DW$23        .dwtag  DW_TAG_TI_assign_register
+     570                      .dwattr $C$DW$23, DW_AT_name("AH")
+     571                      .dwattr $C$DW$23, DW_AT_location[DW_OP_reg1]
+     572              
+     573              $C$DW$24        .dwtag  DW_TAG_TI_assign_register
+     574                      .dwattr $C$DW$24, DW_AT_name("PL")
+     575                      .dwattr $C$DW$24, DW_AT_location[DW_OP_reg2]
+     576              
+     577              $C$DW$25        .dwtag  DW_TAG_TI_assign_register
+     578                      .dwattr $C$DW$25, DW_AT_name("PH")
+     579                      .dwattr $C$DW$25, DW_AT_location[DW_OP_reg3]
+     580              
+     581              $C$DW$26        .dwtag  DW_TAG_TI_assign_register
+     582                      .dwattr $C$DW$26, DW_AT_name("SP")
+     583                      .dwattr $C$DW$26, DW_AT_location[DW_OP_reg20]
+     584              
+     585              $C$DW$27        .dwtag  DW_TAG_TI_assign_register
+     586                      .dwattr $C$DW$27, DW_AT_name("XT")
+     587                      .dwattr $C$DW$27, DW_AT_location[DW_OP_reg21]
+     588              
+     589              $C$DW$28        .dwtag  DW_TAG_TI_assign_register
+     590                      .dwattr $C$DW$28, DW_AT_name("T")
+     591                      .dwattr $C$DW$28, DW_AT_location[DW_OP_reg22]
+     592              
+     593              $C$DW$29        .dwtag  DW_TAG_TI_assign_register
+     594                      .dwattr $C$DW$29, DW_AT_name("ST0")
+     595                      .dwattr $C$DW$29, DW_AT_location[DW_OP_reg23]
+     596              
+     597              $C$DW$30        .dwtag  DW_TAG_TI_assign_register
+     598                      .dwattr $C$DW$30, DW_AT_name("ST1")
+     599                      .dwattr $C$DW$30, DW_AT_location[DW_OP_reg24]
+     600              
+     601              $C$DW$31        .dwtag  DW_TAG_TI_assign_register
+     602                      .dwattr $C$DW$31, DW_AT_name("PC")
+     603                      .dwattr $C$DW$31, DW_AT_location[DW_OP_reg25]
+     604              
+     605              $C$DW$32        .dwtag  DW_TAG_TI_assign_register
+     606                      .dwattr $C$DW$32, DW_AT_name("RPC")
+     607                      .dwattr $C$DW$32, DW_AT_location[DW_OP_reg26]
+     608              
+     609              $C$DW$33        .dwtag  DW_TAG_TI_assign_register
+     610                      .dwattr $C$DW$33, DW_AT_name("FP")
+     611                      .dwattr $C$DW$33, DW_AT_location[DW_OP_reg28]
+     612              
+     613              $C$DW$34        .dwtag  DW_TAG_TI_assign_register
+     614                      .dwattr $C$DW$34, DW_AT_name("DP")
+     615                      .dwattr $C$DW$34, DW_AT_location[DW_OP_reg29]
+     616              
+     617              $C$DW$35        .dwtag  DW_TAG_TI_assign_register
+     618                      .dwattr $C$DW$35, DW_AT_name("SXM")
+     619                      .dwattr $C$DW$35, DW_AT_location[DW_OP_reg30]
+     620              
+     621              $C$DW$36        .dwtag  DW_TAG_TI_assign_register
+     622                      .dwattr $C$DW$36, DW_AT_name("PM")
+TMS320C2000 Assembler PC v20.2.1 Mon Jan  4 16:08:35 2021
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+cpu_c.asm                                                            PAGE   13
+
+     623                      .dwattr $C$DW$36, DW_AT_location[DW_OP_reg31]
+     624              
+     625              $C$DW$37        .dwtag  DW_TAG_TI_assign_register
+     626                      .dwattr $C$DW$37, DW_AT_name("OVM")
+     627                      .dwattr $C$DW$37, DW_AT_location[DW_OP_regx 0x20]
+     628              
+     629              $C$DW$38        .dwtag  DW_TAG_TI_assign_register
+     630                      .dwattr $C$DW$38, DW_AT_name("PAGE0")
+     631                      .dwattr $C$DW$38, DW_AT_location[DW_OP_regx 0x21]
+     632              
+     633              $C$DW$39        .dwtag  DW_TAG_TI_assign_register
+     634                      .dwattr $C$DW$39, DW_AT_name("AMODE")
+     635                      .dwattr $C$DW$39, DW_AT_location[DW_OP_regx 0x22]
+     636              
+     637              $C$DW$40        .dwtag  DW_TAG_TI_assign_register
+     638                      .dwattr $C$DW$40, DW_AT_name("EALLOW")
+     639                      .dwattr $C$DW$40, DW_AT_location[DW_OP_regx 0x4e]
+     640              
+     641              $C$DW$41        .dwtag  DW_TAG_TI_assign_register
+     642                      .dwattr $C$DW$41, DW_AT_name("INTM")
+     643                      .dwattr $C$DW$41, DW_AT_location[DW_OP_regx 0x23]
+     644              
+     645              $C$DW$42        .dwtag  DW_TAG_TI_assign_register
+     646                      .dwattr $C$DW$42, DW_AT_name("IFR")
+     647                      .dwattr $C$DW$42, DW_AT_location[DW_OP_regx 0x24]
+     648              
+     649              $C$DW$43        .dwtag  DW_TAG_TI_assign_register
+     650                      .dwattr $C$DW$43, DW_AT_name("IER")
+     651                      .dwattr $C$DW$43, DW_AT_location[DW_OP_regx 0x25]
+     652              
+     653              $C$DW$44        .dwtag  DW_TAG_TI_assign_register
+     654                      .dwattr $C$DW$44, DW_AT_name("V")
+     655                      .dwattr $C$DW$44, DW_AT_location[DW_OP_regx 0x26]
+     656              
+     657              $C$DW$45        .dwtag  DW_TAG_TI_assign_register
+     658                      .dwattr $C$DW$45, DW_AT_name("PSEUDOH")
+     659                      .dwattr $C$DW$45, DW_AT_location[DW_OP_regx 0x4c]
+     660              
+     661              $C$DW$46        .dwtag  DW_TAG_TI_assign_register
+     662                      .dwattr $C$DW$46, DW_AT_name("VOL")
+     663                      .dwattr $C$DW$46, DW_AT_location[DW_OP_regx 0x4d]
+     664              
+     665              $C$DW$47        .dwtag  DW_TAG_TI_assign_register
+     666                      .dwattr $C$DW$47, DW_AT_name("AR0")
+     667                      .dwattr $C$DW$47, DW_AT_location[DW_OP_reg4]
+     668              
+     669              $C$DW$48        .dwtag  DW_TAG_TI_assign_register
+     670                      .dwattr $C$DW$48, DW_AT_name("XAR0")
+     671                      .dwattr $C$DW$48, DW_AT_location[DW_OP_reg5]
+     672              
+     673              $C$DW$49        .dwtag  DW_TAG_TI_assign_register
+     674                      .dwattr $C$DW$49, DW_AT_name("AR1")
+     675                      .dwattr $C$DW$49, DW_AT_location[DW_OP_reg6]
+     676              
+     677              $C$DW$50        .dwtag  DW_TAG_TI_assign_register
+TMS320C2000 Assembler PC v20.2.1 Mon Jan  4 16:08:35 2021
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+cpu_c.asm                                                            PAGE   14
+
+     678                      .dwattr $C$DW$50, DW_AT_name("XAR1")
+     679                      .dwattr $C$DW$50, DW_AT_location[DW_OP_reg7]
+     680              
+     681              $C$DW$51        .dwtag  DW_TAG_TI_assign_register
+     682                      .dwattr $C$DW$51, DW_AT_name("AR2")
+     683                      .dwattr $C$DW$51, DW_AT_location[DW_OP_reg8]
+     684              
+     685              $C$DW$52        .dwtag  DW_TAG_TI_assign_register
+     686                      .dwattr $C$DW$52, DW_AT_name("XAR2")
+     687                      .dwattr $C$DW$52, DW_AT_location[DW_OP_reg9]
+     688              
+     689              $C$DW$53        .dwtag  DW_TAG_TI_assign_register
+     690                      .dwattr $C$DW$53, DW_AT_name("AR3")
+     691                      .dwattr $C$DW$53, DW_AT_location[DW_OP_reg10]
+     692              
+     693              $C$DW$54        .dwtag  DW_TAG_TI_assign_register
+     694                      .dwattr $C$DW$54, DW_AT_name("XAR3")
+     695                      .dwattr $C$DW$54, DW_AT_location[DW_OP_reg11]
+     696              
+     697              $C$DW$55        .dwtag  DW_TAG_TI_assign_register
+     698                      .dwattr $C$DW$55, DW_AT_name("AR4")
+     699                      .dwattr $C$DW$55, DW_AT_location[DW_OP_reg12]
+     700              
+     701              $C$DW$56        .dwtag  DW_TAG_TI_assign_register
+     702                      .dwattr $C$DW$56, DW_AT_name("XAR4")
+     703                      .dwattr $C$DW$56, DW_AT_location[DW_OP_reg13]
+     704              
+     705              $C$DW$57        .dwtag  DW_TAG_TI_assign_register
+     706                      .dwattr $C$DW$57, DW_AT_name("AR5")
+     707                      .dwattr $C$DW$57, DW_AT_location[DW_OP_reg14]
+     708              
+     709              $C$DW$58        .dwtag  DW_TAG_TI_assign_register
+     710                      .dwattr $C$DW$58, DW_AT_name("XAR5")
+     711                      .dwattr $C$DW$58, DW_AT_location[DW_OP_reg15]
+     712              
+     713              $C$DW$59        .dwtag  DW_TAG_TI_assign_register
+     714                      .dwattr $C$DW$59, DW_AT_name("AR6")
+     715                      .dwattr $C$DW$59, DW_AT_location[DW_OP_reg16]
+     716              
+     717              $C$DW$60        .dwtag  DW_TAG_TI_assign_register
+     718                      .dwattr $C$DW$60, DW_AT_name("XAR6")
+     719                      .dwattr $C$DW$60, DW_AT_location[DW_OP_reg17]
+     720              
+     721              $C$DW$61        .dwtag  DW_TAG_TI_assign_register
+     722                      .dwattr $C$DW$61, DW_AT_name("AR7")
+     723                      .dwattr $C$DW$61, DW_AT_location[DW_OP_reg18]
+     724              
+     725              $C$DW$62        .dwtag  DW_TAG_TI_assign_register
+     726                      .dwattr $C$DW$62, DW_AT_name("XAR7")
+     727                      .dwattr $C$DW$62, DW_AT_location[DW_OP_reg19]
+     728              
+     729              $C$DW$63        .dwtag  DW_TAG_TI_assign_register
+     730                      .dwattr $C$DW$63, DW_AT_name("R0H")
+     731                      .dwattr $C$DW$63, DW_AT_location[DW_OP_regx 0x2b]
+     732              
+TMS320C2000 Assembler PC v20.2.1 Mon Jan  4 16:08:35 2021
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+cpu_c.asm                                                            PAGE   15
+
+     733              $C$DW$64        .dwtag  DW_TAG_TI_assign_register
+     734                      .dwattr $C$DW$64, DW_AT_name("R1H")
+     735                      .dwattr $C$DW$64, DW_AT_location[DW_OP_regx 0x2f]
+     736              
+     737              $C$DW$65        .dwtag  DW_TAG_TI_assign_register
+     738                      .dwattr $C$DW$65, DW_AT_name("R2H")
+     739                      .dwattr $C$DW$65, DW_AT_location[DW_OP_regx 0x33]
+     740              
+     741              $C$DW$66        .dwtag  DW_TAG_TI_assign_register
+     742                      .dwattr $C$DW$66, DW_AT_name("R3H")
+     743                      .dwattr $C$DW$66, DW_AT_location[DW_OP_regx 0x37]
+     744              
+     745              $C$DW$67        .dwtag  DW_TAG_TI_assign_register
+     746                      .dwattr $C$DW$67, DW_AT_name("R4H")
+     747                      .dwattr $C$DW$67, DW_AT_location[DW_OP_regx 0x3b]
+     748              
+     749              $C$DW$68        .dwtag  DW_TAG_TI_assign_register
+     750                      .dwattr $C$DW$68, DW_AT_name("R5H")
+     751                      .dwattr $C$DW$68, DW_AT_location[DW_OP_regx 0x3f]
+     752              
+     753              $C$DW$69        .dwtag  DW_TAG_TI_assign_register
+     754                      .dwattr $C$DW$69, DW_AT_name("R6H")
+     755                      .dwattr $C$DW$69, DW_AT_location[DW_OP_regx 0x43]
+     756              
+     757              $C$DW$70        .dwtag  DW_TAG_TI_assign_register
+     758                      .dwattr $C$DW$70, DW_AT_name("R7H")
+     759                      .dwattr $C$DW$70, DW_AT_location[DW_OP_regx 0x47]
+     760              
+     761              $C$DW$71        .dwtag  DW_TAG_TI_assign_register
+     762                      .dwattr $C$DW$71, DW_AT_name("RB")
+     763                      .dwattr $C$DW$71, DW_AT_location[DW_OP_regx 0x4a]
+     764              
+     765              $C$DW$72        .dwtag  DW_TAG_TI_assign_register
+     766                      .dwattr $C$DW$72, DW_AT_name("STF")
+     767                      .dwattr $C$DW$72, DW_AT_location[DW_OP_regx 0x28]
+     768              
+     769              $C$DW$73        .dwtag  DW_TAG_TI_assign_register
+     770                      .dwattr $C$DW$73, DW_AT_name("FPUHAZ")
+     771                      .dwattr $C$DW$73, DW_AT_location[DW_OP_reg27]
+     772              
+     773              $C$DW$74        .dwtag  DW_TAG_TI_assign_register
+     774                      .dwattr $C$DW$74, DW_AT_name("STF_HWDIV")
+     775                      .dwattr $C$DW$74, DW_AT_location[DW_OP_regx 0x4f]
+     776              
+     777                      .dwendtag $C$DW$CU
+     778              
+
+No Assembly Errors, No Assembly Warnings

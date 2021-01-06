@@ -1,0 +1,320 @@
+TMS320C2000 Assembler PC v20.2.1 Mon Jan  4 16:08:34 2021
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:/ti/Workspace/PLC_certificate/ImitatePLC/Software/uC-CPU/C28x/CCS/cpu_a.asm PAGE    1
+
+       1              ;********************************************************************************************************
+       2              ;                                                uC/CPU
+       3              ;                                    CPU CONFIGURATION & PORT LAYER
+       4              ;
+       5              ;                          (c) Copyright 2004-2015; Micrium, Inc.; Weston, FL
+       6              ;
+       7              ;               All rights reserved.  Protected by international copyright laws.
+       8              ;
+       9              ;               uC/CPU is provided in source form to registered licensees ONLY.  It is 
+      10              ;               illegal to distribute this source code to any third party unless you receive 
+      11              ;               written permission by an authorized Micrium representative.  Knowledge of 
+      12              ;               the source code may NOT be used to develop a similar product.
+      13              ;
+      14              ;               Please help us continue to provide the Embedded community with the finest 
+      15              ;               software available.  Your honesty is greatly appreciated.
+      16              ;
+      17              ;               You can find our product's user manual, API reference, release notes and
+      18              ;               more information at https://doc.micrium.com.
+      19              ;               You can contact us at www.micrium.com.
+      20              ;********************************************************************************************************
+      21              
+      22              ;********************************************************************************************************
+      23              ;
+      24              ;                                             CPU PORT FILE
+      25              ;
+      26              *                                                TI C28x
+      27              ;                                           TI C/C++ Compiler
+      28              ;
+      29              ;
+      30              ; Filename      : cpu_a.asm
+      31              ; Version       : V1.30.02.00
+      32              ; Programmer(s) : JFT
+      33              ;********************************************************************************************************
+      34              
+      35              
+      36              ;********************************************************************************************************
+      37              ;                                           PUBLIC FUNCTIONS
+      38              ;********************************************************************************************************
+      39              
+      40                  .def   _CPU_IntDis
+      41                  .def   _CPU_IntEn
+      42              
+      43                  .def   _CPU_SR_Save
+      44                  .def   _CPU_SR_Restore
+      45              
+      46                  .def   _CPU_CntLeadZeros
+      47              
+      48                  .def   _CPU_RevBits
+      49              
+      50              
+      51              ;********************************************************************************************************
+      52              ;                                                EQUATES
+      53              ;********************************************************************************************************
+      54              
+      55              
+TMS320C2000 Assembler PC v20.2.1 Mon Jan  4 16:08:34 2021
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:/ti/Workspace/PLC_certificate/ImitatePLC/Software/uC-CPU/C28x/CCS/cpu_a.asm PAGE    2
+
+      56              ;********************************************************************************************************
+      57              ;                                      CODE GENERATION DIRECTIVES
+      58              ;********************************************************************************************************
+      59                                                                              ; Set text section and reset local labels.
+      60 00000000           .text
+      61                  .newblock
+      62              
+      63              
+      64              ;********************************************************************************************************
+      65              ;                                      DISABLE/ENABLE INTERRUPTS
+      66              ;
+      67              ; Description : Disable/Enable interrupts.
+      68              ;
+      69              ; Prototypes  : void  CPU_IntDis(void);
+      70              ;               void  CPU_IntEn (void);
+      71              ;********************************************************************************************************
+      72              
+      73                  .asmfunc
+      74 00000000       _CPU_IntDis:
+      75 00000000 3B10      DINT
+      76 00000001 0006      LRETR
+      77                  .endasmfunc
+      78              
+      79                  .asmfunc
+      80 00000002       _CPU_IntEn:
+      81 00000002 2910      EINT
+      82 00000003 0006      LRETR
+      83                  .endasmfunc
+      84              
+      85              
+      86              ;********************************************************************************************************
+      87              ;                                  SAVE/RESTORE CPU STATUS REGISTER
+      88              ;
+      89              ; Description : Save/Restore the state of CPU interrupts, if possible.
+      90              ;
+      91              ;               (1) (c) For CPU_CRITICAL_METHOD_STATUS_LOCAL, the state of the interrupt status flag is
+      92              ;                       stored in the local variable 'cpu_sr' & interrupts are then disabled ('cpu_sr' is
+      93              ;                       allocated in all functions that need to disable interrupts).  The previous interrupt
+      94              ;                       status state is restored by copying 'cpu_sr' into the CPU's status register.
+      95              ;
+      96              ;
+      97              ; Prototypes  : CPU_SR  CPU_SR_Save   (void);
+      98              ;               void    CPU_SR_Restore(CPU_SR  cpu_sr);
+      99              ;
+     100              ; Note(s)     : (1) These functions are used in general like this :
+     101              ;
+     102              ;                       void  Task (void  *p_arg)
+     103              ;                       {
+     104              ;                           CPU_SR_ALLOC();                     /* Allocate storage for CPU status register *
+     105              ;                               :
+     106              ;                               :
+     107              ;                           CPU_CRITICAL_ENTER();               /* cpu_sr = CPU_SR_Save();                  *
+     108              ;                               :
+     109              ;                               :
+     110              ;                           CPU_CRITICAL_EXIT();                /* CPU_SR_Restore(cpu_sr);                  *
+TMS320C2000 Assembler PC v20.2.1 Mon Jan  4 16:08:34 2021
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:/ti/Workspace/PLC_certificate/ImitatePLC/Software/uC-CPU/C28x/CCS/cpu_a.asm PAGE    3
+
+     111              ;                               :
+     112              ;                       }
+     113              ;********************************************************************************************************
+     114                  .asmfunc
+     115 00000004       _CPU_SR_Save:
+     116 00000004 7608      PUSH    ST1
+     117 00000005 3B10      DINT
+     118 00000006 2AA9      POP    @AL
+     119 00000007 9001      AND     AL, #1
+     120 00000008 0006      LRETR
+     121                  .endasmfunc
+     122              
+     123                  .asmfunc
+     124 00000009       _CPU_SR_Restore:
+     125 00000009 7608      PUSH    ST1
+     126 0000000a 2AA0      POP     AR0
+     127 0000000b 18A0      AND     AR0, #0xFFFE
+         0000000c FFFE 
+     128 0000000d CAA0      OR      AL, AR0
+     129 0000000e 22A9      PUSH    AL
+     130 0000000f 7600      POP     ST1
+     131 00000010 0006      LRETR
+     132                  .endasmfunc
+     133              
+     134              
+     135              ;********************************************************************************************************
+     136              ;                                         CPU_CntLeadZeros()
+     137              ;                                        COUNT LEADING ZEROS
+     138              ;
+     139              ; Description : Counts the number of contiguous, most-significant, leading zero bits before the 
+     140              ;                   first binary one bit in a data value.
+     141              ;
+     142              ; Prototype   : CPU_DATA  CPU_CntLeadZeros(CPU_DATA  val);
+     143              ;
+     144              ; Argument(s) : val         Data value to count leading zero bits.
+     145              ;
+     146              ; Return(s)   : Number of contiguous, most-significant, leading zero bits in 'val'.
+     147              ;
+     148              ; Caller(s)   : Application.
+     149              ;
+     150              ;               This function is an INTERNAL CPU module function but MAY be called by application 
+     151              ;               function(s).
+     152              ;
+     153              ; Note(s)     : (1) (a) Supports up to the following data value sizes, depending on the configured 
+     154              ;                       size of 'CPU_DATA' (see 'cpu.h  CPU WORD CONFIGURATION  Note #1') :
+     155              ;
+     156              ;                       (1)  8-bits
+     157              ;                       (2) 16-bits
+     158              ;                       (3) 32-bits
+     159              ;                       (4) 64-bits
+     160              ;
+     161              ;                   (b) (1) For  8-bit values :
+     162              ;
+     163              ;                                  b07  b06  b05  b04  b03  b02  b01  b00    # Leading Zeros
+     164              ;                                  ---  ---  ---  ---  ---  ---  ---  ---    ---------------
+TMS320C2000 Assembler PC v20.2.1 Mon Jan  4 16:08:34 2021
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:/ti/Workspace/PLC_certificate/ImitatePLC/Software/uC-CPU/C28x/CCS/cpu_a.asm PAGE    4
+
+     165              ;                                   1    x    x    x    x    x    x    x            0
+     166              ;                                   0    1    x    x    x    x    x    x            1
+     167              ;                                   0    0    1    x    x    x    x    x            2
+     168              ;                                   0    0    0    1    x    x    x    x            3
+     169              ;                                   0    0    0    0    1    x    x    x            4
+     170              ;                                   0    0    0    0    0    1    x    x            5
+     171              ;                                   0    0    0    0    0    0    1    x            6
+     172              ;                                   0    0    0    0    0    0    0    1            7
+     173              ;                                   0    0    0    0    0    0    0    0            8
+     174              ;
+     175              ;
+     176              ;                       (2) For 16-bit values :
+     177              ;
+     178              ;                             b15  b14  b13  ...  b04  b03  b02  b01  b00    # Leading Zeros
+     179              ;                             ---  ---  ---       ---  ---  ---  ---  ---    ---------------
+     180              ;                              1    x    x         x    x    x    x    x            0
+     181              ;                              0    1    x         x    x    x    x    x            1
+     182              ;                              0    0    1         x    x    x    x    x            2
+     183              ;                              :    :    :         :    :    :    :    :            :
+     184              ;                              :    :    :         :    :    :    :    :            :
+     185              ;                              0    0    0         1    x    x    x    x           11
+     186              ;                              0    0    0         0    1    x    x    x           12
+     187              ;                              0    0    0         0    0    1    x    x           13
+     188              ;                              0    0    0         0    0    0    1    x           14
+     189              ;                              0    0    0         0    0    0    0    1           15
+     190              ;                              0    0    0         0    0    0    0    0           16
+     191              ;
+     192              ;
+     193              ;                       (3) For 32-bit values :
+     194              ;
+     195              ;                             b31  b30  b29  ...  b04  b03  b02  b01  b00    # Leading Zeros
+     196              ;                             ---  ---  ---       ---  ---  ---  ---  ---    ---------------
+     197              ;                              1    x    x         x    x    x    x    x            0
+     198              ;                              0    1    x         x    x    x    x    x            1
+     199              ;                              0    0    1         x    x    x    x    x            2
+     200              ;                              :    :    :         :    :    :    :    :            :
+     201              ;                              :    :    :         :    :    :    :    :            :
+     202              ;                              0    0    0         1    x    x    x    x           27
+     203              ;                              0    0    0         0    1    x    x    x           28
+     204              ;                              0    0    0         0    0    1    x    x           29
+     205              ;                              0    0    0         0    0    0    1    x           30
+     206              ;                              0    0    0         0    0    0    0    1           31
+     207              ;                              0    0    0         0    0    0    0    0           32
+     208              ;
+     209              ;
+     210              ;                       (4) For 64-bit values :
+     211              ;
+     212              ;                             b63  b62  b61  ...  b04  b03  b02  b01  b00    # Leading Zeros
+     213              ;                             ---  ---  ---       ---  ---  ---  ---  ---    ---------------
+     214              ;                              1    x    x         x    x    x    x    x            0
+     215              ;                              0    1    x         x    x    x    x    x            1
+     216              ;                              0    0    1         x    x    x    x    x            2
+     217              ;                              :    :    :         :    :    :    :    :            :
+     218              ;                              :    :    :         :    :    :    :    :            :
+     219              ;                              0    0    0         1    x    x    x    x           59
+TMS320C2000 Assembler PC v20.2.1 Mon Jan  4 16:08:34 2021
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:/ti/Workspace/PLC_certificate/ImitatePLC/Software/uC-CPU/C28x/CCS/cpu_a.asm PAGE    5
+
+     220              ;                              0    0    0         0    1    x    x    x           60
+     221              ;                              0    0    0         0    0    1    x    x           61
+     222              ;                              0    0    0         0    0    0    1    x           62
+     223              ;                              0    0    0         0    0    0    0    1           63
+     224              ;                              0    0    0         0    0    0    0    0           64
+     225              ;
+     226              ;               (2) MUST be defined in 'cpu_a.asm' (or 'cpu_c.c') if CPU_CFG_LEAD_ZEROS_ASM_PRESENT 
+     227              ;                   is #define'd in 'cpu_cfg.h' or 'cpu.h'.
+     228              ;********************************************************************************************************
+     229              
+     230                  .asmfunc
+     231 00000011       _CPU_CntLeadZeros:
+     232 00000011 93A9      MOV     AH, AL
+     233 00000012 18A9      AND     AL, #0x8000
+         00000013 8000 
+     234 00000014 ED07      SBF     $1, NEQ
+     235 00000015 1AA9      OR      AL, #0xFFFF
+         00000016 FFFF 
+     236 00000017 5635      CSB     ACC
+     237 00000018 92AC      MOV     AL, T
+     238 00000019 9C01      ADD     AL, #1
+     239 0000001a 0006      LRETR
+     240 0000001b       $1:
+     241 0000001b 9A00      MOV     AL, #0
+     242 0000001c 0006      LRETR
+     243                  .endasmfunc
+     244              
+     245              
+     246              ;********************************************************************************************************
+     247              ;                                            CPU_RevBits()
+     248              ;                                            REVERSE BITS
+     249              ;
+     250              ; Description : Reverses the bits in a data value.
+     251              ;
+     252              ; Prototypes  : CPU_DATA  CPU_RevBits(CPU_DATA  val);
+     253              ;
+     254              ; Argument(s) : val         Data value to reverse bits.
+     255              ;
+     256              ; Return(s)   : Value with all bits in 'val' reversed (see Note #1).
+     257              ;
+     258              ; Caller(s)   : Application.
+     259              ;
+     260              ;               This function is an INTERNAL CPU module function but MAY be called by application function(s)
+     261              ;
+     262              ; Note(s)     : (1) The final, reversed data value for 'val' is such that :
+     263              ;
+     264              ;                       'val's final bit  0       =  'val's original bit  N
+     265              ;                       'val's final bit  1       =  'val's original bit (N - 1)
+     266              ;                       'val's final bit  2       =  'val's original bit (N - 2)
+     267              ;
+     268              ;                               ...                           ...
+     269              ;
+     270              ;                       'val's final bit (N - 2)  =  'val's original bit  2
+     271              ;                       'val's final bit (N - 1)  =  'val's original bit  1
+     272              ;                       'val's final bit  N       =  'val's original bit  0
+TMS320C2000 Assembler PC v20.2.1 Mon Jan  4 16:08:34 2021
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:/ti/Workspace/PLC_certificate/ImitatePLC/Software/uC-CPU/C28x/CCS/cpu_a.asm PAGE    6
+
+     273              ;********************************************************************************************************
+     274              
+     275                  .asmfunc
+     276 0000001d       _CPU_RevBits:
+     277 0000001d 5670      FLIP    AL
+     278 0000001e 0006      LRETR
+     279                  .endasmfunc
+     280              
+     281              
+     282              ;********************************************************************************************************
+     283              ;                                     CPU ASSEMBLY PORT FILE END
+     284              ;********************************************************************************************************
+     285                  .end
+
+No Assembly Errors, No Assembly Warnings
