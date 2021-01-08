@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>PLC_certificate</name>
+	<name>PLC_certificate_2</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -98,27 +98,27 @@
 		<link>
 			<name>BSP/bsp.c</name>
 			<type>1</type>
-			<locationURI>PARENT-2-PROJECT_LOC/BSP/bsp.c</locationURI>
+			<locationURI>copy_PARENT123/BSP/bsp.c</locationURI>
 		</link>
 		<link>
 			<name>BSP/bsp.h</name>
 			<type>1</type>
-			<locationURI>PARENT-2-PROJECT_LOC/BSP/bsp.h</locationURI>
+			<locationURI>copy_PARENT123/BSP/bsp.h</locationURI>
 		</link>
 		<link>
 			<name>BSP/bsp_int.c</name>
 			<type>1</type>
-			<locationURI>PARENT-2-PROJECT_LOC/BSP/bsp_int.c</locationURI>
+			<locationURI>copy_PARENT123/BSP/bsp_int.c</locationURI>
 		</link>
 		<link>
 			<name>BSP/bsp_led.c</name>
 			<type>1</type>
-			<locationURI>PARENT-2-PROJECT_LOC/BSP/bsp_led.c</locationURI>
+			<locationURI>copy_PARENT123/BSP/bsp_led.c</locationURI>
 		</link>
 		<link>
 			<name>BSP/cpu_bsp.c</name>
 			<type>1</type>
-			<locationURI>PARENT-2-PROJECT_LOC/BSP/cpu_bsp.c</locationURI>
+			<locationURI>copy_PARENT123/BSP/cpu_bsp.c</locationURI>
 		</link>
 		<link>
 			<name>uC-CPU/C28x</name>
@@ -203,7 +203,7 @@
 		<link>
 			<name>BSP/CCS/bsp_start.asm</name>
 			<type>1</type>
-			<locationURI>PARENT-2-PROJECT_LOC/BSP/CCS/bsp_start.asm</locationURI>
+			<locationURI>copy_PARENT123/BSP/CCS/bsp_start.asm</locationURI>
 		</link>
 		<link>
 			<name>BSP/OS/uCOS-II</name>
@@ -283,12 +283,12 @@
 		<link>
 			<name>BSP/OS/uCOS-II/bsp_os.c</name>
 			<type>1</type>
-			<locationURI>PARENT-2-PROJECT_LOC/BSP/OS/uCOS-II/bsp_os.c</locationURI>
+			<locationURI>copy_PARENT123/BSP/OS/uCOS-II/bsp_os.c</locationURI>
 		</link>
 		<link>
 			<name>BSP/OS/uCOS-II/bsp_os.h</name>
 			<type>1</type>
-			<locationURI>PARENT-2-PROJECT_LOC/BSP/OS/uCOS-II/bsp_os.h</locationURI>
+			<locationURI>copy_PARENT123/BSP/OS/uCOS-II/bsp_os.h</locationURI>
 		</link>
 		<link>
 			<name>uC-CPU/C28x/CCS/cpu.h</name>
@@ -341,4 +341,10 @@
 			<locationURI>PARENT-5-PROJECT_LOC/Software/uCOS-II/Ports/C28x/Generic/CCS/os_dbg.c</locationURI>
 		</link>
 	</linkedResources>
+	<variableList>
+		<variable>
+			<name>copy_PARENT123</name>
+			<value>$%7BTI_PRODUCTS_DIR%7D/Workspace/PLC_certificate_backup/Examples/TI/TMDSDOCK28335</value>
+		</variable>
+	</variableList>
 </projectDescription>

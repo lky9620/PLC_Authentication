@@ -166,33 +166,33 @@ endif
 
 # Add inputs and outputs from these tool invocations to the build variables 
 EXE_OUTPUTS += \
-PLC_certificate.out \
+PLC_certificate_2.out \
 
 EXE_OUTPUTS__QUOTED += \
-"PLC_certificate.out" \
+"PLC_certificate_2.out" \
 
 BIN_OUTPUTS += \
-PLC_certificate.hex \
+PLC_certificate_2.hex \
 
 BIN_OUTPUTS__QUOTED += \
-"PLC_certificate.hex" \
+"PLC_certificate_2.hex" \
 
 
 # All Target
-all: PLC_certificate.out
+all: PLC_certificate_2.out
 
 # Tool invocations
-PLC_certificate.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
+PLC_certificate_2.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
 	@echo 'Building target: "$@"'
 	@echo 'Invoking: C2000 Linker'
-	"C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-c2000_20.2.1.LTS/bin/cl2000" -v28 -ml -mt --float_support=fpu32 -Ooff --advice:performance=all -g --diag_warning=225 --diag_wrap=off --display_error_number --issue_remarks --verbose_diagnostics --abi=coffabi -k --asm_listing -z -m"PLC_certificate.map" --heap_size=0x400 --stack_size=0x750 --warn_sections -i"C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-c2000_20.2.1.LTS/lib" -i"C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-c2000_20.2.1.LTS/include" --reread_libs --diag_suppress=10063 --diag_wrap=off --display_error_number --issue_remarks --verbose_diagnostics --xml_link_info="PLC_certificate_linkInfo.xml" --entry_point=_BSP_RAM_StartHere --rom_model -o "PLC_certificate.out" $(ORDERED_OBJS)
+	"C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-c2000_20.2.1.LTS/bin/cl2000" -v28 -ml -mt --float_support=fpu32 -Ooff --advice:performance=all -g --diag_warning=225 --diag_wrap=off --display_error_number --issue_remarks --verbose_diagnostics --abi=coffabi -k --asm_listing -z -m"PLC_certificate_2.map" --heap_size=0x400 --stack_size=0x750 --warn_sections -i"C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-c2000_20.2.1.LTS/lib" -i"C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-c2000_20.2.1.LTS/include" --reread_libs --diag_suppress=10063 --diag_wrap=off --display_error_number --issue_remarks --verbose_diagnostics --xml_link_info="PLC_certificate_2_linkInfo.xml" --entry_point=_BSP_RAM_StartHere --rom_model -o "PLC_certificate_2.out" $(ORDERED_OBJS)
 	@echo 'Finished building target: "$@"'
 	@echo ' '
 
-PLC_certificate.hex: $(EXE_OUTPUTS)
+PLC_certificate_2.hex: $(EXE_OUTPUTS)
 	@echo 'Building files: $(strip $(EXE_OUTPUTS__QUOTED))'
 	@echo 'Invoking: C2000 Hex Utility'
-	"C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-c2000_20.2.1.LTS/bin/hex2000"  -o "PLC_certificate.hex" $(EXE_OUTPUTS__QUOTED)
+	"C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-c2000_20.2.1.LTS/bin/hex2000"  -o "PLC_certificate_2.hex" $(EXE_OUTPUTS__QUOTED)
 	@echo 'Finished building: $(strip $(EXE_OUTPUTS__QUOTED))'
 	@echo ' '
 
