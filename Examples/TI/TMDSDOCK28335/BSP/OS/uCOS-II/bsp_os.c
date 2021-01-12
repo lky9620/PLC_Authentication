@@ -160,9 +160,9 @@ extern INT16U Task_Seq[10];
 extern INT16U Time_Seq[15];
 extern INT8U certification_flag1;
 extern INT8U certification_flag2;
-extern INT8S Timer_flag[4];
-extern INT8U Reply_flag;
-
+extern INT8S Timer_flag[16];
+extern INT8U Reply_flag[16];
+extern INT8U psh_flag;
 interrupt void BSP_SCIA_RX(void)
 {
     INT8U i;
@@ -189,8 +189,10 @@ interrupt void BSP_SCIA_TX(void)
     }
     else if (certification_flag2 == 1)
     {
-        SCIA_TXBUF = Reply_flag;
+        for (i = 0; i < sizeof(Reply_flag); i++)
+            SCIA_TXBUF = Reply_flag[i];
         certification_flag2 = 0;
+        psh_flag = 0;
     }
 
     SCIA_FFTX |= 0x2040u;

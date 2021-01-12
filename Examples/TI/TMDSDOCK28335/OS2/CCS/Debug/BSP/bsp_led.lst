@@ -1,20 +1,20 @@
-TMS320C2000 Assembler PC v20.2.1 Wed Jan  6 17:53:21 2021
+TMS320C2000 Assembler PC v20.2.1 Mon Jan 11 16:45:33 2021
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 bsp_led.asm                                                          PAGE    1
 
        1              ;***************************************************************
        2              ;* TMS320C2000 G3 C/C++ Codegen                               PC v20.2.1.LTS *
-       3              ;* Date/Time created: Wed Jan  6 17:53:21 2021                 *
+       3              ;* Date/Time created: Mon Jan 11 16:45:33 2021                 *
        4              ;***************************************************************
-       5                      .compiler_opts --abi=coffabi --diag_wrap=off --float_support=fpu32 --hll_source=on --mem_model:code=f
+       5                      .compiler_opts --abi=coffabi --diag_wrap=off --float_support=softlib --hll_source=on --mem_model:code
        6                      .asg    XAR2, FP
        7              
        8              $C$DW$CU        .dwtag  DW_TAG_compile_unit
-       9                      .dwattr $C$DW$CU, DW_AT_name("C:/ti/Workspace/PLC_certificate_backup/Examples/TI/TMDSDOCK28335/BSP/bs
+       9                      .dwattr $C$DW$CU, DW_AT_name("C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/bsp_led.c
       10                      .dwattr $C$DW$CU, DW_AT_producer("TI TMS320C2000 G3 C/C++ Codegen PC v20.2.1.LTS Copyright (c) 1996-2
       11                      .dwattr $C$DW$CU, DW_AT_TI_version(0x01)
-      12                      .dwattr $C$DW$CU, DW_AT_comp_dir("C:\ti\Workspace\PLC_certificate_backup\Examples\TI\TMDSDOCK28335\OS
+      12                      .dwattr $C$DW$CU, DW_AT_comp_dir("C:\ti\Workspace\PLC_certificate\Examples\TI\TMDSDOCK28335\OS2\CCS\D
       13              ;       C:\ti\ccs1011\ccs\tools\compiler\ti-cgt-c2000_20.2.1.LTS\bin\ac2000.exe -@C:\\Users\\LEEKEO~1\\AppDat
       14 00000000               .sect   ".text"
       15                      .clink
@@ -26,11 +26,11 @@ bsp_led.asm                                                          PAGE    1
       21                      .dwattr $C$DW$1, DW_AT_high_pc(0x00)
       22                      .dwattr $C$DW$1, DW_AT_TI_symbol_name("_BSP_LED_On")
       23                      .dwattr $C$DW$1, DW_AT_external
-      24                      .dwattr $C$DW$1, DW_AT_TI_begin_file("C:/ti/Workspace/PLC_certificate_backup/Examples/TI/TMDSDOCK2833
+      24                      .dwattr $C$DW$1, DW_AT_TI_begin_file("C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/b
       25                      .dwattr $C$DW$1, DW_AT_TI_begin_line(0x6b)
       26                      .dwattr $C$DW$1, DW_AT_TI_begin_column(0x07)
       27                      .dwattr $C$DW$1, DW_AT_TI_max_frame_size(-4)
-      28                      .dwpsn  file "C:/ti/Workspace/PLC_certificate_backup/Examples/TI/TMDSDOCK28335/BSP/bsp_led.c",line 10
+      28                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/bsp_led.c",line 108,colum
       29              
       30                      .dwfde $C$DW$CIE, _BSP_LED_On
       31              $C$DW$2 .dwtag  DW_TAG_formal_parameter
@@ -58,7 +58,7 @@ bsp_led.asm                                                          PAGE    1
       53                      .dwattr $C$DW$3, DW_AT_name("led")
       54                      .dwattr $C$DW$3, DW_AT_TI_symbol_name("_led")
       55                      .dwattr $C$DW$3, DW_AT_type(*$C$DW$T$20)
-TMS320C2000 Assembler PC v20.2.1 Wed Jan  6 17:53:21 2021
+TMS320C2000 Assembler PC v20.2.1 Mon Jan 11 16:45:33 2021
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 bsp_led.asm                                                          PAGE    2
@@ -66,43 +66,43 @@ bsp_led.asm                                                          PAGE    2
       56                      .dwattr $C$DW$3, DW_AT_location[DW_OP_breg20 -1]
       57              
       58 00000001 9641          MOV       *-SP[1],AL            ; [CPU_ALU] |108| 
-      59                      .dwpsn  file "C:/ti/Workspace/PLC_certificate_backup/Examples/TI/TMDSDOCK28335/BSP/bsp_led.c",line 10
+      59                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/bsp_led.c",line 109,colum
       60 00000002 6F14          B         $C$L4,UNC             ; [CPU_ALU] |109| 
       61                      ; branch occurs ; [] |109| 
       62 00000003       $C$L1:    
-      63                      .dwpsn  file "C:/ti/Workspace/PLC_certificate_backup/Examples/TI/TMDSDOCK28335/BSP/bsp_led.c",line 11
+      63                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/bsp_led.c",line 111,colum
       64 00000003 8F00          MOVL      XAR4,#28612           ; [CPU_ARAU] |111| 
          00000004 6FC4 
       65 00000005 1ACC          OR        *+XAR4[1],#32768      ; [CPU_ALU] |111| 
          00000006 8000 
-      66                      .dwpsn  file "C:/ti/Workspace/PLC_certificate_backup/Examples/TI/TMDSDOCK28335/BSP/bsp_led.c",line 11
+      66                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/bsp_led.c",line 112,colum
       67 00000007 8F00          MOVL      XAR4,#28620           ; [CPU_ARAU] |112| 
          00000008 6FCC 
       68 00000009 1AC4          OR        *+XAR4[0],#4          ; [CPU_ALU] |112| 
          0000000a 0004 
-      69                      .dwpsn  file "C:/ti/Workspace/PLC_certificate_backup/Examples/TI/TMDSDOCK28335/BSP/bsp_led.c",line 11
+      69                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/bsp_led.c",line 113,colum
       70 0000000b 6F12          B         $C$L5,UNC             ; [CPU_ALU] |113| 
       71                      ; branch occurs ; [] |113| 
       72 0000000c       $C$L2:    
-      73                      .dwpsn  file "C:/ti/Workspace/PLC_certificate_backup/Examples/TI/TMDSDOCK28335/BSP/bsp_led.c",line 11
+      73                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/bsp_led.c",line 116,colum
       74 0000000c 8F00          MOVL      XAR4,#28612           ; [CPU_ARAU] |116| 
          0000000d 6FC4 
       75 0000000e 1ACC          OR        *+XAR4[1],#32768      ; [CPU_ALU] |116| 
          0000000f 8000 
-      76                      .dwpsn  file "C:/ti/Workspace/PLC_certificate_backup/Examples/TI/TMDSDOCK28335/BSP/bsp_led.c",line 11
+      76                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/bsp_led.c",line 117,colum
       77 00000010 6F0D          B         $C$L5,UNC             ; [CPU_ALU] |117| 
       78                      ; branch occurs ; [] |117| 
       79 00000011       $C$L3:    
-      80                      .dwpsn  file "C:/ti/Workspace/PLC_certificate_backup/Examples/TI/TMDSDOCK28335/BSP/bsp_led.c",line 12
+      80                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/bsp_led.c",line 120,colum
       81 00000011 8F00          MOVL      XAR4,#28620           ; [CPU_ARAU] |120| 
          00000012 6FCC 
       82 00000013 1AC4          OR        *+XAR4[0],#4          ; [CPU_ALU] |120| 
          00000014 0004 
-      83                      .dwpsn  file "C:/ti/Workspace/PLC_certificate_backup/Examples/TI/TMDSDOCK28335/BSP/bsp_led.c",line 12
+      83                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/bsp_led.c",line 121,colum
       84 00000015 6F08          B         $C$L5,UNC             ; [CPU_ALU] |121| 
       85                      ; branch occurs ; [] |121| 
       86 00000016       $C$L4:    
-      87                      .dwpsn  file "C:/ti/Workspace/PLC_certificate_backup/Examples/TI/TMDSDOCK28335/BSP/bsp_led.c",line 10
+      87                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/bsp_led.c",line 109,colum
       88 00000016 5200          CMPB      AL,#0                 ; [CPU_ALU] |109| 
       89 00000017 61EC          B         $C$L1,EQ              ; [CPU_ALU] |109| 
       90                      ; branchcc occurs ; [] |109| 
@@ -118,7 +118,7 @@ bsp_led.asm                                                          PAGE    2
      100 0000001d FE82          SUBB      SP,#2                 ; [CPU_ARAU] 
      101                      .dwcfi  cfa_offset, -2
      102              $C$DW$4 .dwtag  DW_TAG_TI_branch
-TMS320C2000 Assembler PC v20.2.1 Wed Jan  6 17:53:21 2021
+TMS320C2000 Assembler PC v20.2.1 Mon Jan 11 16:45:33 2021
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 bsp_led.asm                                                          PAGE    3
@@ -128,7 +128,7 @@ bsp_led.asm                                                          PAGE    3
      105              
      106 0000001e 0006          LRETR     ; [CPU_ALU] 
      107                      ; return occurs ; [] 
-     108                      .dwattr $C$DW$1, DW_AT_TI_end_file("C:/ti/Workspace/PLC_certificate_backup/Examples/TI/TMDSDOCK28335/
+     108                      .dwattr $C$DW$1, DW_AT_TI_end_file("C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/bsp
      109                      .dwattr $C$DW$1, DW_AT_TI_end_line(0x7e)
      110                      .dwattr $C$DW$1, DW_AT_TI_end_column(0x01)
      111                      .dwendentry
@@ -144,11 +144,11 @@ bsp_led.asm                                                          PAGE    3
      121                      .dwattr $C$DW$5, DW_AT_high_pc(0x00)
      122                      .dwattr $C$DW$5, DW_AT_TI_symbol_name("_BSP_LED_Off")
      123                      .dwattr $C$DW$5, DW_AT_external
-     124                      .dwattr $C$DW$5, DW_AT_TI_begin_file("C:/ti/Workspace/PLC_certificate_backup/Examples/TI/TMDSDOCK2833
+     124                      .dwattr $C$DW$5, DW_AT_TI_begin_file("C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/b
      125                      .dwattr $C$DW$5, DW_AT_TI_begin_line(0x91)
      126                      .dwattr $C$DW$5, DW_AT_TI_begin_column(0x07)
      127                      .dwattr $C$DW$5, DW_AT_TI_max_frame_size(-4)
-     128                      .dwpsn  file "C:/ti/Workspace/PLC_certificate_backup/Examples/TI/TMDSDOCK28335/BSP/bsp_led.c",line 14
+     128                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/bsp_led.c",line 146,colum
      129              
      130                      .dwfde $C$DW$CIE, _BSP_LED_Off
      131              $C$DW$6 .dwtag  DW_TAG_formal_parameter
@@ -178,49 +178,49 @@ bsp_led.asm                                                          PAGE    3
      155                      .dwattr $C$DW$7, DW_AT_type(*$C$DW$T$20)
      156                      .dwattr $C$DW$7, DW_AT_location[DW_OP_breg20 -1]
      157              
-TMS320C2000 Assembler PC v20.2.1 Wed Jan  6 17:53:21 2021
+TMS320C2000 Assembler PC v20.2.1 Mon Jan 11 16:45:33 2021
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 bsp_led.asm                                                          PAGE    4
 
      158 00000020 9641          MOV       *-SP[1],AL            ; [CPU_ALU] |146| 
-     159                      .dwpsn  file "C:/ti/Workspace/PLC_certificate_backup/Examples/TI/TMDSDOCK28335/BSP/bsp_led.c",line 14
+     159                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/bsp_led.c",line 147,colum
      160 00000021 6F14          B         $C$L9,UNC             ; [CPU_ALU] |147| 
      161                      ; branch occurs ; [] |147| 
      162 00000022       $C$L6:    
-     163                      .dwpsn  file "C:/ti/Workspace/PLC_certificate_backup/Examples/TI/TMDSDOCK28335/BSP/bsp_led.c",line 14
+     163                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/bsp_led.c",line 149,colum
      164 00000022 8F00          MOVL      XAR4,#28610           ; [CPU_ARAU] |149| 
          00000023 6FC2 
      165 00000024 1ACC          OR        *+XAR4[1],#32768      ; [CPU_ALU] |149| 
          00000025 8000 
-     166                      .dwpsn  file "C:/ti/Workspace/PLC_certificate_backup/Examples/TI/TMDSDOCK28335/BSP/bsp_led.c",line 15
+     166                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/bsp_led.c",line 150,colum
      167 00000026 8F00          MOVL      XAR4,#28618           ; [CPU_ARAU] |150| 
          00000027 6FCA 
      168 00000028 1AC4          OR        *+XAR4[0],#4          ; [CPU_ALU] |150| 
          00000029 0004 
-     169                      .dwpsn  file "C:/ti/Workspace/PLC_certificate_backup/Examples/TI/TMDSDOCK28335/BSP/bsp_led.c",line 15
+     169                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/bsp_led.c",line 151,colum
      170 0000002a 6F12          B         $C$L10,UNC            ; [CPU_ALU] |151| 
      171                      ; branch occurs ; [] |151| 
      172 0000002b       $C$L7:    
-     173                      .dwpsn  file "C:/ti/Workspace/PLC_certificate_backup/Examples/TI/TMDSDOCK28335/BSP/bsp_led.c",line 15
+     173                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/bsp_led.c",line 154,colum
      174 0000002b 8F00          MOVL      XAR4,#28610           ; [CPU_ARAU] |154| 
          0000002c 6FC2 
      175 0000002d 1ACC          OR        *+XAR4[1],#32768      ; [CPU_ALU] |154| 
          0000002e 8000 
-     176                      .dwpsn  file "C:/ti/Workspace/PLC_certificate_backup/Examples/TI/TMDSDOCK28335/BSP/bsp_led.c",line 15
+     176                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/bsp_led.c",line 155,colum
      177 0000002f 6F0D          B         $C$L10,UNC            ; [CPU_ALU] |155| 
      178                      ; branch occurs ; [] |155| 
      179 00000030       $C$L8:    
-     180                      .dwpsn  file "C:/ti/Workspace/PLC_certificate_backup/Examples/TI/TMDSDOCK28335/BSP/bsp_led.c",line 15
+     180                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/bsp_led.c",line 158,colum
      181 00000030 8F00          MOVL      XAR4,#28618           ; [CPU_ARAU] |158| 
          00000031 6FCA 
      182 00000032 1AC4          OR        *+XAR4[0],#4          ; [CPU_ALU] |158| 
          00000033 0004 
-     183                      .dwpsn  file "C:/ti/Workspace/PLC_certificate_backup/Examples/TI/TMDSDOCK28335/BSP/bsp_led.c",line 15
+     183                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/bsp_led.c",line 159,colum
      184 00000034 6F08          B         $C$L10,UNC            ; [CPU_ALU] |159| 
      185                      ; branch occurs ; [] |159| 
      186 00000035       $C$L9:    
-     187                      .dwpsn  file "C:/ti/Workspace/PLC_certificate_backup/Examples/TI/TMDSDOCK28335/BSP/bsp_led.c",line 14
+     187                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/bsp_led.c",line 147,colum
      188 00000035 5200          CMPB      AL,#0                 ; [CPU_ALU] |147| 
      189 00000036 61EC          B         $C$L6,EQ              ; [CPU_ALU] |147| 
      190                      ; branchcc occurs ; [] |147| 
@@ -238,7 +238,7 @@ bsp_led.asm                                                          PAGE    4
      202              $C$DW$8 .dwtag  DW_TAG_TI_branch
      203                      .dwattr $C$DW$8, DW_AT_low_pc(0x00)
      204                      .dwattr $C$DW$8, DW_AT_TI_return
-TMS320C2000 Assembler PC v20.2.1 Wed Jan  6 17:53:21 2021
+TMS320C2000 Assembler PC v20.2.1 Mon Jan 11 16:45:33 2021
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 bsp_led.asm                                                          PAGE    5
@@ -246,7 +246,7 @@ bsp_led.asm                                                          PAGE    5
      205              
      206 0000003d 0006          LRETR     ; [CPU_ALU] 
      207                      ; return occurs ; [] 
-     208                      .dwattr $C$DW$5, DW_AT_TI_end_file("C:/ti/Workspace/PLC_certificate_backup/Examples/TI/TMDSDOCK28335/
+     208                      .dwattr $C$DW$5, DW_AT_TI_end_file("C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/bsp
      209                      .dwattr $C$DW$5, DW_AT_TI_end_line(0xa4)
      210                      .dwattr $C$DW$5, DW_AT_TI_end_column(0x01)
      211                      .dwendentry
@@ -262,11 +262,11 @@ bsp_led.asm                                                          PAGE    5
      221                      .dwattr $C$DW$9, DW_AT_high_pc(0x00)
      222                      .dwattr $C$DW$9, DW_AT_TI_symbol_name("_BSP_LED_Toggle")
      223                      .dwattr $C$DW$9, DW_AT_external
-     224                      .dwattr $C$DW$9, DW_AT_TI_begin_file("C:/ti/Workspace/PLC_certificate_backup/Examples/TI/TMDSDOCK2833
+     224                      .dwattr $C$DW$9, DW_AT_TI_begin_file("C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/b
      225                      .dwattr $C$DW$9, DW_AT_TI_begin_line(0xb7)
      226                      .dwattr $C$DW$9, DW_AT_TI_begin_column(0x07)
      227                      .dwattr $C$DW$9, DW_AT_TI_max_frame_size(-4)
-     228                      .dwpsn  file "C:/ti/Workspace/PLC_certificate_backup/Examples/TI/TMDSDOCK28335/BSP/bsp_led.c",line 18
+     228                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/bsp_led.c",line 184,colum
      229              
      230                      .dwfde $C$DW$CIE, _BSP_LED_Toggle
      231              $C$DW$10        .dwtag  DW_TAG_formal_parameter
@@ -297,8 +297,8 @@ bsp_led.asm                                                          PAGE    5
      256                      .dwattr $C$DW$11, DW_AT_location[DW_OP_breg20 -1]
      257              
      258 0000003f 9641          MOV       *-SP[1],AL            ; [CPU_ALU] |184| 
-     259                      .dwpsn  file "C:/ti/Workspace/PLC_certificate_backup/Examples/TI/TMDSDOCK28335/BSP/bsp_led.c",line 18
-TMS320C2000 Assembler PC v20.2.1 Wed Jan  6 17:53:21 2021
+     259                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/bsp_led.c",line 185,colum
+TMS320C2000 Assembler PC v20.2.1 Mon Jan 11 16:45:33 2021
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 bsp_led.asm                                                          PAGE    6
@@ -306,39 +306,39 @@ bsp_led.asm                                                          PAGE    6
      260 00000040 6F14          B         $C$L14,UNC            ; [CPU_ALU] |185| 
      261                      ; branch occurs ; [] |185| 
      262 00000041       $C$L11:    
-     263                      .dwpsn  file "C:/ti/Workspace/PLC_certificate_backup/Examples/TI/TMDSDOCK28335/BSP/bsp_led.c",line 18
+     263                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/bsp_led.c",line 187,colum
      264 00000041 8F00          MOVL      XAR4,#28614           ; [CPU_ARAU] |187| 
          00000042 6FC6 
      265 00000043 1ACC          OR        *+XAR4[1],#32768      ; [CPU_ALU] |187| 
          00000044 8000 
-     266                      .dwpsn  file "C:/ti/Workspace/PLC_certificate_backup/Examples/TI/TMDSDOCK28335/BSP/bsp_led.c",line 18
+     266                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/bsp_led.c",line 188,colum
      267 00000045 8F00          MOVL      XAR4,#28622           ; [CPU_ARAU] |188| 
          00000046 6FCE 
      268 00000047 1AC4          OR        *+XAR4[0],#4          ; [CPU_ALU] |188| 
          00000048 0004 
-     269                      .dwpsn  file "C:/ti/Workspace/PLC_certificate_backup/Examples/TI/TMDSDOCK28335/BSP/bsp_led.c",line 18
+     269                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/bsp_led.c",line 189,colum
      270 00000049 6F12          B         $C$L15,UNC            ; [CPU_ALU] |189| 
      271                      ; branch occurs ; [] |189| 
      272 0000004a       $C$L12:    
-     273                      .dwpsn  file "C:/ti/Workspace/PLC_certificate_backup/Examples/TI/TMDSDOCK28335/BSP/bsp_led.c",line 19
+     273                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/bsp_led.c",line 192,colum
      274 0000004a 8F00          MOVL      XAR4,#28614           ; [CPU_ARAU] |192| 
          0000004b 6FC6 
      275 0000004c 1ACC          OR        *+XAR4[1],#32768      ; [CPU_ALU] |192| 
          0000004d 8000 
-     276                      .dwpsn  file "C:/ti/Workspace/PLC_certificate_backup/Examples/TI/TMDSDOCK28335/BSP/bsp_led.c",line 19
+     276                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/bsp_led.c",line 193,colum
      277 0000004e 6F0D          B         $C$L15,UNC            ; [CPU_ALU] |193| 
      278                      ; branch occurs ; [] |193| 
      279 0000004f       $C$L13:    
-     280                      .dwpsn  file "C:/ti/Workspace/PLC_certificate_backup/Examples/TI/TMDSDOCK28335/BSP/bsp_led.c",line 19
+     280                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/bsp_led.c",line 196,colum
      281 0000004f 8F00          MOVL      XAR4,#28622           ; [CPU_ARAU] |196| 
          00000050 6FCE 
      282 00000051 1AC4          OR        *+XAR4[0],#4          ; [CPU_ALU] |196| 
          00000052 0004 
-     283                      .dwpsn  file "C:/ti/Workspace/PLC_certificate_backup/Examples/TI/TMDSDOCK28335/BSP/bsp_led.c",line 19
+     283                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/bsp_led.c",line 197,colum
      284 00000053 6F08          B         $C$L15,UNC            ; [CPU_ALU] |197| 
      285                      ; branch occurs ; [] |197| 
      286 00000054       $C$L14:    
-     287                      .dwpsn  file "C:/ti/Workspace/PLC_certificate_backup/Examples/TI/TMDSDOCK28335/BSP/bsp_led.c",line 18
+     287                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/bsp_led.c",line 185,colum
      288 00000054 5200          CMPB      AL,#0                 ; [CPU_ALU] |185| 
      289 00000055 61EC          B         $C$L11,EQ             ; [CPU_ALU] |185| 
      290                      ; branchcc occurs ; [] |185| 
@@ -358,13 +358,13 @@ bsp_led.asm                                                          PAGE    6
      304                      .dwattr $C$DW$12, DW_AT_TI_return
      305              
      306 0000005c 0006          LRETR     ; [CPU_ALU] 
-TMS320C2000 Assembler PC v20.2.1 Wed Jan  6 17:53:21 2021
+TMS320C2000 Assembler PC v20.2.1 Mon Jan 11 16:45:33 2021
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 bsp_led.asm                                                          PAGE    7
 
      307                      ; return occurs ; [] 
-     308                      .dwattr $C$DW$9, DW_AT_TI_end_file("C:/ti/Workspace/PLC_certificate_backup/Examples/TI/TMDSDOCK28335/
+     308                      .dwattr $C$DW$9, DW_AT_TI_end_file("C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/bsp
      309                      .dwattr $C$DW$9, DW_AT_TI_end_line(0xca)
      310                      .dwattr $C$DW$9, DW_AT_TI_end_column(0x01)
      311                      .dwendentry
@@ -418,7 +418,7 @@ bsp_led.asm                                                          PAGE    7
      359                      .dwattr $C$DW$T$20, DW_AT_language(DW_LANG_C)
      360              
      361              $C$DW$T$10      .dwtag  DW_TAG_base_type
-TMS320C2000 Assembler PC v20.2.1 Wed Jan  6 17:53:21 2021
+TMS320C2000 Assembler PC v20.2.1 Mon Jan 11 16:45:33 2021
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 bsp_led.asm                                                          PAGE    8
@@ -478,7 +478,7 @@ bsp_led.asm                                                          PAGE    8
      414              ;* DWARF CIE ENTRIES                                           *
      415              ;***************************************************************
      416              
-TMS320C2000 Assembler PC v20.2.1 Wed Jan  6 17:53:21 2021
+TMS320C2000 Assembler PC v20.2.1 Mon Jan 11 16:45:33 2021
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 bsp_led.asm                                                          PAGE    9
@@ -493,249 +493,192 @@ bsp_led.asm                                                          PAGE    9
      424                      .dwcfi  same_value, 9
      425                      .dwcfi  same_value, 10
      426                      .dwcfi  same_value, 11
-     427                      .dwcfi  same_value, 59
-     428                      .dwcfi  same_value, 63
-     429                      .dwcfi  same_value, 67
-     430                      .dwcfi  same_value, 71
-     431                      .dwendentry
+     427                      .dwendentry
+     428              
+     429              ;***************************************************************
+     430              ;* DWARF REGISTER MAP                                          *
+     431              ;***************************************************************
      432              
-     433              ;***************************************************************
-     434              ;* DWARF REGISTER MAP                                          *
-     435              ;***************************************************************
+     433              $C$DW$13        .dwtag  DW_TAG_TI_assign_register
+     434                      .dwattr $C$DW$13, DW_AT_name("AL")
+     435                      .dwattr $C$DW$13, DW_AT_location[DW_OP_reg0]
      436              
-     437              $C$DW$13        .dwtag  DW_TAG_TI_assign_register
-     438                      .dwattr $C$DW$13, DW_AT_name("AL")
-     439                      .dwattr $C$DW$13, DW_AT_location[DW_OP_reg0]
+     437              $C$DW$14        .dwtag  DW_TAG_TI_assign_register
+     438                      .dwattr $C$DW$14, DW_AT_name("AH")
+     439                      .dwattr $C$DW$14, DW_AT_location[DW_OP_reg1]
      440              
-     441              $C$DW$14        .dwtag  DW_TAG_TI_assign_register
-     442                      .dwattr $C$DW$14, DW_AT_name("AH")
-     443                      .dwattr $C$DW$14, DW_AT_location[DW_OP_reg1]
+     441              $C$DW$15        .dwtag  DW_TAG_TI_assign_register
+     442                      .dwattr $C$DW$15, DW_AT_name("PL")
+     443                      .dwattr $C$DW$15, DW_AT_location[DW_OP_reg2]
      444              
-     445              $C$DW$15        .dwtag  DW_TAG_TI_assign_register
-     446                      .dwattr $C$DW$15, DW_AT_name("PL")
-     447                      .dwattr $C$DW$15, DW_AT_location[DW_OP_reg2]
+     445              $C$DW$16        .dwtag  DW_TAG_TI_assign_register
+     446                      .dwattr $C$DW$16, DW_AT_name("PH")
+     447                      .dwattr $C$DW$16, DW_AT_location[DW_OP_reg3]
      448              
-     449              $C$DW$16        .dwtag  DW_TAG_TI_assign_register
-     450                      .dwattr $C$DW$16, DW_AT_name("PH")
-     451                      .dwattr $C$DW$16, DW_AT_location[DW_OP_reg3]
+     449              $C$DW$17        .dwtag  DW_TAG_TI_assign_register
+     450                      .dwattr $C$DW$17, DW_AT_name("SP")
+     451                      .dwattr $C$DW$17, DW_AT_location[DW_OP_reg20]
      452              
-     453              $C$DW$17        .dwtag  DW_TAG_TI_assign_register
-     454                      .dwattr $C$DW$17, DW_AT_name("SP")
-     455                      .dwattr $C$DW$17, DW_AT_location[DW_OP_reg20]
+     453              $C$DW$18        .dwtag  DW_TAG_TI_assign_register
+     454                      .dwattr $C$DW$18, DW_AT_name("XT")
+     455                      .dwattr $C$DW$18, DW_AT_location[DW_OP_reg21]
      456              
-     457              $C$DW$18        .dwtag  DW_TAG_TI_assign_register
-     458                      .dwattr $C$DW$18, DW_AT_name("XT")
-     459                      .dwattr $C$DW$18, DW_AT_location[DW_OP_reg21]
+     457              $C$DW$19        .dwtag  DW_TAG_TI_assign_register
+     458                      .dwattr $C$DW$19, DW_AT_name("T")
+     459                      .dwattr $C$DW$19, DW_AT_location[DW_OP_reg22]
      460              
-     461              $C$DW$19        .dwtag  DW_TAG_TI_assign_register
-     462                      .dwattr $C$DW$19, DW_AT_name("T")
-     463                      .dwattr $C$DW$19, DW_AT_location[DW_OP_reg22]
+     461              $C$DW$20        .dwtag  DW_TAG_TI_assign_register
+     462                      .dwattr $C$DW$20, DW_AT_name("ST0")
+     463                      .dwattr $C$DW$20, DW_AT_location[DW_OP_reg23]
      464              
-     465              $C$DW$20        .dwtag  DW_TAG_TI_assign_register
-     466                      .dwattr $C$DW$20, DW_AT_name("ST0")
-     467                      .dwattr $C$DW$20, DW_AT_location[DW_OP_reg23]
+     465              $C$DW$21        .dwtag  DW_TAG_TI_assign_register
+     466                      .dwattr $C$DW$21, DW_AT_name("ST1")
+     467                      .dwattr $C$DW$21, DW_AT_location[DW_OP_reg24]
      468              
-     469              $C$DW$21        .dwtag  DW_TAG_TI_assign_register
-     470                      .dwattr $C$DW$21, DW_AT_name("ST1")
-     471                      .dwattr $C$DW$21, DW_AT_location[DW_OP_reg24]
-TMS320C2000 Assembler PC v20.2.1 Wed Jan  6 17:53:21 2021
+     469              $C$DW$22        .dwtag  DW_TAG_TI_assign_register
+     470                      .dwattr $C$DW$22, DW_AT_name("PC")
+     471                      .dwattr $C$DW$22, DW_AT_location[DW_OP_reg25]
+TMS320C2000 Assembler PC v20.2.1 Mon Jan 11 16:45:33 2021
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 bsp_led.asm                                                          PAGE   10
 
      472              
-     473              $C$DW$22        .dwtag  DW_TAG_TI_assign_register
-     474                      .dwattr $C$DW$22, DW_AT_name("PC")
-     475                      .dwattr $C$DW$22, DW_AT_location[DW_OP_reg25]
+     473              $C$DW$23        .dwtag  DW_TAG_TI_assign_register
+     474                      .dwattr $C$DW$23, DW_AT_name("RPC")
+     475                      .dwattr $C$DW$23, DW_AT_location[DW_OP_reg26]
      476              
-     477              $C$DW$23        .dwtag  DW_TAG_TI_assign_register
-     478                      .dwattr $C$DW$23, DW_AT_name("RPC")
-     479                      .dwattr $C$DW$23, DW_AT_location[DW_OP_reg26]
+     477              $C$DW$24        .dwtag  DW_TAG_TI_assign_register
+     478                      .dwattr $C$DW$24, DW_AT_name("FP")
+     479                      .dwattr $C$DW$24, DW_AT_location[DW_OP_reg28]
      480              
-     481              $C$DW$24        .dwtag  DW_TAG_TI_assign_register
-     482                      .dwattr $C$DW$24, DW_AT_name("FP")
-     483                      .dwattr $C$DW$24, DW_AT_location[DW_OP_reg28]
+     481              $C$DW$25        .dwtag  DW_TAG_TI_assign_register
+     482                      .dwattr $C$DW$25, DW_AT_name("DP")
+     483                      .dwattr $C$DW$25, DW_AT_location[DW_OP_reg29]
      484              
-     485              $C$DW$25        .dwtag  DW_TAG_TI_assign_register
-     486                      .dwattr $C$DW$25, DW_AT_name("DP")
-     487                      .dwattr $C$DW$25, DW_AT_location[DW_OP_reg29]
+     485              $C$DW$26        .dwtag  DW_TAG_TI_assign_register
+     486                      .dwattr $C$DW$26, DW_AT_name("SXM")
+     487                      .dwattr $C$DW$26, DW_AT_location[DW_OP_reg30]
      488              
-     489              $C$DW$26        .dwtag  DW_TAG_TI_assign_register
-     490                      .dwattr $C$DW$26, DW_AT_name("SXM")
-     491                      .dwattr $C$DW$26, DW_AT_location[DW_OP_reg30]
+     489              $C$DW$27        .dwtag  DW_TAG_TI_assign_register
+     490                      .dwattr $C$DW$27, DW_AT_name("PM")
+     491                      .dwattr $C$DW$27, DW_AT_location[DW_OP_reg31]
      492              
-     493              $C$DW$27        .dwtag  DW_TAG_TI_assign_register
-     494                      .dwattr $C$DW$27, DW_AT_name("PM")
-     495                      .dwattr $C$DW$27, DW_AT_location[DW_OP_reg31]
+     493              $C$DW$28        .dwtag  DW_TAG_TI_assign_register
+     494                      .dwattr $C$DW$28, DW_AT_name("OVM")
+     495                      .dwattr $C$DW$28, DW_AT_location[DW_OP_regx 0x20]
      496              
-     497              $C$DW$28        .dwtag  DW_TAG_TI_assign_register
-     498                      .dwattr $C$DW$28, DW_AT_name("OVM")
-     499                      .dwattr $C$DW$28, DW_AT_location[DW_OP_regx 0x20]
+     497              $C$DW$29        .dwtag  DW_TAG_TI_assign_register
+     498                      .dwattr $C$DW$29, DW_AT_name("PAGE0")
+     499                      .dwattr $C$DW$29, DW_AT_location[DW_OP_regx 0x21]
      500              
-     501              $C$DW$29        .dwtag  DW_TAG_TI_assign_register
-     502                      .dwattr $C$DW$29, DW_AT_name("PAGE0")
-     503                      .dwattr $C$DW$29, DW_AT_location[DW_OP_regx 0x21]
+     501              $C$DW$30        .dwtag  DW_TAG_TI_assign_register
+     502                      .dwattr $C$DW$30, DW_AT_name("AMODE")
+     503                      .dwattr $C$DW$30, DW_AT_location[DW_OP_regx 0x22]
      504              
-     505              $C$DW$30        .dwtag  DW_TAG_TI_assign_register
-     506                      .dwattr $C$DW$30, DW_AT_name("AMODE")
-     507                      .dwattr $C$DW$30, DW_AT_location[DW_OP_regx 0x22]
+     505              $C$DW$31        .dwtag  DW_TAG_TI_assign_register
+     506                      .dwattr $C$DW$31, DW_AT_name("EALLOW")
+     507                      .dwattr $C$DW$31, DW_AT_location[DW_OP_regx 0x4e]
      508              
-     509              $C$DW$31        .dwtag  DW_TAG_TI_assign_register
-     510                      .dwattr $C$DW$31, DW_AT_name("EALLOW")
-     511                      .dwattr $C$DW$31, DW_AT_location[DW_OP_regx 0x4e]
+     509              $C$DW$32        .dwtag  DW_TAG_TI_assign_register
+     510                      .dwattr $C$DW$32, DW_AT_name("INTM")
+     511                      .dwattr $C$DW$32, DW_AT_location[DW_OP_regx 0x23]
      512              
-     513              $C$DW$32        .dwtag  DW_TAG_TI_assign_register
-     514                      .dwattr $C$DW$32, DW_AT_name("INTM")
-     515                      .dwattr $C$DW$32, DW_AT_location[DW_OP_regx 0x23]
+     513              $C$DW$33        .dwtag  DW_TAG_TI_assign_register
+     514                      .dwattr $C$DW$33, DW_AT_name("IFR")
+     515                      .dwattr $C$DW$33, DW_AT_location[DW_OP_regx 0x24]
      516              
-     517              $C$DW$33        .dwtag  DW_TAG_TI_assign_register
-     518                      .dwattr $C$DW$33, DW_AT_name("IFR")
-     519                      .dwattr $C$DW$33, DW_AT_location[DW_OP_regx 0x24]
+     517              $C$DW$34        .dwtag  DW_TAG_TI_assign_register
+     518                      .dwattr $C$DW$34, DW_AT_name("IER")
+     519                      .dwattr $C$DW$34, DW_AT_location[DW_OP_regx 0x25]
      520              
-     521              $C$DW$34        .dwtag  DW_TAG_TI_assign_register
-     522                      .dwattr $C$DW$34, DW_AT_name("IER")
-     523                      .dwattr $C$DW$34, DW_AT_location[DW_OP_regx 0x25]
+     521              $C$DW$35        .dwtag  DW_TAG_TI_assign_register
+     522                      .dwattr $C$DW$35, DW_AT_name("V")
+     523                      .dwattr $C$DW$35, DW_AT_location[DW_OP_regx 0x26]
      524              
-     525              $C$DW$35        .dwtag  DW_TAG_TI_assign_register
-     526                      .dwattr $C$DW$35, DW_AT_name("V")
-TMS320C2000 Assembler PC v20.2.1 Wed Jan  6 17:53:21 2021
+     525              $C$DW$36        .dwtag  DW_TAG_TI_assign_register
+     526                      .dwattr $C$DW$36, DW_AT_name("PSEUDOH")
+TMS320C2000 Assembler PC v20.2.1 Mon Jan 11 16:45:33 2021
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 bsp_led.asm                                                          PAGE   11
 
-     527                      .dwattr $C$DW$35, DW_AT_location[DW_OP_regx 0x26]
+     527                      .dwattr $C$DW$36, DW_AT_location[DW_OP_regx 0x4c]
      528              
-     529              $C$DW$36        .dwtag  DW_TAG_TI_assign_register
-     530                      .dwattr $C$DW$36, DW_AT_name("PSEUDOH")
-     531                      .dwattr $C$DW$36, DW_AT_location[DW_OP_regx 0x4c]
+     529              $C$DW$37        .dwtag  DW_TAG_TI_assign_register
+     530                      .dwattr $C$DW$37, DW_AT_name("VOL")
+     531                      .dwattr $C$DW$37, DW_AT_location[DW_OP_regx 0x4d]
      532              
-     533              $C$DW$37        .dwtag  DW_TAG_TI_assign_register
-     534                      .dwattr $C$DW$37, DW_AT_name("VOL")
-     535                      .dwattr $C$DW$37, DW_AT_location[DW_OP_regx 0x4d]
+     533              $C$DW$38        .dwtag  DW_TAG_TI_assign_register
+     534                      .dwattr $C$DW$38, DW_AT_name("AR0")
+     535                      .dwattr $C$DW$38, DW_AT_location[DW_OP_reg4]
      536              
-     537              $C$DW$38        .dwtag  DW_TAG_TI_assign_register
-     538                      .dwattr $C$DW$38, DW_AT_name("AR0")
-     539                      .dwattr $C$DW$38, DW_AT_location[DW_OP_reg4]
+     537              $C$DW$39        .dwtag  DW_TAG_TI_assign_register
+     538                      .dwattr $C$DW$39, DW_AT_name("XAR0")
+     539                      .dwattr $C$DW$39, DW_AT_location[DW_OP_reg5]
      540              
-     541              $C$DW$39        .dwtag  DW_TAG_TI_assign_register
-     542                      .dwattr $C$DW$39, DW_AT_name("XAR0")
-     543                      .dwattr $C$DW$39, DW_AT_location[DW_OP_reg5]
+     541              $C$DW$40        .dwtag  DW_TAG_TI_assign_register
+     542                      .dwattr $C$DW$40, DW_AT_name("AR1")
+     543                      .dwattr $C$DW$40, DW_AT_location[DW_OP_reg6]
      544              
-     545              $C$DW$40        .dwtag  DW_TAG_TI_assign_register
-     546                      .dwattr $C$DW$40, DW_AT_name("AR1")
-     547                      .dwattr $C$DW$40, DW_AT_location[DW_OP_reg6]
+     545              $C$DW$41        .dwtag  DW_TAG_TI_assign_register
+     546                      .dwattr $C$DW$41, DW_AT_name("XAR1")
+     547                      .dwattr $C$DW$41, DW_AT_location[DW_OP_reg7]
      548              
-     549              $C$DW$41        .dwtag  DW_TAG_TI_assign_register
-     550                      .dwattr $C$DW$41, DW_AT_name("XAR1")
-     551                      .dwattr $C$DW$41, DW_AT_location[DW_OP_reg7]
+     549              $C$DW$42        .dwtag  DW_TAG_TI_assign_register
+     550                      .dwattr $C$DW$42, DW_AT_name("AR2")
+     551                      .dwattr $C$DW$42, DW_AT_location[DW_OP_reg8]
      552              
-     553              $C$DW$42        .dwtag  DW_TAG_TI_assign_register
-     554                      .dwattr $C$DW$42, DW_AT_name("AR2")
-     555                      .dwattr $C$DW$42, DW_AT_location[DW_OP_reg8]
+     553              $C$DW$43        .dwtag  DW_TAG_TI_assign_register
+     554                      .dwattr $C$DW$43, DW_AT_name("XAR2")
+     555                      .dwattr $C$DW$43, DW_AT_location[DW_OP_reg9]
      556              
-     557              $C$DW$43        .dwtag  DW_TAG_TI_assign_register
-     558                      .dwattr $C$DW$43, DW_AT_name("XAR2")
-     559                      .dwattr $C$DW$43, DW_AT_location[DW_OP_reg9]
+     557              $C$DW$44        .dwtag  DW_TAG_TI_assign_register
+     558                      .dwattr $C$DW$44, DW_AT_name("AR3")
+     559                      .dwattr $C$DW$44, DW_AT_location[DW_OP_reg10]
      560              
-     561              $C$DW$44        .dwtag  DW_TAG_TI_assign_register
-     562                      .dwattr $C$DW$44, DW_AT_name("AR3")
-     563                      .dwattr $C$DW$44, DW_AT_location[DW_OP_reg10]
+     561              $C$DW$45        .dwtag  DW_TAG_TI_assign_register
+     562                      .dwattr $C$DW$45, DW_AT_name("XAR3")
+     563                      .dwattr $C$DW$45, DW_AT_location[DW_OP_reg11]
      564              
-     565              $C$DW$45        .dwtag  DW_TAG_TI_assign_register
-     566                      .dwattr $C$DW$45, DW_AT_name("XAR3")
-     567                      .dwattr $C$DW$45, DW_AT_location[DW_OP_reg11]
+     565              $C$DW$46        .dwtag  DW_TAG_TI_assign_register
+     566                      .dwattr $C$DW$46, DW_AT_name("AR4")
+     567                      .dwattr $C$DW$46, DW_AT_location[DW_OP_reg12]
      568              
-     569              $C$DW$46        .dwtag  DW_TAG_TI_assign_register
-     570                      .dwattr $C$DW$46, DW_AT_name("AR4")
-     571                      .dwattr $C$DW$46, DW_AT_location[DW_OP_reg12]
+     569              $C$DW$47        .dwtag  DW_TAG_TI_assign_register
+     570                      .dwattr $C$DW$47, DW_AT_name("XAR4")
+     571                      .dwattr $C$DW$47, DW_AT_location[DW_OP_reg13]
      572              
-     573              $C$DW$47        .dwtag  DW_TAG_TI_assign_register
-     574                      .dwattr $C$DW$47, DW_AT_name("XAR4")
-     575                      .dwattr $C$DW$47, DW_AT_location[DW_OP_reg13]
+     573              $C$DW$48        .dwtag  DW_TAG_TI_assign_register
+     574                      .dwattr $C$DW$48, DW_AT_name("AR5")
+     575                      .dwattr $C$DW$48, DW_AT_location[DW_OP_reg14]
      576              
-     577              $C$DW$48        .dwtag  DW_TAG_TI_assign_register
-     578                      .dwattr $C$DW$48, DW_AT_name("AR5")
-     579                      .dwattr $C$DW$48, DW_AT_location[DW_OP_reg14]
+     577              $C$DW$49        .dwtag  DW_TAG_TI_assign_register
+     578                      .dwattr $C$DW$49, DW_AT_name("XAR5")
+     579                      .dwattr $C$DW$49, DW_AT_location[DW_OP_reg15]
      580              
-     581              $C$DW$49        .dwtag  DW_TAG_TI_assign_register
-TMS320C2000 Assembler PC v20.2.1 Wed Jan  6 17:53:21 2021
+     581              $C$DW$50        .dwtag  DW_TAG_TI_assign_register
+TMS320C2000 Assembler PC v20.2.1 Mon Jan 11 16:45:33 2021
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 bsp_led.asm                                                          PAGE   12
 
-     582                      .dwattr $C$DW$49, DW_AT_name("XAR5")
-     583                      .dwattr $C$DW$49, DW_AT_location[DW_OP_reg15]
+     582                      .dwattr $C$DW$50, DW_AT_name("AR6")
+     583                      .dwattr $C$DW$50, DW_AT_location[DW_OP_reg16]
      584              
-     585              $C$DW$50        .dwtag  DW_TAG_TI_assign_register
-     586                      .dwattr $C$DW$50, DW_AT_name("AR6")
-     587                      .dwattr $C$DW$50, DW_AT_location[DW_OP_reg16]
+     585              $C$DW$51        .dwtag  DW_TAG_TI_assign_register
+     586                      .dwattr $C$DW$51, DW_AT_name("XAR6")
+     587                      .dwattr $C$DW$51, DW_AT_location[DW_OP_reg17]
      588              
-     589              $C$DW$51        .dwtag  DW_TAG_TI_assign_register
-     590                      .dwattr $C$DW$51, DW_AT_name("XAR6")
-     591                      .dwattr $C$DW$51, DW_AT_location[DW_OP_reg17]
+     589              $C$DW$52        .dwtag  DW_TAG_TI_assign_register
+     590                      .dwattr $C$DW$52, DW_AT_name("AR7")
+     591                      .dwattr $C$DW$52, DW_AT_location[DW_OP_reg18]
      592              
-     593              $C$DW$52        .dwtag  DW_TAG_TI_assign_register
-     594                      .dwattr $C$DW$52, DW_AT_name("AR7")
-     595                      .dwattr $C$DW$52, DW_AT_location[DW_OP_reg18]
+     593              $C$DW$53        .dwtag  DW_TAG_TI_assign_register
+     594                      .dwattr $C$DW$53, DW_AT_name("XAR7")
+     595                      .dwattr $C$DW$53, DW_AT_location[DW_OP_reg19]
      596              
-     597              $C$DW$53        .dwtag  DW_TAG_TI_assign_register
-     598                      .dwattr $C$DW$53, DW_AT_name("XAR7")
-     599                      .dwattr $C$DW$53, DW_AT_location[DW_OP_reg19]
-     600              
-     601              $C$DW$54        .dwtag  DW_TAG_TI_assign_register
-     602                      .dwattr $C$DW$54, DW_AT_name("R0H")
-     603                      .dwattr $C$DW$54, DW_AT_location[DW_OP_regx 0x2b]
-     604              
-     605              $C$DW$55        .dwtag  DW_TAG_TI_assign_register
-     606                      .dwattr $C$DW$55, DW_AT_name("R1H")
-     607                      .dwattr $C$DW$55, DW_AT_location[DW_OP_regx 0x2f]
-     608              
-     609              $C$DW$56        .dwtag  DW_TAG_TI_assign_register
-     610                      .dwattr $C$DW$56, DW_AT_name("R2H")
-     611                      .dwattr $C$DW$56, DW_AT_location[DW_OP_regx 0x33]
-     612              
-     613              $C$DW$57        .dwtag  DW_TAG_TI_assign_register
-     614                      .dwattr $C$DW$57, DW_AT_name("R3H")
-     615                      .dwattr $C$DW$57, DW_AT_location[DW_OP_regx 0x37]
-     616              
-     617              $C$DW$58        .dwtag  DW_TAG_TI_assign_register
-     618                      .dwattr $C$DW$58, DW_AT_name("R4H")
-     619                      .dwattr $C$DW$58, DW_AT_location[DW_OP_regx 0x3b]
-     620              
-     621              $C$DW$59        .dwtag  DW_TAG_TI_assign_register
-     622                      .dwattr $C$DW$59, DW_AT_name("R5H")
-     623                      .dwattr $C$DW$59, DW_AT_location[DW_OP_regx 0x3f]
-     624              
-     625              $C$DW$60        .dwtag  DW_TAG_TI_assign_register
-     626                      .dwattr $C$DW$60, DW_AT_name("R6H")
-     627                      .dwattr $C$DW$60, DW_AT_location[DW_OP_regx 0x43]
-     628              
-     629              $C$DW$61        .dwtag  DW_TAG_TI_assign_register
-     630                      .dwattr $C$DW$61, DW_AT_name("R7H")
-     631                      .dwattr $C$DW$61, DW_AT_location[DW_OP_regx 0x47]
-     632              
-     633              $C$DW$62        .dwtag  DW_TAG_TI_assign_register
-     634                      .dwattr $C$DW$62, DW_AT_name("RB")
-     635                      .dwattr $C$DW$62, DW_AT_location[DW_OP_regx 0x4a]
-     636              
-TMS320C2000 Assembler PC v20.2.1 Wed Jan  6 17:53:21 2021
-
-Copyright (c) 1996-2018 Texas Instruments Incorporated
-bsp_led.asm                                                          PAGE   13
-
-     637              $C$DW$63        .dwtag  DW_TAG_TI_assign_register
-     638                      .dwattr $C$DW$63, DW_AT_name("STF")
-     639                      .dwattr $C$DW$63, DW_AT_location[DW_OP_regx 0x28]
-     640              
-     641              $C$DW$64        .dwtag  DW_TAG_TI_assign_register
-     642                      .dwattr $C$DW$64, DW_AT_name("FPUHAZ")
-     643                      .dwattr $C$DW$64, DW_AT_location[DW_OP_reg27]
-     644              
-     645              $C$DW$65        .dwtag  DW_TAG_TI_assign_register
-     646                      .dwattr $C$DW$65, DW_AT_name("STF_HWDIV")
-     647                      .dwattr $C$DW$65, DW_AT_location[DW_OP_regx 0x4f]
-     648              
-     649                      .dwendtag $C$DW$CU
-     650              
+     597                      .dwendtag $C$DW$CU
+     598              
 
 No Assembly Errors, No Assembly Warnings

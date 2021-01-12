@@ -1,15 +1,15 @@
 ;***************************************************************
 ;* TMS320C2000 G3 C/C++ Codegen                               PC v20.2.1.LTS *
-;* Date/Time created: Wed Jan  6 17:53:22 2021                 *
+;* Date/Time created: Mon Jan 11 16:45:35 2021                 *
 ;***************************************************************
-	.compiler_opts --abi=coffabi --diag_wrap=off --float_support=fpu32 --hll_source=on --mem_model:code=flat --mem_model:data=large --object_format=coff --silicon_errata_fpu1_workaround=on --silicon_version=28 --symdebug:dwarf --symdebug:dwarf_version=3 
+	.compiler_opts --abi=coffabi --diag_wrap=off --float_support=softlib --hll_source=on --mem_model:code=flat --mem_model:data=large --object_format=coff --silicon_errata_fpu1_workaround=on --silicon_version=28 --symdebug:dwarf --symdebug:dwarf_version=3 
 	.asg	XAR2, FP
 
 $C$DW$CU	.dwtag  DW_TAG_compile_unit
-	.dwattr $C$DW$CU, DW_AT_name("C:/ti/Workspace/PLC_certificate_backup/Software/uC-LIB/lib_math.c")
+	.dwattr $C$DW$CU, DW_AT_name("C:/ti/Workspace/PLC_certificate/Software/uC-LIB/lib_math.c")
 	.dwattr $C$DW$CU, DW_AT_producer("TI TMS320C2000 G3 C/C++ Codegen PC v20.2.1.LTS Copyright (c) 1996-2018 Texas Instruments Incorporated")
 	.dwattr $C$DW$CU, DW_AT_TI_version(0x01)
-	.dwattr $C$DW$CU, DW_AT_comp_dir("C:\ti\Workspace\PLC_certificate_backup\Examples\TI\TMDSDOCK28335\OS2\CCS\Debug")
+	.dwattr $C$DW$CU, DW_AT_comp_dir("C:\ti\Workspace\PLC_certificate\Examples\TI\TMDSDOCK28335\OS2\CCS\Debug")
 
 $C$DW$1	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$1, DW_AT_name("CPU_SR_Restore")
@@ -40,7 +40,7 @@ $C$DW$4	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$4, DW_AT_external
 
 	.sblock	".ebss"
-;	C:\ti\ccs1011\ccs\tools\compiler\ti-cgt-c2000_20.2.1.LTS\bin\ac2000.exe -@C:\\Users\\LEEKEO~1\\AppData\\Local\\Temp\\{F992A61F-1B30-47EE-8AF6-DAE9B995C2E1} 
+;	C:\ti\ccs1011\ccs\tools\compiler\ti-cgt-c2000_20.2.1.LTS\bin\ac2000.exe -@C:\\Users\\LEEKEO~1\\AppData\\Local\\Temp\\{5018003C-ED8D-4351-8D24-1F8B597C9019} 
 	.sect	".text"
 	.clink
 	.global	_Math_Init
@@ -51,11 +51,11 @@ $C$DW$5	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$5, DW_AT_high_pc(0x00)
 	.dwattr $C$DW$5, DW_AT_TI_symbol_name("_Math_Init")
 	.dwattr $C$DW$5, DW_AT_external
-	.dwattr $C$DW$5, DW_AT_TI_begin_file("C:/ti/Workspace/PLC_certificate_backup/Software/uC-LIB/lib_math.c")
+	.dwattr $C$DW$5, DW_AT_TI_begin_file("C:/ti/Workspace/PLC_certificate/Software/uC-LIB/lib_math.c")
 	.dwattr $C$DW$5, DW_AT_TI_begin_line(0x93)
 	.dwattr $C$DW$5, DW_AT_TI_begin_column(0x07)
 	.dwattr $C$DW$5, DW_AT_TI_max_frame_size(-2)
-	.dwpsn	file "C:/ti/Workspace/PLC_certificate_backup/Software/uC-LIB/lib_math.c",line 148,column 1,is_stmt,address _Math_Init,isa 0
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Software/uC-LIB/lib_math.c",line 148,column 1,is_stmt,address _Math_Init,isa 0
 
 	.dwfde $C$DW$CIE, _Math_Init
 
@@ -71,7 +71,7 @@ $C$DW$5	.dwtag  DW_TAG_subprogram
 _Math_Init:
 	.dwcfi	cfa_offset, -2
 	.dwcfi	save_reg_to_mem, 26, 0
-	.dwpsn	file "C:/ti/Workspace/PLC_certificate_backup/Software/uC-LIB/lib_math.c",line 149,column 5,is_stmt,isa 0
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Software/uC-LIB/lib_math.c",line 149,column 5,is_stmt,isa 0
         MOVB      ACC,#1                ; [CPU_ALU] |149| 
 $C$DW$6	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$6, DW_AT_low_pc(0x00)
@@ -80,14 +80,14 @@ $C$DW$6	.dwtag  DW_TAG_TI_branch
 
         LCR       #_Math_RandSetSeed    ; [CPU_ALU] |149| 
         ; call occurs [#_Math_RandSetSeed] ; [] |149| 
-	.dwpsn	file "C:/ti/Workspace/PLC_certificate_backup/Software/uC-LIB/lib_math.c",line 150,column 1,is_stmt,isa 0
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Software/uC-LIB/lib_math.c",line 150,column 1,is_stmt,isa 0
 $C$DW$7	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$7, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$7, DW_AT_TI_return
 
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$5, DW_AT_TI_end_file("C:/ti/Workspace/PLC_certificate_backup/Software/uC-LIB/lib_math.c")
+	.dwattr $C$DW$5, DW_AT_TI_end_file("C:/ti/Workspace/PLC_certificate/Software/uC-LIB/lib_math.c")
 	.dwattr $C$DW$5, DW_AT_TI_end_line(0x96)
 	.dwattr $C$DW$5, DW_AT_TI_end_column(0x01)
 	.dwendentry
@@ -103,11 +103,11 @@ $C$DW$8	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$8, DW_AT_high_pc(0x00)
 	.dwattr $C$DW$8, DW_AT_TI_symbol_name("_Math_RandSetSeed")
 	.dwattr $C$DW$8, DW_AT_external
-	.dwattr $C$DW$8, DW_AT_TI_begin_file("C:/ti/Workspace/PLC_certificate_backup/Software/uC-LIB/lib_math.c")
+	.dwattr $C$DW$8, DW_AT_TI_begin_file("C:/ti/Workspace/PLC_certificate/Software/uC-LIB/lib_math.c")
 	.dwattr $C$DW$8, DW_AT_TI_begin_line(0xaf)
 	.dwattr $C$DW$8, DW_AT_TI_begin_column(0x07)
 	.dwattr $C$DW$8, DW_AT_TI_max_frame_size(-6)
-	.dwpsn	file "C:/ti/Workspace/PLC_certificate_backup/Software/uC-LIB/lib_math.c",line 176,column 1,is_stmt,address _Math_RandSetSeed,isa 0
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Software/uC-LIB/lib_math.c",line 176,column 1,is_stmt,address _Math_RandSetSeed,isa 0
 
 	.dwfde $C$DW$CIE, _Math_RandSetSeed
 $C$DW$9	.dwtag  DW_TAG_formal_parameter
@@ -144,9 +144,9 @@ $C$DW$11	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$11, DW_AT_location[DW_OP_breg20 -3]
 
         MOVL      *-SP[2],ACC           ; [CPU_ALU] |176| 
-	.dwpsn	file "C:/ti/Workspace/PLC_certificate_backup/Software/uC-LIB/lib_math.c",line 177,column 5,is_stmt,isa 0
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Software/uC-LIB/lib_math.c",line 177,column 5,is_stmt,isa 0
         MOV       *-SP[3],#0            ; [CPU_ALU] |177| 
-	.dwpsn	file "C:/ti/Workspace/PLC_certificate_backup/Software/uC-LIB/lib_math.c",line 180,column 5,is_stmt,isa 0
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Software/uC-LIB/lib_math.c",line 180,column 5,is_stmt,isa 0
 $C$DW$12	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$12, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$12, DW_AT_name("_CPU_SR_Save")
@@ -155,11 +155,11 @@ $C$DW$12	.dwtag  DW_TAG_TI_branch
         LCR       #_CPU_SR_Save         ; [CPU_ALU] |180| 
         ; call occurs [#_CPU_SR_Save] ; [] |180| 
         MOV       *-SP[3],AL            ; [CPU_ALU] |180| 
-	.dwpsn	file "C:/ti/Workspace/PLC_certificate_backup/Software/uC-LIB/lib_math.c",line 181,column 5,is_stmt,isa 0
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Software/uC-LIB/lib_math.c",line 181,column 5,is_stmt,isa 0
         MOVW      DP,#_Math_RandSeedCur ; [CPU_ARAU] 
         MOVL      ACC,*-SP[2]           ; [CPU_ALU] |181| 
         MOVL      @_Math_RandSeedCur,ACC ; [CPU_ALU] |181| 
-	.dwpsn	file "C:/ti/Workspace/PLC_certificate_backup/Software/uC-LIB/lib_math.c",line 182,column 5,is_stmt,isa 0
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Software/uC-LIB/lib_math.c",line 182,column 5,is_stmt,isa 0
         MOV       AL,*-SP[3]            ; [CPU_ALU] |182| 
 $C$DW$13	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$13, DW_AT_low_pc(0x00)
@@ -168,7 +168,7 @@ $C$DW$13	.dwtag  DW_TAG_TI_branch
 
         LCR       #_CPU_SR_Restore      ; [CPU_ALU] |182| 
         ; call occurs [#_CPU_SR_Restore] ; [] |182| 
-	.dwpsn	file "C:/ti/Workspace/PLC_certificate_backup/Software/uC-LIB/lib_math.c",line 183,column 1,is_stmt,isa 0
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Software/uC-LIB/lib_math.c",line 183,column 1,is_stmt,isa 0
         SUBB      SP,#4                 ; [CPU_ARAU] 
 	.dwcfi	cfa_offset, -2
 $C$DW$14	.dwtag  DW_TAG_TI_branch
@@ -177,7 +177,7 @@ $C$DW$14	.dwtag  DW_TAG_TI_branch
 
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$8, DW_AT_TI_end_file("C:/ti/Workspace/PLC_certificate_backup/Software/uC-LIB/lib_math.c")
+	.dwattr $C$DW$8, DW_AT_TI_end_file("C:/ti/Workspace/PLC_certificate/Software/uC-LIB/lib_math.c")
 	.dwattr $C$DW$8, DW_AT_TI_end_line(0xb7)
 	.dwattr $C$DW$8, DW_AT_TI_end_column(0x01)
 	.dwendentry
@@ -194,11 +194,11 @@ $C$DW$15	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$15, DW_AT_TI_symbol_name("_Math_Rand")
 	.dwattr $C$DW$15, DW_AT_external
 	.dwattr $C$DW$15, DW_AT_type(*$C$DW$T$25)
-	.dwattr $C$DW$15, DW_AT_TI_begin_file("C:/ti/Workspace/PLC_certificate_backup/Software/uC-LIB/lib_math.c")
+	.dwattr $C$DW$15, DW_AT_TI_begin_file("C:/ti/Workspace/PLC_certificate/Software/uC-LIB/lib_math.c")
 	.dwattr $C$DW$15, DW_AT_TI_begin_line(0xd7)
 	.dwattr $C$DW$15, DW_AT_TI_begin_column(0x0b)
 	.dwattr $C$DW$15, DW_AT_TI_max_frame_size(-8)
-	.dwpsn	file "C:/ti/Workspace/PLC_certificate_backup/Software/uC-LIB/lib_math.c",line 216,column 1,is_stmt,address _Math_Rand,isa 0
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Software/uC-LIB/lib_math.c",line 216,column 1,is_stmt,address _Math_Rand,isa 0
 
 	.dwfde $C$DW$CIE, _Math_Rand
 
@@ -234,9 +234,9 @@ $C$DW$18	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$18, DW_AT_type(*$C$DW$T$20)
 	.dwattr $C$DW$18, DW_AT_location[DW_OP_breg20 -5]
 
-	.dwpsn	file "C:/ti/Workspace/PLC_certificate_backup/Software/uC-LIB/lib_math.c",line 219,column 5,is_stmt,isa 0
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Software/uC-LIB/lib_math.c",line 219,column 5,is_stmt,isa 0
         MOV       *-SP[5],#0            ; [CPU_ALU] |219| 
-	.dwpsn	file "C:/ti/Workspace/PLC_certificate_backup/Software/uC-LIB/lib_math.c",line 222,column 5,is_stmt,isa 0
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Software/uC-LIB/lib_math.c",line 222,column 5,is_stmt,isa 0
 $C$DW$19	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$19, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$19, DW_AT_name("_CPU_SR_Save")
@@ -245,11 +245,11 @@ $C$DW$19	.dwtag  DW_TAG_TI_branch
         LCR       #_CPU_SR_Save         ; [CPU_ALU] |222| 
         ; call occurs [#_CPU_SR_Save] ; [] |222| 
         MOV       *-SP[5],AL            ; [CPU_ALU] |222| 
-	.dwpsn	file "C:/ti/Workspace/PLC_certificate_backup/Software/uC-LIB/lib_math.c",line 223,column 5,is_stmt,isa 0
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Software/uC-LIB/lib_math.c",line 223,column 5,is_stmt,isa 0
         MOVW      DP,#_Math_RandSeedCur ; [CPU_ARAU] 
         MOVL      ACC,@_Math_RandSeedCur ; [CPU_ALU] |223| 
         MOVL      *-SP[2],ACC           ; [CPU_ALU] |223| 
-	.dwpsn	file "C:/ti/Workspace/PLC_certificate_backup/Software/uC-LIB/lib_math.c",line 224,column 5,is_stmt,isa 0
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Software/uC-LIB/lib_math.c",line 224,column 5,is_stmt,isa 0
 $C$DW$20	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$20, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$20, DW_AT_name("_Math_RandSeed")
@@ -258,10 +258,10 @@ $C$DW$20	.dwtag  DW_TAG_TI_branch
         LCR       #_Math_RandSeed       ; [CPU_ALU] |224| 
         ; call occurs [#_Math_RandSeed] ; [] |224| 
         MOVL      *-SP[4],ACC           ; [CPU_ALU] |224| 
-	.dwpsn	file "C:/ti/Workspace/PLC_certificate_backup/Software/uC-LIB/lib_math.c",line 225,column 5,is_stmt,isa 0
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Software/uC-LIB/lib_math.c",line 225,column 5,is_stmt,isa 0
         MOVW      DP,#_Math_RandSeedCur ; [CPU_ARAU] 
         MOVL      @_Math_RandSeedCur,ACC ; [CPU_ALU] |225| 
-	.dwpsn	file "C:/ti/Workspace/PLC_certificate_backup/Software/uC-LIB/lib_math.c",line 226,column 5,is_stmt,isa 0
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Software/uC-LIB/lib_math.c",line 226,column 5,is_stmt,isa 0
         MOV       AL,*-SP[5]            ; [CPU_ALU] |226| 
 $C$DW$21	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$21, DW_AT_low_pc(0x00)
@@ -270,9 +270,9 @@ $C$DW$21	.dwtag  DW_TAG_TI_branch
 
         LCR       #_CPU_SR_Restore      ; [CPU_ALU] |226| 
         ; call occurs [#_CPU_SR_Restore] ; [] |226| 
-	.dwpsn	file "C:/ti/Workspace/PLC_certificate_backup/Software/uC-LIB/lib_math.c",line 228,column 5,is_stmt,isa 0
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Software/uC-LIB/lib_math.c",line 228,column 5,is_stmt,isa 0
         MOVL      ACC,*-SP[4]           ; [CPU_ALU] |228| 
-	.dwpsn	file "C:/ti/Workspace/PLC_certificate_backup/Software/uC-LIB/lib_math.c",line 229,column 1,is_stmt,isa 0
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Software/uC-LIB/lib_math.c",line 229,column 1,is_stmt,isa 0
         SUBB      SP,#6                 ; [CPU_ARAU] 
 	.dwcfi	cfa_offset, -2
 $C$DW$22	.dwtag  DW_TAG_TI_branch
@@ -281,7 +281,7 @@ $C$DW$22	.dwtag  DW_TAG_TI_branch
 
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$15, DW_AT_TI_end_file("C:/ti/Workspace/PLC_certificate_backup/Software/uC-LIB/lib_math.c")
+	.dwattr $C$DW$15, DW_AT_TI_end_file("C:/ti/Workspace/PLC_certificate/Software/uC-LIB/lib_math.c")
 	.dwattr $C$DW$15, DW_AT_TI_end_line(0xe5)
 	.dwattr $C$DW$15, DW_AT_TI_end_column(0x01)
 	.dwendentry
@@ -298,11 +298,11 @@ $C$DW$23	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$23, DW_AT_TI_symbol_name("_Math_RandSeed")
 	.dwattr $C$DW$23, DW_AT_external
 	.dwattr $C$DW$23, DW_AT_type(*$C$DW$T$25)
-	.dwattr $C$DW$23, DW_AT_TI_begin_file("C:/ti/Workspace/PLC_certificate_backup/Software/uC-LIB/lib_math.c")
+	.dwattr $C$DW$23, DW_AT_TI_begin_file("C:/ti/Workspace/PLC_certificate/Software/uC-LIB/lib_math.c")
 	.dwattr $C$DW$23, DW_AT_TI_begin_line(0x110)
 	.dwattr $C$DW$23, DW_AT_TI_begin_column(0x0b)
 	.dwattr $C$DW$23, DW_AT_TI_max_frame_size(-6)
-	.dwpsn	file "C:/ti/Workspace/PLC_certificate_backup/Software/uC-LIB/lib_math.c",line 273,column 1,is_stmt,address _Math_RandSeed,isa 0
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Software/uC-LIB/lib_math.c",line 273,column 1,is_stmt,address _Math_RandSeed,isa 0
 
 	.dwfde $C$DW$CIE, _Math_RandSeed
 $C$DW$24	.dwtag  DW_TAG_formal_parameter
@@ -339,7 +339,7 @@ $C$DW$26	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$26, DW_AT_location[DW_OP_breg20 -4]
 
         MOVL      *-SP[2],ACC           ; [CPU_ALU] |273| 
-	.dwpsn	file "C:/ti/Workspace/PLC_certificate_backup/Software/uC-LIB/lib_math.c",line 277,column 5,is_stmt,isa 0
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Software/uC-LIB/lib_math.c",line 277,column 5,is_stmt,isa 0
         MOV       AL,#20077             ; [CPU_ALU] |277| 
         MOV       AH,#16838             ; [CPU_ALU] |277| 
         MOVL      XT,ACC                ; [CPU_ALU] |277| 
@@ -347,8 +347,8 @@ $C$DW$26	.dwtag  DW_TAG_variable
         ADD       ACC,#12345 << 0       ; [CPU_ALU] |277| 
         AND       AH,#32767             ; [CPU_ALU] |277| 
         MOVL      *-SP[4],ACC           ; [CPU_ALU] |277| 
-	.dwpsn	file "C:/ti/Workspace/PLC_certificate_backup/Software/uC-LIB/lib_math.c",line 279,column 5,is_stmt,isa 0
-	.dwpsn	file "C:/ti/Workspace/PLC_certificate_backup/Software/uC-LIB/lib_math.c",line 280,column 1,is_stmt,isa 0
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Software/uC-LIB/lib_math.c",line 279,column 5,is_stmt,isa 0
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Software/uC-LIB/lib_math.c",line 280,column 1,is_stmt,isa 0
         SUBB      SP,#4                 ; [CPU_ARAU] 
 	.dwcfi	cfa_offset, -2
 $C$DW$27	.dwtag  DW_TAG_TI_branch
@@ -357,7 +357,7 @@ $C$DW$27	.dwtag  DW_TAG_TI_branch
 
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$23, DW_AT_TI_end_file("C:/ti/Workspace/PLC_certificate_backup/Software/uC-LIB/lib_math.c")
+	.dwattr $C$DW$23, DW_AT_TI_end_file("C:/ti/Workspace/PLC_certificate/Software/uC-LIB/lib_math.c")
 	.dwattr $C$DW$23, DW_AT_TI_end_line(0x118)
 	.dwattr $C$DW$23, DW_AT_TI_end_column(0x01)
 	.dwendentry
@@ -486,10 +486,6 @@ $C$DW$CIE	.dwcie 26
 	.dwcfi	same_value, 9
 	.dwcfi	same_value, 10
 	.dwcfi	same_value, 11
-	.dwcfi	same_value, 59
-	.dwcfi	same_value, 63
-	.dwcfi	same_value, 67
-	.dwcfi	same_value, 71
 	.dwendentry
 
 ;***************************************************************
@@ -659,54 +655,6 @@ $C$DW$67	.dwtag  DW_TAG_TI_assign_register
 $C$DW$68	.dwtag  DW_TAG_TI_assign_register
 	.dwattr $C$DW$68, DW_AT_name("XAR7")
 	.dwattr $C$DW$68, DW_AT_location[DW_OP_reg19]
-
-$C$DW$69	.dwtag  DW_TAG_TI_assign_register
-	.dwattr $C$DW$69, DW_AT_name("R0H")
-	.dwattr $C$DW$69, DW_AT_location[DW_OP_regx 0x2b]
-
-$C$DW$70	.dwtag  DW_TAG_TI_assign_register
-	.dwattr $C$DW$70, DW_AT_name("R1H")
-	.dwattr $C$DW$70, DW_AT_location[DW_OP_regx 0x2f]
-
-$C$DW$71	.dwtag  DW_TAG_TI_assign_register
-	.dwattr $C$DW$71, DW_AT_name("R2H")
-	.dwattr $C$DW$71, DW_AT_location[DW_OP_regx 0x33]
-
-$C$DW$72	.dwtag  DW_TAG_TI_assign_register
-	.dwattr $C$DW$72, DW_AT_name("R3H")
-	.dwattr $C$DW$72, DW_AT_location[DW_OP_regx 0x37]
-
-$C$DW$73	.dwtag  DW_TAG_TI_assign_register
-	.dwattr $C$DW$73, DW_AT_name("R4H")
-	.dwattr $C$DW$73, DW_AT_location[DW_OP_regx 0x3b]
-
-$C$DW$74	.dwtag  DW_TAG_TI_assign_register
-	.dwattr $C$DW$74, DW_AT_name("R5H")
-	.dwattr $C$DW$74, DW_AT_location[DW_OP_regx 0x3f]
-
-$C$DW$75	.dwtag  DW_TAG_TI_assign_register
-	.dwattr $C$DW$75, DW_AT_name("R6H")
-	.dwattr $C$DW$75, DW_AT_location[DW_OP_regx 0x43]
-
-$C$DW$76	.dwtag  DW_TAG_TI_assign_register
-	.dwattr $C$DW$76, DW_AT_name("R7H")
-	.dwattr $C$DW$76, DW_AT_location[DW_OP_regx 0x47]
-
-$C$DW$77	.dwtag  DW_TAG_TI_assign_register
-	.dwattr $C$DW$77, DW_AT_name("RB")
-	.dwattr $C$DW$77, DW_AT_location[DW_OP_regx 0x4a]
-
-$C$DW$78	.dwtag  DW_TAG_TI_assign_register
-	.dwattr $C$DW$78, DW_AT_name("STF")
-	.dwattr $C$DW$78, DW_AT_location[DW_OP_regx 0x28]
-
-$C$DW$79	.dwtag  DW_TAG_TI_assign_register
-	.dwattr $C$DW$79, DW_AT_name("FPUHAZ")
-	.dwattr $C$DW$79, DW_AT_location[DW_OP_reg27]
-
-$C$DW$80	.dwtag  DW_TAG_TI_assign_register
-	.dwattr $C$DW$80, DW_AT_name("STF_HWDIV")
-	.dwattr $C$DW$80, DW_AT_location[DW_OP_regx 0x4f]
 
 	.dwendtag $C$DW$CU
 

@@ -106,7 +106,7 @@ typedef  unsigned  short   OS_CPU_SR;                           /* Define size o
 *             will be enabled even if they were disabled before entering the critical section.
 *             NOT IMPLEMENTED
 *
-* Method #2:  Disable/Enable interrupts by preserving the state of interrupts.  In other words, if
+* Method #2:  Disable/Enable interrupts by preserving the state of interrupts.  In other INT16Us, if
 *             interrupts were disabled before entering the critical section, they will be disabled when
 *             leaving the critical section.
 *             NOT IMPLEMENTED

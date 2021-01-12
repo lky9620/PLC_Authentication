@@ -6,10 +6,10 @@ SHELL = cmd.exe
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-C:/ti/Workspace/PLC_certificate_backup/Examples/TI/TMDSDOCK28335/BSP/bsp.c \
-C:/ti/Workspace/PLC_certificate_backup/Examples/TI/TMDSDOCK28335/BSP/bsp_int.c \
-C:/ti/Workspace/PLC_certificate_backup/Examples/TI/TMDSDOCK28335/BSP/bsp_led.c \
-C:/ti/Workspace/PLC_certificate_backup/Examples/TI/TMDSDOCK28335/BSP/cpu_bsp.c 
+C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/bsp.c \
+C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/bsp_int.c \
+C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/bsp_led.c \
+C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/cpu_bsp.c 
 
 C_DEPS += \
 ./BSP/bsp.d \
@@ -36,9 +36,9 @@ C_DEPS__QUOTED += \
 "BSP\cpu_bsp.d" 
 
 C_SRCS__QUOTED += \
-"C:/ti/Workspace/PLC_certificate_backup/Examples/TI/TMDSDOCK28335/BSP/bsp.c" \
-"C:/ti/Workspace/PLC_certificate_backup/Examples/TI/TMDSDOCK28335/BSP/bsp_int.c" \
-"C:/ti/Workspace/PLC_certificate_backup/Examples/TI/TMDSDOCK28335/BSP/bsp_led.c" \
-"C:/ti/Workspace/PLC_certificate_backup/Examples/TI/TMDSDOCK28335/BSP/cpu_bsp.c" 
+"C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/bsp.c" \
+"C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/bsp_int.c" \
+"C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/bsp_led.c" \
+"C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/cpu_bsp.c" 
 
 

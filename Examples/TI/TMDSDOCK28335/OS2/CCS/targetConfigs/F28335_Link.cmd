@@ -37,6 +37,7 @@ MEMORY
         RAMM0      : origin = 0x000050, length = 0x0000B0
 
         RAMLP      : origin = 0x008000, length = 0x005000
+        FLASH      : origin = 0x300000, length = 0x03FF80
         CSM_RSVD   : origin = 0x33FF80, length = 0x000076       /* Part of FLASHA.  Program with all 0x0000 when ...    */
                                                                 /*  ... CSM is in use.                                  */
         CSM_PWL    : origin = 0x33FFF8, length = 0x000008       /* Part of FLASHA.  CSM password locations in FLASHA    */
@@ -66,17 +67,18 @@ SECTIONS
                                                                  /* Program sections.                                   */
     ram_start  : > BEGIN,           PAGE = 0                     /* codestart branches to c_int00().                    */
     ramfuncs   : > RAMLP,           PAGE = 0
-    .text      : > RAMLP,           PAGE = 0
-    .cinit     : > RAMLP,           PAGE = 0
-    .pinit     : > RAMLP,           PAGE = 0
-    .switch    : > RAMLP,           PAGE = 0
+    .cio       : > RAMLP,           PAGE = 0
+    .text      : > FLASH,           PAGE = 0
+    .cinit     : > FLASH,           PAGE = 0
+    .pinit     : > FLASH,           PAGE = 0
+    .switch    : > FLASH,           PAGE = 0
                                                                 /* Default reset handler. Not used.                     */
     .reset     : > VECTORS,         PAGE = 0, TYPE = DSECT
                                                                 /* Data sections.                                       */
     .stack     : > RAMM1,           PAGE = 1
     pie_vram   : > PIE_VRAM,        PAGE = 1
     .ebss      : > RAMLD,           PAGE = 1
-    .econst    : > RAMLD,           PAGE = 1
+    .econst    : > FLASH,           PAGE = 0
     .esysmem   : > RAMLD,           PAGE = 1
                                                                 /* 128-bit CSM Password. Not used.                      */
     csm_rsvd   : > CSM_RSVD,        PAGE = 0, TYPE = DSECT

@@ -6,16 +6,16 @@ SHELL = cmd.exe
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-C:/ti/Workspace/PLC_certificate_backup/Software/uCOS-II/Source/os_core.c \
-C:/ti/Workspace/PLC_certificate_backup/Software/uCOS-II/Source/os_flag.c \
-C:/ti/Workspace/PLC_certificate_backup/Software/uCOS-II/Source/os_mbox.c \
-C:/ti/Workspace/PLC_certificate_backup/Software/uCOS-II/Source/os_mem.c \
-C:/ti/Workspace/PLC_certificate_backup/Software/uCOS-II/Source/os_mutex.c \
-C:/ti/Workspace/PLC_certificate_backup/Software/uCOS-II/Source/os_q.c \
-C:/ti/Workspace/PLC_certificate_backup/Software/uCOS-II/Source/os_sem.c \
-C:/ti/Workspace/PLC_certificate_backup/Software/uCOS-II/Source/os_task.c \
-C:/ti/Workspace/PLC_certificate_backup/Software/uCOS-II/Source/os_time.c \
-C:/ti/Workspace/PLC_certificate_backup/Software/uCOS-II/Source/os_tmr.c 
+C:/ti/Workspace/PLC_certificate/Software/uCOS-II/Source/os_core.c \
+C:/ti/Workspace/PLC_certificate/Software/uCOS-II/Source/os_flag.c \
+C:/ti/Workspace/PLC_certificate/Software/uCOS-II/Source/os_mbox.c \
+C:/ti/Workspace/PLC_certificate/Software/uCOS-II/Source/os_mem.c \
+C:/ti/Workspace/PLC_certificate/Software/uCOS-II/Source/os_mutex.c \
+C:/ti/Workspace/PLC_certificate/Software/uCOS-II/Source/os_q.c \
+C:/ti/Workspace/PLC_certificate/Software/uCOS-II/Source/os_sem.c \
+C:/ti/Workspace/PLC_certificate/Software/uCOS-II/Source/os_task.c \
+C:/ti/Workspace/PLC_certificate/Software/uCOS-II/Source/os_time.c \
+C:/ti/Workspace/PLC_certificate/Software/uCOS-II/Source/os_tmr.c 
 
 C_DEPS += \
 ./uCOS-II/Source/os_core.d \
@@ -66,15 +66,15 @@ C_DEPS__QUOTED += \
 "uCOS-II\Source\os_tmr.d" 
 
 C_SRCS__QUOTED += \
-"C:/ti/Workspace/PLC_certificate_backup/Software/uCOS-II/Source/os_core.c" \
-"C:/ti/Workspace/PLC_certificate_backup/Software/uCOS-II/Source/os_flag.c" \
-"C:/ti/Workspace/PLC_certificate_backup/Software/uCOS-II/Source/os_mbox.c" \
-"C:/ti/Workspace/PLC_certificate_backup/Software/uCOS-II/Source/os_mem.c" \
-"C:/ti/Workspace/PLC_certificate_backup/Software/uCOS-II/Source/os_mutex.c" \
-"C:/ti/Workspace/PLC_certificate_backup/Software/uCOS-II/Source/os_q.c" \
-"C:/ti/Workspace/PLC_certificate_backup/Software/uCOS-II/Source/os_sem.c" \
-"C:/ti/Workspace/PLC_certificate_backup/Software/uCOS-II/Source/os_task.c" \
-"C:/ti/Workspace/PLC_certificate_backup/Software/uCOS-II/Source/os_time.c" \
-"C:/ti/Workspace/PLC_certificate_backup/Software/uCOS-II/Source/os_tmr.c" 
+"C:/ti/Workspace/PLC_certificate/Software/uCOS-II/Source/os_core.c" \
+"C:/ti/Workspace/PLC_certificate/Software/uCOS-II/Source/os_flag.c" \
+"C:/ti/Workspace/PLC_certificate/Software/uCOS-II/Source/os_mbox.c" \
+"C:/ti/Workspace/PLC_certificate/Software/uCOS-II/Source/os_mem.c" \
+"C:/ti/Workspace/PLC_certificate/Software/uCOS-II/Source/os_mutex.c" \
+"C:/ti/Workspace/PLC_certificate/Software/uCOS-II/Source/os_q.c" \
+"C:/ti/Workspace/PLC_certificate/Software/uCOS-II/Source/os_sem.c" \
+"C:/ti/Workspace/PLC_certificate/Software/uCOS-II/Source/os_task.c" \
+"C:/ti/Workspace/PLC_certificate/Software/uCOS-II/Source/os_time.c" \
+"C:/ti/Workspace/PLC_certificate/Software/uCOS-II/Source/os_tmr.c" 
 
 

@@ -6,10 +6,10 @@ SHELL = cmd.exe
 
 # Add inputs and outputs from these tool invocations to the build variables 
 ASM_SRCS += \
-C:/ti/Workspace/PLC_certificate_backup/Software/uC-CPU/C28x/CCS/cpu_a.asm 
+C:/ti/Workspace/PLC_certificate/Software/uC-CPU/C28x/CCS/cpu_a.asm 
 
 C_SRCS += \
-C:/ti/Workspace/PLC_certificate_backup/Software/uC-CPU/C28x/CCS/cpu_c.c 
+C:/ti/Workspace/PLC_certificate/Software/uC-CPU/C28x/CCS/cpu_c.c 
 
 C_DEPS += \
 ./uC-CPU/C28x/CCS/cpu_c.d 
@@ -32,9 +32,9 @@ ASM_DEPS__QUOTED += \
 "uC-CPU\C28x\CCS\cpu_a.d" 
 
 ASM_SRCS__QUOTED += \
-"C:/ti/Workspace/PLC_certificate_backup/Software/uC-CPU/C28x/CCS/cpu_a.asm" 
+"C:/ti/Workspace/PLC_certificate/Software/uC-CPU/C28x/CCS/cpu_a.asm" 
 
 C_SRCS__QUOTED += \
-"C:/ti/Workspace/PLC_certificate_backup/Software/uC-CPU/C28x/CCS/cpu_c.c" 
+"C:/ti/Workspace/PLC_certificate/Software/uC-CPU/C28x/CCS/cpu_c.c" 
 
 

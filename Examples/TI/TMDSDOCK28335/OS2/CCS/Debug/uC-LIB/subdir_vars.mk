@@ -6,10 +6,10 @@ SHELL = cmd.exe
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-C:/ti/Workspace/PLC_certificate_backup/Software/uC-LIB/lib_ascii.c \
-C:/ti/Workspace/PLC_certificate_backup/Software/uC-LIB/lib_math.c \
-C:/ti/Workspace/PLC_certificate_backup/Software/uC-LIB/lib_mem.c \
-C:/ti/Workspace/PLC_certificate_backup/Software/uC-LIB/lib_str.c 
+C:/ti/Workspace/PLC_certificate/Software/uC-LIB/lib_ascii.c \
+C:/ti/Workspace/PLC_certificate/Software/uC-LIB/lib_math.c \
+C:/ti/Workspace/PLC_certificate/Software/uC-LIB/lib_mem.c \
+C:/ti/Workspace/PLC_certificate/Software/uC-LIB/lib_str.c 
 
 C_DEPS += \
 ./uC-LIB/lib_ascii.d \
@@ -36,9 +36,9 @@ C_DEPS__QUOTED += \
 "uC-LIB\lib_str.d" 
 
 C_SRCS__QUOTED += \
-"C:/ti/Workspace/PLC_certificate_backup/Software/uC-LIB/lib_ascii.c" \
-"C:/ti/Workspace/PLC_certificate_backup/Software/uC-LIB/lib_math.c" \
-"C:/ti/Workspace/PLC_certificate_backup/Software/uC-LIB/lib_mem.c" \
-"C:/ti/Workspace/PLC_certificate_backup/Software/uC-LIB/lib_str.c" 
+"C:/ti/Workspace/PLC_certificate/Software/uC-LIB/lib_ascii.c" \
+"C:/ti/Workspace/PLC_certificate/Software/uC-LIB/lib_math.c" \
+"C:/ti/Workspace/PLC_certificate/Software/uC-LIB/lib_mem.c" \
+"C:/ti/Workspace/PLC_certificate/Software/uC-LIB/lib_str.c" 
 
 

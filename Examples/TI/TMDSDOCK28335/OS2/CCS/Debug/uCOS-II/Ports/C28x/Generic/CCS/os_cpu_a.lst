@@ -1,7 +1,7 @@
-TMS320C2000 Assembler PC v20.2.1 Wed Jan  6 17:53:23 2021
+TMS320C2000 Assembler PC v20.2.1 Mon Jan 11 16:45:36 2021
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
-C:/ti/Workspace/PLC_certificate_backup/Software/uCOS-II/Ports/C28x/Generic/CCS/os_cpu_a.asm PAGE    1
+C:/ti/Workspace/PLC_certificate/Software/uCOS-II/Ports/C28x/Generic/CCS/os_cpu_a.asm PAGE    1
 
        1              ;
        2              ;********************************************************************************************************
@@ -58,10 +58,10 @@ C:/ti/Workspace/PLC_certificate_backup/Software/uCOS-II/Ports/C28x/Generic/CCS/o
       53                  .ref   _OSTCBHighRdy
       54                  .ref   _OSIntExit
       55                  .ref   _OSTaskSwHook
-TMS320C2000 Assembler PC v20.2.1 Wed Jan  6 17:53:23 2021
+TMS320C2000 Assembler PC v20.2.1 Mon Jan 11 16:45:36 2021
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
-C:/ti/Workspace/PLC_certificate_backup/Software/uCOS-II/Ports/C28x/Generic/CCS/os_cpu_a.asm PAGE    2
+C:/ti/Workspace/PLC_certificate/Software/uCOS-II/Ports/C28x/Generic/CCS/os_cpu_a.asm PAGE    2
 
       56              
       57              
@@ -118,10 +118,10 @@ C:/ti/Workspace/PLC_certificate_backup/Software/uCOS-II/Ports/C28x/Generic/CCS/o
      108              ;                                   CRITICAL SECTION METHOD 3 FUNCTIONS
      109              ;
      110              ; Description: Disable/Enable interrupts by preserving the state of interrupts.  Generally speaking you
-TMS320C2000 Assembler PC v20.2.1 Wed Jan  6 17:53:23 2021
+TMS320C2000 Assembler PC v20.2.1 Mon Jan 11 16:45:36 2021
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
-C:/ti/Workspace/PLC_certificate_backup/Software/uCOS-II/Ports/C28x/Generic/CCS/os_cpu_a.asm PAGE    3
+C:/ti/Workspace/PLC_certificate/Software/uCOS-II/Ports/C28x/Generic/CCS/os_cpu_a.asm PAGE    3
 
      111              ;              would store the state of the interrupt disable flag in the local variable 'cpu_sr' and then
      112              ;              disable interrupts.  'cpu_sr' is allocated in all of uC/OS-II's functions that need to
@@ -178,10 +178,10 @@ C:/ti/Workspace/PLC_certificate_backup/Software/uCOS-II/Ports/C28x/Generic/CCS/o
      162              ;                                      void OSStartHighRdy(void)
      163              ; Note(s) : 1) This function triggers a PendSV exception (essentially, causes a context switch) to cause
      164              ;              the first task to start.
-TMS320C2000 Assembler PC v20.2.1 Wed Jan  6 17:53:23 2021
+TMS320C2000 Assembler PC v20.2.1 Mon Jan 11 16:45:36 2021
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
-C:/ti/Workspace/PLC_certificate_backup/Software/uCOS-II/Ports/C28x/Generic/CCS/os_cpu_a.asm PAGE    4
+C:/ti/Workspace/PLC_certificate/Software/uCOS-II/Ports/C28x/Generic/CCS/os_cpu_a.asm PAGE    4
 
      165              ;
      166              ;           2) OSStartHighRdy() MUST:
@@ -208,61 +208,52 @@ C:/ti/Workspace/PLC_certificate_backup/Software/uCOS-II/Ports/C28x/Generic/CCS/o
      184                                                                              ; Restore registers.
      185 0000001c           OS_CTX_RESTORE
 1                      .if .TMS320C2800_FPU32 = 1                                     ; Restore FPU registers, if enabled.
-1        0000001c FFF1      POP     RB                                                  ;   RB
-1        0000001d 59AD      MOVZ    AR1, @SP                                            ;   Can't use SP for indirect addressing.
-1        0000001e E280      MOV32   STF, *--XAR1                                        ;   STF
-         0000001f 0089 
-1        00000020 E2AF      MOV32   R7H, *--XAR1                                        ;   R7H
-         00000021 0789 
-1        00000022 E2AF      MOV32   R6H, *--XAR1                                        ;   R6H
-         00000023 0689 
-1        00000024 E2AF      MOV32   R5H, *--XAR1                                        ;   R5H
-         00000025 0589 
-1        00000026 E2AF      MOV32   R4H, *--XAR1                                        ;   R4H
-         00000027 0489 
-1        00000028 E2AF      MOV32   R3H, *--XAR1                                        ;   R3H
-         00000029 0389 
-1        0000002a E2AF      MOV32   R2H, *--XAR1                                        ;   R2H
-         0000002b 0289 
-1        0000002c E2AF      MOV32   R1H, *--XAR1                                        ;   R1H
-         0000002d 0189 
-1        0000002e E2AF      MOV32   R0H, *--XAR1                                        ;   R0H
-         0000002f 0089 
-1        00000030 92A1      MOV     AL    , AR1                                         ;   Restore SP.
-1        00000031 96AD      MOV     @SP   , AL
+1                         POP     RB                                                  ;   RB
+1                         MOVZ    AR1, @SP                                            ;   Can't use SP for indirect addressing.
+1                         MOV32   STF, *--XAR1                                        ;   STF
+1                         MOV32   R7H, *--XAR1                                        ;   R7H
+1                         MOV32   R6H, *--XAR1                                        ;   R6H
+1                         MOV32   R5H, *--XAR1                                        ;   R5H
+1                         MOV32   R4H, *--XAR1                                        ;   R4H
+1                         MOV32   R3H, *--XAR1                                        ;   R3H
+1                         MOV32   R2H, *--XAR1                                        ;   R2H
+1                         MOV32   R1H, *--XAR1                                        ;   R1H
+1                         MOV32   R0H, *--XAR1                                        ;   R0H
+1                         MOV     AL    , AR1                                         ;   Restore SP.
+1                         MOV     @SP   , AL
 1                      .endif
 1                                                                                     ; Restore CPU registers part 1.
-1        00000032 0007      POP     RPC                                                 ;   RPC
-1        00000033 87BE      POP     XT                                                  ;   XT
-1        00000034 C5BE      POP     XAR7                                                ;   XAR7
-1        00000035 C4BE      POP     XAR6                                                ;   XAR6
-1        00000036 83BE      POP     XAR5                                                ;   XAR5
-1        00000037 8ABE      POP     XAR4                                                ;   XAR4
-TMS320C2000 Assembler PC v20.2.1 Wed Jan  6 17:53:23 2021
-
-Copyright (c) 1996-2018 Texas Instruments Incorporated
-C:/ti/Workspace/PLC_certificate_backup/Software/uCOS-II/Ports/C28x/Generic/CCS/os_cpu_a.asm PAGE    5
-
-1        00000038 82BE      POP     XAR3                                                ;   XAR3
-1        00000039 86BE      POP     XAR2                                                ;   XAR2
+1        0000001c 0007      POP     RPC                                                 ;   RPC
+1        0000001d 87BE      POP     XT                                                  ;   XT
+1        0000001e C5BE      POP     XAR7                                                ;   XAR7
+1        0000001f C4BE      POP     XAR6                                                ;   XAR6
+1        00000020 83BE      POP     XAR5                                                ;   XAR5
+1        00000021 8ABE      POP     XAR4                                                ;   XAR4
+1        00000022 82BE      POP     XAR3                                                ;   XAR3
+1        00000023 86BE      POP     XAR2                                                ;   XAR2
 1                     
 1                                                                                     ; Overwrite saved IER in stack frame.
-1        0000003a 58AD      MOVZ    AR0 , @SP                                           ;   Get SP.
-1        0000003b D886      SUBB    XAR0, #6                                            ;   Point to old IER.
-1        0000003c 06C0      MOVL    ACC , *XAR0                                         ;   Get old DBGSTAT:IER.
-1        0000003d 5608      AND     ACC, #0xFFFF << 16
-         0000003e FFFF 
-1        0000003f 20A9      MOV     AL, IER                                             ;   Get current IER.
-1        00000040 1EC0      MOVL   *XAR0, ACC                                           ;   Overwrite IER.
+1        00000024 58AD      MOVZ    AR0 , @SP                                           ;   Get SP.
+1        00000025 D886      SUBB    XAR0, #6                                            ;   Point to old IER.
+1        00000026 06C0      MOVL    ACC , *XAR0                                         ;   Get old DBGSTAT:IER.
+1        00000027 5608      AND     ACC, #0xFFFF << 16
+         00000028 FFFF 
+TMS320C2000 Assembler PC v20.2.1 Mon Jan 11 16:45:36 2021
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:/ti/Workspace/PLC_certificate/Software/uCOS-II/Ports/C28x/Generic/CCS/os_cpu_a.asm PAGE    5
+
+1        00000029 20A9      MOV     AL, IER                                             ;   Get current IER.
+1        0000002a 1EC0      MOVL   *XAR0, ACC                                           ;   Overwrite IER.
 1                     
 1                                                                                     ; Restore registers part 2.
-1        00000041 0003      POP     AR1H:AR0H                                           ;   AR1H:AR0H
+1        0000002b 0003      POP     AR1H:AR0H                                           ;   AR1H:AR0H
      186                                                                              ; IRET into task.
-     187 00000042 7602      IRET
+     187 0000002c 7602      IRET
      188                  .endasmfunc
      189                                                                              ; Catch start high failure.
-     190 00000043       OSStartHang:
-     191 00000043 6F00      SB      OSStartHang, UNC
+     190 0000002d       OSStartHang:
+     191 0000002d 6F00      SB      OSStartHang, UNC
      192              
      193              
      194              ;********************************************************************************************************
@@ -297,138 +288,115 @@ C:/ti/Workspace/PLC_certificate_backup/Software/uCOS-II/Ports/C28x/Generic/CCS/o
      223              ;********************************************************************************************************
      224              
      225                  .asmfunc
-     226 00000044       _OS_CPU_RTOSINT_Handler:
-TMS320C2000 Assembler PC v20.2.1 Wed Jan  6 17:53:23 2021
+     226 0000002e       _OS_CPU_RTOSINT_Handler:
+     227                                                                              ; Save registers.
+     228 0000002e           OS_CTX_SAVE
+1                                                                                     ; Save remaining registers.
+1        0000002e 0005      PUSH    AR1H:AR0H                                           ;   AR1H:AR0H
+1        0000002f AABD      PUSH    XAR2                                                ;   XAR2
+1        00000030 A2BD      PUSH    XAR3                                                ;   XAR3
+1        00000031 A8BD      PUSH    XAR4                                                ;   XAR4
+1        00000032 A0BD      PUSH    XAR5                                                ;   XAR5
+1        00000033 C2BD      PUSH    XAR6                                                ;   XAR6
+TMS320C2000 Assembler PC v20.2.1 Mon Jan 11 16:45:36 2021
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
-C:/ti/Workspace/PLC_certificate_backup/Software/uCOS-II/Ports/C28x/Generic/CCS/os_cpu_a.asm PAGE    6
+C:/ti/Workspace/PLC_certificate/Software/uCOS-II/Ports/C28x/Generic/CCS/os_cpu_a.asm PAGE    6
 
-     227                                                                              ; Save registers.
-     228 00000044           OS_CTX_SAVE
-1                                                                                     ; Save remaining registers.
-1        00000044 0005      PUSH    AR1H:AR0H                                           ;   AR1H:AR0H
-1        00000045 AABD      PUSH    XAR2                                                ;   XAR2
-1        00000046 A2BD      PUSH    XAR3                                                ;   XAR3
-1        00000047 A8BD      PUSH    XAR4                                                ;   XAR4
-1        00000048 A0BD      PUSH    XAR5                                                ;   XAR5
-1        00000049 C2BD      PUSH    XAR6                                                ;   XAR6
-1        0000004a C3BD      PUSH    XAR7                                                ;   XAR7
-1        0000004b ABBD      PUSH    XT                                                  ;   XT
-1        0000004c 0004      PUSH    RPC                                                 ;   RPC
+1        00000034 C3BD      PUSH    XAR7                                                ;   XAR7
+1        00000035 ABBD      PUSH    XT                                                  ;   XT
+1        00000036 0004      PUSH    RPC                                                 ;   RPC
 1                     
 1                      .if .TMS320C2800_FPU32 = 1                                     ; Save FPU registers, if enabled.
-1        0000004d 59AD      MOVZ    AR1   , @SP                                         ;   Can't use SP for indirect addressing.
-1        0000004e E203      MOV32  *XAR1++, R0H                                         ;   R0H
-         0000004f 0081 
-1        00000050 E203      MOV32  *XAR1++, R1H                                         ;   R1H
-         00000051 0181 
-1        00000052 E203      MOV32  *XAR1++, R2H                                         ;   R2H
-         00000053 0281 
-1        00000054 E203      MOV32  *XAR1++, R3H                                         ;   R3H
-         00000055 0381 
-1        00000056 E203      MOV32  *XAR1++, R4H                                         ;   R4H
-         00000057 0481 
-1        00000058 E203      MOV32  *XAR1++, R5H                                         ;   R5H
-         00000059 0581 
-1        0000005a E203      MOV32  *XAR1++, R6H                                         ;   R6H
-         0000005b 0681 
-1        0000005c E203      MOV32  *XAR1++, R7H                                         ;   R7H
-         0000005d 0781 
-1        0000005e E200      MOV32  *XAR1++, STF                                         ;   STF
-         0000005f 0081 
-1        00000060 92A1      MOV     AL    , AR1                                         ;   Can't use indirect addressing with RB.
-1        00000061 96AD      MOV     @SP   , AL                                          ;   Restore SP.
-1        00000062 FFF0      PUSH    RB                                                  ;   RB
+1                         MOVZ    AR1   , @SP                                         ;   Can't use SP for indirect addressing.
+1                         MOV32  *XAR1++, R0H                                         ;   R0H
+1                         MOV32  *XAR1++, R1H                                         ;   R1H
+1                         MOV32  *XAR1++, R2H                                         ;   R2H
+1                         MOV32  *XAR1++, R3H                                         ;   R3H
+1                         MOV32  *XAR1++, R4H                                         ;   R4H
+1                         MOV32  *XAR1++, R5H                                         ;   R5H
+1                         MOV32  *XAR1++, R6H                                         ;   R6H
+1                         MOV32  *XAR1++, R7H                                         ;   R7H
+1                         MOV32  *XAR1++, STF                                         ;   STF
+1                         MOV     AL    , AR1                                         ;   Can't use indirect addressing with RB.
+1                         MOV     @SP   , AL                                          ;   Restore SP.
+1                         PUSH    RB                                                  ;   RB
 1                      .endif
      229                                                                              ; Save SP to current process.
-     230 00000063 8D00!     MOVL    XAR0, #_OSTCBCur                                    ; Get the process's SP.
-         00000064 0000 
-     231 00000065 8BC0      MOVL    XAR1, *XAR0
-     232 00000066 92AD      MOV     AL  , @SP
-     233 00000067 96C1      MOV     *AR1,  AL
+     230 00000037 8D00!     MOVL    XAR0, #_OSTCBCur                                    ; Get the process's SP.
+         00000038 0000 
+     231 00000039 8BC0      MOVL    XAR1, *XAR0
+     232 0000003a 92AD      MOV     AL  , @SP
+     233 0000003b 96C1      MOV     *AR1,  AL
      234              
-     235 00000068 761B      ASP                                                         ; Align the stack pointer.
+     235 0000003c 761B      ASP                                                         ; Align the stack pointer.
      236                                                                              ; Call OSTaskSwHook.
      237                  ;LCR     #_OSTaskSwHook
-     238 00000069 7617      NASP                                                        ; Restore alignement of the stack pointer.
+     238 0000003d 7617      NASP                                                        ; Restore alignement of the stack pointer.
      239                  
      240                                                                              ; OSPrioCur = OSPrioHighRdy
-     241 0000006a 8D00!     MOVL    XAR0, #_OSPrioHighRdy
-         0000006b 0000 
-     242 0000006c 8D40!     MOVL    XAR1, #_OSPrioCur
-         0000006d 0000 
-     243 0000006e 85C0      MOV     ACC, *XAR0
-TMS320C2000 Assembler PC v20.2.1 Wed Jan  6 17:53:23 2021
+     241 0000003e 8D00!     MOVL    XAR0, #_OSPrioHighRdy
+         0000003f 0000 
+     242 00000040 8D40!     MOVL    XAR1, #_OSPrioCur
+         00000041 0000 
+     243 00000042 85C0      MOV     ACC, *XAR0
+     244 00000043 96C1      MOV     *XAR1, ACC
+     245                                                                              ; OSTCBCur = OSTCBHighRdy
+     246 00000044 8D00!     MOVL    XAR0, #_OSTCBHighRdy
+         00000045 0000 
+     247 00000046 8D40!     MOVL    XAR1, #_OSTCBCur
+         00000047 0000 
+     248 00000048 06C0      MOVL    ACC, *XAR0
+     249 00000049 1EC1      MOVL    *XAR1, ACC
+     250                                                                              ; Get SP from new process.
+     251 0000004a 8EC1      MOVL    XAR0, *XAR1
+     252 0000004b 92C0      MOV     AL  , *AR0
+     253 0000004c 96AD      MOV     @SP , AL
+     254              
+     255 0000004d           OS_CTX_RESTORE
+1                      .if .TMS320C2800_FPU32 = 1                                     ; Restore FPU registers, if enabled.
+1                         POP     RB                                                  ;   RB
+1                         MOVZ    AR1, @SP                                            ;   Can't use SP for indirect addressing.
+1                         MOV32   STF, *--XAR1                                        ;   STF
+TMS320C2000 Assembler PC v20.2.1 Mon Jan 11 16:45:36 2021
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
-C:/ti/Workspace/PLC_certificate_backup/Software/uCOS-II/Ports/C28x/Generic/CCS/os_cpu_a.asm PAGE    7
+C:/ti/Workspace/PLC_certificate/Software/uCOS-II/Ports/C28x/Generic/CCS/os_cpu_a.asm PAGE    7
 
-     244 0000006f 96C1      MOV     *XAR1, ACC
-     245                                                                              ; OSTCBCur = OSTCBHighRdy
-     246 00000070 8D00!     MOVL    XAR0, #_OSTCBHighRdy
-         00000071 0000 
-     247 00000072 8D40!     MOVL    XAR1, #_OSTCBCur
-         00000073 0000 
-     248 00000074 06C0      MOVL    ACC, *XAR0
-     249 00000075 1EC1      MOVL    *XAR1, ACC
-     250                                                                              ; Get SP from new process.
-     251 00000076 8EC1      MOVL    XAR0, *XAR1
-     252 00000077 92C0      MOV     AL  , *AR0
-     253 00000078 96AD      MOV     @SP , AL
-     254              
-     255 00000079           OS_CTX_RESTORE
-1                      .if .TMS320C2800_FPU32 = 1                                     ; Restore FPU registers, if enabled.
-1        00000079 FFF1      POP     RB                                                  ;   RB
-1        0000007a 59AD      MOVZ    AR1, @SP                                            ;   Can't use SP for indirect addressing.
-1        0000007b E280      MOV32   STF, *--XAR1                                        ;   STF
-         0000007c 0089 
-1        0000007d E2AF      MOV32   R7H, *--XAR1                                        ;   R7H
-         0000007e 0789 
-1        0000007f E2AF      MOV32   R6H, *--XAR1                                        ;   R6H
-         00000080 0689 
-1        00000081 E2AF      MOV32   R5H, *--XAR1                                        ;   R5H
-         00000082 0589 
-1        00000083 E2AF      MOV32   R4H, *--XAR1                                        ;   R4H
-         00000084 0489 
-1        00000085 E2AF      MOV32   R3H, *--XAR1                                        ;   R3H
-         00000086 0389 
-1        00000087 E2AF      MOV32   R2H, *--XAR1                                        ;   R2H
-         00000088 0289 
-1        00000089 E2AF      MOV32   R1H, *--XAR1                                        ;   R1H
-         0000008a 0189 
-1        0000008b E2AF      MOV32   R0H, *--XAR1                                        ;   R0H
-         0000008c 0089 
-1        0000008d 92A1      MOV     AL    , AR1                                         ;   Restore SP.
-1        0000008e 96AD      MOV     @SP   , AL
+1                         MOV32   R7H, *--XAR1                                        ;   R7H
+1                         MOV32   R6H, *--XAR1                                        ;   R6H
+1                         MOV32   R5H, *--XAR1                                        ;   R5H
+1                         MOV32   R4H, *--XAR1                                        ;   R4H
+1                         MOV32   R3H, *--XAR1                                        ;   R3H
+1                         MOV32   R2H, *--XAR1                                        ;   R2H
+1                         MOV32   R1H, *--XAR1                                        ;   R1H
+1                         MOV32   R0H, *--XAR1                                        ;   R0H
+1                         MOV     AL    , AR1                                         ;   Restore SP.
+1                         MOV     @SP   , AL
 1                      .endif
 1                                                                                     ; Restore CPU registers part 1.
-1        0000008f 0007      POP     RPC                                                 ;   RPC
-1        00000090 87BE      POP     XT                                                  ;   XT
-1        00000091 C5BE      POP     XAR7                                                ;   XAR7
-1        00000092 C4BE      POP     XAR6                                                ;   XAR6
-1        00000093 83BE      POP     XAR5                                                ;   XAR5
-1        00000094 8ABE      POP     XAR4                                                ;   XAR4
-1        00000095 82BE      POP     XAR3                                                ;   XAR3
-1        00000096 86BE      POP     XAR2                                                ;   XAR2
+1        0000004d 0007      POP     RPC                                                 ;   RPC
+1        0000004e 87BE      POP     XT                                                  ;   XT
+1        0000004f C5BE      POP     XAR7                                                ;   XAR7
+1        00000050 C4BE      POP     XAR6                                                ;   XAR6
+1        00000051 83BE      POP     XAR5                                                ;   XAR5
+1        00000052 8ABE      POP     XAR4                                                ;   XAR4
+1        00000053 82BE      POP     XAR3                                                ;   XAR3
+1        00000054 86BE      POP     XAR2                                                ;   XAR2
 1                     
 1                                                                                     ; Overwrite saved IER in stack frame.
-1        00000097 58AD      MOVZ    AR0 , @SP                                           ;   Get SP.
-1        00000098 D886      SUBB    XAR0, #6                                            ;   Point to old IER.
-1        00000099 06C0      MOVL    ACC , *XAR0                                         ;   Get old DBGSTAT:IER.
-1        0000009a 5608      AND     ACC, #0xFFFF << 16
-         0000009b FFFF 
-1        0000009c 20A9      MOV     AL, IER                                             ;   Get current IER.
-TMS320C2000 Assembler PC v20.2.1 Wed Jan  6 17:53:23 2021
-
-Copyright (c) 1996-2018 Texas Instruments Incorporated
-C:/ti/Workspace/PLC_certificate_backup/Software/uCOS-II/Ports/C28x/Generic/CCS/os_cpu_a.asm PAGE    8
-
-1        0000009d 1EC0      MOVL   *XAR0, ACC                                           ;   Overwrite IER.
+1        00000055 58AD      MOVZ    AR0 , @SP                                           ;   Get SP.
+1        00000056 D886      SUBB    XAR0, #6                                            ;   Point to old IER.
+1        00000057 06C0      MOVL    ACC , *XAR0                                         ;   Get old DBGSTAT:IER.
+1        00000058 5608      AND     ACC, #0xFFFF << 16
+         00000059 FFFF 
+1        0000005a 20A9      MOV     AL, IER                                             ;   Get current IER.
+1        0000005b 1EC0      MOVL   *XAR0, ACC                                           ;   Overwrite IER.
 1                     
 1                                                                                     ; Restore registers part 2.
-1        0000009e 0003      POP     AR1H:AR0H                                           ;   AR1H:AR0H
+1        0000005c 0003      POP     AR1H:AR0H                                           ;   AR1H:AR0H
      256                                                                              ; Return from interrupt to restore remaining 
-     257 0000009f 7602      IRET
+     257 0000005d 7602      IRET
      258                  .endasmfunc
      259              
      260              

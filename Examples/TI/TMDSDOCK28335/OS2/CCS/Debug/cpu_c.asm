@@ -1,15 +1,15 @@
 ;***************************************************************
 ;* TMS320C2000 G3 C/C++ Codegen                               PC v20.2.1.LTS *
-;* Date/Time created: Wed Jan  6 17:53:21 2021                 *
+;* Date/Time created: Mon Jan 11 16:45:34 2021                 *
 ;***************************************************************
-	.compiler_opts --abi=coffabi --diag_wrap=off --float_support=fpu32 --hll_source=on --mem_model:code=flat --mem_model:data=large --object_format=coff --silicon_errata_fpu1_workaround=on --silicon_version=28 --symdebug:dwarf --symdebug:dwarf_version=3 
+	.compiler_opts --abi=coffabi --diag_wrap=off --float_support=softlib --hll_source=on --mem_model:code=flat --mem_model:data=large --object_format=coff --silicon_errata_fpu1_workaround=on --silicon_version=28 --symdebug:dwarf --symdebug:dwarf_version=3 
 	.asg	XAR2, FP
 
 $C$DW$CU	.dwtag  DW_TAG_compile_unit
-	.dwattr $C$DW$CU, DW_AT_name("C:/ti/Workspace/PLC_certificate_backup/Software/uC-CPU/C28x/CCS/cpu_c.c")
+	.dwattr $C$DW$CU, DW_AT_name("C:/ti/Workspace/PLC_certificate/Software/uC-CPU/C28x/CCS/cpu_c.c")
 	.dwattr $C$DW$CU, DW_AT_producer("TI TMS320C2000 G3 C/C++ Codegen PC v20.2.1.LTS Copyright (c) 1996-2018 Texas Instruments Incorporated")
 	.dwattr $C$DW$CU, DW_AT_TI_version(0x01)
-	.dwattr $C$DW$CU, DW_AT_comp_dir("C:\ti\Workspace\PLC_certificate_backup\Examples\TI\TMDSDOCK28335\OS2\CCS\Debug")
+	.dwattr $C$DW$CU, DW_AT_comp_dir("C:\ti\Workspace\PLC_certificate\Examples\TI\TMDSDOCK28335\OS2\CCS\Debug")
 
 $C$DW$1	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$1, DW_AT_name("CPU_SR_Restore")
@@ -30,7 +30,7 @@ $C$DW$3	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$3, DW_AT_external
 	.dwendtag $C$DW$3
 
-;	C:\ti\ccs1011\ccs\tools\compiler\ti-cgt-c2000_20.2.1.LTS\bin\ac2000.exe -@C:\\Users\\LEEKEO~1\\AppData\\Local\\Temp\\{B03C683A-F21B-4943-9A2D-3FE1A5C8171D} 
+;	C:\ti\ccs1011\ccs\tools\compiler\ti-cgt-c2000_20.2.1.LTS\bin\ac2000.exe -@C:\\Users\\LEEKEO~1\\AppData\\Local\\Temp\\{522D76F7-3AA1-4FD4-ACE5-3F5E49F51881} 
 	.sect	".text"
 	.clink
 	.global	_CPU_IntSrcDis
@@ -41,11 +41,11 @@ $C$DW$4	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$4, DW_AT_high_pc(0x00)
 	.dwattr $C$DW$4, DW_AT_TI_symbol_name("_CPU_IntSrcDis")
 	.dwattr $C$DW$4, DW_AT_external
-	.dwattr $C$DW$4, DW_AT_TI_begin_file("C:/ti/Workspace/PLC_certificate_backup/Software/uC-CPU/C28x/CCS/cpu_c.c")
+	.dwattr $C$DW$4, DW_AT_TI_begin_file("C:/ti/Workspace/PLC_certificate/Software/uC-CPU/C28x/CCS/cpu_c.c")
 	.dwattr $C$DW$4, DW_AT_TI_begin_line(0x78)
 	.dwattr $C$DW$4, DW_AT_TI_begin_column(0x07)
 	.dwattr $C$DW$4, DW_AT_TI_max_frame_size(-4)
-	.dwpsn	file "C:/ti/Workspace/PLC_certificate_backup/Software/uC-CPU/C28x/CCS/cpu_c.c",line 121,column 1,is_stmt,address _CPU_IntSrcDis,isa 0
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Software/uC-CPU/C28x/CCS/cpu_c.c",line 121,column 1,is_stmt,address _CPU_IntSrcDis,isa 0
 
 	.dwfde $C$DW$CIE, _CPU_IntSrcDis
 $C$DW$5	.dwtag  DW_TAG_formal_parameter
@@ -82,13 +82,13 @@ $C$DW$7	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$7, DW_AT_location[DW_OP_breg20 -2]
 
         MOV       *-SP[1],AL            ; [CPU_ALU] |121| 
-	.dwpsn	file "C:/ti/Workspace/PLC_certificate_backup/Software/uC-CPU/C28x/CCS/cpu_c.c",line 122,column 5,is_stmt,isa 0
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Software/uC-CPU/C28x/CCS/cpu_c.c",line 122,column 5,is_stmt,isa 0
         MOV       *-SP[2],#0            ; [CPU_ALU] |122| 
-	.dwpsn	file "C:/ti/Workspace/PLC_certificate_backup/Software/uC-CPU/C28x/CCS/cpu_c.c",line 125,column 5,is_stmt,isa 0
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Software/uC-CPU/C28x/CCS/cpu_c.c",line 125,column 5,is_stmt,isa 0
         CMPB      AL,#16                ; [CPU_ALU] |125| 
         B         $C$L1,HI              ; [CPU_ALU] |125| 
         ; branchcc occurs ; [] |125| 
-	.dwpsn	file "C:/ti/Workspace/PLC_certificate_backup/Software/uC-CPU/C28x/CCS/cpu_c.c",line 126,column 9,is_stmt,isa 0
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Software/uC-CPU/C28x/CCS/cpu_c.c",line 126,column 9,is_stmt,isa 0
 $C$DW$8	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$8, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$8, DW_AT_name("_CPU_SR_Save")
@@ -97,17 +97,17 @@ $C$DW$8	.dwtag  DW_TAG_TI_branch
         LCR       #_CPU_SR_Save         ; [CPU_ALU] |126| 
         ; call occurs [#_CPU_SR_Save] ; [] |126| 
         MOV       *-SP[2],AL            ; [CPU_ALU] |126| 
-	.dwpsn	file "C:/ti/Workspace/PLC_certificate_backup/Software/uC-CPU/C28x/CCS/cpu_c.c",line 127,column 9,is_stmt,isa 0
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Software/uC-CPU/C28x/CCS/cpu_c.c",line 127,column 9,is_stmt,isa 0
         MOV       AL,*-SP[1]            ; [CPU_ALU] |127| 
         ADDB      AL,#-1                ; [CPU_ALU] |127| 
         MOV       T,AL                  ; [CPU_ALU] |127| 
         MOVB      AL,#1                 ; [CPU_ALU] |127| 
         LSL       AL,T                  ; [CPU_ALU] |127| 
         NOT       AL                    ; [CPU_ALU] |127| 
-        MOV       AH,IER                ; [CPU_FPU] |127| 
+        MOV       AH,IER                ; [CPU_ALU] |127| 
         AND       AL,AH                 ; [CPU_ALU] |127| 
         MOV       IER,AL                ; [CPU_ALU] |127| 
-	.dwpsn	file "C:/ti/Workspace/PLC_certificate_backup/Software/uC-CPU/C28x/CCS/cpu_c.c",line 128,column 9,is_stmt,isa 0
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Software/uC-CPU/C28x/CCS/cpu_c.c",line 128,column 9,is_stmt,isa 0
         MOV       AL,*-SP[2]            ; [CPU_ALU] |128| 
 $C$DW$9	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$9, DW_AT_low_pc(0x00)
@@ -116,7 +116,7 @@ $C$DW$9	.dwtag  DW_TAG_TI_branch
 
         LCR       #_CPU_SR_Restore      ; [CPU_ALU] |128| 
         ; call occurs [#_CPU_SR_Restore] ; [] |128| 
-	.dwpsn	file "C:/ti/Workspace/PLC_certificate_backup/Software/uC-CPU/C28x/CCS/cpu_c.c",line 130,column 1,is_stmt,isa 0
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Software/uC-CPU/C28x/CCS/cpu_c.c",line 130,column 1,is_stmt,isa 0
 $C$L1:    
         SUBB      SP,#2                 ; [CPU_ARAU] 
 	.dwcfi	cfa_offset, -2
@@ -126,7 +126,7 @@ $C$DW$10	.dwtag  DW_TAG_TI_branch
 
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$4, DW_AT_TI_end_file("C:/ti/Workspace/PLC_certificate_backup/Software/uC-CPU/C28x/CCS/cpu_c.c")
+	.dwattr $C$DW$4, DW_AT_TI_end_file("C:/ti/Workspace/PLC_certificate/Software/uC-CPU/C28x/CCS/cpu_c.c")
 	.dwattr $C$DW$4, DW_AT_TI_end_line(0x82)
 	.dwattr $C$DW$4, DW_AT_TI_end_column(0x01)
 	.dwendentry
@@ -142,11 +142,11 @@ $C$DW$11	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$11, DW_AT_high_pc(0x00)
 	.dwattr $C$DW$11, DW_AT_TI_symbol_name("_CPU_IntSrcEn")
 	.dwattr $C$DW$11, DW_AT_external
-	.dwattr $C$DW$11, DW_AT_TI_begin_file("C:/ti/Workspace/PLC_certificate_backup/Software/uC-CPU/C28x/CCS/cpu_c.c")
+	.dwattr $C$DW$11, DW_AT_TI_begin_file("C:/ti/Workspace/PLC_certificate/Software/uC-CPU/C28x/CCS/cpu_c.c")
 	.dwattr $C$DW$11, DW_AT_TI_begin_line(0x95)
 	.dwattr $C$DW$11, DW_AT_TI_begin_column(0x07)
 	.dwattr $C$DW$11, DW_AT_TI_max_frame_size(-4)
-	.dwpsn	file "C:/ti/Workspace/PLC_certificate_backup/Software/uC-CPU/C28x/CCS/cpu_c.c",line 150,column 1,is_stmt,address _CPU_IntSrcEn,isa 0
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Software/uC-CPU/C28x/CCS/cpu_c.c",line 150,column 1,is_stmt,address _CPU_IntSrcEn,isa 0
 
 	.dwfde $C$DW$CIE, _CPU_IntSrcEn
 $C$DW$12	.dwtag  DW_TAG_formal_parameter
@@ -183,13 +183,13 @@ $C$DW$14	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$14, DW_AT_location[DW_OP_breg20 -2]
 
         MOV       *-SP[1],AL            ; [CPU_ALU] |150| 
-	.dwpsn	file "C:/ti/Workspace/PLC_certificate_backup/Software/uC-CPU/C28x/CCS/cpu_c.c",line 151,column 5,is_stmt,isa 0
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Software/uC-CPU/C28x/CCS/cpu_c.c",line 151,column 5,is_stmt,isa 0
         MOV       *-SP[2],#0            ; [CPU_ALU] |151| 
-	.dwpsn	file "C:/ti/Workspace/PLC_certificate_backup/Software/uC-CPU/C28x/CCS/cpu_c.c",line 154,column 5,is_stmt,isa 0
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Software/uC-CPU/C28x/CCS/cpu_c.c",line 154,column 5,is_stmt,isa 0
         CMPB      AL,#16                ; [CPU_ALU] |154| 
         B         $C$L2,HI              ; [CPU_ALU] |154| 
         ; branchcc occurs ; [] |154| 
-	.dwpsn	file "C:/ti/Workspace/PLC_certificate_backup/Software/uC-CPU/C28x/CCS/cpu_c.c",line 155,column 9,is_stmt,isa 0
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Software/uC-CPU/C28x/CCS/cpu_c.c",line 155,column 9,is_stmt,isa 0
 $C$DW$15	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$15, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$15, DW_AT_name("_CPU_SR_Save")
@@ -198,16 +198,16 @@ $C$DW$15	.dwtag  DW_TAG_TI_branch
         LCR       #_CPU_SR_Save         ; [CPU_ALU] |155| 
         ; call occurs [#_CPU_SR_Save] ; [] |155| 
         MOV       *-SP[2],AL            ; [CPU_ALU] |155| 
-	.dwpsn	file "C:/ti/Workspace/PLC_certificate_backup/Software/uC-CPU/C28x/CCS/cpu_c.c",line 156,column 9,is_stmt,isa 0
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Software/uC-CPU/C28x/CCS/cpu_c.c",line 156,column 9,is_stmt,isa 0
         MOV       AL,*-SP[1]            ; [CPU_ALU] |156| 
         ADDB      AL,#-1                ; [CPU_ALU] |156| 
         MOV       T,AL                  ; [CPU_ALU] |156| 
         MOVB      AL,#1                 ; [CPU_ALU] |156| 
         LSL       AL,T                  ; [CPU_ALU] |156| 
-        MOV       AH,IER                ; [CPU_FPU] |156| 
+        MOV       AH,IER                ; [CPU_ALU] |156| 
         OR        AL,AH                 ; [CPU_ALU] |156| 
         MOV       IER,AL                ; [CPU_ALU] |156| 
-	.dwpsn	file "C:/ti/Workspace/PLC_certificate_backup/Software/uC-CPU/C28x/CCS/cpu_c.c",line 157,column 9,is_stmt,isa 0
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Software/uC-CPU/C28x/CCS/cpu_c.c",line 157,column 9,is_stmt,isa 0
         MOV       AL,*-SP[2]            ; [CPU_ALU] |157| 
 $C$DW$16	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$16, DW_AT_low_pc(0x00)
@@ -216,7 +216,7 @@ $C$DW$16	.dwtag  DW_TAG_TI_branch
 
         LCR       #_CPU_SR_Restore      ; [CPU_ALU] |157| 
         ; call occurs [#_CPU_SR_Restore] ; [] |157| 
-	.dwpsn	file "C:/ti/Workspace/PLC_certificate_backup/Software/uC-CPU/C28x/CCS/cpu_c.c",line 159,column 1,is_stmt,isa 0
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Software/uC-CPU/C28x/CCS/cpu_c.c",line 159,column 1,is_stmt,isa 0
 $C$L2:    
         SUBB      SP,#2                 ; [CPU_ARAU] 
 	.dwcfi	cfa_offset, -2
@@ -226,7 +226,7 @@ $C$DW$17	.dwtag  DW_TAG_TI_branch
 
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$11, DW_AT_TI_end_file("C:/ti/Workspace/PLC_certificate_backup/Software/uC-CPU/C28x/CCS/cpu_c.c")
+	.dwattr $C$DW$11, DW_AT_TI_end_file("C:/ti/Workspace/PLC_certificate/Software/uC-CPU/C28x/CCS/cpu_c.c")
 	.dwattr $C$DW$11, DW_AT_TI_end_line(0x9f)
 	.dwattr $C$DW$11, DW_AT_TI_end_column(0x01)
 	.dwendentry
@@ -242,11 +242,11 @@ $C$DW$18	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$18, DW_AT_high_pc(0x00)
 	.dwattr $C$DW$18, DW_AT_TI_symbol_name("_CPU_IntSrcPendClr")
 	.dwattr $C$DW$18, DW_AT_external
-	.dwattr $C$DW$18, DW_AT_TI_begin_file("C:/ti/Workspace/PLC_certificate_backup/Software/uC-CPU/C28x/CCS/cpu_c.c")
+	.dwattr $C$DW$18, DW_AT_TI_begin_file("C:/ti/Workspace/PLC_certificate/Software/uC-CPU/C28x/CCS/cpu_c.c")
 	.dwattr $C$DW$18, DW_AT_TI_begin_line(0xb2)
 	.dwattr $C$DW$18, DW_AT_TI_begin_column(0x07)
 	.dwattr $C$DW$18, DW_AT_TI_max_frame_size(-4)
-	.dwpsn	file "C:/ti/Workspace/PLC_certificate_backup/Software/uC-CPU/C28x/CCS/cpu_c.c",line 179,column 1,is_stmt,address _CPU_IntSrcPendClr,isa 0
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Software/uC-CPU/C28x/CCS/cpu_c.c",line 179,column 1,is_stmt,address _CPU_IntSrcPendClr,isa 0
 
 	.dwfde $C$DW$CIE, _CPU_IntSrcPendClr
 $C$DW$19	.dwtag  DW_TAG_formal_parameter
@@ -277,107 +277,107 @@ $C$DW$20	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$20, DW_AT_location[DW_OP_breg20 -1]
 
         MOV       *-SP[1],AL            ; [CPU_ALU] |179| 
-	.dwpsn	file "C:/ti/Workspace/PLC_certificate_backup/Software/uC-CPU/C28x/CCS/cpu_c.c",line 182,column 5,is_stmt,isa 0
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Software/uC-CPU/C28x/CCS/cpu_c.c",line 182,column 5,is_stmt,isa 0
         B         $C$L19,UNC            ; [CPU_ALU] |182| 
         ; branch occurs ; [] |182| 
 $C$L3:    
-	.dwpsn	file "C:/ti/Workspace/PLC_certificate_backup/Software/uC-CPU/C28x/CCS/cpu_c.c",line 184,column 14,is_stmt,isa 0
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Software/uC-CPU/C28x/CCS/cpu_c.c",line 184,column 14,is_stmt,isa 0
         AND IFR, #0x7FFF
-	.dwpsn	file "C:/ti/Workspace/PLC_certificate_backup/Software/uC-CPU/C28x/CCS/cpu_c.c",line 185,column 14,is_stmt,isa 0
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Software/uC-CPU/C28x/CCS/cpu_c.c",line 185,column 14,is_stmt,isa 0
         B         $C$L21,UNC            ; [CPU_ALU] |185| 
         ; branch occurs ; [] |185| 
 $C$L4:    
-	.dwpsn	file "C:/ti/Workspace/PLC_certificate_backup/Software/uC-CPU/C28x/CCS/cpu_c.c",line 189,column 14,is_stmt,isa 0
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Software/uC-CPU/C28x/CCS/cpu_c.c",line 189,column 14,is_stmt,isa 0
         AND IFR, #0xBFFF
-	.dwpsn	file "C:/ti/Workspace/PLC_certificate_backup/Software/uC-CPU/C28x/CCS/cpu_c.c",line 190,column 14,is_stmt,isa 0
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Software/uC-CPU/C28x/CCS/cpu_c.c",line 190,column 14,is_stmt,isa 0
         B         $C$L21,UNC            ; [CPU_ALU] |190| 
         ; branch occurs ; [] |190| 
 $C$L5:    
-	.dwpsn	file "C:/ti/Workspace/PLC_certificate_backup/Software/uC-CPU/C28x/CCS/cpu_c.c",line 194,column 14,is_stmt,isa 0
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Software/uC-CPU/C28x/CCS/cpu_c.c",line 194,column 14,is_stmt,isa 0
         AND IFR, #0xDFFF
-	.dwpsn	file "C:/ti/Workspace/PLC_certificate_backup/Software/uC-CPU/C28x/CCS/cpu_c.c",line 195,column 14,is_stmt,isa 0
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Software/uC-CPU/C28x/CCS/cpu_c.c",line 195,column 14,is_stmt,isa 0
         B         $C$L21,UNC            ; [CPU_ALU] |195| 
         ; branch occurs ; [] |195| 
 $C$L6:    
-	.dwpsn	file "C:/ti/Workspace/PLC_certificate_backup/Software/uC-CPU/C28x/CCS/cpu_c.c",line 199,column 14,is_stmt,isa 0
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Software/uC-CPU/C28x/CCS/cpu_c.c",line 199,column 14,is_stmt,isa 0
         AND IFR, #0xEFFF
-	.dwpsn	file "C:/ti/Workspace/PLC_certificate_backup/Software/uC-CPU/C28x/CCS/cpu_c.c",line 200,column 14,is_stmt,isa 0
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Software/uC-CPU/C28x/CCS/cpu_c.c",line 200,column 14,is_stmt,isa 0
         B         $C$L21,UNC            ; [CPU_ALU] |200| 
         ; branch occurs ; [] |200| 
 $C$L7:    
-	.dwpsn	file "C:/ti/Workspace/PLC_certificate_backup/Software/uC-CPU/C28x/CCS/cpu_c.c",line 204,column 14,is_stmt,isa 0
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Software/uC-CPU/C28x/CCS/cpu_c.c",line 204,column 14,is_stmt,isa 0
         AND IFR, #0xF7FF
-	.dwpsn	file "C:/ti/Workspace/PLC_certificate_backup/Software/uC-CPU/C28x/CCS/cpu_c.c",line 205,column 14,is_stmt,isa 0
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Software/uC-CPU/C28x/CCS/cpu_c.c",line 205,column 14,is_stmt,isa 0
         B         $C$L21,UNC            ; [CPU_ALU] |205| 
         ; branch occurs ; [] |205| 
 $C$L8:    
-	.dwpsn	file "C:/ti/Workspace/PLC_certificate_backup/Software/uC-CPU/C28x/CCS/cpu_c.c",line 209,column 14,is_stmt,isa 0
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Software/uC-CPU/C28x/CCS/cpu_c.c",line 209,column 14,is_stmt,isa 0
         AND IFR, #0xFBFF
-	.dwpsn	file "C:/ti/Workspace/PLC_certificate_backup/Software/uC-CPU/C28x/CCS/cpu_c.c",line 210,column 14,is_stmt,isa 0
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Software/uC-CPU/C28x/CCS/cpu_c.c",line 210,column 14,is_stmt,isa 0
         B         $C$L21,UNC            ; [CPU_ALU] |210| 
         ; branch occurs ; [] |210| 
 $C$L9:    
-	.dwpsn	file "C:/ti/Workspace/PLC_certificate_backup/Software/uC-CPU/C28x/CCS/cpu_c.c",line 214,column 14,is_stmt,isa 0
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Software/uC-CPU/C28x/CCS/cpu_c.c",line 214,column 14,is_stmt,isa 0
         AND IFR, #0xFDFF
-	.dwpsn	file "C:/ti/Workspace/PLC_certificate_backup/Software/uC-CPU/C28x/CCS/cpu_c.c",line 215,column 14,is_stmt,isa 0
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Software/uC-CPU/C28x/CCS/cpu_c.c",line 215,column 14,is_stmt,isa 0
         B         $C$L21,UNC            ; [CPU_ALU] |215| 
         ; branch occurs ; [] |215| 
 $C$L10:    
-	.dwpsn	file "C:/ti/Workspace/PLC_certificate_backup/Software/uC-CPU/C28x/CCS/cpu_c.c",line 219,column 14,is_stmt,isa 0
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Software/uC-CPU/C28x/CCS/cpu_c.c",line 219,column 14,is_stmt,isa 0
         AND IFR, #0xFEFF
-	.dwpsn	file "C:/ti/Workspace/PLC_certificate_backup/Software/uC-CPU/C28x/CCS/cpu_c.c",line 220,column 14,is_stmt,isa 0
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Software/uC-CPU/C28x/CCS/cpu_c.c",line 220,column 14,is_stmt,isa 0
         B         $C$L21,UNC            ; [CPU_ALU] |220| 
         ; branch occurs ; [] |220| 
 $C$L11:    
-	.dwpsn	file "C:/ti/Workspace/PLC_certificate_backup/Software/uC-CPU/C28x/CCS/cpu_c.c",line 224,column 14,is_stmt,isa 0
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Software/uC-CPU/C28x/CCS/cpu_c.c",line 224,column 14,is_stmt,isa 0
         AND IFR, #0xFF7F
-	.dwpsn	file "C:/ti/Workspace/PLC_certificate_backup/Software/uC-CPU/C28x/CCS/cpu_c.c",line 225,column 14,is_stmt,isa 0
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Software/uC-CPU/C28x/CCS/cpu_c.c",line 225,column 14,is_stmt,isa 0
         B         $C$L21,UNC            ; [CPU_ALU] |225| 
         ; branch occurs ; [] |225| 
 $C$L12:    
-	.dwpsn	file "C:/ti/Workspace/PLC_certificate_backup/Software/uC-CPU/C28x/CCS/cpu_c.c",line 229,column 14,is_stmt,isa 0
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Software/uC-CPU/C28x/CCS/cpu_c.c",line 229,column 14,is_stmt,isa 0
         AND IFR, #0xFFBF
-	.dwpsn	file "C:/ti/Workspace/PLC_certificate_backup/Software/uC-CPU/C28x/CCS/cpu_c.c",line 230,column 14,is_stmt,isa 0
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Software/uC-CPU/C28x/CCS/cpu_c.c",line 230,column 14,is_stmt,isa 0
         B         $C$L21,UNC            ; [CPU_ALU] |230| 
         ; branch occurs ; [] |230| 
 $C$L13:    
-	.dwpsn	file "C:/ti/Workspace/PLC_certificate_backup/Software/uC-CPU/C28x/CCS/cpu_c.c",line 234,column 14,is_stmt,isa 0
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Software/uC-CPU/C28x/CCS/cpu_c.c",line 234,column 14,is_stmt,isa 0
         AND IFR, #0xFFDF
-	.dwpsn	file "C:/ti/Workspace/PLC_certificate_backup/Software/uC-CPU/C28x/CCS/cpu_c.c",line 235,column 14,is_stmt,isa 0
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Software/uC-CPU/C28x/CCS/cpu_c.c",line 235,column 14,is_stmt,isa 0
         B         $C$L21,UNC            ; [CPU_ALU] |235| 
         ; branch occurs ; [] |235| 
 $C$L14:    
-	.dwpsn	file "C:/ti/Workspace/PLC_certificate_backup/Software/uC-CPU/C28x/CCS/cpu_c.c",line 239,column 14,is_stmt,isa 0
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Software/uC-CPU/C28x/CCS/cpu_c.c",line 239,column 14,is_stmt,isa 0
         AND IFR, #0xFFEF
-	.dwpsn	file "C:/ti/Workspace/PLC_certificate_backup/Software/uC-CPU/C28x/CCS/cpu_c.c",line 240,column 14,is_stmt,isa 0
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Software/uC-CPU/C28x/CCS/cpu_c.c",line 240,column 14,is_stmt,isa 0
         B         $C$L21,UNC            ; [CPU_ALU] |240| 
         ; branch occurs ; [] |240| 
 $C$L15:    
-	.dwpsn	file "C:/ti/Workspace/PLC_certificate_backup/Software/uC-CPU/C28x/CCS/cpu_c.c",line 244,column 14,is_stmt,isa 0
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Software/uC-CPU/C28x/CCS/cpu_c.c",line 244,column 14,is_stmt,isa 0
         AND IFR, #0xFFF7
-	.dwpsn	file "C:/ti/Workspace/PLC_certificate_backup/Software/uC-CPU/C28x/CCS/cpu_c.c",line 245,column 14,is_stmt,isa 0
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Software/uC-CPU/C28x/CCS/cpu_c.c",line 245,column 14,is_stmt,isa 0
         B         $C$L21,UNC            ; [CPU_ALU] |245| 
         ; branch occurs ; [] |245| 
 $C$L16:    
-	.dwpsn	file "C:/ti/Workspace/PLC_certificate_backup/Software/uC-CPU/C28x/CCS/cpu_c.c",line 249,column 14,is_stmt,isa 0
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Software/uC-CPU/C28x/CCS/cpu_c.c",line 249,column 14,is_stmt,isa 0
         AND IFR, #0xFFFB
-	.dwpsn	file "C:/ti/Workspace/PLC_certificate_backup/Software/uC-CPU/C28x/CCS/cpu_c.c",line 250,column 14,is_stmt,isa 0
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Software/uC-CPU/C28x/CCS/cpu_c.c",line 250,column 14,is_stmt,isa 0
         B         $C$L21,UNC            ; [CPU_ALU] |250| 
         ; branch occurs ; [] |250| 
 $C$L17:    
-	.dwpsn	file "C:/ti/Workspace/PLC_certificate_backup/Software/uC-CPU/C28x/CCS/cpu_c.c",line 254,column 14,is_stmt,isa 0
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Software/uC-CPU/C28x/CCS/cpu_c.c",line 254,column 14,is_stmt,isa 0
         AND IFR, #0xFFFD
-	.dwpsn	file "C:/ti/Workspace/PLC_certificate_backup/Software/uC-CPU/C28x/CCS/cpu_c.c",line 255,column 14,is_stmt,isa 0
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Software/uC-CPU/C28x/CCS/cpu_c.c",line 255,column 14,is_stmt,isa 0
         B         $C$L21,UNC            ; [CPU_ALU] |255| 
         ; branch occurs ; [] |255| 
 $C$L18:    
-	.dwpsn	file "C:/ti/Workspace/PLC_certificate_backup/Software/uC-CPU/C28x/CCS/cpu_c.c",line 259,column 14,is_stmt,isa 0
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Software/uC-CPU/C28x/CCS/cpu_c.c",line 259,column 14,is_stmt,isa 0
         AND IFR, #0xFFFE
-	.dwpsn	file "C:/ti/Workspace/PLC_certificate_backup/Software/uC-CPU/C28x/CCS/cpu_c.c",line 260,column 14,is_stmt,isa 0
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Software/uC-CPU/C28x/CCS/cpu_c.c",line 260,column 14,is_stmt,isa 0
         B         $C$L21,UNC            ; [CPU_ALU] |260| 
         ; branch occurs ; [] |260| 
 $C$L19:    
-	.dwpsn	file "C:/ti/Workspace/PLC_certificate_backup/Software/uC-CPU/C28x/CCS/cpu_c.c",line 182,column 5,is_stmt,isa 0
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Software/uC-CPU/C28x/CCS/cpu_c.c",line 182,column 5,is_stmt,isa 0
         MOV       AH,*-SP[1]            ; [CPU_ALU] |182| 
         ADDB      AL,#-1                ; [CPU_ALU] |182| 
         CMPB      AL,#15                ; [CPU_ALU] |182| 
@@ -419,16 +419,16 @@ $C$SW1:	.long	$C$L18	; 1
 	.long	$C$L3	; 16
 	.sect	".text"
 $C$L21:    
+        SPM       #0                    ; [CPU_ALU] 
         SUBB      SP,#2                 ; [CPU_ARAU] 
 	.dwcfi	cfa_offset, -2
-        SPM       #0                    ; [CPU_ALU] 
 $C$DW$21	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$21, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$21, DW_AT_TI_return
 
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$18, DW_AT_TI_end_file("C:/ti/Workspace/PLC_certificate_backup/Software/uC-CPU/C28x/CCS/cpu_c.c")
+	.dwattr $C$DW$18, DW_AT_TI_end_file("C:/ti/Workspace/PLC_certificate/Software/uC-CPU/C28x/CCS/cpu_c.c")
 	.dwattr $C$DW$18, DW_AT_TI_end_line(0x10a)
 	.dwattr $C$DW$18, DW_AT_TI_end_column(0x01)
 	.dwendentry
@@ -552,10 +552,6 @@ $C$DW$CIE	.dwcie 26
 	.dwcfi	same_value, 9
 	.dwcfi	same_value, 10
 	.dwcfi	same_value, 11
-	.dwcfi	same_value, 59
-	.dwcfi	same_value, 63
-	.dwcfi	same_value, 67
-	.dwcfi	same_value, 71
 	.dwendentry
 
 ;***************************************************************
@@ -725,54 +721,6 @@ $C$DW$61	.dwtag  DW_TAG_TI_assign_register
 $C$DW$62	.dwtag  DW_TAG_TI_assign_register
 	.dwattr $C$DW$62, DW_AT_name("XAR7")
 	.dwattr $C$DW$62, DW_AT_location[DW_OP_reg19]
-
-$C$DW$63	.dwtag  DW_TAG_TI_assign_register
-	.dwattr $C$DW$63, DW_AT_name("R0H")
-	.dwattr $C$DW$63, DW_AT_location[DW_OP_regx 0x2b]
-
-$C$DW$64	.dwtag  DW_TAG_TI_assign_register
-	.dwattr $C$DW$64, DW_AT_name("R1H")
-	.dwattr $C$DW$64, DW_AT_location[DW_OP_regx 0x2f]
-
-$C$DW$65	.dwtag  DW_TAG_TI_assign_register
-	.dwattr $C$DW$65, DW_AT_name("R2H")
-	.dwattr $C$DW$65, DW_AT_location[DW_OP_regx 0x33]
-
-$C$DW$66	.dwtag  DW_TAG_TI_assign_register
-	.dwattr $C$DW$66, DW_AT_name("R3H")
-	.dwattr $C$DW$66, DW_AT_location[DW_OP_regx 0x37]
-
-$C$DW$67	.dwtag  DW_TAG_TI_assign_register
-	.dwattr $C$DW$67, DW_AT_name("R4H")
-	.dwattr $C$DW$67, DW_AT_location[DW_OP_regx 0x3b]
-
-$C$DW$68	.dwtag  DW_TAG_TI_assign_register
-	.dwattr $C$DW$68, DW_AT_name("R5H")
-	.dwattr $C$DW$68, DW_AT_location[DW_OP_regx 0x3f]
-
-$C$DW$69	.dwtag  DW_TAG_TI_assign_register
-	.dwattr $C$DW$69, DW_AT_name("R6H")
-	.dwattr $C$DW$69, DW_AT_location[DW_OP_regx 0x43]
-
-$C$DW$70	.dwtag  DW_TAG_TI_assign_register
-	.dwattr $C$DW$70, DW_AT_name("R7H")
-	.dwattr $C$DW$70, DW_AT_location[DW_OP_regx 0x47]
-
-$C$DW$71	.dwtag  DW_TAG_TI_assign_register
-	.dwattr $C$DW$71, DW_AT_name("RB")
-	.dwattr $C$DW$71, DW_AT_location[DW_OP_regx 0x4a]
-
-$C$DW$72	.dwtag  DW_TAG_TI_assign_register
-	.dwattr $C$DW$72, DW_AT_name("STF")
-	.dwattr $C$DW$72, DW_AT_location[DW_OP_regx 0x28]
-
-$C$DW$73	.dwtag  DW_TAG_TI_assign_register
-	.dwattr $C$DW$73, DW_AT_name("FPUHAZ")
-	.dwattr $C$DW$73, DW_AT_location[DW_OP_reg27]
-
-$C$DW$74	.dwtag  DW_TAG_TI_assign_register
-	.dwattr $C$DW$74, DW_AT_name("STF_HWDIV")
-	.dwattr $C$DW$74, DW_AT_location[DW_OP_regx 0x4f]
 
 	.dwendtag $C$DW$CU
 

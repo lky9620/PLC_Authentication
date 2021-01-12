@@ -94,7 +94,7 @@
 */
 
 #define  APP_CFG_TASK_STK_SIZE                      48u
-#define  APP_CFG_TASK_STK_SIZE_BIG                  96u
+#define  APP_CFG_TASK_STK_SIZE_BIG                  128u
 
 /*
 *********************************************************************************************************
