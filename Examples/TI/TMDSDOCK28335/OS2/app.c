@@ -574,10 +574,14 @@ static void User_certification(void *p_arg)
             for (i = 0; i < sizeof(hash); i++)
                 if (hash[i] == scirxBuf[i])
                     Verify_cnt++;
+            __asm("   ESTOP0");
+            for(i=0;i<sizeof(Reply_flag);i++)
+                    Reply_flag[i] = 0;
             if (aes_flag == 16 && Verify_cnt == 16)
                 Reply_flag[0] = 1;
             else
                 Reply_flag[0] = 0;
+
             certification_flag2 = 1;
             aes_flag = 0;
         }
@@ -681,6 +685,7 @@ static void UART_Transmission(void *p_arg)
         }
         else if (certification_flag2 == 1)
             aes_enc_dec(Reply_flag,key,0);
+
 
         while (1)
         {

@@ -1,10 +1,10 @@
 ******************************************************************************
              TMS320C2000 Linker PC v20.2.1                     
 ******************************************************************************
->> Linked Tue Jan 12 14:30:43 2021
+>> Linked Wed Jan 13 16:03:49 2021
 
 OUTPUT FILE NAME:   <PLC_certificate.out>
-ENTRY POINT SYMBOL: "_BSP_RAM_StartHere"  address: 00304dfe
+ENTRY POINT SYMBOL: "_BSP_RAM_StartHere"  address: 00304e0c
 
 
 MEMORY CONFIGURATION
@@ -15,7 +15,7 @@ PAGE 0:
   BEGIN                 00000000   00000002  00000002  00000000  RWIX
   RAMM0                 00000050   000000b0  00000000  000000b0  RWIX
   RAMLP                 00008000   00005000  00000120  00004ee0  RWIX
-  FLASH                 00300000   0003ff80  00005612  0003a96e  RWIX
+  FLASH                 00300000   0003ff80  00005620  0003a960  RWIX
   CSM_RSVD              0033ff80   00000076  00000000  00000076  RWIX
   CSM_PWL               0033fff8   00000008  00000000  00000008  RWIX
   ADC_CAL               00380080   00000009  00000000  00000009  RWIX
@@ -41,156 +41,156 @@ ram_start
 .cio       0    00008000    00000120     UNINITIALIZED
                   00008000    00000120     rts2800_ml.lib : trgmsg.c.obj (.cio)
 
-.text      0    00300000    00004e71     
+.text      0    00300000    00004e7f     
                   00300000    00000c98     rts2800_ml.lib : _printfi.c.obj (.text)
                   00300c98    000009c2     md5.obj (.text)
                   0030165a    000007b9     os_core.obj (.text)
                   00301e13    000005ca     os_task.obj (.text)
                   003023dd    000004f3     os_flag.obj (.text)
                   003028d0    000003f9     os_q.obj (.text)
-                  00302cc9    0000030c     app.obj (.text)
-                  00302fd5    00000289     rts2800_ml.lib : memory.c.obj (.text)
-                  0030325e    00000282     aes.obj (.text)
-                  003034e0    0000021f     os_sem.obj (.text)
-                  003036ff    00000194     os_mem.obj (.text)
-                  00303893    0000013b     os_cpu_c.obj (.text)
-                  003039ce    0000011f     rts2800_ml.lib : fopen.c.obj (.text)
-                  00303aed    0000010e     os_time.obj (.text)
-                  00303bfb    00000107     rts2800_ml.lib : ll_div28.asm.obj (.text)
-                  00303d02    000000fa     bsp.obj (.text)
-                  00303dfc    000000cb     cpu_core.obj (.text)
-                  00303ec7    000000ae     bsp_int.obj (.text)
-                  00303f75    000000ac     rts2800_ml.lib : s_scalbn.c.obj (.text)
-                  00304021    000000a3                    : fputs.c.obj (.text)
-                  003040c4    0000009d     bsp_os.obj (.text:retain)
-                  00304161    0000009c     rts2800_ml.lib : fd_add28.asm.obj (.text)
-                  003041fd    00000094                    : trgmsg.c.obj (.text)
-                  00304291    0000008d     os_dbg.obj (.text)
-                  0030431e    0000008b     rts2800_ml.lib : fd_div28.asm.obj (.text)
-                  003043a9    00000083                    : fd_mpy28.asm.obj (.text)
-                  0030442c    00000079                    : setvbuf.c.obj (.text)
-                  003044a5    00000073     cpu_c.obj (.text)
-                  00304518    0000006f     rts2800_ml.lib : open.c.obj (.text)
-                  00304587    0000006b                    : fflush.c.obj (.text)
-                  003045f2    00000067                    : _io_perm.c.obj (.text)
-                  00304659    0000005e     os_cpu_a.obj (.text)
-                  003046b7    0000005d     bsp_led.obj (.text)
-                  00304714    0000005d     rts2800_ml.lib : hostlseek.c.obj (.text)
-                  00304771    0000005c                    : s_frexp.c.obj (.text)
-                  003047cd    0000005b                    : fclose.c.obj (.text)
-                  00304828    00000054                    : boot28.asm.obj (.text)
-                  0030487c    00000050                    : getdevice.c.obj (.text)
-                  003048cc    0000004f                    : fputc.c.obj (.text)
-                  0030491b    0000003f                    : hostrename.c.obj (.text)
-                  0030495a    0000003d                    : fseek.c.obj (.text)
-                  00304997    00000039                    : hostopen.c.obj (.text)
-                  003049d0    00000038                    : hostread.c.obj (.text)
-                  00304a08    00000038                    : hostwrite.c.obj (.text)
-                  00304a40    00000034                    : printf.c.obj (.text)
-                  00304a74    00000033                    : close.c.obj (.text)
-                  00304aa7    00000031     bsp_os.obj (.text)
-                  00304ad8    00000031     bsp_int.obj (.text:retain)
-                  00304b09    00000031     rts2800_ml.lib : atoi.c.obj (.text)
-                  00304b3a    0000002e                    : _ltoa.c.obj (.text)
-                  00304b68    0000002a                    : fd_cmp28.asm.obj (.text)
-                  00304b92    0000002a                    : l_div28.asm.obj (.text)
-                  00304bbc    00000029                    : exit.c.obj (.text)
-                  00304be5    00000027                    : hostclose.c.obj (.text)
-                  00304c0c    00000025                    : hostunlink.c.obj (.text)
-                  00304c31    00000024                    : cpy_tbl.c.obj (.text)
-                  00304c55    00000023                    : s_copysign.c.obj (.text)
-                  00304c78    00000021                    : fd_toi28.asm.obj (.text)
-                  00304c99    0000001f     cpu_a.obj (.text)
-                  00304cb8    0000001f     rts2800_ml.lib : fd_tol28.asm.obj (.text)
-                  00304cd7    0000001e                    : ll_cmp28.asm.obj (.text)
-                  00304cf5    0000001d                    : i_tofd28.asm.obj (.text)
-                  00304d12    0000001d                    : memcpy.c.obj (.text)
-                  00304d2f    0000001c                    : fs_tofd28.asm.obj (.text)
-                  00304d4b    0000001c                    : l_tofd28.asm.obj (.text)
-                  00304d67    00000019                    : unlink.c.obj (.text)
-                  00304d80    00000018                    : ll_aox28.asm.obj (.text)
-                  00304d98    00000018                    : lseek.c.obj (.text)
-                  00304db0    00000018                    : write.c.obj (.text)
-                  00304dc8    00000015                    : strncpy.c.obj (.text)
-                  00304ddd    00000011                    : args_main.c.obj (.text)
-                  00304dee    00000010                    : memccpy.c.obj (.text)
-                  00304dfe    0000000f     bsp_start.obj (.text)
-                  00304e0d    0000000e     rts2800_ml.lib : fd_sub28.asm.obj (.text)
-                  00304e1b    0000000d                    : memchr.c.obj (.text)
-                  00304e28    0000000b                    : strchr.c.obj (.text)
-                  00304e33    0000000a                    : strcmp.c.obj (.text)
-                  00304e3d    00000009                    : _lock.c.obj (.text)
-                  00304e46    00000009                    : fd_neg28.asm.obj (.text)
-                  00304e4f    00000008                    : strlen.c.obj (.text)
-                  00304e57    00000008                    : wcslen.c.obj (.text)
-                  00304e5f    00000007                    : memset.c.obj (.text)
-                  00304e66    00000005                    : strcpy.c.obj (.text)
-                  00304e6b    00000003                    : remove.c.obj (.text)
-                  00304e6e    00000002                    : pre_init.c.obj (.text)
-                  00304e70    00000001                    : startup.c.obj (.text)
+                  00302cc9    0000031a     app.obj (.text)
+                  00302fe3    00000289     rts2800_ml.lib : memory.c.obj (.text)
+                  0030326c    00000282     aes.obj (.text)
+                  003034ee    0000021f     os_sem.obj (.text)
+                  0030370d    00000194     os_mem.obj (.text)
+                  003038a1    0000013b     os_cpu_c.obj (.text)
+                  003039dc    0000011f     rts2800_ml.lib : fopen.c.obj (.text)
+                  00303afb    0000010e     os_time.obj (.text)
+                  00303c09    00000107     rts2800_ml.lib : ll_div28.asm.obj (.text)
+                  00303d10    000000fa     bsp.obj (.text)
+                  00303e0a    000000cb     cpu_core.obj (.text)
+                  00303ed5    000000ae     bsp_int.obj (.text)
+                  00303f83    000000ac     rts2800_ml.lib : s_scalbn.c.obj (.text)
+                  0030402f    000000a3                    : fputs.c.obj (.text)
+                  003040d2    0000009d     bsp_os.obj (.text:retain)
+                  0030416f    0000009c     rts2800_ml.lib : fd_add28.asm.obj (.text)
+                  0030420b    00000094                    : trgmsg.c.obj (.text)
+                  0030429f    0000008d     os_dbg.obj (.text)
+                  0030432c    0000008b     rts2800_ml.lib : fd_div28.asm.obj (.text)
+                  003043b7    00000083                    : fd_mpy28.asm.obj (.text)
+                  0030443a    00000079                    : setvbuf.c.obj (.text)
+                  003044b3    00000073     cpu_c.obj (.text)
+                  00304526    0000006f     rts2800_ml.lib : open.c.obj (.text)
+                  00304595    0000006b                    : fflush.c.obj (.text)
+                  00304600    00000067                    : _io_perm.c.obj (.text)
+                  00304667    0000005e     os_cpu_a.obj (.text)
+                  003046c5    0000005d     bsp_led.obj (.text)
+                  00304722    0000005d     rts2800_ml.lib : hostlseek.c.obj (.text)
+                  0030477f    0000005c                    : s_frexp.c.obj (.text)
+                  003047db    0000005b                    : fclose.c.obj (.text)
+                  00304836    00000054                    : boot28.asm.obj (.text)
+                  0030488a    00000050                    : getdevice.c.obj (.text)
+                  003048da    0000004f                    : fputc.c.obj (.text)
+                  00304929    0000003f                    : hostrename.c.obj (.text)
+                  00304968    0000003d                    : fseek.c.obj (.text)
+                  003049a5    00000039                    : hostopen.c.obj (.text)
+                  003049de    00000038                    : hostread.c.obj (.text)
+                  00304a16    00000038                    : hostwrite.c.obj (.text)
+                  00304a4e    00000034                    : printf.c.obj (.text)
+                  00304a82    00000033                    : close.c.obj (.text)
+                  00304ab5    00000031     bsp_os.obj (.text)
+                  00304ae6    00000031     bsp_int.obj (.text:retain)
+                  00304b17    00000031     rts2800_ml.lib : atoi.c.obj (.text)
+                  00304b48    0000002e                    : _ltoa.c.obj (.text)
+                  00304b76    0000002a                    : fd_cmp28.asm.obj (.text)
+                  00304ba0    0000002a                    : l_div28.asm.obj (.text)
+                  00304bca    00000029                    : exit.c.obj (.text)
+                  00304bf3    00000027                    : hostclose.c.obj (.text)
+                  00304c1a    00000025                    : hostunlink.c.obj (.text)
+                  00304c3f    00000024                    : cpy_tbl.c.obj (.text)
+                  00304c63    00000023                    : s_copysign.c.obj (.text)
+                  00304c86    00000021                    : fd_toi28.asm.obj (.text)
+                  00304ca7    0000001f     cpu_a.obj (.text)
+                  00304cc6    0000001f     rts2800_ml.lib : fd_tol28.asm.obj (.text)
+                  00304ce5    0000001e                    : ll_cmp28.asm.obj (.text)
+                  00304d03    0000001d                    : i_tofd28.asm.obj (.text)
+                  00304d20    0000001d                    : memcpy.c.obj (.text)
+                  00304d3d    0000001c                    : fs_tofd28.asm.obj (.text)
+                  00304d59    0000001c                    : l_tofd28.asm.obj (.text)
+                  00304d75    00000019                    : unlink.c.obj (.text)
+                  00304d8e    00000018                    : ll_aox28.asm.obj (.text)
+                  00304da6    00000018                    : lseek.c.obj (.text)
+                  00304dbe    00000018                    : write.c.obj (.text)
+                  00304dd6    00000015                    : strncpy.c.obj (.text)
+                  00304deb    00000011                    : args_main.c.obj (.text)
+                  00304dfc    00000010                    : memccpy.c.obj (.text)
+                  00304e0c    0000000f     bsp_start.obj (.text)
+                  00304e1b    0000000e     rts2800_ml.lib : fd_sub28.asm.obj (.text)
+                  00304e29    0000000d                    : memchr.c.obj (.text)
+                  00304e36    0000000b                    : strchr.c.obj (.text)
+                  00304e41    0000000a                    : strcmp.c.obj (.text)
+                  00304e4b    00000009                    : _lock.c.obj (.text)
+                  00304e54    00000009                    : fd_neg28.asm.obj (.text)
+                  00304e5d    00000008                    : strlen.c.obj (.text)
+                  00304e65    00000008                    : wcslen.c.obj (.text)
+                  00304e6d    00000007                    : memset.c.obj (.text)
+                  00304e74    00000005                    : strcpy.c.obj (.text)
+                  00304e79    00000003                    : remove.c.obj (.text)
+                  00304e7c    00000002                    : pre_init.c.obj (.text)
+                  00304e7e    00000001                    : startup.c.obj (.text)
 
-.cinit     0    003054c2    00000131     
-                  003054c2    00000043     md5.obj (.cinit:_PADDING)
-                  00305505    00000038     app.obj (.cinit)
-                  0030553d    00000026     rts2800_ml.lib : defs.c.obj (.cinit:__ftable)
-                  00305563    0000001b                    : host_device.c.obj (.cinit:__device)
-                  0030557e    0000000e                    : host_device.c.obj (.cinit:__stream)
-                  0030558c    0000000e                    : exit.c.obj (.cinit)
-                  0030559a    0000000c     os_cpu_c.obj (.cinit)
-                  003055a6    00000009     app.obj (.cinit:_User_MAC_Address)
-                  003055af    00000008     app.obj (.cinit:_User_ID)
-                  003055b7    00000008     app.obj (.cinit:_User_password)
-                  003055bf    00000005     rts2800_ml.lib : _lock.c.obj (.cinit:__lock)
-                  003055c4    00000005                    : _lock.c.obj (.cinit:__unlock)
-                  003055c9    00000004     app.obj (.cinit:_Reply_flag)
-                  003055cd    00000004     app.obj (.cinit:_Timer_flag)
-                  003055d1    00000004     app.obj (.cinit:_Timer_flag_NoneCrypt)
-                  003055d5    00000004     app.obj (.cinit:_hash)
-                  003055d9    00000004     bsp_os.obj (.cinit:_scirxBuf)
-                  003055dd    00000004     rts2800_ml.lib : defs.c.obj (.cinit)
-                  003055e1    00000004                    : errno.c.obj (.cinit)
-                  003055e5    00000004                    : fopen.c.obj (.cinit)
-                  003055e9    00000004                    : memory.c.obj (.cinit)
-                  003055ed    00000004                    : open.c.obj (.cinit)
-                  003055f1    00000002     --HOLE-- [fill = 0]
+.cinit     0    003054d0    00000131     
+                  003054d0    00000043     md5.obj (.cinit:_PADDING)
+                  00305513    00000038     app.obj (.cinit)
+                  0030554b    00000026     rts2800_ml.lib : defs.c.obj (.cinit:__ftable)
+                  00305571    0000001b                    : host_device.c.obj (.cinit:__device)
+                  0030558c    0000000e                    : host_device.c.obj (.cinit:__stream)
+                  0030559a    0000000e                    : exit.c.obj (.cinit)
+                  003055a8    0000000c     os_cpu_c.obj (.cinit)
+                  003055b4    00000009     app.obj (.cinit:_User_MAC_Address)
+                  003055bd    00000008     app.obj (.cinit:_User_ID)
+                  003055c5    00000008     app.obj (.cinit:_User_password)
+                  003055cd    00000005     rts2800_ml.lib : _lock.c.obj (.cinit:__lock)
+                  003055d2    00000005                    : _lock.c.obj (.cinit:__unlock)
+                  003055d7    00000004     app.obj (.cinit:_Reply_flag)
+                  003055db    00000004     app.obj (.cinit:_Timer_flag)
+                  003055df    00000004     app.obj (.cinit:_Timer_flag_NoneCrypt)
+                  003055e3    00000004     app.obj (.cinit:_hash)
+                  003055e7    00000004     bsp_os.obj (.cinit:_scirxBuf)
+                  003055eb    00000004     rts2800_ml.lib : defs.c.obj (.cinit)
+                  003055ef    00000004                    : errno.c.obj (.cinit)
+                  003055f3    00000004                    : fopen.c.obj (.cinit)
+                  003055f7    00000004                    : memory.c.obj (.cinit)
+                  003055fb    00000004                    : open.c.obj (.cinit)
+                  003055ff    00000002     --HOLE-- [fill = 0]
 
 .pinit     0    00300000    00000000     UNINITIALIZED
 
-.switch    0    003055f4    00000020     
-                  003055f4    00000020     cpu_c.obj (.switch:_CPU_IntSrcPendClr)
+.switch    0    00305602    00000020     
+                  00305602    00000020     cpu_c.obj (.switch:_CPU_IntSrcPendClr)
 
 .reset     0    003fffc0    00000002     DSECT
                   003fffc0    00000002     rts2800_ml.lib : boot28.asm.obj (.reset)
 
-.econst    0    00304e72    00000650     
-                  00304e72    00000101     rts2800_ml.lib : ctype.c.obj (.econst:.string:__ctypes_)
-                  00304f73    00000100     cpu_core.obj (.econst:.string:_CPU_CntLeadZerosTbl)
-                  00305073    00000100     os_core.obj (.econst:.string:_OSUnMapTbl)
-                  00305173    00000100     aes.obj (.econst:.string:_rsbox)
-                  00305273    00000100     aes.obj (.econst:.string:_sbox)
-                  00305373    00000001     --HOLE-- [fill = 0]
-                  00305374    0000003b     lib_mem.obj (.econst:.string)
-                  003053af    00000001     --HOLE-- [fill = 0]
-                  003053b0    0000003a     os_dbg.obj (.econst)
-                  003053ea    00000026     rts2800_ml.lib : _printfi.c.obj (.econst:.string)
-                  00305410    0000001e     os_core.obj (.econst:.string)
-                  0030542e    0000001c     rts2800_ml.lib : _printfi.c.obj (.econst)
-                  0030544a    0000001c                    : s_scalbn.c.obj (.econst)
-                  00305466    00000010     app.obj (.econst:.string:_$P$T0$1)
-                  00305476    00000010     app.obj (.econst:.string:_$P$T1$2)
-                  00305486    00000010     app.obj (.econst:.string:_$P$T2$3)
-                  00305496    0000000a     aes.obj (.econst:.string:_Rcon)
-                  003054a0    00000008     md5.obj (.econst:.string)
-                  003054a8    00000008     rts2800_ml.lib : s_frexp.c.obj (.econst)
-                  003054b0    00000002     os_flag.obj (.econst:.string)
-                  003054b2    00000002     os_mbox.obj (.econst:.string)
-                  003054b4    00000002     os_mem.obj (.econst:.string)
-                  003054b6    00000002     os_mutex.obj (.econst:.string)
-                  003054b8    00000002     os_q.obj (.econst:.string)
-                  003054ba    00000002     os_sem.obj (.econst:.string)
-                  003054bc    00000002     os_task.obj (.econst:.string)
-                  003054be    00000002     rts2800_ml.lib : fputs.c.obj (.econst:.string)
-                  003054c0    00000002     cpu_core.obj (.econst)
+.econst    0    00304e80    00000650     
+                  00304e80    00000101     rts2800_ml.lib : ctype.c.obj (.econst:.string:__ctypes_)
+                  00304f81    00000100     cpu_core.obj (.econst:.string:_CPU_CntLeadZerosTbl)
+                  00305081    00000100     os_core.obj (.econst:.string:_OSUnMapTbl)
+                  00305181    00000100     aes.obj (.econst:.string:_rsbox)
+                  00305281    00000100     aes.obj (.econst:.string:_sbox)
+                  00305381    00000001     --HOLE-- [fill = 0]
+                  00305382    0000003b     lib_mem.obj (.econst:.string)
+                  003053bd    00000001     --HOLE-- [fill = 0]
+                  003053be    0000003a     os_dbg.obj (.econst)
+                  003053f8    00000026     rts2800_ml.lib : _printfi.c.obj (.econst:.string)
+                  0030541e    0000001e     os_core.obj (.econst:.string)
+                  0030543c    0000001c     rts2800_ml.lib : _printfi.c.obj (.econst)
+                  00305458    0000001c                    : s_scalbn.c.obj (.econst)
+                  00305474    00000010     app.obj (.econst:.string:_$P$T0$1)
+                  00305484    00000010     app.obj (.econst:.string:_$P$T1$2)
+                  00305494    00000010     app.obj (.econst:.string:_$P$T2$3)
+                  003054a4    0000000a     aes.obj (.econst:.string:_Rcon)
+                  003054ae    00000008     md5.obj (.econst:.string)
+                  003054b6    00000008     rts2800_ml.lib : s_frexp.c.obj (.econst)
+                  003054be    00000002     os_flag.obj (.econst:.string)
+                  003054c0    00000002     os_mbox.obj (.econst:.string)
+                  003054c2    00000002     os_mem.obj (.econst:.string)
+                  003054c4    00000002     os_mutex.obj (.econst:.string)
+                  003054c6    00000002     os_q.obj (.econst:.string)
+                  003054c8    00000002     os_sem.obj (.econst:.string)
+                  003054ca    00000002     os_task.obj (.econst:.string)
+                  003054cc    00000002     rts2800_ml.lib : fputs.c.obj (.econst:.string)
+                  003054ce    00000002     cpu_core.obj (.econst)
 
 .stack     1    000000b0    00000750     UNINITIALIZED
                   000000b0    00000750     --HOLE--
@@ -270,10 +270,10 @@ MODULE SUMMARY
        ------              ----    ----------------   ------------------
     .\APP\
        md5.obj             2498    75                 64                
-       app.obj             780     145                912               
+       app.obj             794     145                912               
        aes.obj             642     522                0                 
     +--+-------------------+-------+------------------+--------------------+
-       Total:              3920    742                976               
+       Total:              3934    742                976               
                                                                         
     .\BSP\
        bsp_int.obj         223     0                  256               
@@ -403,7 +403,7 @@ MODULE SUMMARY
        Heap:               0       0                  1024              
        Stack:              0       0                  1872              
     +--+-------------------+-------+------------------+--------------------+
-       Grand Total:        20083   1949               6919              
+       Grand Total:        20097   1949               6919              
 
 
 GLOBAL DATA SYMBOLS: SORTED BY DATA PAGE
@@ -539,75 +539,75 @@ address     data page           name
 0000dea4     37a (0000de80)     _OSTime
 0000dea6     37a (0000de80)     __sys_memory
 
-00304e72    c139 (00304e40)     __ctypes_
+00304e80    c13a (00304e80)     __ctypes_
 
-00305073    c141 (00305040)     _OSUnMapTbl
+00305081    c142 (00305080)     _OSUnMapTbl
 
-00305173    c145 (00305140)     _rsbox
+00305181    c146 (00305180)     _rsbox
 
-00305273    c149 (00305240)     _sbox
+00305281    c14a (00305280)     _sbox
 
-003053b0    c14e (00305380)     _OSDebugEn
-003053b1    c14e (00305380)     _OSEventEn
-003053b2    c14e (00305380)     _OSEventMax
-003053b3    c14e (00305380)     _OSEventNameEn
-003053b4    c14e (00305380)     _OSEventSize
-003053b5    c14e (00305380)     _OSEventTblSize
-003053b6    c14e (00305380)     _OSEventMultiEn
-003053b7    c14e (00305380)     _OSFlagEn
-003053b8    c14e (00305380)     _OSFlagGrpSize
-003053b9    c14e (00305380)     _OSFlagNodeSize
-003053ba    c14e (00305380)     _OSFlagWidth
-003053bb    c14e (00305380)     _OSFlagMax
-003053bc    c14e (00305380)     _OSFlagNameEn
-003053bd    c14e (00305380)     _OSLowestPrio
-003053be    c14e (00305380)     _OSMboxEn
-003053bf    c14e (00305380)     _OSMemEn
+003053be    c14e (00305380)     _OSDebugEn
+003053bf    c14e (00305380)     _OSEventEn
 
-003053c0    c14f (003053c0)     _OSMemMax
-003053c1    c14f (003053c0)     _OSMemNameEn
-003053c2    c14f (003053c0)     _OSMemSize
-003053c3    c14f (003053c0)     _OSMemTblSize
-003053c4    c14f (003053c0)     _OSMutexEn
-003053c5    c14f (003053c0)     _OSPtrSize
-003053c6    c14f (003053c0)     _OSQEn
-003053c7    c14f (003053c0)     _OSQMax
-003053c8    c14f (003053c0)     _OSQSize
-003053c9    c14f (003053c0)     _OSRdyTblSize
-003053ca    c14f (003053c0)     _OSSemEn
-003053cb    c14f (003053c0)     _OSStkWidth
-003053cc    c14f (003053c0)     _OSTaskCreateEn
-003053cd    c14f (003053c0)     _OSTaskCreateExtEn
-003053ce    c14f (003053c0)     _OSTaskDelEn
-003053cf    c14f (003053c0)     _OSTaskIdleStkSize
-003053d0    c14f (003053c0)     _OSTaskProfileEn
-003053d1    c14f (003053c0)     _OSTaskMax
-003053d2    c14f (003053c0)     _OSTaskNameEn
-003053d3    c14f (003053c0)     _OSTaskStatEn
-003053d4    c14f (003053c0)     _OSTaskStatStkSize
-003053d5    c14f (003053c0)     _OSTaskStatStkChkEn
-003053d6    c14f (003053c0)     _OSTaskSwHookEn
-003053d7    c14f (003053c0)     _OSTaskRegTblSize
-003053d8    c14f (003053c0)     _OSTCBPrioTblMax
-003053d9    c14f (003053c0)     _OSTCBSize
-003053da    c14f (003053c0)     _OSTicksPerSec
-003053db    c14f (003053c0)     _OSTimeTickHookEn
-003053dc    c14f (003053c0)     _OSVersionNbr
-003053dd    c14f (003053c0)     _OSTmrEn
-003053de    c14f (003053c0)     _OSTmrCfgMax
-003053df    c14f (003053c0)     _OSTmrCfgNameEn
-003053e0    c14f (003053c0)     _OSTmrCfgWheelSize
-003053e1    c14f (003053c0)     _OSTmrCfgTicksPerSec
-003053e2    c14f (003053c0)     _OSTmrSize
-003053e3    c14f (003053c0)     _OSTmrTblSize
-003053e4    c14f (003053c0)     _OSTmrWheelSize
-003053e5    c14f (003053c0)     _OSTmrWheelTblSize
-003053e6    c14f (003053c0)     _OSDataSize
-003053e8    c14f (003053c0)     _OSEndiannessTest
+003053c0    c14f (003053c0)     _OSEventMax
+003053c1    c14f (003053c0)     _OSEventNameEn
+003053c2    c14f (003053c0)     _OSEventSize
+003053c3    c14f (003053c0)     _OSEventTblSize
+003053c4    c14f (003053c0)     _OSEventMultiEn
+003053c5    c14f (003053c0)     _OSFlagEn
+003053c6    c14f (003053c0)     _OSFlagGrpSize
+003053c7    c14f (003053c0)     _OSFlagNodeSize
+003053c8    c14f (003053c0)     _OSFlagWidth
+003053c9    c14f (003053c0)     _OSFlagMax
+003053ca    c14f (003053c0)     _OSFlagNameEn
+003053cb    c14f (003053c0)     _OSLowestPrio
+003053cc    c14f (003053c0)     _OSMboxEn
+003053cd    c14f (003053c0)     _OSMemEn
+003053ce    c14f (003053c0)     _OSMemMax
+003053cf    c14f (003053c0)     _OSMemNameEn
+003053d0    c14f (003053c0)     _OSMemSize
+003053d1    c14f (003053c0)     _OSMemTblSize
+003053d2    c14f (003053c0)     _OSMutexEn
+003053d3    c14f (003053c0)     _OSPtrSize
+003053d4    c14f (003053c0)     _OSQEn
+003053d5    c14f (003053c0)     _OSQMax
+003053d6    c14f (003053c0)     _OSQSize
+003053d7    c14f (003053c0)     _OSRdyTblSize
+003053d8    c14f (003053c0)     _OSSemEn
+003053d9    c14f (003053c0)     _OSStkWidth
+003053da    c14f (003053c0)     _OSTaskCreateEn
+003053db    c14f (003053c0)     _OSTaskCreateExtEn
+003053dc    c14f (003053c0)     _OSTaskDelEn
+003053dd    c14f (003053c0)     _OSTaskIdleStkSize
+003053de    c14f (003053c0)     _OSTaskProfileEn
+003053df    c14f (003053c0)     _OSTaskMax
+003053e0    c14f (003053c0)     _OSTaskNameEn
+003053e1    c14f (003053c0)     _OSTaskStatEn
+003053e2    c14f (003053c0)     _OSTaskStatStkSize
+003053e3    c14f (003053c0)     _OSTaskStatStkChkEn
+003053e4    c14f (003053c0)     _OSTaskSwHookEn
+003053e5    c14f (003053c0)     _OSTaskRegTblSize
+003053e6    c14f (003053c0)     _OSTCBPrioTblMax
+003053e7    c14f (003053c0)     _OSTCBSize
+003053e8    c14f (003053c0)     _OSTicksPerSec
+003053e9    c14f (003053c0)     _OSTimeTickHookEn
+003053ea    c14f (003053c0)     _OSVersionNbr
+003053eb    c14f (003053c0)     _OSTmrEn
+003053ec    c14f (003053c0)     _OSTmrCfgMax
+003053ed    c14f (003053c0)     _OSTmrCfgNameEn
+003053ee    c14f (003053c0)     _OSTmrCfgWheelSize
+003053ef    c14f (003053c0)     _OSTmrCfgTicksPerSec
+003053f0    c14f (003053c0)     _OSTmrSize
+003053f1    c14f (003053c0)     _OSTmrTblSize
+003053f2    c14f (003053c0)     _OSTmrWheelSize
+003053f3    c14f (003053c0)     _OSTmrWheelTblSize
+003053f4    c14f (003053c0)     _OSDataSize
+003053f6    c14f (003053c0)     _OSEndiannessTest
 
-00305496    c152 (00305480)     _Rcon
+003054a4    c152 (00305480)     _Rcon
 
-003054c0    c153 (003054c0)     _CPU_EndiannessTest
+003054ce    c153 (003054c0)     _CPU_EndiannessTest
 
 
 GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
@@ -615,84 +615,84 @@ GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name
 page  address   name                            
 ----  -------   ----                            
 0     00300000  .text                           
-0     00304bbc  C$$EXIT                         
-0     00304250  C$$IO$$                         
-0     00304161  FD$$ADD                         
-0     00304b68  FD$$CMP                         
-0     0030431e  FD$$DIV                         
-0     003043a9  FD$$MPY                         
-0     00304e46  FD$$NEG                         
-0     00304e0d  FD$$SUB                         
-0     00304c78  FD$$TOI                         
-0     00304cb8  FD$$TOL                         
-0     00304d2f  FS$$TOFD                        
-0     00304cf5  I$$TOFD                         
-0     00304b92  L$$DIV                          
-0     00304ba1  L$$MOD                          
-0     00304d4b  L$$TOFD                         
-0     00304d80  LL$$AND                         
-0     00304cd7  LL$$CMP                         
-0     00303bfb  LL$$DIV                         
-0     00303c37  LL$$MOD                         
-0     00304d88  LL$$OR                          
-0     00304d90  LL$$XOR                         
-0     00304baf  UL$$DIV                         
-0     00304bb6  UL$$MOD                         
-0     00304ce9  ULL$$CMP                        
-0     00303c71  ULL$$DIV                        
-0     00303ca0  ULL$$MOD                        
-0     00303d26  _BSP_CPU_ClkFreq                
-0     00303f48  _BSP_ExtIntDis                  
-0     00303f34  _BSP_ExtIntEn                   
-0     00303d02  _BSP_Init                       
-0     00303ec7  _BSP_IntAck                     
-0     00303f0c  _BSP_IntDis                     
-0     00303ee5  _BSP_IntEn                      
-0     00304ad8  _BSP_IntHandlerDummy            
-0     00303f5c  _BSP_IntVectSet                 
-0     003046d6  _BSP_LED_Off                    
-0     003046b7  _BSP_LED_On                     
-0     003046f5  _BSP_LED_Toggle                 
-0     003040c4  _BSP_OS_TIMER2_TickHandler      
-0     00304aa7  _BSP_OS_TIMER2_TickInit         
-0     00304dfe  _BSP_RAM_StartHere              
-0     00303d9a  _BSP_SCIA_Init                  
-0     003040ee  _BSP_SCIA_RX                    
-0     00304116  _BSP_SCIA_TX                    
-0     00303d15  _BSP_Tick_Init                  
-0     00304caa  _CPU_CntLeadZeros               
-0     00303dfe  _CPU_CntLeadZeros08             
-0     00303e08  _CPU_CntLeadZeros16             
-0     00303e0f  _CPU_CntLeadZeros32             
-0     00303e47  _CPU_CntTrailZeros              
-0     00303e59  _CPU_CntTrailZeros08            
-0     00303e6b  _CPU_CntTrailZeros16            
-0     00303e7d  _CPU_CntTrailZeros32            
-0     003054c0  _CPU_EndiannessTest             
-0     00303dfc  _CPU_Init                       
-0     00304c99  _CPU_IntDis                     
-0     00304c9b  _CPU_IntEn                      
-0     003044a5  _CPU_IntSrcDis                  
-0     003044bb  _CPU_IntSrcEn                   
-0     003044d0  _CPU_IntSrcPendClr              
-0     00303e91  _CPU_PopCnt32                   
-0     00304cb6  _CPU_RevBits                    
-0     00304ca2  _CPU_SR_Restore                 
-0     00304c9d  _CPU_SR_Save                    
-0     00303dfd  _CPU_SW_Exception               
+0     00304bca  C$$EXIT                         
+0     0030425e  C$$IO$$                         
+0     0030416f  FD$$ADD                         
+0     00304b76  FD$$CMP                         
+0     0030432c  FD$$DIV                         
+0     003043b7  FD$$MPY                         
+0     00304e54  FD$$NEG                         
+0     00304e1b  FD$$SUB                         
+0     00304c86  FD$$TOI                         
+0     00304cc6  FD$$TOL                         
+0     00304d3d  FS$$TOFD                        
+0     00304d03  I$$TOFD                         
+0     00304ba0  L$$DIV                          
+0     00304baf  L$$MOD                          
+0     00304d59  L$$TOFD                         
+0     00304d8e  LL$$AND                         
+0     00304ce5  LL$$CMP                         
+0     00303c09  LL$$DIV                         
+0     00303c45  LL$$MOD                         
+0     00304d96  LL$$OR                          
+0     00304d9e  LL$$XOR                         
+0     00304bbd  UL$$DIV                         
+0     00304bc4  UL$$MOD                         
+0     00304cf7  ULL$$CMP                        
+0     00303c7f  ULL$$DIV                        
+0     00303cae  ULL$$MOD                        
+0     00303d34  _BSP_CPU_ClkFreq                
+0     00303f56  _BSP_ExtIntDis                  
+0     00303f42  _BSP_ExtIntEn                   
+0     00303d10  _BSP_Init                       
+0     00303ed5  _BSP_IntAck                     
+0     00303f1a  _BSP_IntDis                     
+0     00303ef3  _BSP_IntEn                      
+0     00304ae6  _BSP_IntHandlerDummy            
+0     00303f6a  _BSP_IntVectSet                 
+0     003046e4  _BSP_LED_Off                    
+0     003046c5  _BSP_LED_On                     
+0     00304703  _BSP_LED_Toggle                 
+0     003040d2  _BSP_OS_TIMER2_TickHandler      
+0     00304ab5  _BSP_OS_TIMER2_TickInit         
+0     00304e0c  _BSP_RAM_StartHere              
+0     00303da8  _BSP_SCIA_Init                  
+0     003040fc  _BSP_SCIA_RX                    
+0     00304124  _BSP_SCIA_TX                    
+0     00303d23  _BSP_Tick_Init                  
+0     00304cb8  _CPU_CntLeadZeros               
+0     00303e0c  _CPU_CntLeadZeros08             
+0     00303e16  _CPU_CntLeadZeros16             
+0     00303e1d  _CPU_CntLeadZeros32             
+0     00303e55  _CPU_CntTrailZeros              
+0     00303e67  _CPU_CntTrailZeros08            
+0     00303e79  _CPU_CntTrailZeros16            
+0     00303e8b  _CPU_CntTrailZeros32            
+0     003054ce  _CPU_EndiannessTest             
+0     00303e0a  _CPU_Init                       
+0     00304ca7  _CPU_IntDis                     
+0     00304ca9  _CPU_IntEn                      
+0     003044b3  _CPU_IntSrcDis                  
+0     003044c9  _CPU_IntSrcEn                   
+0     003044de  _CPU_IntSrcPendClr              
+0     00303e9f  _CPU_PopCnt32                   
+0     00304cc4  _CPU_RevBits                    
+0     00304cb0  _CPU_SR_Restore                 
+0     00304cab  _CPU_SR_Save                    
+0     00303e0b  _CPU_SW_Exception               
 1     0000d7bc  _DEVICE_OUT                     
 1     0000d980  _Data_SyncStk                   
 1     0000d7ce  _Data_Sync_ExTime               
 1     0000da00  _DiagnosisStk                   
 1     0000d7cd  _Diagnosis_ExTime               
 1     0000d9e3  _Excute_Time                    
-0     00304be5  _HOSTclose                      
-0     00304714  _HOSTlseek                      
-0     00304997  _HOSTopen                       
-0     003049d0  _HOSTread                       
-0     0030491b  _HOSTrename                     
-0     00304c0c  _HOSTunlink                     
-0     00304a08  _HOSTwrite                      
+0     00304bf3  _HOSTclose                      
+0     00304722  _HOSTlseek                      
+0     003049a5  _HOSTopen                       
+0     003049de  _HOSTread                       
+0     00304929  _HOSTrename                     
+0     00304c1a  _HOSTunlink                     
+0     00304a16  _HOSTwrite                      
 1     0000da80  _Init_UpdateStk                 
 1     0000d7c1  _Init_Update_EXTime             
 0     00300d3c  _MD5Final                       
@@ -704,176 +704,176 @@ page  address   name
 1     0000d7b2  _Mem_SegHeap                    
 1     0000de80  _OSCPUUsage                     
 1     0000de8c  _OSCtxSwCtr                     
-0     003053e6  _OSDataSize                     
-0     003053b0  _OSDebugEn                      
-0     00304291  _OSDebugInit                    
-0     003053e8  _OSEndiannessTest               
-0     003053b1  _OSEventEn                      
+0     003053f4  _OSDataSize                     
+0     003053be  _OSDebugEn                      
+0     0030429f  _OSDebugInit                    
+0     003053f6  _OSEndiannessTest               
+0     003053bf  _OSEventEn                      
 1     0000de8e  _OSEventFreeList                
-0     003053b2  _OSEventMax                     
-0     003053b6  _OSEventMultiEn                 
-0     003053b3  _OSEventNameEn                  
+0     003053c0  _OSEventMax                     
+0     003053c4  _OSEventMultiEn                 
+0     003053c1  _OSEventNameEn                  
 0     0030165a  _OSEventNameGet                 
 0     00301699  _OSEventNameSet                 
 0     003016cd  _OSEventPendMulti               
-0     003053b4  _OSEventSize                    
+0     003053c2  _OSEventSize                    
 1     0000d640  _OSEventTbl                     
-0     003053b5  _OSEventTblSize                 
+0     003053c3  _OSEventTblSize                 
 0     003023dd  _OSFlagAccept                   
 0     00302468  _OSFlagCreate                   
 0     0030249b  _OSFlagDel                      
-0     003053b7  _OSFlagEn                       
+0     003053c5  _OSFlagEn                       
 1     0000de90  _OSFlagFreeList                 
-0     003053b8  _OSFlagGrpSize                  
-0     003053bb  _OSFlagMax                      
-0     003053bc  _OSFlagNameEn                   
+0     003053c6  _OSFlagGrpSize                  
+0     003053c9  _OSFlagMax                      
+0     003053ca  _OSFlagNameEn                   
 0     00302520  _OSFlagNameGet                  
 0     0030255a  _OSFlagNameSet                  
-0     003053b9  _OSFlagNodeSize                 
+0     003053c7  _OSFlagNodeSize                 
 0     00302589  _OSFlagPend                     
 0     003026e2  _OSFlagPendGetFlagsRdy          
 0     003026f4  _OSFlagPost                     
 0     003027b4  _OSFlagQuery                    
 1     0000de00  _OSFlagTbl                      
-0     003053ba  _OSFlagWidth                    
+0     003053c8  _OSFlagWidth                    
 1     0000de96  _OSIdleCtr                      
 1     0000de92  _OSIdleCtrMax                   
 1     0000de94  _OSIdleCtrRun                   
 0     00301887  _OSInit                         
-0     00303893  _OSInitHookBegin                
-0     003038dd  _OSInitHookEnd                  
+0     003038a1  _OSInitHookBegin                
+0     003038eb  _OSInitHookEnd                  
 0     003018a0  _OSIntEnter                     
 0     003018aa  _OSIntExit                      
 1     0000de82  _OSIntNesting                   
 1     0000de83  _OSLockNesting                  
-0     003053bd  _OSLowestPrio                   
-0     003053be  _OSMboxEn                       
-0     003036ff  _OSMemCreate                    
-0     003053bf  _OSMemEn                        
+0     003053cb  _OSLowestPrio                   
+0     003053cc  _OSMboxEn                       
+0     0030370d  _OSMemCreate                    
+0     003053cd  _OSMemEn                        
 1     0000dea0  _OSMemFreeList                  
-0     00303768  _OSMemGet                       
-0     003053c0  _OSMemMax                       
-0     003053c1  _OSMemNameEn                    
-0     00303798  _OSMemNameGet                   
-0     003037c9  _OSMemNameSet                   
-0     003037f0  _OSMemPut                       
-0     0030381f  _OSMemQuery                     
-0     003053c2  _OSMemSize                      
+0     00303776  _OSMemGet                       
+0     003053ce  _OSMemMax                       
+0     003053cf  _OSMemNameEn                    
+0     003037a6  _OSMemNameGet                   
+0     003037d7  _OSMemNameSet                   
+0     003037fe  _OSMemPut                       
+0     0030382d  _OSMemQuery                     
+0     003053d0  _OSMemSize                      
 1     0000ddc0  _OSMemTbl                       
-0     003053c3  _OSMemTblSize                   
-0     003053c4  _OSMutexEn                      
+0     003053d1  _OSMemTblSize                   
+0     003053d2  _OSMutexEn                      
 1     0000de84  _OSPrioCur                      
 1     0000de85  _OSPrioHighRdy                  
-0     003053c5  _OSPtrSize                      
+0     003053d3  _OSPtrSize                      
 0     003028d0  _OSQAccept                      
 0     00302918  _OSQCreate                      
 0     0030297d  _OSQDel                         
-0     003053c6  _OSQEn                          
+0     003053d4  _OSQEn                          
 0     00302a16  _OSQFlush                       
 1     0000dea2  _OSQFreeList                    
-0     003053c7  _OSQMax                         
+0     003053d5  _OSQMax                         
 0     00302a3b  _OSQPend                        
 0     00302af0  _OSQPendAbort                   
 0     00302b34  _OSQPost                        
 0     00302b7b  _OSQPostFront                   
 0     00302bcf  _OSQPostOpt                     
 0     00302c42  _OSQQuery                       
-0     003053c8  _OSQSize                        
+0     003053d6  _OSQSize                        
 1     0000dd48  _OSQTbl                         
 1     0000de86  _OSRdyGrp                       
 1     0000d85c  _OSRdyTbl                       
-0     003053c9  _OSRdyTblSize                   
+0     003053d7  _OSRdyTblSize                   
 1     0000de87  _OSRunning                      
 0     003018dd  _OSSchedLock                    
 0     003018f4  _OSSchedUnlock                  
-0     003034e0  _OSSemAccept                    
-0     003034fa  _OSSemCreate                    
-0     00303529  _OSSemDel                       
-0     003053ca  _OSSemEn                        
-0     003035ac  _OSSemPend                      
-0     0030362a  _OSSemPendAbort                 
-0     0030366e  _OSSemPost                      
-0     0030369b  _OSSemQuery                     
-0     003036d5  _OSSemSet                       
+0     003034ee  _OSSemAccept                    
+0     00303508  _OSSemCreate                    
+0     00303537  _OSSemDel                       
+0     003053d8  _OSSemEn                        
+0     003035ba  _OSSemPend                      
+0     00303638  _OSSemPendAbort                 
+0     0030367c  _OSSemPost                      
+0     003036a9  _OSSemQuery                     
+0     003036e3  _OSSemSet                       
 0     0030191a  _OSStart                        
-0     0030466c  _OSStartHighRdy                 
+0     0030467a  _OSStartHighRdy                 
 0     00301931  _OSStatInit                     
 1     0000de81  _OSStatRdy                      
-0     003053cb  _OSStkWidth                     
+0     003053d9  _OSStkWidth                     
 1     0000de98  _OSTCBCur                       
 1     0000de9a  _OSTCBFreeList                  
 1     0000de9c  _OSTCBHighRdy                   
-0     003039c9  _OSTCBInitHook                  
+0     003039d7  _OSTCBInitHook                  
 1     0000de9e  _OSTCBList                      
 1     0000d880  _OSTCBPrioTbl                   
-0     003053d8  _OSTCBPrioTblMax                
-0     003053d9  _OSTCBSize                      
+0     003053e6  _OSTCBPrioTblMax                
+0     003053e7  _OSTCBSize                      
 1     0000d000  _OSTCBTbl                       
 0     00301e13  _OSTaskChangePrio               
 0     00301f1c  _OSTaskCreate                   
-0     003053cc  _OSTaskCreateEn                 
+0     003053da  _OSTaskCreateEn                 
 0     00301f79  _OSTaskCreateExt                
-0     003053cd  _OSTaskCreateExtEn              
-0     003038de  _OSTaskCreateHook               
+0     003053db  _OSTaskCreateExtEn              
+0     003038ec  _OSTaskCreateHook               
 1     0000de88  _OSTaskCtr                      
 0     00301fdf  _OSTaskDel                      
-0     003053ce  _OSTaskDelEn                    
-0     003038e2  _OSTaskDelHook                  
+0     003053dc  _OSTaskDelEn                    
+0     003038f0  _OSTaskDelHook                  
 0     003020d5  _OSTaskDelReq                   
-0     003038e6  _OSTaskIdleHook                 
+0     003038f4  _OSTaskIdleHook                 
 1     0000d440  _OSTaskIdleStk                  
-0     003053cf  _OSTaskIdleStkSize              
-0     003053d1  _OSTaskMax                      
-0     003053d2  _OSTaskNameEn                   
+0     003053dd  _OSTaskIdleStkSize              
+0     003053df  _OSTaskMax                      
+0     003053e0  _OSTaskNameEn                   
 0     00302119  _OSTaskNameGet                  
 0     00302175  _OSTaskNameSet                  
-0     003053d0  _OSTaskProfileEn                
+0     003053de  _OSTaskProfileEn                
 0     003022f8  _OSTaskQuery                    
 0     00302336  _OSTaskRegGet                   
 0     0030236d  _OSTaskRegGetID                 
 1     0000de8a  _OSTaskRegNextAvailID           
 0     00302389  _OSTaskRegSet                   
-0     003053d7  _OSTaskRegTblSize               
+0     003053e5  _OSTaskRegTblSize               
 0     003021c5  _OSTaskResume                   
-0     003038e7  _OSTaskReturnHook               
-0     003053d3  _OSTaskStatEn                   
-0     003038eb  _OSTaskStatHook                 
+0     003038f5  _OSTaskReturnHook               
+0     003053e1  _OSTaskStatEn                   
+0     003038f9  _OSTaskStatHook                 
 1     0000d540  _OSTaskStatStk                  
-0     003053d5  _OSTaskStatStkChkEn             
-0     003053d4  _OSTaskStatStkSize              
+0     003053e3  _OSTaskStatStkChkEn             
+0     003053e2  _OSTaskStatStkSize              
 0     0030222a  _OSTaskStkChk                   
-0     003038ec  _OSTaskStkInit                  
+0     003038fa  _OSTaskStkInit                  
 0     00302289  _OSTaskSuspend                  
-0     0030397c  _OSTaskSwHook                   
-0     003053d6  _OSTaskSwHookEn                 
+0     0030398a  _OSTaskSwHook                   
+0     003053e4  _OSTaskSwHookEn                 
 1     0000de89  _OSTickStepState                
-0     003053da  _OSTicksPerSec                  
+0     003053e8  _OSTicksPerSec                  
 1     0000dea4  _OSTime                         
-0     00303aed  _OSTimeDly                      
-0     00303b2a  _OSTimeDlyHMSM                  
-0     00303b72  _OSTimeDlyResume                
-0     00303bdd  _OSTimeGet                      
-0     00303bec  _OSTimeSet                      
+0     00303afb  _OSTimeDly                      
+0     00303b38  _OSTimeDlyHMSM                  
+0     00303b80  _OSTimeDlyResume                
+0     00303beb  _OSTimeGet                      
+0     00303bfa  _OSTimeSet                      
 0     00301951  _OSTimeTick                     
-0     003039cd  _OSTimeTickHook                 
-0     003053db  _OSTimeTickHookEn               
-0     003053de  _OSTmrCfgMax                    
-0     003053df  _OSTmrCfgNameEn                 
-0     003053e1  _OSTmrCfgTicksPerSec            
-0     003053e0  _OSTmrCfgWheelSize              
-0     003053dd  _OSTmrEn                        
-0     003053e2  _OSTmrSize                      
-0     003053e3  _OSTmrTblSize                   
-0     003053e4  _OSTmrWheelSize                 
-0     003053e5  _OSTmrWheelTblSize              
-0     00305073  _OSUnMapTbl                     
+0     003039db  _OSTimeTickHook                 
+0     003053e9  _OSTimeTickHookEn               
+0     003053ec  _OSTmrCfgMax                    
+0     003053ed  _OSTmrCfgNameEn                 
+0     003053ef  _OSTmrCfgTicksPerSec            
+0     003053ee  _OSTmrCfgWheelSize              
+0     003053eb  _OSTmrEn                        
+0     003053f0  _OSTmrSize                      
+0     003053f1  _OSTmrTblSize                   
+0     003053f2  _OSTmrWheelSize                 
+0     003053f3  _OSTmrWheelTblSize              
+0     00305081  _OSUnMapTbl                     
 0     003019d1  _OSVersion                      
-0     003053dc  _OSVersionNbr                   
-0     00304659  _OS_CPU_GetST0                  
-0     0030465c  _OS_CPU_GetST1                  
-0     00304687  _OS_CPU_RTOSINT_Handler         
-0     00304664  _OS_CPU_SR_Restore              
-0     0030465f  _OS_CPU_SR_Save                 
+0     003053ea  _OSVersionNbr                   
+0     00304667  _OS_CPU_GetST0                  
+0     0030466a  _OS_CPU_GetST1                  
+0     00304695  _OS_CPU_RTOSINT_Handler         
+0     00304672  _OS_CPU_SR_Restore              
+0     0030466d  _OS_CPU_SR_Save                 
 0     003019d4  _OS_Dummy                       
 0     003019d5  _OS_EventTaskRdy                
 0     00301abc  _OS_EventTaskRemove             
@@ -885,7 +885,7 @@ page  address   name
 0     003028ab  _OS_FlagUnlink                  
 0     00301c20  _OS_MemClr                      
 0     00301c2f  _OS_MemCopy                     
-0     00303857  _OS_MemInit                     
+0     00303865  _OS_MemInit                     
 0     00302c97  _OS_QInit                       
 0     00301c42  _OS_Sched                       
 0     00301c81  _OS_StrLen                      
@@ -895,7 +895,7 @@ page  address   name
 0     00301ca8  _OS_TaskStat                    
 0     00301cfc  _OS_TaskStatStkChk              
 0     003023c7  _OS_TaskStkClr                  
-0     00305496  _Rcon                           
+0     003054a4  _Rcon                           
 1     0000d420  _Reply_flag                     
 1     0000db00  _Status_SyncStk                 
 1     0000d7c0  _Status_Sync_ExTime             
@@ -927,114 +927,114 @@ page  address   name
 abs   00000750  __STACK_SIZE                    
 abs   00000400  __SYSMEM_SIZE                   
 1     00000d00  ___BSP_VectorTable              
-0     00303a6c  ___TI_cleanup                   
+0     00303a7a  ___TI_cleanup                   
 1     0000d874  ___TI_cleanup_ptr               
-0     003047cd  ___TI_closefile                 
-0     00304587  ___TI_doflush                   
+0     003047db  ___TI_closefile                 
+0     00304595  ___TI_doflush                   
 1     0000d876  ___TI_dtors_ptr                 
 1     0000d872  ___TI_enable_exit_profile_output
 1     0000d87d  ___TI_ft_end                    
-0     0030325c  ___TI_heap_check                
-0     0030323f  ___TI_heap_largest_available    
-0     00303222  ___TI_heap_total_available      
-0     00304b3a  ___TI_ltoa                      
+0     0030326a  ___TI_heap_check                
+0     0030324d  ___TI_heap_largest_available    
+0     00303230  ___TI_heap_total_available      
+0     00304b48  ___TI_ltoa                      
 abs   ffffffff  ___TI_pprof_out_hndl            
 0     00300b12  ___TI_printfi                   
 abs   ffffffff  ___TI_prof_data_size            
 abs   ffffffff  ___TI_prof_data_start           
-0     0030462d  ___TI_rd_ok                     
-0     00304255  ___TI_readmsg                   
+0     0030463b  ___TI_rd_ok                     
+0     00304263  ___TI_readmsg                   
 1     0000d700  ___TI_tmpnams                   
-0     003041fd  ___TI_writemsg                  
-0     003045f2  ___TI_wrt_ok                    
+0     0030420b  ___TI_writemsg                  
+0     00304600  ___TI_wrt_ok                    
 abs   ffffffff  ___binit__                      
 abs   ffffffff  ___c_args__                     
-0     003054c2  ___cinit__                      
-0     00304e71  ___etext__                      
+0     003054d0  ___cinit__                      
+0     00304e7f  ___etext__                      
 abs   ffffffff  ___pinit__                      
 0     00300000  ___text__                       
-0     00304ddd  __args_main                     
-0     00304e72  __ctypes_                       
+0     00304deb  __args_main                     
+0     00304e80  __ctypes_                       
 1     0000dd00  __device                        
 1     0000d900  __ftable                        
 1     0000d87e  __lock                          
-0     00304e45  __nop                           
-0     00304e41  __register_lock                 
-0     00304e3d  __register_unlock               
+0     00304e53  __nop                           
+0     00304e4f  __register_lock                 
+0     00304e4b  __register_unlock               
 1     000000b0  __stack                         
 1     0000de40  __stream                        
 1     0000dea6  __sys_memory                    
-0     00304e70  __system_post_cinit             
-0     00304e6e  __system_pre_init               
+0     00304e7e  __system_post_cinit             
+0     00304e7c  __system_pre_init               
 1     0000d97e  __unlock                        
-0     00304bbc  _abort                          
-0     0030326c  _aes_enc_dec                    
+0     00304bca  _abort                          
+0     0030327a  _aes_enc_dec                    
 1     0000d7d6  _aes_flag                       
-0     0030317c  _aligned_alloc                  
-0     00304b09  _atoi                           
-0     00304828  _c_int00                        
-0     0030314f  _calloc                         
+0     0030318a  _aligned_alloc                  
+0     00304b17  _atoi                           
+0     00304836  _c_int00                        
+0     0030315d  _calloc                         
 1     0000d7d4  _certification_flag1            
 1     0000d7d5  _certification_flag2            
-0     00304a74  _close                          
+0     00304a82  _close                          
 1     0000d9e0  _cnt0                           
 1     0000d9e1  _cnt1                           
 1     0000d800  _context                        
-0     00304c31  _copy_in                        
-0     00304c55  _copysignl                      
+0     00304c3f  _copy_in                        
+0     00304c63  _copysignl                      
 1     0000d97d  _errno                          
-0     00304bbe  _exit                           
-0     0030480f  _fclose                         
-0     003045b6  _fflush                         
-0     0030487c  _finddevice                     
-0     00303aa7  _fopen                          
-0     003048cc  _fputc                          
-0     00304021  _fputs                          
-0     00303000  _free                           
-0     00303a89  _freopen                        
-0     00304771  _frexpl                         
-0     0030495a  _fseek                          
-0     0030325e  _galois_mul2                    
-0     00304897  _getdevice                      
+0     00304bcc  _exit                           
+0     0030481d  _fclose                         
+0     003045c4  _fflush                         
+0     0030488a  _finddevice                     
+0     00303ab5  _fopen                          
+0     003048da  _fputc                          
+0     0030402f  _fputs                          
+0     0030300e  _free                           
+0     00303a97  _freopen                        
+0     0030477f  _frexpl                         
+0     00304968  _fseek                          
+0     0030326c  _galois_mul2                    
+0     003048a5  _getdevice                      
 1     0000d6f0  _hash                           
 1     0000d9e4  _init_flag                      
-0     00303f75  _ldexpl                         
-0     00304d98  _lseek                          
+0     00303f83  _ldexpl                         
+0     00304da6  _lseek                          
 0     00302cc9  _main                           
-0     00302fd5  _malloc                         
-0     0030317c  _memalign                       
-0     00304dee  _memccpy                        
-0     00304e1b  _memchr                         
-0     00304d12  _memcpy                         
-0     00304e5f  _memset                         
-0     0030314b  _minit                          
+0     00302fe3  _malloc                         
+0     0030318a  _memalign                       
+0     00304dfc  _memccpy                        
+0     00304e29  _memchr                         
+0     00304d20  _memcpy                         
+0     00304e6d  _memset                         
+0     00303159  _minit                          
 1     0000d7d1  _nonce                          
-0     00304518  _open                           
+0     00304526  _open                           
 1     0000d864  _parmbuf                        
-0     00304a46  _printf                         
+0     00304a54  _printf                         
 1     0000d7d7  _psh_flag                       
-0     003048cc  _putc                           
-0     00304916  _putchar                        
-0     003040b1  _puts                           
-0     003030c8  _realloc                        
-0     00304e6b  _remove                         
-0     00305173  _rsbox                          
-0     00305273  _sbox                           
-0     00303f75  _scalbnl                        
+0     003048da  _putc                           
+0     00304924  _putchar                        
+0     003040bf  _puts                           
+0     003030d6  _realloc                        
+0     00304e79  _remove                         
+0     00305181  _rsbox                          
+0     00305281  _sbox                           
+0     00303f83  _scalbnl                        
 1     0000d7a0  _scirxBuf                       
-0     0030442c  _setvbuf                        
+0     0030443a  _setvbuf                        
 1     0000d7d2  _start                          
-0     00304e28  _strchr                         
-0     00304e33  _strcmp                         
-0     00304e66  _strcpy                         
-0     00304e4f  _strlen                         
-0     00304dc8  _strncpy                        
-0     00304d67  _unlink                         
-0     00304e57  _wcslen                         
-0     00304db0  _write                          
+0     00304e36  _strchr                         
+0     00304e41  _strcmp                         
+0     00304e74  _strcpy                         
+0     00304e5d  _strlen                         
+0     00304dd6  _strncpy                        
+0     00304d75  _unlink                         
+0     00304e65  _wcslen                         
+0     00304dbe  _write                          
 abs   ffffffff  binit                           
-0     003054c2  cinit                           
-0     00304e71  etext                           
+0     003054d0  cinit                           
+0     00304e7f  etext                           
 abs   ffffffff  pinit                           
 
 
@@ -1116,246 +1116,246 @@ page  address   name
 0     00302c42  _OSQQuery                       
 0     00302c97  _OS_QInit                       
 0     00302cc9  _main                           
-0     00302fd5  _malloc                         
-0     00303000  _free                           
-0     003030c8  _realloc                        
-0     0030314b  _minit                          
-0     0030314f  _calloc                         
-0     0030317c  _aligned_alloc                  
-0     0030317c  _memalign                       
-0     00303222  ___TI_heap_total_available      
-0     0030323f  ___TI_heap_largest_available    
-0     0030325c  ___TI_heap_check                
-0     0030325e  _galois_mul2                    
-0     0030326c  _aes_enc_dec                    
-0     003034e0  _OSSemAccept                    
-0     003034fa  _OSSemCreate                    
-0     00303529  _OSSemDel                       
-0     003035ac  _OSSemPend                      
-0     0030362a  _OSSemPendAbort                 
-0     0030366e  _OSSemPost                      
-0     0030369b  _OSSemQuery                     
-0     003036d5  _OSSemSet                       
-0     003036ff  _OSMemCreate                    
-0     00303768  _OSMemGet                       
-0     00303798  _OSMemNameGet                   
-0     003037c9  _OSMemNameSet                   
-0     003037f0  _OSMemPut                       
-0     0030381f  _OSMemQuery                     
-0     00303857  _OS_MemInit                     
-0     00303893  _OSInitHookBegin                
-0     003038dd  _OSInitHookEnd                  
-0     003038de  _OSTaskCreateHook               
-0     003038e2  _OSTaskDelHook                  
-0     003038e6  _OSTaskIdleHook                 
-0     003038e7  _OSTaskReturnHook               
-0     003038eb  _OSTaskStatHook                 
-0     003038ec  _OSTaskStkInit                  
-0     0030397c  _OSTaskSwHook                   
-0     003039c9  _OSTCBInitHook                  
-0     003039cd  _OSTimeTickHook                 
-0     00303a6c  ___TI_cleanup                   
-0     00303a89  _freopen                        
-0     00303aa7  _fopen                          
-0     00303aed  _OSTimeDly                      
-0     00303b2a  _OSTimeDlyHMSM                  
-0     00303b72  _OSTimeDlyResume                
-0     00303bdd  _OSTimeGet                      
-0     00303bec  _OSTimeSet                      
-0     00303bfb  LL$$DIV                         
-0     00303c37  LL$$MOD                         
-0     00303c71  ULL$$DIV                        
-0     00303ca0  ULL$$MOD                        
-0     00303d02  _BSP_Init                       
-0     00303d15  _BSP_Tick_Init                  
-0     00303d26  _BSP_CPU_ClkFreq                
-0     00303d9a  _BSP_SCIA_Init                  
-0     00303dfc  _CPU_Init                       
-0     00303dfd  _CPU_SW_Exception               
-0     00303dfe  _CPU_CntLeadZeros08             
-0     00303e08  _CPU_CntLeadZeros16             
-0     00303e0f  _CPU_CntLeadZeros32             
-0     00303e47  _CPU_CntTrailZeros              
-0     00303e59  _CPU_CntTrailZeros08            
-0     00303e6b  _CPU_CntTrailZeros16            
-0     00303e7d  _CPU_CntTrailZeros32            
-0     00303e91  _CPU_PopCnt32                   
-0     00303ec7  _BSP_IntAck                     
-0     00303ee5  _BSP_IntEn                      
-0     00303f0c  _BSP_IntDis                     
-0     00303f34  _BSP_ExtIntEn                   
-0     00303f48  _BSP_ExtIntDis                  
-0     00303f5c  _BSP_IntVectSet                 
-0     00303f75  _ldexpl                         
-0     00303f75  _scalbnl                        
-0     00304021  _fputs                          
-0     003040b1  _puts                           
-0     003040c4  _BSP_OS_TIMER2_TickHandler      
-0     003040ee  _BSP_SCIA_RX                    
-0     00304116  _BSP_SCIA_TX                    
-0     00304161  FD$$ADD                         
-0     003041fd  ___TI_writemsg                  
-0     00304250  C$$IO$$                         
-0     00304255  ___TI_readmsg                   
-0     00304291  _OSDebugInit                    
-0     0030431e  FD$$DIV                         
-0     003043a9  FD$$MPY                         
-0     0030442c  _setvbuf                        
-0     003044a5  _CPU_IntSrcDis                  
-0     003044bb  _CPU_IntSrcEn                   
-0     003044d0  _CPU_IntSrcPendClr              
-0     00304518  _open                           
-0     00304587  ___TI_doflush                   
-0     003045b6  _fflush                         
-0     003045f2  ___TI_wrt_ok                    
-0     0030462d  ___TI_rd_ok                     
-0     00304659  _OS_CPU_GetST0                  
-0     0030465c  _OS_CPU_GetST1                  
-0     0030465f  _OS_CPU_SR_Save                 
-0     00304664  _OS_CPU_SR_Restore              
-0     0030466c  _OSStartHighRdy                 
-0     00304687  _OS_CPU_RTOSINT_Handler         
-0     003046b7  _BSP_LED_On                     
-0     003046d6  _BSP_LED_Off                    
-0     003046f5  _BSP_LED_Toggle                 
-0     00304714  _HOSTlseek                      
-0     00304771  _frexpl                         
-0     003047cd  ___TI_closefile                 
-0     0030480f  _fclose                         
-0     00304828  _c_int00                        
-0     0030487c  _finddevice                     
-0     00304897  _getdevice                      
-0     003048cc  _fputc                          
-0     003048cc  _putc                           
-0     00304916  _putchar                        
-0     0030491b  _HOSTrename                     
-0     0030495a  _fseek                          
-0     00304997  _HOSTopen                       
-0     003049d0  _HOSTread                       
-0     00304a08  _HOSTwrite                      
-0     00304a46  _printf                         
-0     00304a74  _close                          
-0     00304aa7  _BSP_OS_TIMER2_TickInit         
-0     00304ad8  _BSP_IntHandlerDummy            
-0     00304b09  _atoi                           
-0     00304b3a  ___TI_ltoa                      
-0     00304b68  FD$$CMP                         
-0     00304b92  L$$DIV                          
-0     00304ba1  L$$MOD                          
-0     00304baf  UL$$DIV                         
-0     00304bb6  UL$$MOD                         
-0     00304bbc  C$$EXIT                         
-0     00304bbc  _abort                          
-0     00304bbe  _exit                           
-0     00304be5  _HOSTclose                      
-0     00304c0c  _HOSTunlink                     
-0     00304c31  _copy_in                        
-0     00304c55  _copysignl                      
-0     00304c78  FD$$TOI                         
-0     00304c99  _CPU_IntDis                     
-0     00304c9b  _CPU_IntEn                      
-0     00304c9d  _CPU_SR_Save                    
-0     00304ca2  _CPU_SR_Restore                 
-0     00304caa  _CPU_CntLeadZeros               
-0     00304cb6  _CPU_RevBits                    
-0     00304cb8  FD$$TOL                         
-0     00304cd7  LL$$CMP                         
-0     00304ce9  ULL$$CMP                        
-0     00304cf5  I$$TOFD                         
-0     00304d12  _memcpy                         
-0     00304d2f  FS$$TOFD                        
-0     00304d4b  L$$TOFD                         
-0     00304d67  _unlink                         
-0     00304d80  LL$$AND                         
-0     00304d88  LL$$OR                          
-0     00304d90  LL$$XOR                         
-0     00304d98  _lseek                          
-0     00304db0  _write                          
-0     00304dc8  _strncpy                        
-0     00304ddd  __args_main                     
-0     00304dee  _memccpy                        
-0     00304dfe  _BSP_RAM_StartHere              
-0     00304e0d  FD$$SUB                         
-0     00304e1b  _memchr                         
-0     00304e28  _strchr                         
-0     00304e33  _strcmp                         
-0     00304e3d  __register_unlock               
-0     00304e41  __register_lock                 
-0     00304e45  __nop                           
-0     00304e46  FD$$NEG                         
-0     00304e4f  _strlen                         
-0     00304e57  _wcslen                         
-0     00304e5f  _memset                         
-0     00304e66  _strcpy                         
-0     00304e6b  _remove                         
-0     00304e6e  __system_pre_init               
-0     00304e70  __system_post_cinit             
-0     00304e71  ___etext__                      
-0     00304e71  etext                           
-0     00304e72  __ctypes_                       
-0     00305073  _OSUnMapTbl                     
-0     00305173  _rsbox                          
-0     00305273  _sbox                           
-0     003053b0  _OSDebugEn                      
-0     003053b1  _OSEventEn                      
-0     003053b2  _OSEventMax                     
-0     003053b3  _OSEventNameEn                  
-0     003053b4  _OSEventSize                    
-0     003053b5  _OSEventTblSize                 
-0     003053b6  _OSEventMultiEn                 
-0     003053b7  _OSFlagEn                       
-0     003053b8  _OSFlagGrpSize                  
-0     003053b9  _OSFlagNodeSize                 
-0     003053ba  _OSFlagWidth                    
-0     003053bb  _OSFlagMax                      
-0     003053bc  _OSFlagNameEn                   
-0     003053bd  _OSLowestPrio                   
-0     003053be  _OSMboxEn                       
-0     003053bf  _OSMemEn                        
-0     003053c0  _OSMemMax                       
-0     003053c1  _OSMemNameEn                    
-0     003053c2  _OSMemSize                      
-0     003053c3  _OSMemTblSize                   
-0     003053c4  _OSMutexEn                      
-0     003053c5  _OSPtrSize                      
-0     003053c6  _OSQEn                          
-0     003053c7  _OSQMax                         
-0     003053c8  _OSQSize                        
-0     003053c9  _OSRdyTblSize                   
-0     003053ca  _OSSemEn                        
-0     003053cb  _OSStkWidth                     
-0     003053cc  _OSTaskCreateEn                 
-0     003053cd  _OSTaskCreateExtEn              
-0     003053ce  _OSTaskDelEn                    
-0     003053cf  _OSTaskIdleStkSize              
-0     003053d0  _OSTaskProfileEn                
-0     003053d1  _OSTaskMax                      
-0     003053d2  _OSTaskNameEn                   
-0     003053d3  _OSTaskStatEn                   
-0     003053d4  _OSTaskStatStkSize              
-0     003053d5  _OSTaskStatStkChkEn             
-0     003053d6  _OSTaskSwHookEn                 
-0     003053d7  _OSTaskRegTblSize               
-0     003053d8  _OSTCBPrioTblMax                
-0     003053d9  _OSTCBSize                      
-0     003053da  _OSTicksPerSec                  
-0     003053db  _OSTimeTickHookEn               
-0     003053dc  _OSVersionNbr                   
-0     003053dd  _OSTmrEn                        
-0     003053de  _OSTmrCfgMax                    
-0     003053df  _OSTmrCfgNameEn                 
-0     003053e0  _OSTmrCfgWheelSize              
-0     003053e1  _OSTmrCfgTicksPerSec            
-0     003053e2  _OSTmrSize                      
-0     003053e3  _OSTmrTblSize                   
-0     003053e4  _OSTmrWheelSize                 
-0     003053e5  _OSTmrWheelTblSize              
-0     003053e6  _OSDataSize                     
-0     003053e8  _OSEndiannessTest               
-0     00305496  _Rcon                           
-0     003054c0  _CPU_EndiannessTest             
-0     003054c2  ___cinit__                      
-0     003054c2  cinit                           
+0     00302fe3  _malloc                         
+0     0030300e  _free                           
+0     003030d6  _realloc                        
+0     00303159  _minit                          
+0     0030315d  _calloc                         
+0     0030318a  _aligned_alloc                  
+0     0030318a  _memalign                       
+0     00303230  ___TI_heap_total_available      
+0     0030324d  ___TI_heap_largest_available    
+0     0030326a  ___TI_heap_check                
+0     0030326c  _galois_mul2                    
+0     0030327a  _aes_enc_dec                    
+0     003034ee  _OSSemAccept                    
+0     00303508  _OSSemCreate                    
+0     00303537  _OSSemDel                       
+0     003035ba  _OSSemPend                      
+0     00303638  _OSSemPendAbort                 
+0     0030367c  _OSSemPost                      
+0     003036a9  _OSSemQuery                     
+0     003036e3  _OSSemSet                       
+0     0030370d  _OSMemCreate                    
+0     00303776  _OSMemGet                       
+0     003037a6  _OSMemNameGet                   
+0     003037d7  _OSMemNameSet                   
+0     003037fe  _OSMemPut                       
+0     0030382d  _OSMemQuery                     
+0     00303865  _OS_MemInit                     
+0     003038a1  _OSInitHookBegin                
+0     003038eb  _OSInitHookEnd                  
+0     003038ec  _OSTaskCreateHook               
+0     003038f0  _OSTaskDelHook                  
+0     003038f4  _OSTaskIdleHook                 
+0     003038f5  _OSTaskReturnHook               
+0     003038f9  _OSTaskStatHook                 
+0     003038fa  _OSTaskStkInit                  
+0     0030398a  _OSTaskSwHook                   
+0     003039d7  _OSTCBInitHook                  
+0     003039db  _OSTimeTickHook                 
+0     00303a7a  ___TI_cleanup                   
+0     00303a97  _freopen                        
+0     00303ab5  _fopen                          
+0     00303afb  _OSTimeDly                      
+0     00303b38  _OSTimeDlyHMSM                  
+0     00303b80  _OSTimeDlyResume                
+0     00303beb  _OSTimeGet                      
+0     00303bfa  _OSTimeSet                      
+0     00303c09  LL$$DIV                         
+0     00303c45  LL$$MOD                         
+0     00303c7f  ULL$$DIV                        
+0     00303cae  ULL$$MOD                        
+0     00303d10  _BSP_Init                       
+0     00303d23  _BSP_Tick_Init                  
+0     00303d34  _BSP_CPU_ClkFreq                
+0     00303da8  _BSP_SCIA_Init                  
+0     00303e0a  _CPU_Init                       
+0     00303e0b  _CPU_SW_Exception               
+0     00303e0c  _CPU_CntLeadZeros08             
+0     00303e16  _CPU_CntLeadZeros16             
+0     00303e1d  _CPU_CntLeadZeros32             
+0     00303e55  _CPU_CntTrailZeros              
+0     00303e67  _CPU_CntTrailZeros08            
+0     00303e79  _CPU_CntTrailZeros16            
+0     00303e8b  _CPU_CntTrailZeros32            
+0     00303e9f  _CPU_PopCnt32                   
+0     00303ed5  _BSP_IntAck                     
+0     00303ef3  _BSP_IntEn                      
+0     00303f1a  _BSP_IntDis                     
+0     00303f42  _BSP_ExtIntEn                   
+0     00303f56  _BSP_ExtIntDis                  
+0     00303f6a  _BSP_IntVectSet                 
+0     00303f83  _ldexpl                         
+0     00303f83  _scalbnl                        
+0     0030402f  _fputs                          
+0     003040bf  _puts                           
+0     003040d2  _BSP_OS_TIMER2_TickHandler      
+0     003040fc  _BSP_SCIA_RX                    
+0     00304124  _BSP_SCIA_TX                    
+0     0030416f  FD$$ADD                         
+0     0030420b  ___TI_writemsg                  
+0     0030425e  C$$IO$$                         
+0     00304263  ___TI_readmsg                   
+0     0030429f  _OSDebugInit                    
+0     0030432c  FD$$DIV                         
+0     003043b7  FD$$MPY                         
+0     0030443a  _setvbuf                        
+0     003044b3  _CPU_IntSrcDis                  
+0     003044c9  _CPU_IntSrcEn                   
+0     003044de  _CPU_IntSrcPendClr              
+0     00304526  _open                           
+0     00304595  ___TI_doflush                   
+0     003045c4  _fflush                         
+0     00304600  ___TI_wrt_ok                    
+0     0030463b  ___TI_rd_ok                     
+0     00304667  _OS_CPU_GetST0                  
+0     0030466a  _OS_CPU_GetST1                  
+0     0030466d  _OS_CPU_SR_Save                 
+0     00304672  _OS_CPU_SR_Restore              
+0     0030467a  _OSStartHighRdy                 
+0     00304695  _OS_CPU_RTOSINT_Handler         
+0     003046c5  _BSP_LED_On                     
+0     003046e4  _BSP_LED_Off                    
+0     00304703  _BSP_LED_Toggle                 
+0     00304722  _HOSTlseek                      
+0     0030477f  _frexpl                         
+0     003047db  ___TI_closefile                 
+0     0030481d  _fclose                         
+0     00304836  _c_int00                        
+0     0030488a  _finddevice                     
+0     003048a5  _getdevice                      
+0     003048da  _fputc                          
+0     003048da  _putc                           
+0     00304924  _putchar                        
+0     00304929  _HOSTrename                     
+0     00304968  _fseek                          
+0     003049a5  _HOSTopen                       
+0     003049de  _HOSTread                       
+0     00304a16  _HOSTwrite                      
+0     00304a54  _printf                         
+0     00304a82  _close                          
+0     00304ab5  _BSP_OS_TIMER2_TickInit         
+0     00304ae6  _BSP_IntHandlerDummy            
+0     00304b17  _atoi                           
+0     00304b48  ___TI_ltoa                      
+0     00304b76  FD$$CMP                         
+0     00304ba0  L$$DIV                          
+0     00304baf  L$$MOD                          
+0     00304bbd  UL$$DIV                         
+0     00304bc4  UL$$MOD                         
+0     00304bca  C$$EXIT                         
+0     00304bca  _abort                          
+0     00304bcc  _exit                           
+0     00304bf3  _HOSTclose                      
+0     00304c1a  _HOSTunlink                     
+0     00304c3f  _copy_in                        
+0     00304c63  _copysignl                      
+0     00304c86  FD$$TOI                         
+0     00304ca7  _CPU_IntDis                     
+0     00304ca9  _CPU_IntEn                      
+0     00304cab  _CPU_SR_Save                    
+0     00304cb0  _CPU_SR_Restore                 
+0     00304cb8  _CPU_CntLeadZeros               
+0     00304cc4  _CPU_RevBits                    
+0     00304cc6  FD$$TOL                         
+0     00304ce5  LL$$CMP                         
+0     00304cf7  ULL$$CMP                        
+0     00304d03  I$$TOFD                         
+0     00304d20  _memcpy                         
+0     00304d3d  FS$$TOFD                        
+0     00304d59  L$$TOFD                         
+0     00304d75  _unlink                         
+0     00304d8e  LL$$AND                         
+0     00304d96  LL$$OR                          
+0     00304d9e  LL$$XOR                         
+0     00304da6  _lseek                          
+0     00304dbe  _write                          
+0     00304dd6  _strncpy                        
+0     00304deb  __args_main                     
+0     00304dfc  _memccpy                        
+0     00304e0c  _BSP_RAM_StartHere              
+0     00304e1b  FD$$SUB                         
+0     00304e29  _memchr                         
+0     00304e36  _strchr                         
+0     00304e41  _strcmp                         
+0     00304e4b  __register_unlock               
+0     00304e4f  __register_lock                 
+0     00304e53  __nop                           
+0     00304e54  FD$$NEG                         
+0     00304e5d  _strlen                         
+0     00304e65  _wcslen                         
+0     00304e6d  _memset                         
+0     00304e74  _strcpy                         
+0     00304e79  _remove                         
+0     00304e7c  __system_pre_init               
+0     00304e7e  __system_post_cinit             
+0     00304e7f  ___etext__                      
+0     00304e7f  etext                           
+0     00304e80  __ctypes_                       
+0     00305081  _OSUnMapTbl                     
+0     00305181  _rsbox                          
+0     00305281  _sbox                           
+0     003053be  _OSDebugEn                      
+0     003053bf  _OSEventEn                      
+0     003053c0  _OSEventMax                     
+0     003053c1  _OSEventNameEn                  
+0     003053c2  _OSEventSize                    
+0     003053c3  _OSEventTblSize                 
+0     003053c4  _OSEventMultiEn                 
+0     003053c5  _OSFlagEn                       
+0     003053c6  _OSFlagGrpSize                  
+0     003053c7  _OSFlagNodeSize                 
+0     003053c8  _OSFlagWidth                    
+0     003053c9  _OSFlagMax                      
+0     003053ca  _OSFlagNameEn                   
+0     003053cb  _OSLowestPrio                   
+0     003053cc  _OSMboxEn                       
+0     003053cd  _OSMemEn                        
+0     003053ce  _OSMemMax                       
+0     003053cf  _OSMemNameEn                    
+0     003053d0  _OSMemSize                      
+0     003053d1  _OSMemTblSize                   
+0     003053d2  _OSMutexEn                      
+0     003053d3  _OSPtrSize                      
+0     003053d4  _OSQEn                          
+0     003053d5  _OSQMax                         
+0     003053d6  _OSQSize                        
+0     003053d7  _OSRdyTblSize                   
+0     003053d8  _OSSemEn                        
+0     003053d9  _OSStkWidth                     
+0     003053da  _OSTaskCreateEn                 
+0     003053db  _OSTaskCreateExtEn              
+0     003053dc  _OSTaskDelEn                    
+0     003053dd  _OSTaskIdleStkSize              
+0     003053de  _OSTaskProfileEn                
+0     003053df  _OSTaskMax                      
+0     003053e0  _OSTaskNameEn                   
+0     003053e1  _OSTaskStatEn                   
+0     003053e2  _OSTaskStatStkSize              
+0     003053e3  _OSTaskStatStkChkEn             
+0     003053e4  _OSTaskSwHookEn                 
+0     003053e5  _OSTaskRegTblSize               
+0     003053e6  _OSTCBPrioTblMax                
+0     003053e7  _OSTCBSize                      
+0     003053e8  _OSTicksPerSec                  
+0     003053e9  _OSTimeTickHookEn               
+0     003053ea  _OSVersionNbr                   
+0     003053eb  _OSTmrEn                        
+0     003053ec  _OSTmrCfgMax                    
+0     003053ed  _OSTmrCfgNameEn                 
+0     003053ee  _OSTmrCfgWheelSize              
+0     003053ef  _OSTmrCfgTicksPerSec            
+0     003053f0  _OSTmrSize                      
+0     003053f1  _OSTmrTblSize                   
+0     003053f2  _OSTmrWheelSize                 
+0     003053f3  _OSTmrWheelTblSize              
+0     003053f4  _OSDataSize                     
+0     003053f6  _OSEndiannessTest               
+0     003054a4  _Rcon                           
+0     003054ce  _CPU_EndiannessTest             
+0     003054d0  ___cinit__                      
+0     003054d0  cinit                           
 1     000000b0  __stack                         
 1     00000800  __STACK_END                     
 1     00000d00  ___BSP_VectorTable              
