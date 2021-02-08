@@ -1,4 +1,4 @@
-TMS320C2000 Assembler PC v20.2.1 Mon Jan 11 16:45:36 2021
+TMS320C2000 Assembler PC v20.2.1 Mon Feb  8 19:02:45 2021
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 C:/ti/Workspace/PLC_certificate/Software/uCOS-II/Ports/C28x/Generic/CCS/os_cpu_a.asm PAGE    1
@@ -58,7 +58,7 @@ C:/ti/Workspace/PLC_certificate/Software/uCOS-II/Ports/C28x/Generic/CCS/os_cpu_a
       53                  .ref   _OSTCBHighRdy
       54                  .ref   _OSIntExit
       55                  .ref   _OSTaskSwHook
-TMS320C2000 Assembler PC v20.2.1 Mon Jan 11 16:45:36 2021
+TMS320C2000 Assembler PC v20.2.1 Mon Feb  8 19:02:45 2021
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 C:/ti/Workspace/PLC_certificate/Software/uCOS-II/Ports/C28x/Generic/CCS/os_cpu_a.asm PAGE    2
@@ -118,7 +118,7 @@ C:/ti/Workspace/PLC_certificate/Software/uCOS-II/Ports/C28x/Generic/CCS/os_cpu_a
      108              ;                                   CRITICAL SECTION METHOD 3 FUNCTIONS
      109              ;
      110              ; Description: Disable/Enable interrupts by preserving the state of interrupts.  Generally speaking you
-TMS320C2000 Assembler PC v20.2.1 Mon Jan 11 16:45:36 2021
+TMS320C2000 Assembler PC v20.2.1 Mon Feb  8 19:02:45 2021
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 C:/ti/Workspace/PLC_certificate/Software/uCOS-II/Ports/C28x/Generic/CCS/os_cpu_a.asm PAGE    3
@@ -178,7 +178,7 @@ C:/ti/Workspace/PLC_certificate/Software/uCOS-II/Ports/C28x/Generic/CCS/os_cpu_a
      162              ;                                      void OSStartHighRdy(void)
      163              ; Note(s) : 1) This function triggers a PendSV exception (essentially, causes a context switch) to cause
      164              ;              the first task to start.
-TMS320C2000 Assembler PC v20.2.1 Mon Jan 11 16:45:36 2021
+TMS320C2000 Assembler PC v20.2.1 Mon Feb  8 19:02:45 2021
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 C:/ti/Workspace/PLC_certificate/Software/uCOS-II/Ports/C28x/Generic/CCS/os_cpu_a.asm PAGE    4
@@ -238,7 +238,7 @@ C:/ti/Workspace/PLC_certificate/Software/uCOS-II/Ports/C28x/Generic/CCS/os_cpu_a
 1        00000026 06C0      MOVL    ACC , *XAR0                                         ;   Get old DBGSTAT:IER.
 1        00000027 5608      AND     ACC, #0xFFFF << 16
          00000028 FFFF 
-TMS320C2000 Assembler PC v20.2.1 Mon Jan 11 16:45:36 2021
+TMS320C2000 Assembler PC v20.2.1 Mon Feb  8 19:02:45 2021
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 C:/ti/Workspace/PLC_certificate/Software/uCOS-II/Ports/C28x/Generic/CCS/os_cpu_a.asm PAGE    5
@@ -298,7 +298,7 @@ C:/ti/Workspace/PLC_certificate/Software/uCOS-II/Ports/C28x/Generic/CCS/os_cpu_a
 1        00000031 A8BD      PUSH    XAR4                                                ;   XAR4
 1        00000032 A0BD      PUSH    XAR5                                                ;   XAR5
 1        00000033 C2BD      PUSH    XAR6                                                ;   XAR6
-TMS320C2000 Assembler PC v20.2.1 Mon Jan 11 16:45:36 2021
+TMS320C2000 Assembler PC v20.2.1 Mon Feb  8 19:02:45 2021
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 C:/ti/Workspace/PLC_certificate/Software/uCOS-II/Ports/C28x/Generic/CCS/os_cpu_a.asm PAGE    6
@@ -358,7 +358,7 @@ C:/ti/Workspace/PLC_certificate/Software/uCOS-II/Ports/C28x/Generic/CCS/os_cpu_a
 1                         POP     RB                                                  ;   RB
 1                         MOVZ    AR1, @SP                                            ;   Can't use SP for indirect addressing.
 1                         MOV32   STF, *--XAR1                                        ;   STF
-TMS320C2000 Assembler PC v20.2.1 Mon Jan 11 16:45:36 2021
+TMS320C2000 Assembler PC v20.2.1 Mon Feb  8 19:02:45 2021
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 C:/ti/Workspace/PLC_certificate/Software/uCOS-II/Ports/C28x/Generic/CCS/os_cpu_a.asm PAGE    7

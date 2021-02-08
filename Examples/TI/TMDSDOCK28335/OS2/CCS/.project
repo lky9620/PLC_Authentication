@@ -95,6 +95,16 @@
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/os_cfg.h</locationURI>
 		</link>
+		<link>
+			<name>APP/sha1.c</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/sha1.c</locationURI>
+		</link>
+		<link>
+			<name>APP/sha1.h</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/sha1.h</locationURI>
+		</link>
 	</linkedResources>
 	<variableList>
 		<variable>

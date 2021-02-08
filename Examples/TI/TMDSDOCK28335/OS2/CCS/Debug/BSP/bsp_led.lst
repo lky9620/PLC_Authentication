@@ -1,11 +1,11 @@
-TMS320C2000 Assembler PC v20.2.1 Mon Jan 11 16:45:33 2021
+TMS320C2000 Assembler PC v20.2.1 Mon Feb  8 19:02:43 2021
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 bsp_led.asm                                                          PAGE    1
 
        1              ;***************************************************************
        2              ;* TMS320C2000 G3 C/C++ Codegen                               PC v20.2.1.LTS *
-       3              ;* Date/Time created: Mon Jan 11 16:45:33 2021                 *
+       3              ;* Date/Time created: Mon Feb  8 19:02:43 2021                 *
        4              ;***************************************************************
        5                      .compiler_opts --abi=coffabi --diag_wrap=off --float_support=softlib --hll_source=on --mem_model:code
        6                      .asg    XAR2, FP
@@ -58,7 +58,7 @@ bsp_led.asm                                                          PAGE    1
       53                      .dwattr $C$DW$3, DW_AT_name("led")
       54                      .dwattr $C$DW$3, DW_AT_TI_symbol_name("_led")
       55                      .dwattr $C$DW$3, DW_AT_type(*$C$DW$T$20)
-TMS320C2000 Assembler PC v20.2.1 Mon Jan 11 16:45:33 2021
+TMS320C2000 Assembler PC v20.2.1 Mon Feb  8 19:02:43 2021
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 bsp_led.asm                                                          PAGE    2
@@ -118,7 +118,7 @@ bsp_led.asm                                                          PAGE    2
      100 0000001d FE82          SUBB      SP,#2                 ; [CPU_ARAU] 
      101                      .dwcfi  cfa_offset, -2
      102              $C$DW$4 .dwtag  DW_TAG_TI_branch
-TMS320C2000 Assembler PC v20.2.1 Mon Jan 11 16:45:33 2021
+TMS320C2000 Assembler PC v20.2.1 Mon Feb  8 19:02:43 2021
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 bsp_led.asm                                                          PAGE    3
@@ -178,7 +178,7 @@ bsp_led.asm                                                          PAGE    3
      155                      .dwattr $C$DW$7, DW_AT_type(*$C$DW$T$20)
      156                      .dwattr $C$DW$7, DW_AT_location[DW_OP_breg20 -1]
      157              
-TMS320C2000 Assembler PC v20.2.1 Mon Jan 11 16:45:33 2021
+TMS320C2000 Assembler PC v20.2.1 Mon Feb  8 19:02:43 2021
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 bsp_led.asm                                                          PAGE    4
@@ -238,7 +238,7 @@ bsp_led.asm                                                          PAGE    4
      202              $C$DW$8 .dwtag  DW_TAG_TI_branch
      203                      .dwattr $C$DW$8, DW_AT_low_pc(0x00)
      204                      .dwattr $C$DW$8, DW_AT_TI_return
-TMS320C2000 Assembler PC v20.2.1 Mon Jan 11 16:45:33 2021
+TMS320C2000 Assembler PC v20.2.1 Mon Feb  8 19:02:43 2021
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 bsp_led.asm                                                          PAGE    5
@@ -298,7 +298,7 @@ bsp_led.asm                                                          PAGE    5
      257              
      258 0000003f 9641          MOV       *-SP[1],AL            ; [CPU_ALU] |184| 
      259                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/bsp_led.c",line 185,colum
-TMS320C2000 Assembler PC v20.2.1 Mon Jan 11 16:45:33 2021
+TMS320C2000 Assembler PC v20.2.1 Mon Feb  8 19:02:43 2021
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 bsp_led.asm                                                          PAGE    6
@@ -358,7 +358,7 @@ bsp_led.asm                                                          PAGE    6
      304                      .dwattr $C$DW$12, DW_AT_TI_return
      305              
      306 0000005c 0006          LRETR     ; [CPU_ALU] 
-TMS320C2000 Assembler PC v20.2.1 Mon Jan 11 16:45:33 2021
+TMS320C2000 Assembler PC v20.2.1 Mon Feb  8 19:02:43 2021
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 bsp_led.asm                                                          PAGE    7
@@ -418,7 +418,7 @@ bsp_led.asm                                                          PAGE    7
      359                      .dwattr $C$DW$T$20, DW_AT_language(DW_LANG_C)
      360              
      361              $C$DW$T$10      .dwtag  DW_TAG_base_type
-TMS320C2000 Assembler PC v20.2.1 Mon Jan 11 16:45:33 2021
+TMS320C2000 Assembler PC v20.2.1 Mon Feb  8 19:02:43 2021
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 bsp_led.asm                                                          PAGE    8
@@ -478,7 +478,7 @@ bsp_led.asm                                                          PAGE    8
      414              ;* DWARF CIE ENTRIES                                           *
      415              ;***************************************************************
      416              
-TMS320C2000 Assembler PC v20.2.1 Mon Jan 11 16:45:33 2021
+TMS320C2000 Assembler PC v20.2.1 Mon Feb  8 19:02:43 2021
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 bsp_led.asm                                                          PAGE    9
@@ -538,7 +538,7 @@ bsp_led.asm                                                          PAGE    9
      469              $C$DW$22        .dwtag  DW_TAG_TI_assign_register
      470                      .dwattr $C$DW$22, DW_AT_name("PC")
      471                      .dwattr $C$DW$22, DW_AT_location[DW_OP_reg25]
-TMS320C2000 Assembler PC v20.2.1 Mon Jan 11 16:45:33 2021
+TMS320C2000 Assembler PC v20.2.1 Mon Feb  8 19:02:43 2021
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 bsp_led.asm                                                          PAGE   10
@@ -598,7 +598,7 @@ bsp_led.asm                                                          PAGE   10
      524              
      525              $C$DW$36        .dwtag  DW_TAG_TI_assign_register
      526                      .dwattr $C$DW$36, DW_AT_name("PSEUDOH")
-TMS320C2000 Assembler PC v20.2.1 Mon Jan 11 16:45:33 2021
+TMS320C2000 Assembler PC v20.2.1 Mon Feb  8 19:02:43 2021
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 bsp_led.asm                                                          PAGE   11
@@ -658,7 +658,7 @@ bsp_led.asm                                                          PAGE   11
      579                      .dwattr $C$DW$49, DW_AT_location[DW_OP_reg15]
      580              
      581              $C$DW$50        .dwtag  DW_TAG_TI_assign_register
-TMS320C2000 Assembler PC v20.2.1 Mon Jan 11 16:45:33 2021
+TMS320C2000 Assembler PC v20.2.1 Mon Feb  8 19:02:43 2021
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 bsp_led.asm                                                          PAGE   12

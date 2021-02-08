@@ -19,7 +19,7 @@ APP/app.obj: C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-c2000_20.2.1.LTS/include/st
 APP/app.obj: C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-c2000_20.2.1.LTS/include/sys/_types.h
 APP/app.obj: C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-c2000_20.2.1.LTS/include/machine/_types.h
 APP/app.obj: C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/bsp.h
-APP/app.obj: C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/OS2/md5.h
+APP/app.obj: C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/OS2/sha1.h
 APP/app.obj: C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/OS2/aes.h
 
 C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/OS2/app.c: 
@@ -41,5 +41,5 @@ C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-c2000_20.2.1.LTS/include/stdarg.h:
 C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-c2000_20.2.1.LTS/include/sys/_types.h: 
 C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-c2000_20.2.1.LTS/include/machine/_types.h: 
 C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/bsp.h: 
-C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/OS2/md5.h: 
+C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/OS2/sha1.h: 
 C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/OS2/aes.h: 

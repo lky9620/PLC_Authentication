@@ -1,11 +1,11 @@
-TMS320C2000 Assembler PC v20.2.1 Mon Jan 11 16:45:34 2021
+TMS320C2000 Assembler PC v20.2.1 Mon Feb  8 19:02:43 2021
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 cpu_bsp.asm                                                          PAGE    1
 
        1              ;***************************************************************
        2              ;* TMS320C2000 G3 C/C++ Codegen                               PC v20.2.1.LTS *
-       3              ;* Date/Time created: Mon Jan 11 16:45:34 2021                 *
+       3              ;* Date/Time created: Mon Feb  8 19:02:43 2021                 *
        4              ;***************************************************************
        5                      .compiler_opts --abi=coffabi --diag_wrap=off --float_support=softlib --hll_source=on --mem_model:code
        6                      .asg    XAR2, FP
@@ -58,7 +58,7 @@ cpu_bsp.asm                                                          PAGE    1
       53                      .dwattr $C$DW$T$10, DW_AT_name("int")
       54                      .dwattr $C$DW$T$10, DW_AT_byte_size(0x01)
       55              
-TMS320C2000 Assembler PC v20.2.1 Mon Jan 11 16:45:34 2021
+TMS320C2000 Assembler PC v20.2.1 Mon Feb  8 19:02:43 2021
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 cpu_bsp.asm                                                          PAGE    2

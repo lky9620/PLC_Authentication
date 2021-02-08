@@ -44,7 +44,8 @@
 #include  <lib_def.h>
 #include  <stdio.h>
 #include  <bsp.h>
-#include  "md5.h"
+//#include  "md5.h"
+#include  "sha1.h"
 #include  "aes.h"
 //#include  "aria.h"
 //#include  "seed.h"
@@ -280,8 +281,6 @@ static void Status_Sync(void *p_arg)
 
 }
 
-
-
 static void Init_Update(void *p_arg)
 {
     (void) &p_arg;
@@ -516,20 +515,17 @@ INT8U certification_flag1 = 0;
 INT8U certification_flag2 = 0;
 INT8S Timer_flag[16] = { 0, };
 INT8S Timer_flag_NoneCrypt[16] = { 0, };
-MD5_CTX context;
+//MD5_CTX context;
+SHA1Context context;
 
 INT8U User_MAC_Address[6] = { 212, 93, 100, 74, 30, 58 };
 INT8U User_ID[] = "csos";
 INT8U User_password[] = "1234";
-INT8U hash[16] = { 0, };
-INT8U Reply_flag[16] ={ 0,};
+INT8U hash[20] = { 0, };
+INT8U Reply_flag[16] = { 0, };
 INT8U Hash_Data_Before[16] = { 0, };
 INT8U aes_flag = 0;
 INT8U psh_flag = 0;
-
-//        for (i = 0; i < sizeof(User_MAC_Address); i++)
-//            Hash_Data_Before[i] = User_MAC_Address[i];
-//INT8U enc[16] = {0,};
 
 static void User_certification(void *p_arg)
 {
@@ -548,8 +544,6 @@ static void User_certification(void *p_arg)
         INT8U key[] = { 0x00, 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08,
                         0x09, 0x0a, 0x0b, 0x0c, 0x0d, 0x0e, 0x0f };
 
-//        INT8U Hash_Data_Before[sizeof(User_MAC_Address) + sizeof(User_ID)
-//                + sizeof(User_password) + sizeof(Timer_flag)] = { 0, };
         for (i = 0; i < sizeof(User_MAC_Address); i++)
             Hash_Data_Before[i] = User_MAC_Address[i];
         for (i = 0; i < sizeof(User_ID) - 1; i++)
@@ -568,15 +562,19 @@ static void User_certification(void *p_arg)
         if (psh_flag == 1)
         {
             INT8U *base = &Hash_Data_Before;
-            MD5Init(&context);
-            MD5Update(&context, base, sizeof(Hash_Data_Before));
-            MD5Final(hash, &context);
+//            MD5Init(&context);
+//            MD5Update(&context, base, sizeof(Hash_Data_Before));
+//            MD5Final(hash, &context);
+
+            SHA1Input(&context, base, sizeof(Hash_Data_Before));
+            SHA1Result(&context);
+
             for (i = 0; i < sizeof(hash); i++)
                 if (hash[i] == scirxBuf[i])
                     Verify_cnt++;
             __asm("   ESTOP0");
-            for(i=0;i<sizeof(Reply_flag);i++)
-                    Reply_flag[i] = 0;
+            for (i = 0; i < sizeof(Reply_flag); i++)
+                Reply_flag[i] = 0;
             if (aes_flag == 16 && Verify_cnt == 16)
                 Reply_flag[0] = 1;
             else
@@ -615,6 +613,7 @@ static void UART_Reception(void *p_arg)
 
     while (DEF_TRUE)
     {
+MSW & 0xff;
         Start_Time = OSTime;
         TaskID = UARTR_PRIO;
         INT16U FFRX = SCIA_FFRX;
@@ -679,13 +678,17 @@ static void UART_Transmission(void *p_arg)
                 Timer_flag[i] = (OSTime >> (8 * i)) & (0xff);
                 Timer_flag_NoneCrypt[i] = (OSTime >> (8 * i)) & (0xff);
             }
+            Timer_flag[4] = (MSW >> 8) & 0xff;
+            Timer_flag[5] = MSW & 0xff;
+            Timer_flag[6] = (LSW >> 8) & 0xff;
+            Timer_flag[7] = LSW & 0xff;
+
 
             aes_enc_dec(Timer_flag, key, 0);
 
         }
         else if (certification_flag2 == 1)
-            aes_enc_dec(Reply_flag,key,0);
-
+            aes_enc_dec(Reply_flag, key, 0);
 
         while (1)
         {
