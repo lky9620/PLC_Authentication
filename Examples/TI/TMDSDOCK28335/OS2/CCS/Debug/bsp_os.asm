@@ -1,6 +1,6 @@
 ;***************************************************************
 ;* TMS320C2000 G3 C/C++ Codegen                               PC v20.2.1.LTS *
-;* Date/Time created: Mon Feb  8 19:02:42 2021                 *
+;* Date/Time created: Wed Feb 17 16:36:15 2021                 *
 ;***************************************************************
 	.compiler_opts --abi=coffabi --diag_wrap=off --float_support=softlib --hll_source=on --mem_model:code=flat --mem_model:data=large --object_format=coff --silicon_errata_fpu1_workaround=on --silicon_version=28 --symdebug:dwarf --symdebug:dwarf_version=3 
 	.asg	XAR2, FP
@@ -71,81 +71,88 @@ $C$DW$7	.dwtag  DW_TAG_subprogram
 $C$DW$8	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$8, DW_AT_name("certification_flag1")
 	.dwattr $C$DW$8, DW_AT_TI_symbol_name("_certification_flag1")
-	.dwattr $C$DW$8, DW_AT_type(*$C$DW$T$33)
+	.dwattr $C$DW$8, DW_AT_type(*$C$DW$T$30)
 	.dwattr $C$DW$8, DW_AT_declaration
 	.dwattr $C$DW$8, DW_AT_external
 
 $C$DW$9	.dwtag  DW_TAG_variable
-	.dwattr $C$DW$9, DW_AT_name("certification_flag2")
-	.dwattr $C$DW$9, DW_AT_TI_symbol_name("_certification_flag2")
-	.dwattr $C$DW$9, DW_AT_type(*$C$DW$T$33)
+	.dwattr $C$DW$9, DW_AT_name("certification_flag1_1")
+	.dwattr $C$DW$9, DW_AT_TI_symbol_name("_certification_flag1_1")
+	.dwattr $C$DW$9, DW_AT_type(*$C$DW$T$30)
 	.dwattr $C$DW$9, DW_AT_declaration
 	.dwattr $C$DW$9, DW_AT_external
 
 $C$DW$10	.dwtag  DW_TAG_variable
-	.dwattr $C$DW$10, DW_AT_name("psh_flag")
-	.dwattr $C$DW$10, DW_AT_TI_symbol_name("_psh_flag")
-	.dwattr $C$DW$10, DW_AT_type(*$C$DW$T$33)
+	.dwattr $C$DW$10, DW_AT_name("certification_flag2")
+	.dwattr $C$DW$10, DW_AT_TI_symbol_name("_certification_flag2")
+	.dwattr $C$DW$10, DW_AT_type(*$C$DW$T$30)
 	.dwattr $C$DW$10, DW_AT_declaration
 	.dwattr $C$DW$10, DW_AT_external
 
-
-$C$DW$11	.dwtag  DW_TAG_subprogram
-	.dwattr $C$DW$11, DW_AT_name("CPU_SR_Save")
-	.dwattr $C$DW$11, DW_AT_TI_symbol_name("_CPU_SR_Save")
-	.dwattr $C$DW$11, DW_AT_type(*$C$DW$T$20)
+$C$DW$11	.dwtag  DW_TAG_variable
+	.dwattr $C$DW$11, DW_AT_name("psh_flag")
+	.dwattr $C$DW$11, DW_AT_TI_symbol_name("_psh_flag")
+	.dwattr $C$DW$11, DW_AT_type(*$C$DW$T$30)
 	.dwattr $C$DW$11, DW_AT_declaration
 	.dwattr $C$DW$11, DW_AT_external
-	.dwendtag $C$DW$11
+
+
+$C$DW$12	.dwtag  DW_TAG_subprogram
+	.dwattr $C$DW$12, DW_AT_name("CPU_SR_Save")
+	.dwattr $C$DW$12, DW_AT_TI_symbol_name("_CPU_SR_Save")
+	.dwattr $C$DW$12, DW_AT_type(*$C$DW$T$20)
+	.dwattr $C$DW$12, DW_AT_declaration
+	.dwattr $C$DW$12, DW_AT_external
+	.dwendtag $C$DW$12
 
 	.global	_scirxBuf
 _scirxBuf:	.usect	".ebss:_scirxBuf",16,1,0
 	.clink ".ebss:_scirxBuf"
-$C$DW$12	.dwtag  DW_TAG_variable
-	.dwattr $C$DW$12, DW_AT_name("scirxBuf")
-	.dwattr $C$DW$12, DW_AT_TI_symbol_name("_scirxBuf")
-	.dwattr $C$DW$12, DW_AT_location[DW_OP_addr _scirxBuf]
-	.dwattr $C$DW$12, DW_AT_type(*$C$DW$T$34)
-	.dwattr $C$DW$12, DW_AT_external
-
 $C$DW$13	.dwtag  DW_TAG_variable
-	.dwattr $C$DW$13, DW_AT_name("Timer_flag")
-	.dwattr $C$DW$13, DW_AT_TI_symbol_name("_Timer_flag")
+	.dwattr $C$DW$13, DW_AT_name("scirxBuf")
+	.dwattr $C$DW$13, DW_AT_TI_symbol_name("_scirxBuf")
+	.dwattr $C$DW$13, DW_AT_location[DW_OP_addr _scirxBuf]
 	.dwattr $C$DW$13, DW_AT_type(*$C$DW$T$31)
-	.dwattr $C$DW$13, DW_AT_declaration
 	.dwattr $C$DW$13, DW_AT_external
 
 $C$DW$14	.dwtag  DW_TAG_variable
-	.dwattr $C$DW$14, DW_AT_name("Reply_flag")
-	.dwattr $C$DW$14, DW_AT_TI_symbol_name("_Reply_flag")
-	.dwattr $C$DW$14, DW_AT_type(*$C$DW$T$34)
+	.dwattr $C$DW$14, DW_AT_name("R_PLC")
+	.dwattr $C$DW$14, DW_AT_TI_symbol_name("_R_PLC")
+	.dwattr $C$DW$14, DW_AT_type(*$C$DW$T$31)
 	.dwattr $C$DW$14, DW_AT_declaration
 	.dwattr $C$DW$14, DW_AT_external
 
+$C$DW$15	.dwtag  DW_TAG_variable
+	.dwattr $C$DW$15, DW_AT_name("Reply_flag")
+	.dwattr $C$DW$15, DW_AT_TI_symbol_name("_Reply_flag")
+	.dwattr $C$DW$15, DW_AT_type(*$C$DW$T$31)
+	.dwattr $C$DW$15, DW_AT_declaration
+	.dwattr $C$DW$15, DW_AT_external
+
 	.sblock	".ebss:_scirxBuf"
-;	C:\ti\ccs1011\ccs\tools\compiler\ti-cgt-c2000_20.2.1.LTS\bin\ac2000.exe -@C:\\Users\\LEEKEO~1\\AppData\\Local\\Temp\\{3688CD6B-6F4A-4034-9F97-94A80557F86A} 
+;	C:\ti\ccs1011\ccs\tools\compiler\ti-cgt-c2000_20.2.1.LTS\bin\ac2000.exe -@C:\\Users\\LEEKEO~1\\AppData\\Local\\Temp\\{26201EB4-A9D2-40C6-9D47-889E9DA1A0D5} 
 	.sect	".text"
 	.clink
 	.global	_BSP_OS_TIMER2_TickInit
 
-$C$DW$15	.dwtag  DW_TAG_subprogram
-	.dwattr $C$DW$15, DW_AT_name("BSP_OS_TIMER2_TickInit")
-	.dwattr $C$DW$15, DW_AT_low_pc(_BSP_OS_TIMER2_TickInit)
-	.dwattr $C$DW$15, DW_AT_high_pc(0x00)
-	.dwattr $C$DW$15, DW_AT_TI_symbol_name("_BSP_OS_TIMER2_TickInit")
-	.dwattr $C$DW$15, DW_AT_external
-	.dwattr $C$DW$15, DW_AT_TI_begin_file("C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/OS/uCOS-II/bsp_os.c")
-	.dwattr $C$DW$15, DW_AT_TI_begin_line(0x66)
-	.dwattr $C$DW$15, DW_AT_TI_begin_column(0x06)
-	.dwattr $C$DW$15, DW_AT_TI_max_frame_size(-4)
+$C$DW$16	.dwtag  DW_TAG_subprogram
+	.dwattr $C$DW$16, DW_AT_name("BSP_OS_TIMER2_TickInit")
+	.dwattr $C$DW$16, DW_AT_low_pc(_BSP_OS_TIMER2_TickInit)
+	.dwattr $C$DW$16, DW_AT_high_pc(0x00)
+	.dwattr $C$DW$16, DW_AT_TI_symbol_name("_BSP_OS_TIMER2_TickInit")
+	.dwattr $C$DW$16, DW_AT_external
+	.dwattr $C$DW$16, DW_AT_TI_begin_file("C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/OS/uCOS-II/bsp_os.c")
+	.dwattr $C$DW$16, DW_AT_TI_begin_line(0x66)
+	.dwattr $C$DW$16, DW_AT_TI_begin_column(0x06)
+	.dwattr $C$DW$16, DW_AT_TI_max_frame_size(-4)
 	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/OS/uCOS-II/bsp_os.c",line 103,column 1,is_stmt,address _BSP_OS_TIMER2_TickInit,isa 0
 
 	.dwfde $C$DW$CIE, _BSP_OS_TIMER2_TickInit
-$C$DW$16	.dwtag  DW_TAG_formal_parameter
-	.dwattr $C$DW$16, DW_AT_name("cnts")
-	.dwattr $C$DW$16, DW_AT_TI_symbol_name("_cnts")
-	.dwattr $C$DW$16, DW_AT_type(*$C$DW$T$28)
-	.dwattr $C$DW$16, DW_AT_location[DW_OP_reg0]
+$C$DW$17	.dwtag  DW_TAG_formal_parameter
+	.dwattr $C$DW$17, DW_AT_name("cnts")
+	.dwattr $C$DW$17, DW_AT_TI_symbol_name("_cnts")
+	.dwattr $C$DW$17, DW_AT_type(*$C$DW$T$28)
+	.dwattr $C$DW$17, DW_AT_location[DW_OP_reg0]
 
 
 ;***************************************************************
@@ -162,11 +169,11 @@ _BSP_OS_TIMER2_TickInit:
 	.dwcfi	save_reg_to_mem, 26, 0
         ADDB      SP,#2                 ; [CPU_ARAU] 
 	.dwcfi	cfa_offset, -4
-$C$DW$17	.dwtag  DW_TAG_variable
-	.dwattr $C$DW$17, DW_AT_name("cnts")
-	.dwattr $C$DW$17, DW_AT_TI_symbol_name("_cnts")
-	.dwattr $C$DW$17, DW_AT_type(*$C$DW$T$28)
-	.dwattr $C$DW$17, DW_AT_location[DW_OP_breg20 -2]
+$C$DW$18	.dwtag  DW_TAG_variable
+	.dwattr $C$DW$18, DW_AT_name("cnts")
+	.dwattr $C$DW$18, DW_AT_TI_symbol_name("_cnts")
+	.dwattr $C$DW$18, DW_AT_type(*$C$DW$T$28)
+	.dwattr $C$DW$18, DW_AT_location[DW_OP_breg20 -2]
 
         MOVL      *-SP[2],ACC           ; [CPU_ALU] |103| 
 	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/OS/uCOS-II/bsp_os.c",line 105,column 5,is_stmt,isa 0
@@ -199,10 +206,10 @@ $C$DW$17	.dwtag  DW_TAG_variable
         MOV       *(0:0x0c14),AL        ; [CPU_ALU] |116| 
 	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/OS/uCOS-II/bsp_os.c",line 118,column 5,is_stmt,isa 0
         MOVB      AL,#14                ; [CPU_ALU] |118| 
-$C$DW$18	.dwtag  DW_TAG_TI_branch
-	.dwattr $C$DW$18, DW_AT_low_pc(0x00)
-	.dwattr $C$DW$18, DW_AT_name("_BSP_IntEn")
-	.dwattr $C$DW$18, DW_AT_TI_call
+$C$DW$19	.dwtag  DW_TAG_TI_branch
+	.dwattr $C$DW$19, DW_AT_low_pc(0x00)
+	.dwattr $C$DW$19, DW_AT_name("_BSP_IntEn")
+	.dwattr $C$DW$19, DW_AT_TI_call
 
         LCR       #_BSP_IntEn           ; [CPU_ALU] |118| 
         ; call occurs [#_BSP_IntEn] ; [] |118| 
@@ -213,34 +220,34 @@ $C$DW$18	.dwtag  DW_TAG_TI_branch
 	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/OS/uCOS-II/bsp_os.c",line 121,column 1,is_stmt,isa 0
         SUBB      SP,#2                 ; [CPU_ARAU] 
 	.dwcfi	cfa_offset, -2
-$C$DW$19	.dwtag  DW_TAG_TI_branch
-	.dwattr $C$DW$19, DW_AT_low_pc(0x00)
-	.dwattr $C$DW$19, DW_AT_TI_return
+$C$DW$20	.dwtag  DW_TAG_TI_branch
+	.dwattr $C$DW$20, DW_AT_low_pc(0x00)
+	.dwattr $C$DW$20, DW_AT_TI_return
 
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$15, DW_AT_TI_end_file("C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/OS/uCOS-II/bsp_os.c")
-	.dwattr $C$DW$15, DW_AT_TI_end_line(0x79)
-	.dwattr $C$DW$15, DW_AT_TI_end_column(0x01)
+	.dwattr $C$DW$16, DW_AT_TI_end_file("C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/OS/uCOS-II/bsp_os.c")
+	.dwattr $C$DW$16, DW_AT_TI_end_line(0x79)
+	.dwattr $C$DW$16, DW_AT_TI_end_column(0x01)
 	.dwendentry
-	.dwendtag $C$DW$15
+	.dwendtag $C$DW$16
 
 	.sect	".text:retain"
 	.retain
 	.retainrefs
 	.global	_BSP_OS_TIMER2_TickHandler
 
-$C$DW$20	.dwtag  DW_TAG_subprogram
-	.dwattr $C$DW$20, DW_AT_name("BSP_OS_TIMER2_TickHandler")
-	.dwattr $C$DW$20, DW_AT_low_pc(_BSP_OS_TIMER2_TickHandler)
-	.dwattr $C$DW$20, DW_AT_high_pc(0x00)
-	.dwattr $C$DW$20, DW_AT_TI_symbol_name("_BSP_OS_TIMER2_TickHandler")
-	.dwattr $C$DW$20, DW_AT_external
-	.dwattr $C$DW$20, DW_AT_TI_begin_file("C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/OS/uCOS-II/bsp_os.c")
-	.dwattr $C$DW$20, DW_AT_TI_begin_line(0x8b)
-	.dwattr $C$DW$20, DW_AT_TI_begin_column(0x10)
-	.dwattr $C$DW$20, DW_AT_TI_interrupt
-	.dwattr $C$DW$20, DW_AT_TI_max_frame_size(-16)
+$C$DW$21	.dwtag  DW_TAG_subprogram
+	.dwattr $C$DW$21, DW_AT_name("BSP_OS_TIMER2_TickHandler")
+	.dwattr $C$DW$21, DW_AT_low_pc(_BSP_OS_TIMER2_TickHandler)
+	.dwattr $C$DW$21, DW_AT_high_pc(0x00)
+	.dwattr $C$DW$21, DW_AT_TI_symbol_name("_BSP_OS_TIMER2_TickHandler")
+	.dwattr $C$DW$21, DW_AT_external
+	.dwattr $C$DW$21, DW_AT_TI_begin_file("C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/OS/uCOS-II/bsp_os.c")
+	.dwattr $C$DW$21, DW_AT_TI_begin_line(0x8b)
+	.dwattr $C$DW$21, DW_AT_TI_begin_column(0x10)
+	.dwattr $C$DW$21, DW_AT_TI_interrupt
+	.dwattr $C$DW$21, DW_AT_TI_max_frame_size(-16)
 	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/OS/uCOS-II/bsp_os.c",line 140,column 1,is_stmt,address _BSP_OS_TIMER2_TickHandler,isa 0
 
 	.dwfde $C$DW$CIE, _BSP_OS_TIMER2_TickHandler
@@ -287,28 +294,28 @@ _BSP_OS_TIMER2_TickHandler:
         SPM       0                     ; [CPU_ALU] 
         CLRC      PAGE0,OVM             ; [CPU_ALU] 
         CLRC      AMODE                 ; [CPU_ALU] 
-$C$DW$21	.dwtag  DW_TAG_variable
-	.dwattr $C$DW$21, DW_AT_name("cpu_sr")
-	.dwattr $C$DW$21, DW_AT_TI_symbol_name("_cpu_sr")
-	.dwattr $C$DW$21, DW_AT_type(*$C$DW$T$20)
-	.dwattr $C$DW$21, DW_AT_location[DW_OP_breg20 -1]
+$C$DW$22	.dwtag  DW_TAG_variable
+	.dwattr $C$DW$22, DW_AT_name("cpu_sr")
+	.dwattr $C$DW$22, DW_AT_TI_symbol_name("_cpu_sr")
+	.dwattr $C$DW$22, DW_AT_type(*$C$DW$T$20)
+	.dwattr $C$DW$22, DW_AT_location[DW_OP_breg20 -1]
 
 	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/OS/uCOS-II/bsp_os.c",line 141,column 5,is_stmt,isa 0
         MOV       *-SP[1],#0            ; [CPU_ALU] |141| 
 	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/OS/uCOS-II/bsp_os.c",line 143,column 5,is_stmt,isa 0
-$C$DW$22	.dwtag  DW_TAG_TI_branch
-	.dwattr $C$DW$22, DW_AT_low_pc(0x00)
-	.dwattr $C$DW$22, DW_AT_name("_CPU_SR_Save")
-	.dwattr $C$DW$22, DW_AT_TI_call
+$C$DW$23	.dwtag  DW_TAG_TI_branch
+	.dwattr $C$DW$23, DW_AT_low_pc(0x00)
+	.dwattr $C$DW$23, DW_AT_name("_CPU_SR_Save")
+	.dwattr $C$DW$23, DW_AT_TI_call
 
         LCR       #_CPU_SR_Save         ; [CPU_ALU] |143| 
         ; call occurs [#_CPU_SR_Save] ; [] |143| 
         MOV       *-SP[1],AL            ; [CPU_ALU] |143| 
 	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/OS/uCOS-II/bsp_os.c",line 144,column 5,is_stmt,isa 0
-$C$DW$23	.dwtag  DW_TAG_TI_branch
-	.dwattr $C$DW$23, DW_AT_low_pc(0x00)
-	.dwattr $C$DW$23, DW_AT_name("_OSIntEnter")
-	.dwattr $C$DW$23, DW_AT_TI_call
+$C$DW$24	.dwtag  DW_TAG_TI_branch
+	.dwattr $C$DW$24, DW_AT_low_pc(0x00)
+	.dwattr $C$DW$24, DW_AT_name("_OSIntEnter")
+	.dwattr $C$DW$24, DW_AT_TI_call
 
         LCR       #_OSIntEnter          ; [CPU_ALU] |144| 
         ; call occurs [#_OSIntEnter] ; [] |144| 
@@ -318,35 +325,35 @@ $C$DW$23	.dwtag  DW_TAG_TI_branch
         MOV       *(0:0x0c14),AL        ; [CPU_ALU] |145| 
 	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/OS/uCOS-II/bsp_os.c",line 146,column 5,is_stmt,isa 0
         MOV       AL,*-SP[1]            ; [CPU_ALU] |146| 
-$C$DW$24	.dwtag  DW_TAG_TI_branch
-	.dwattr $C$DW$24, DW_AT_low_pc(0x00)
-	.dwattr $C$DW$24, DW_AT_name("_CPU_SR_Restore")
-	.dwattr $C$DW$24, DW_AT_TI_call
+$C$DW$25	.dwtag  DW_TAG_TI_branch
+	.dwattr $C$DW$25, DW_AT_low_pc(0x00)
+	.dwattr $C$DW$25, DW_AT_name("_CPU_SR_Restore")
+	.dwattr $C$DW$25, DW_AT_TI_call
 
         LCR       #_CPU_SR_Restore      ; [CPU_ALU] |146| 
         ; call occurs [#_CPU_SR_Restore] ; [] |146| 
 	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/OS/uCOS-II/bsp_os.c",line 148,column 5,is_stmt,isa 0
-$C$DW$25	.dwtag  DW_TAG_TI_branch
-	.dwattr $C$DW$25, DW_AT_low_pc(0x00)
-	.dwattr $C$DW$25, DW_AT_name("_OSTimeTick")
-	.dwattr $C$DW$25, DW_AT_TI_call
+$C$DW$26	.dwtag  DW_TAG_TI_branch
+	.dwattr $C$DW$26, DW_AT_low_pc(0x00)
+	.dwattr $C$DW$26, DW_AT_name("_OSTimeTick")
+	.dwattr $C$DW$26, DW_AT_TI_call
 
         LCR       #_OSTimeTick          ; [CPU_ALU] |148| 
         ; call occurs [#_OSTimeTick] ; [] |148| 
 	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/OS/uCOS-II/bsp_os.c",line 151,column 5,is_stmt,isa 0
         MOVB      AL,#14                ; [CPU_ALU] |151| 
-$C$DW$26	.dwtag  DW_TAG_TI_branch
-	.dwattr $C$DW$26, DW_AT_low_pc(0x00)
-	.dwattr $C$DW$26, DW_AT_name("_BSP_IntEn")
-	.dwattr $C$DW$26, DW_AT_TI_call
+$C$DW$27	.dwtag  DW_TAG_TI_branch
+	.dwattr $C$DW$27, DW_AT_low_pc(0x00)
+	.dwattr $C$DW$27, DW_AT_name("_BSP_IntEn")
+	.dwattr $C$DW$27, DW_AT_TI_call
 
         LCR       #_BSP_IntEn           ; [CPU_ALU] |151| 
         ; call occurs [#_BSP_IntEn] ; [] |151| 
 	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/OS/uCOS-II/bsp_os.c",line 152,column 5,is_stmt,isa 0
-$C$DW$27	.dwtag  DW_TAG_TI_branch
-	.dwattr $C$DW$27, DW_AT_low_pc(0x00)
-	.dwattr $C$DW$27, DW_AT_name("_OSIntExit")
-	.dwattr $C$DW$27, DW_AT_TI_call
+$C$DW$28	.dwtag  DW_TAG_TI_branch
+	.dwattr $C$DW$28, DW_AT_low_pc(0x00)
+	.dwattr $C$DW$28, DW_AT_name("_OSIntExit")
+	.dwattr $C$DW$28, DW_AT_TI_call
 
         LCR       #_OSIntExit           ; [CPU_ALU] |152| 
         ; call occurs [#_OSIntExit] ; [] |152| 
@@ -374,35 +381,35 @@ $C$DW$27	.dwtag  DW_TAG_TI_branch
 	.dwcfi	restore_reg, 5
 	.dwcfi	restore_reg, 7
         NASP      ; [CPU_ALU] 
-$C$DW$28	.dwtag  DW_TAG_TI_branch
-	.dwattr $C$DW$28, DW_AT_low_pc(0x00)
-	.dwattr $C$DW$28, DW_AT_TI_return
+$C$DW$29	.dwtag  DW_TAG_TI_branch
+	.dwattr $C$DW$29, DW_AT_low_pc(0x00)
+	.dwattr $C$DW$29, DW_AT_TI_return
 
         IRET      ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$20, DW_AT_TI_end_file("C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/OS/uCOS-II/bsp_os.c")
-	.dwattr $C$DW$20, DW_AT_TI_end_line(0x99)
-	.dwattr $C$DW$20, DW_AT_TI_end_column(0x01)
+	.dwattr $C$DW$21, DW_AT_TI_end_file("C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/OS/uCOS-II/bsp_os.c")
+	.dwattr $C$DW$21, DW_AT_TI_end_line(0x99)
+	.dwattr $C$DW$21, DW_AT_TI_end_column(0x01)
 	.dwendentry
-	.dwendtag $C$DW$20
+	.dwendtag $C$DW$21
 
 	.sect	".text:retain"
 	.retain
 	.retainrefs
 	.global	_BSP_SCIA_RX
 
-$C$DW$29	.dwtag  DW_TAG_subprogram
-	.dwattr $C$DW$29, DW_AT_name("BSP_SCIA_RX")
-	.dwattr $C$DW$29, DW_AT_low_pc(_BSP_SCIA_RX)
-	.dwattr $C$DW$29, DW_AT_high_pc(0x00)
-	.dwattr $C$DW$29, DW_AT_TI_symbol_name("_BSP_SCIA_RX")
-	.dwattr $C$DW$29, DW_AT_external
-	.dwattr $C$DW$29, DW_AT_TI_begin_file("C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/OS/uCOS-II/bsp_os.c")
-	.dwattr $C$DW$29, DW_AT_TI_begin_line(0xa6)
-	.dwattr $C$DW$29, DW_AT_TI_begin_column(0x10)
-	.dwattr $C$DW$29, DW_AT_TI_interrupt
-	.dwattr $C$DW$29, DW_AT_TI_max_frame_size(-8)
-	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/OS/uCOS-II/bsp_os.c",line 167,column 1,is_stmt,address _BSP_SCIA_RX,isa 0
+$C$DW$30	.dwtag  DW_TAG_subprogram
+	.dwattr $C$DW$30, DW_AT_name("BSP_SCIA_RX")
+	.dwattr $C$DW$30, DW_AT_low_pc(_BSP_SCIA_RX)
+	.dwattr $C$DW$30, DW_AT_high_pc(0x00)
+	.dwattr $C$DW$30, DW_AT_TI_symbol_name("_BSP_SCIA_RX")
+	.dwattr $C$DW$30, DW_AT_external
+	.dwattr $C$DW$30, DW_AT_TI_begin_file("C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/OS/uCOS-II/bsp_os.c")
+	.dwattr $C$DW$30, DW_AT_TI_begin_line(0xa7)
+	.dwattr $C$DW$30, DW_AT_TI_begin_column(0x10)
+	.dwattr $C$DW$30, DW_AT_TI_interrupt
+	.dwattr $C$DW$30, DW_AT_TI_max_frame_size(-8)
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/OS/uCOS-II/bsp_os.c",line 168,column 1,is_stmt,address _BSP_SCIA_RX,isa 0
 
 	.dwfde $C$DW$CIE, _BSP_SCIA_RX
 
@@ -431,44 +438,44 @@ _BSP_SCIA_RX:
 	.dwcfi	cfa_offset, -8
         CLRC      PAGE0,OVM             ; [CPU_ALU] 
         CLRC      AMODE                 ; [CPU_ALU] 
-$C$DW$30	.dwtag  DW_TAG_variable
-	.dwattr $C$DW$30, DW_AT_name("i")
-	.dwattr $C$DW$30, DW_AT_TI_symbol_name("_i")
-	.dwattr $C$DW$30, DW_AT_type(*$C$DW$T$33)
-	.dwattr $C$DW$30, DW_AT_location[DW_OP_breg20 -1]
+$C$DW$31	.dwtag  DW_TAG_variable
+	.dwattr $C$DW$31, DW_AT_name("i")
+	.dwattr $C$DW$31, DW_AT_TI_symbol_name("_i")
+	.dwattr $C$DW$31, DW_AT_type(*$C$DW$T$30)
+	.dwattr $C$DW$31, DW_AT_location[DW_OP_breg20 -1]
 
-	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/OS/uCOS-II/bsp_os.c",line 170,column 10,is_stmt,isa 0
-        MOV       *-SP[1],#0            ; [CPU_ALU] |170| 
-	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/OS/uCOS-II/bsp_os.c",line 170,column 17,is_stmt,isa 0
-        MOV       AL,*-SP[1]            ; [CPU_ALU] |170| 
-        CMPB      AL,#16                ; [CPU_ALU] |170| 
-        B         $C$L2,HIS             ; [CPU_ALU] |170| 
-        ; branchcc occurs ; [] |170| 
-        MOVL      XAR4,#_scirxBuf       ; [CPU_ARAU] |171| 
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/OS/uCOS-II/bsp_os.c",line 171,column 10,is_stmt,isa 0
+        MOV       *-SP[1],#0            ; [CPU_ALU] |171| 
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/OS/uCOS-II/bsp_os.c",line 171,column 17,is_stmt,isa 0
+        MOV       AL,*-SP[1]            ; [CPU_ALU] |171| 
+        CMPB      AL,#16                ; [CPU_ALU] |171| 
+        B         $C$L2,HIS             ; [CPU_ALU] |171| 
+        ; branchcc occurs ; [] |171| 
+        MOVL      XAR4,#_scirxBuf       ; [CPU_ARAU] |172| 
 $C$L1:    
-	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/OS/uCOS-II/bsp_os.c",line 171,column 9,is_stmt,isa 0
-        MOVZ      AR0,*-SP[1]           ; [CPU_ALU] |171| 
-        MOV       *+XAR4[AR0],*(0:0x7057) ; [CPU_ALU] |171| 
-	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/OS/uCOS-II/bsp_os.c",line 170,column 39,is_stmt,isa 0
-        INC       *-SP[1]               ; [CPU_ALU] |170| 
-	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/OS/uCOS-II/bsp_os.c",line 170,column 17,is_stmt,isa 0
-        MOV       AL,*-SP[1]            ; [CPU_ALU] |170| 
-        CMPB      AL,#16                ; [CPU_ALU] |170| 
-        B         $C$L1,LO              ; [CPU_ALU] |170| 
-        ; branchcc occurs ; [] |170| 
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/OS/uCOS-II/bsp_os.c",line 172,column 9,is_stmt,isa 0
+        MOVZ      AR0,*-SP[1]           ; [CPU_ALU] |172| 
+        MOV       *+XAR4[AR0],*(0:0x7057) ; [CPU_ALU] |172| 
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/OS/uCOS-II/bsp_os.c",line 171,column 39,is_stmt,isa 0
+        INC       *-SP[1]               ; [CPU_ALU] |171| 
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/OS/uCOS-II/bsp_os.c",line 171,column 17,is_stmt,isa 0
+        MOV       AL,*-SP[1]            ; [CPU_ALU] |171| 
+        CMPB      AL,#16                ; [CPU_ALU] |171| 
+        B         $C$L1,LO              ; [CPU_ALU] |171| 
+        ; branchcc occurs ; [] |171| 
 $C$L2:    
-	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/OS/uCOS-II/bsp_os.c",line 174,column 5,is_stmt,isa 0
-        MOV       AL,#8208              ; [CPU_ALU] |174| 
-        MOV       *(0:0x705b),AL        ; [CPU_ALU] |174| 
 	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/OS/uCOS-II/bsp_os.c",line 175,column 5,is_stmt,isa 0
-        MOV       AL,*(0:0x0cf3)        ; [CPU_ALU] |175| 
-        AND       AL,#0xfffe            ; [CPU_ALU] |175| 
-        MOV       *(0:0x0cf3),AL        ; [CPU_ALU] |175| 
+        MOV       AL,#8208              ; [CPU_ALU] |175| 
+        MOV       *(0:0x705b),AL        ; [CPU_ALU] |175| 
 	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/OS/uCOS-II/bsp_os.c",line 176,column 5,is_stmt,isa 0
-        MOV       AL,*(0:0x0ce1)        ; [CPU_ALU] |176| 
-        OR        AL,#0x0100            ; [CPU_ALU] |176| 
-        MOV       *(0:0x0ce1),AL        ; [CPU_ALU] |176| 
-	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/OS/uCOS-II/bsp_os.c",line 177,column 1,is_stmt,isa 0
+        MOV       AL,*(0:0x0cf3)        ; [CPU_ALU] |176| 
+        AND       AL,#0xfffe            ; [CPU_ALU] |176| 
+        MOV       *(0:0x0cf3),AL        ; [CPU_ALU] |176| 
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/OS/uCOS-II/bsp_os.c",line 177,column 5,is_stmt,isa 0
+        MOV       AL,*(0:0x0ce1)        ; [CPU_ALU] |177| 
+        OR        AL,#0x0100            ; [CPU_ALU] |177| 
+        MOV       *(0:0x0ce1),AL        ; [CPU_ALU] |177| 
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/OS/uCOS-II/bsp_os.c",line 178,column 1,is_stmt,isa 0
         SUBB      SP,#2                 ; [CPU_ARAU] 
 	.dwcfi	cfa_offset, -6
         MOVL      XAR4,*--SP            ; [CPU_ALU] 
@@ -479,35 +486,35 @@ $C$L2:
 	.dwcfi	restore_reg, 5
 	.dwcfi	restore_reg, 7
         NASP      ; [CPU_ALU] 
-$C$DW$31	.dwtag  DW_TAG_TI_branch
-	.dwattr $C$DW$31, DW_AT_low_pc(0x00)
-	.dwattr $C$DW$31, DW_AT_TI_return
+$C$DW$32	.dwtag  DW_TAG_TI_branch
+	.dwattr $C$DW$32, DW_AT_low_pc(0x00)
+	.dwattr $C$DW$32, DW_AT_TI_return
 
         IRET      ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$29, DW_AT_TI_end_file("C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/OS/uCOS-II/bsp_os.c")
-	.dwattr $C$DW$29, DW_AT_TI_end_line(0xb1)
-	.dwattr $C$DW$29, DW_AT_TI_end_column(0x01)
+	.dwattr $C$DW$30, DW_AT_TI_end_file("C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/OS/uCOS-II/bsp_os.c")
+	.dwattr $C$DW$30, DW_AT_TI_end_line(0xb2)
+	.dwattr $C$DW$30, DW_AT_TI_end_column(0x01)
 	.dwendentry
-	.dwendtag $C$DW$29
+	.dwendtag $C$DW$30
 
 	.sect	".text:retain"
 	.retain
 	.retainrefs
 	.global	_BSP_SCIA_TX
 
-$C$DW$32	.dwtag  DW_TAG_subprogram
-	.dwattr $C$DW$32, DW_AT_name("BSP_SCIA_TX")
-	.dwattr $C$DW$32, DW_AT_low_pc(_BSP_SCIA_TX)
-	.dwattr $C$DW$32, DW_AT_high_pc(0x00)
-	.dwattr $C$DW$32, DW_AT_TI_symbol_name("_BSP_SCIA_TX")
-	.dwattr $C$DW$32, DW_AT_external
-	.dwattr $C$DW$32, DW_AT_TI_begin_file("C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/OS/uCOS-II/bsp_os.c")
-	.dwattr $C$DW$32, DW_AT_TI_begin_line(0xb3)
-	.dwattr $C$DW$32, DW_AT_TI_begin_column(0x10)
-	.dwattr $C$DW$32, DW_AT_TI_interrupt
-	.dwattr $C$DW$32, DW_AT_TI_max_frame_size(-8)
-	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/OS/uCOS-II/bsp_os.c",line 180,column 1,is_stmt,address _BSP_SCIA_TX,isa 0
+$C$DW$33	.dwtag  DW_TAG_subprogram
+	.dwattr $C$DW$33, DW_AT_name("BSP_SCIA_TX")
+	.dwattr $C$DW$33, DW_AT_low_pc(_BSP_SCIA_TX)
+	.dwattr $C$DW$33, DW_AT_high_pc(0x00)
+	.dwattr $C$DW$33, DW_AT_TI_symbol_name("_BSP_SCIA_TX")
+	.dwattr $C$DW$33, DW_AT_external
+	.dwattr $C$DW$33, DW_AT_TI_begin_file("C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/OS/uCOS-II/bsp_os.c")
+	.dwattr $C$DW$33, DW_AT_TI_begin_line(0xb4)
+	.dwattr $C$DW$33, DW_AT_TI_begin_column(0x10)
+	.dwattr $C$DW$33, DW_AT_TI_interrupt
+	.dwattr $C$DW$33, DW_AT_TI_max_frame_size(-8)
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/OS/uCOS-II/bsp_os.c",line 181,column 1,is_stmt,address _BSP_SCIA_TX,isa 0
 
 	.dwfde $C$DW$CIE, _BSP_SCIA_TX
 
@@ -536,90 +543,122 @@ _BSP_SCIA_TX:
 	.dwcfi	cfa_offset, -8
         CLRC      PAGE0,OVM             ; [CPU_ALU] 
         CLRC      AMODE                 ; [CPU_ALU] 
-$C$DW$33	.dwtag  DW_TAG_variable
-	.dwattr $C$DW$33, DW_AT_name("i")
-	.dwattr $C$DW$33, DW_AT_TI_symbol_name("_i")
-	.dwattr $C$DW$33, DW_AT_type(*$C$DW$T$33)
-	.dwattr $C$DW$33, DW_AT_location[DW_OP_breg20 -1]
+$C$DW$34	.dwtag  DW_TAG_variable
+	.dwattr $C$DW$34, DW_AT_name("i")
+	.dwattr $C$DW$34, DW_AT_TI_symbol_name("_i")
+	.dwattr $C$DW$34, DW_AT_type(*$C$DW$T$30)
+	.dwattr $C$DW$34, DW_AT_location[DW_OP_breg20 -1]
 
-	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/OS/uCOS-II/bsp_os.c",line 184,column 5,is_stmt,isa 0
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/OS/uCOS-II/bsp_os.c",line 185,column 5,is_stmt,isa 0
         MOVW      DP,#_certification_flag1 ; [CPU_ARAU] 
-        MOV       AL,@_certification_flag1 ; [CPU_ALU] |184| 
-        CMPB      AL,#1                 ; [CPU_ALU] |184| 
-        B         $C$L5,NEQ             ; [CPU_ALU] |184| 
-        ; branchcc occurs ; [] |184| 
-	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/OS/uCOS-II/bsp_os.c",line 186,column 14,is_stmt,isa 0
-        MOV       *-SP[1],#0            ; [CPU_ALU] |186| 
-	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/OS/uCOS-II/bsp_os.c",line 186,column 21,is_stmt,isa 0
-        MOV       AL,*-SP[1]            ; [CPU_ALU] |186| 
-        CMPB      AL,#16                ; [CPU_ALU] |186| 
-        B         $C$L4,HIS             ; [CPU_ALU] |186| 
-        ; branchcc occurs ; [] |186| 
-        MOVL      XAR4,#_Timer_flag     ; [CPU_ARAU] |187| 
+        MOV       AL,@_certification_flag1 ; [CPU_ALU] |185| 
+        CMPB      AL,#1                 ; [CPU_ALU] |185| 
+        B         $C$L5,NEQ             ; [CPU_ALU] |185| 
+        ; branchcc occurs ; [] |185| 
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/OS/uCOS-II/bsp_os.c",line 187,column 14,is_stmt,isa 0
+        MOV       *-SP[1],#0            ; [CPU_ALU] |187| 
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/OS/uCOS-II/bsp_os.c",line 187,column 21,is_stmt,isa 0
+        MOV       AL,*-SP[1]            ; [CPU_ALU] |187| 
+        CMPB      AL,#16                ; [CPU_ALU] |187| 
+        B         $C$L4,HIS             ; [CPU_ALU] |187| 
+        ; branchcc occurs ; [] |187| 
+        MOVL      XAR4,#_R_PLC          ; [CPU_ARAU] |188| 
 $C$L3:    
-	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/OS/uCOS-II/bsp_os.c",line 187,column 13,is_stmt,isa 0
-        MOVZ      AR0,*-SP[1]           ; [CPU_ALU] |187| 
-        MOV       *(0:0x7059),*+XAR4[AR0] ; [CPU_ALU] |187| 
-	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/OS/uCOS-II/bsp_os.c",line 186,column 45,is_stmt,isa 0
-        INC       *-SP[1]               ; [CPU_ALU] |186| 
-	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/OS/uCOS-II/bsp_os.c",line 186,column 21,is_stmt,isa 0
-        MOV       AL,*-SP[1]            ; [CPU_ALU] |186| 
-        CMPB      AL,#16                ; [CPU_ALU] |186| 
-        B         $C$L3,LO              ; [CPU_ALU] |186| 
-        ; branchcc occurs ; [] |186| 
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/OS/uCOS-II/bsp_os.c",line 188,column 13,is_stmt,isa 0
+        MOVZ      AR0,*-SP[1]           ; [CPU_ALU] |188| 
+        MOV       *(0:0x7059),*+XAR4[AR0] ; [CPU_ALU] |188| 
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/OS/uCOS-II/bsp_os.c",line 187,column 40,is_stmt,isa 0
+        INC       *-SP[1]               ; [CPU_ALU] |187| 
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/OS/uCOS-II/bsp_os.c",line 187,column 21,is_stmt,isa 0
+        MOV       AL,*-SP[1]            ; [CPU_ALU] |187| 
+        CMPB      AL,#16                ; [CPU_ALU] |187| 
+        B         $C$L3,LO              ; [CPU_ALU] |187| 
+        ; branchcc occurs ; [] |187| 
 $C$L4:    
-	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/OS/uCOS-II/bsp_os.c",line 188,column 9,is_stmt,isa 0
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/OS/uCOS-II/bsp_os.c",line 189,column 9,is_stmt,isa 0
         MOVW      DP,#_certification_flag1 ; [CPU_ARAU] 
-        MOV       @_certification_flag1,#0 ; [CPU_ALU] |188| 
-        B         $C$L8,UNC             ; [CPU_ALU] 
+        MOV       @_certification_flag1,#0 ; [CPU_ALU] |189| 
+        B         $C$L11,UNC            ; [CPU_ALU] 
         ; branch occurs ; [] 
 $C$L5:    
-	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/OS/uCOS-II/bsp_os.c",line 190,column 10,is_stmt,isa 0
-        MOVW      DP,#_certification_flag2 ; [CPU_ARAU] 
-        MOV       AL,@_certification_flag2 ; [CPU_ALU] |190| 
-        CMPB      AL,#1                 ; [CPU_ALU] |190| 
-        B         $C$L8,NEQ             ; [CPU_ALU] |190| 
-        ; branchcc occurs ; [] |190| 
-	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/OS/uCOS-II/bsp_os.c",line 192,column 14,is_stmt,isa 0
-        MOV       *-SP[1],#0            ; [CPU_ALU] |192| 
-	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/OS/uCOS-II/bsp_os.c",line 192,column 21,is_stmt,isa 0
-        MOV       AL,*-SP[1]            ; [CPU_ALU] |192| 
-        CMPB      AL,#16                ; [CPU_ALU] |192| 
-        B         $C$L7,HIS             ; [CPU_ALU] |192| 
-        ; branchcc occurs ; [] |192| 
-        MOVL      XAR4,#_Reply_flag     ; [CPU_ARAU] |193| 
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/OS/uCOS-II/bsp_os.c",line 191,column 10,is_stmt,isa 0
+        MOVW      DP,#_certification_flag1_1 ; [CPU_ARAU] 
+        MOV       AL,@_certification_flag1_1 ; [CPU_ALU] |191| 
+        CMPB      AL,#1                 ; [CPU_ALU] |191| 
+        B         $C$L8,NEQ             ; [CPU_ALU] |191| 
+        ; branchcc occurs ; [] |191| 
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/OS/uCOS-II/bsp_os.c",line 193,column 18,is_stmt,isa 0
+        MOV       *-SP[1],#0            ; [CPU_ALU] |193| 
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/OS/uCOS-II/bsp_os.c",line 193,column 25,is_stmt,isa 0
+        MOV       AL,*-SP[1]            ; [CPU_ALU] |193| 
+        CMPB      AL,#16                ; [CPU_ALU] |193| 
+        B         $C$L7,HIS             ; [CPU_ALU] |193| 
+        ; branchcc occurs ; [] |193| 
+        MOVL      XAR4,#_R_PLC          ; [CPU_ARAU] |194| 
 $C$L6:    
-	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/OS/uCOS-II/bsp_os.c",line 193,column 13,is_stmt,isa 0
-        MOVZ      AR0,*-SP[1]           ; [CPU_ALU] |193| 
-        MOV       *(0:0x7059),*+XAR4[AR0] ; [CPU_ALU] |193| 
-	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/OS/uCOS-II/bsp_os.c",line 192,column 45,is_stmt,isa 0
-        INC       *-SP[1]               ; [CPU_ALU] |192| 
-	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/OS/uCOS-II/bsp_os.c",line 192,column 21,is_stmt,isa 0
-        MOV       AL,*-SP[1]            ; [CPU_ALU] |192| 
-        CMPB      AL,#16                ; [CPU_ALU] |192| 
-        B         $C$L6,LO              ; [CPU_ALU] |192| 
-        ; branchcc occurs ; [] |192| 
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/OS/uCOS-II/bsp_os.c",line 194,column 17,is_stmt,isa 0
+        MOVZ      AR0,*-SP[1]           ; [CPU_ALU] |194| 
+        MOV       *(0:0x7059),*+XAR4[AR0] ; [CPU_ALU] |194| 
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/OS/uCOS-II/bsp_os.c",line 193,column 44,is_stmt,isa 0
+        INC       *-SP[1]               ; [CPU_ALU] |193| 
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/OS/uCOS-II/bsp_os.c",line 193,column 25,is_stmt,isa 0
+        MOV       AL,*-SP[1]            ; [CPU_ALU] |193| 
+        CMPB      AL,#16                ; [CPU_ALU] |193| 
+        B         $C$L6,LO              ; [CPU_ALU] |193| 
+        ; branchcc occurs ; [] |193| 
 $C$L7:    
-	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/OS/uCOS-II/bsp_os.c",line 194,column 9,is_stmt,isa 0
-        MOVW      DP,#_certification_flag2 ; [CPU_ARAU] 
-        MOV       @_certification_flag2,#0 ; [CPU_ALU] |194| 
-	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/OS/uCOS-II/bsp_os.c",line 195,column 9,is_stmt,isa 0
-        MOVW      DP,#_psh_flag         ; [CPU_ARAU] 
-        MOV       @_psh_flag,#0         ; [CPU_ALU] |195| 
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/OS/uCOS-II/bsp_os.c",line 195,column 13,is_stmt,isa 0
+        MOVW      DP,#_certification_flag1_1 ; [CPU_ARAU] 
+        MOV       @_certification_flag1_1,#0 ; [CPU_ALU] |195| 
+        B         $C$L11,UNC            ; [CPU_ALU] 
+        ; branch occurs ; [] 
 $C$L8:    
-	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/OS/uCOS-II/bsp_os.c",line 198,column 5,is_stmt,isa 0
-        MOV       AL,*(0:0x705a)        ; [CPU_ALU] |198| 
-        OR        AL,#0x2040            ; [CPU_ALU] |198| 
-        MOV       *(0:0x705a),AL        ; [CPU_ALU] |198| 
-	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/OS/uCOS-II/bsp_os.c",line 199,column 5,is_stmt,isa 0
-        MOV       AL,*(0:0x0cf3)        ; [CPU_ALU] |199| 
-        AND       AL,#0xfffe            ; [CPU_ALU] |199| 
-        MOV       *(0:0x0cf3),AL        ; [CPU_ALU] |199| 
-	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/OS/uCOS-II/bsp_os.c",line 200,column 5,is_stmt,isa 0
-        MOV       AL,*(0:0x0ce1)        ; [CPU_ALU] |200| 
-        OR        AL,#0x0100            ; [CPU_ALU] |200| 
-        MOV       *(0:0x0ce1),AL        ; [CPU_ALU] |200| 
-	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/OS/uCOS-II/bsp_os.c",line 203,column 1,is_stmt,isa 0
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/OS/uCOS-II/bsp_os.c",line 197,column 10,is_stmt,isa 0
+        MOVW      DP,#_certification_flag2 ; [CPU_ARAU] 
+        MOV       AL,@_certification_flag2 ; [CPU_ALU] |197| 
+        CMPB      AL,#1                 ; [CPU_ALU] |197| 
+        B         $C$L11,NEQ            ; [CPU_ALU] |197| 
+        ; branchcc occurs ; [] |197| 
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/OS/uCOS-II/bsp_os.c",line 199,column 14,is_stmt,isa 0
+        MOV       *-SP[1],#0            ; [CPU_ALU] |199| 
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/OS/uCOS-II/bsp_os.c",line 199,column 21,is_stmt,isa 0
+        MOV       AL,*-SP[1]            ; [CPU_ALU] |199| 
+        CMPB      AL,#16                ; [CPU_ALU] |199| 
+        B         $C$L10,HIS            ; [CPU_ALU] |199| 
+        ; branchcc occurs ; [] |199| 
+        MOVL      XAR4,#_Reply_flag     ; [CPU_ARAU] |200| 
+$C$L9:    
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/OS/uCOS-II/bsp_os.c",line 200,column 13,is_stmt,isa 0
+        MOVZ      AR0,*-SP[1]           ; [CPU_ALU] |200| 
+        MOV       *(0:0x7059),*+XAR4[AR0] ; [CPU_ALU] |200| 
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/OS/uCOS-II/bsp_os.c",line 199,column 45,is_stmt,isa 0
+        INC       *-SP[1]               ; [CPU_ALU] |199| 
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/OS/uCOS-II/bsp_os.c",line 199,column 21,is_stmt,isa 0
+        MOV       AL,*-SP[1]            ; [CPU_ALU] |199| 
+        CMPB      AL,#16                ; [CPU_ALU] |199| 
+        B         $C$L9,LO              ; [CPU_ALU] |199| 
+        ; branchcc occurs ; [] |199| 
+$C$L10:    
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/OS/uCOS-II/bsp_os.c",line 201,column 9,is_stmt,isa 0
+        MOVW      DP,#_certification_flag2 ; [CPU_ARAU] 
+        MOV       @_certification_flag2,#0 ; [CPU_ALU] |201| 
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/OS/uCOS-II/bsp_os.c",line 202,column 9,is_stmt,isa 0
+        MOVW      DP,#_psh_flag         ; [CPU_ARAU] 
+        MOV       @_psh_flag,#0         ; [CPU_ALU] |202| 
+$C$L11:    
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/OS/uCOS-II/bsp_os.c",line 205,column 5,is_stmt,isa 0
+        MOV       AL,*(0:0x705a)        ; [CPU_ALU] |205| 
+        OR        AL,#0x2040            ; [CPU_ALU] |205| 
+        MOV       *(0:0x705a),AL        ; [CPU_ALU] |205| 
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/OS/uCOS-II/bsp_os.c",line 206,column 5,is_stmt,isa 0
+        MOV       AL,*(0:0x0cf3)        ; [CPU_ALU] |206| 
+        AND       AL,#0xfffe            ; [CPU_ALU] |206| 
+        MOV       *(0:0x0cf3),AL        ; [CPU_ALU] |206| 
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/OS/uCOS-II/bsp_os.c",line 207,column 5,is_stmt,isa 0
+        MOV       AL,*(0:0x0ce1)        ; [CPU_ALU] |207| 
+        OR        AL,#0x0100            ; [CPU_ALU] |207| 
+        MOV       *(0:0x0ce1),AL        ; [CPU_ALU] |207| 
+	.dwpsn	file "C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/OS/uCOS-II/bsp_os.c",line 210,column 1,is_stmt,isa 0
         SUBB      SP,#2                 ; [CPU_ARAU] 
 	.dwcfi	cfa_offset, -6
         MOVL      XAR4,*--SP            ; [CPU_ALU] 
@@ -630,17 +669,17 @@ $C$L8:
 	.dwcfi	restore_reg, 5
 	.dwcfi	restore_reg, 7
         NASP      ; [CPU_ALU] 
-$C$DW$34	.dwtag  DW_TAG_TI_branch
-	.dwattr $C$DW$34, DW_AT_low_pc(0x00)
-	.dwattr $C$DW$34, DW_AT_TI_return
+$C$DW$35	.dwtag  DW_TAG_TI_branch
+	.dwattr $C$DW$35, DW_AT_low_pc(0x00)
+	.dwattr $C$DW$35, DW_AT_TI_return
 
         IRET      ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$32, DW_AT_TI_end_file("C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/OS/uCOS-II/bsp_os.c")
-	.dwattr $C$DW$32, DW_AT_TI_end_line(0xcb)
-	.dwattr $C$DW$32, DW_AT_TI_end_column(0x01)
+	.dwattr $C$DW$33, DW_AT_TI_end_file("C:/ti/Workspace/PLC_certificate/Examples/TI/TMDSDOCK28335/BSP/OS/uCOS-II/bsp_os.c")
+	.dwattr $C$DW$33, DW_AT_TI_end_line(0xd2)
+	.dwattr $C$DW$33, DW_AT_TI_end_column(0x01)
 	.dwendentry
-	.dwendtag $C$DW$32
+	.dwendtag $C$DW$33
 
 ;**************************************************************
 ;* UNDEFINED EXTERNAL REFERENCES                              *
@@ -651,10 +690,11 @@ $C$DW$34	.dwtag  DW_TAG_TI_branch
 	.global	_OSTimeTick
 	.global	_OSIntExit
 	.global	_certification_flag1
+	.global	_certification_flag1_1
 	.global	_certification_flag2
 	.global	_psh_flag
 	.global	_CPU_SR_Save
-	.global	_Timer_flag
+	.global	_R_PLC
 	.global	_Reply_flag
 
 ;***************************************************************
@@ -673,9 +713,14 @@ $C$DW$T$5	.dwtag  DW_TAG_base_type
 	.dwattr $C$DW$T$5, DW_AT_name("signed char")
 	.dwattr $C$DW$T$5, DW_AT_byte_size(0x01)
 
+$C$DW$T$6	.dwtag  DW_TAG_base_type
+	.dwattr $C$DW$T$6, DW_AT_encoding(DW_ATE_unsigned_char)
+	.dwattr $C$DW$T$6, DW_AT_name("unsigned char")
+	.dwattr $C$DW$T$6, DW_AT_byte_size(0x01)
+
 $C$DW$T$30	.dwtag  DW_TAG_typedef
-	.dwattr $C$DW$T$30, DW_AT_name("INT8S")
-	.dwattr $C$DW$T$30, DW_AT_type(*$C$DW$T$5)
+	.dwattr $C$DW$T$30, DW_AT_name("INT8U")
+	.dwattr $C$DW$T$30, DW_AT_type(*$C$DW$T$6)
 	.dwattr $C$DW$T$30, DW_AT_language(DW_LANG_C)
 
 
@@ -683,30 +728,10 @@ $C$DW$T$31	.dwtag  DW_TAG_array_type
 	.dwattr $C$DW$T$31, DW_AT_type(*$C$DW$T$30)
 	.dwattr $C$DW$T$31, DW_AT_language(DW_LANG_C)
 	.dwattr $C$DW$T$31, DW_AT_byte_size(0x10)
-$C$DW$35	.dwtag  DW_TAG_subrange_type
-	.dwattr $C$DW$35, DW_AT_upper_bound(0x0f)
-
-	.dwendtag $C$DW$T$31
-
-$C$DW$T$6	.dwtag  DW_TAG_base_type
-	.dwattr $C$DW$T$6, DW_AT_encoding(DW_ATE_unsigned_char)
-	.dwattr $C$DW$T$6, DW_AT_name("unsigned char")
-	.dwattr $C$DW$T$6, DW_AT_byte_size(0x01)
-
-$C$DW$T$33	.dwtag  DW_TAG_typedef
-	.dwattr $C$DW$T$33, DW_AT_name("INT8U")
-	.dwattr $C$DW$T$33, DW_AT_type(*$C$DW$T$6)
-	.dwattr $C$DW$T$33, DW_AT_language(DW_LANG_C)
-
-
-$C$DW$T$34	.dwtag  DW_TAG_array_type
-	.dwattr $C$DW$T$34, DW_AT_type(*$C$DW$T$33)
-	.dwattr $C$DW$T$34, DW_AT_language(DW_LANG_C)
-	.dwattr $C$DW$T$34, DW_AT_byte_size(0x10)
 $C$DW$36	.dwtag  DW_TAG_subrange_type
 	.dwattr $C$DW$36, DW_AT_upper_bound(0x0f)
 
-	.dwendtag $C$DW$T$34
+	.dwendtag $C$DW$T$31
 
 $C$DW$T$7	.dwtag  DW_TAG_base_type
 	.dwattr $C$DW$T$7, DW_AT_encoding(DW_ATE_signed_char)

@@ -1,11 +1,11 @@
-TMS320C2000 Assembler PC v20.2.1 Mon Feb  8 19:02:44 2021
+TMS320C2000 Assembler PC v20.2.1 Tue Feb 16 00:15:55 2021
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 cpu_core.asm                                                         PAGE    1
 
        1              ;***************************************************************
        2              ;* TMS320C2000 G3 C/C++ Codegen                               PC v20.2.1.LTS *
-       3              ;* Date/Time created: Mon Feb  8 19:02:44 2021                 *
+       3              ;* Date/Time created: Tue Feb 16 00:15:55 2021                 *
        4              ;***************************************************************
        5                      .compiler_opts --abi=coffabi --diag_wrap=off --float_support=softlib --hll_source=on --mem_model:code
        6                      .asg    XAR2, FP
@@ -58,7 +58,7 @@ cpu_core.asm                                                         PAGE    1
       52                                      ; _CPU_CntLeadZerosTbl[3] @ 48
       53 00000004 0005          .bits           0x5,16
       54                                      ; _CPU_CntLeadZerosTbl[4] @ 64
-TMS320C2000 Assembler PC v20.2.1 Mon Feb  8 19:02:44 2021
+TMS320C2000 Assembler PC v20.2.1 Tue Feb 16 00:15:55 2021
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 cpu_core.asm                                                         PAGE    2
@@ -118,7 +118,7 @@ cpu_core.asm                                                         PAGE    2
      107 0000001f 0003          .bits           0x3,16
      108                                      ; _CPU_CntLeadZerosTbl[31] @ 496
      109 00000020 0002          .bits           0x2,16
-TMS320C2000 Assembler PC v20.2.1 Mon Feb  8 19:02:44 2021
+TMS320C2000 Assembler PC v20.2.1 Tue Feb 16 00:15:55 2021
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 cpu_core.asm                                                         PAGE    3
@@ -178,7 +178,7 @@ cpu_core.asm                                                         PAGE    3
      162                                      ; _CPU_CntLeadZerosTbl[58] @ 928
      163 0000003b 0002          .bits           0x2,16
      164                                      ; _CPU_CntLeadZerosTbl[59] @ 944
-TMS320C2000 Assembler PC v20.2.1 Mon Feb  8 19:02:44 2021
+TMS320C2000 Assembler PC v20.2.1 Tue Feb 16 00:15:55 2021
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 cpu_core.asm                                                         PAGE    4
@@ -238,7 +238,7 @@ cpu_core.asm                                                         PAGE    4
      217 00000056 0001          .bits           0x1,16
      218                                      ; _CPU_CntLeadZerosTbl[86] @ 1376
      219 00000057 0001          .bits           0x1,16
-TMS320C2000 Assembler PC v20.2.1 Mon Feb  8 19:02:44 2021
+TMS320C2000 Assembler PC v20.2.1 Tue Feb 16 00:15:55 2021
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 cpu_core.asm                                                         PAGE    5
@@ -298,7 +298,7 @@ cpu_core.asm                                                         PAGE    5
      272                                      ; _CPU_CntLeadZerosTbl[113] @ 1808
      273 00000072 0001          .bits           0x1,16
      274                                      ; _CPU_CntLeadZerosTbl[114] @ 1824
-TMS320C2000 Assembler PC v20.2.1 Mon Feb  8 19:02:44 2021
+TMS320C2000 Assembler PC v20.2.1 Tue Feb 16 00:15:55 2021
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 cpu_core.asm                                                         PAGE    6
@@ -358,7 +358,7 @@ cpu_core.asm                                                         PAGE    6
      327 0000008d 0000          .bits           0,16
      328                                      ; _CPU_CntLeadZerosTbl[141] @ 2256
      329 0000008e 0000          .bits           0,16
-TMS320C2000 Assembler PC v20.2.1 Mon Feb  8 19:02:44 2021
+TMS320C2000 Assembler PC v20.2.1 Tue Feb 16 00:15:55 2021
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 cpu_core.asm                                                         PAGE    7
@@ -418,7 +418,7 @@ cpu_core.asm                                                         PAGE    7
      382                                      ; _CPU_CntLeadZerosTbl[168] @ 2688
      383 000000a9 0000          .bits           0,16
      384                                      ; _CPU_CntLeadZerosTbl[169] @ 2704
-TMS320C2000 Assembler PC v20.2.1 Mon Feb  8 19:02:44 2021
+TMS320C2000 Assembler PC v20.2.1 Tue Feb 16 00:15:55 2021
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 cpu_core.asm                                                         PAGE    8
@@ -478,7 +478,7 @@ cpu_core.asm                                                         PAGE    8
      437 000000c4 0000          .bits           0,16
      438                                      ; _CPU_CntLeadZerosTbl[196] @ 3136
      439 000000c5 0000          .bits           0,16
-TMS320C2000 Assembler PC v20.2.1 Mon Feb  8 19:02:44 2021
+TMS320C2000 Assembler PC v20.2.1 Tue Feb 16 00:15:55 2021
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 cpu_core.asm                                                         PAGE    9
@@ -538,7 +538,7 @@ cpu_core.asm                                                         PAGE    9
      492                                      ; _CPU_CntLeadZerosTbl[223] @ 3568
      493 000000e0 0000          .bits           0,16
      494                                      ; _CPU_CntLeadZerosTbl[224] @ 3584
-TMS320C2000 Assembler PC v20.2.1 Mon Feb  8 19:02:44 2021
+TMS320C2000 Assembler PC v20.2.1 Tue Feb 16 00:15:55 2021
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 cpu_core.asm                                                         PAGE   10
@@ -598,7 +598,7 @@ cpu_core.asm                                                         PAGE   10
      547 000000fb 0000          .bits           0,16
      548                                      ; _CPU_CntLeadZerosTbl[251] @ 4016
      549 000000fc 0000          .bits           0,16
-TMS320C2000 Assembler PC v20.2.1 Mon Feb  8 19:02:44 2021
+TMS320C2000 Assembler PC v20.2.1 Tue Feb 16 00:15:55 2021
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 cpu_core.asm                                                         PAGE   11
@@ -658,7 +658,7 @@ cpu_core.asm                                                         PAGE   11
      602                      .dwattr $C$DW$5, DW_AT_TI_end_file("C:/ti/Workspace/PLC_certificate/Software/uC-CPU/cpu_core.c")
      603                      .dwattr $C$DW$5, DW_AT_TI_end_line(0xe2)
      604                      .dwattr $C$DW$5, DW_AT_TI_end_column(0x01)
-TMS320C2000 Assembler PC v20.2.1 Mon Feb  8 19:02:44 2021
+TMS320C2000 Assembler PC v20.2.1 Tue Feb 16 00:15:55 2021
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 cpu_core.asm                                                         PAGE   12
@@ -718,7 +718,7 @@ cpu_core.asm                                                         PAGE   12
      657                      .dwattr $C$DW$8, DW_AT_external
      658                      .dwattr $C$DW$8, DW_AT_type(*$C$DW$T$27)
      659                      .dwattr $C$DW$8, DW_AT_TI_begin_file("C:/ti/Workspace/PLC_certificate/Software/uC-CPU/cpu_core.c")
-TMS320C2000 Assembler PC v20.2.1 Mon Feb  8 19:02:44 2021
+TMS320C2000 Assembler PC v20.2.1 Tue Feb 16 00:15:55 2021
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 cpu_core.asm                                                         PAGE   13
@@ -778,7 +778,7 @@ cpu_core.asm                                                         PAGE   13
      711 00000008 7442          SUB       *-SP[2],AL            ; [CPU_ALU] |1220| 
      712                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/Software/uC-CPU/cpu_core.c",line 1231,column 5,is_stmt,
      713 00000009 9242          MOV       AL,*-SP[2]            ; [CPU_ALU] |1231| 
-TMS320C2000 Assembler PC v20.2.1 Mon Feb  8 19:02:44 2021
+TMS320C2000 Assembler PC v20.2.1 Tue Feb 16 00:15:55 2021
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 cpu_core.asm                                                         PAGE   14
@@ -838,7 +838,7 @@ cpu_core.asm                                                         PAGE   14
      766 0000000c FE02          ADDB      SP,#2                 ; [CPU_ARAU] 
      767                      .dwcfi  cfa_offset, -4
      768              $C$DW$16        .dwtag  DW_TAG_variable
-TMS320C2000 Assembler PC v20.2.1 Mon Feb  8 19:02:44 2021
+TMS320C2000 Assembler PC v20.2.1 Tue Feb 16 00:15:55 2021
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 cpu_core.asm                                                         PAGE   15
@@ -898,7 +898,7 @@ cpu_core.asm                                                         PAGE   15
      820                      .dwattr $C$DW$20, DW_AT_TI_begin_column(0x0b)
      821                      .dwattr $C$DW$20, DW_AT_TI_max_frame_size(-6)
      822                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/Software/uC-CPU/cpu_core.c",line 1349,column 1,is_stmt,
-TMS320C2000 Assembler PC v20.2.1 Mon Feb  8 19:02:44 2021
+TMS320C2000 Assembler PC v20.2.1 Tue Feb 16 00:15:55 2021
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 cpu_core.asm                                                         PAGE   16
@@ -958,7 +958,7 @@ cpu_core.asm                                                         PAGE   16
      873 0000001c 9BFF          MOV       AH,#255               ; [CPU_ALU] |1365| 
      874 0000001d 0F42          CMPL      ACC,*-SP[2]           ; [CPU_ALU] |1365| 
      875 0000001e 670C          B         $C$L2,HIS             ; [CPU_ALU] |1365| 
-TMS320C2000 Assembler PC v20.2.1 Mon Feb  8 19:02:44 2021
+TMS320C2000 Assembler PC v20.2.1 Tue Feb 16 00:15:55 2021
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 cpu_core.asm                                                         PAGE   17
@@ -1018,7 +1018,7 @@ cpu_core.asm                                                         PAGE   17
      924                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/Software/uC-CPU/cpu_core.c",line 1385,column 13,is_stmt
      925 00000043 5843          MOVZ      AR0,*-SP[3]           ; [CPU_ALU] |1385| 
      926 00000044 8F00+         MOVL      XAR4,#_CPU_CntLeadZerosTbl ; [CPU_ARAU] |1385| 
-TMS320C2000 Assembler PC v20.2.1 Mon Feb  8 19:02:44 2021
+TMS320C2000 Assembler PC v20.2.1 Tue Feb 16 00:15:55 2021
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 cpu_core.asm                                                         PAGE   18
@@ -1078,7 +1078,7 @@ cpu_core.asm                                                         PAGE   18
      978              ;*                            0 Parameter,  4 Auto,  0 SOE     *
      979              ;***************************************************************
      980              
-TMS320C2000 Assembler PC v20.2.1 Mon Feb  8 19:02:44 2021
+TMS320C2000 Assembler PC v20.2.1 Tue Feb 16 00:15:55 2021
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 cpu_core.asm                                                         PAGE   19
@@ -1138,7 +1138,7 @@ cpu_core.asm                                                         PAGE   19
     1032                      ; call occurs [#_CPU_CntLeadZeros] ; [] |1634| 
     1033 00000057 9643          MOV       *-SP[3],AL            ; [CPU_ALU] |1634| 
     1034                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/Software/uC-CPU/cpu_core.c",line 1636,column 5,is_stmt,
-TMS320C2000 Assembler PC v20.2.1 Mon Feb  8 19:02:44 2021
+TMS320C2000 Assembler PC v20.2.1 Tue Feb 16 00:15:55 2021
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 cpu_core.asm                                                         PAGE   20
@@ -1198,7 +1198,7 @@ cpu_core.asm                                                         PAGE   20
     1087              ;***************************************************************
     1088              
     1089 0000005d       _CPU_CntTrailZeros08:
-TMS320C2000 Assembler PC v20.2.1 Mon Feb  8 19:02:44 2021
+TMS320C2000 Assembler PC v20.2.1 Tue Feb 16 00:15:55 2021
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 cpu_core.asm                                                         PAGE   21
@@ -1258,7 +1258,7 @@ cpu_core.asm                                                         PAGE   21
     1141 00000069 9643          MOV       *-SP[3],AL            ; [CPU_ALU] |1735| 
     1142                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/Software/uC-CPU/cpu_core.c",line 1737,column 5,is_stmt,
     1143 0000006a 9A07          MOVB      AL,#7                 ; [CPU_ALU] |1737| 
-TMS320C2000 Assembler PC v20.2.1 Mon Feb  8 19:02:44 2021
+TMS320C2000 Assembler PC v20.2.1 Tue Feb 16 00:15:55 2021
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 cpu_core.asm                                                         PAGE   22
@@ -1318,7 +1318,7 @@ cpu_core.asm                                                         PAGE   22
     1196              
     1197 0000006f       _CPU_CntTrailZeros16:
     1198                      .dwcfi  cfa_offset, -2
-TMS320C2000 Assembler PC v20.2.1 Mon Feb  8 19:02:44 2021
+TMS320C2000 Assembler PC v20.2.1 Tue Feb 16 00:15:55 2021
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 cpu_core.asm                                                         PAGE   23
@@ -1378,7 +1378,7 @@ cpu_core.asm                                                         PAGE   23
     1250                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/Software/uC-CPU/cpu_core.c",line 1841,column 5,is_stmt,
     1251 0000007c 9A0F          MOVB      AL,#15                ; [CPU_ALU] |1841| 
     1252 0000007d 9E43          SUB       AL,*-SP[3]            ; [CPU_ALU] |1841| 
-TMS320C2000 Assembler PC v20.2.1 Mon Feb  8 19:02:44 2021
+TMS320C2000 Assembler PC v20.2.1 Tue Feb 16 00:15:55 2021
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 cpu_core.asm                                                         PAGE   24
@@ -1438,7 +1438,7 @@ cpu_core.asm                                                         PAGE   24
     1305 00000081       _CPU_CntTrailZeros32:
     1306                      .dwcfi  cfa_offset, -2
     1307                      .dwcfi  save_reg_to_mem, 26, 0
-TMS320C2000 Assembler PC v20.2.1 Mon Feb  8 19:02:44 2021
+TMS320C2000 Assembler PC v20.2.1 Tue Feb 16 00:15:55 2021
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 cpu_core.asm                                                         PAGE   25
@@ -1498,7 +1498,7 @@ cpu_core.asm                                                         PAGE   25
     1359 0000008f 9645          MOV       *-SP[5],AL            ; [CPU_ALU] |1943| 
     1360                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/Software/uC-CPU/cpu_core.c",line 1945,column 5,is_stmt,
     1361 00000090 9A1F          MOVB      AL,#31                ; [CPU_ALU] |1945| 
-TMS320C2000 Assembler PC v20.2.1 Mon Feb  8 19:02:44 2021
+TMS320C2000 Assembler PC v20.2.1 Tue Feb 16 00:15:55 2021
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 cpu_core.asm                                                         PAGE   26
@@ -1558,7 +1558,7 @@ cpu_core.asm                                                         PAGE   26
     1414              
     1415 00000095       _CPU_PopCnt32:
     1416                      .dwcfi  cfa_offset, -2
-TMS320C2000 Assembler PC v20.2.1 Mon Feb  8 19:02:44 2021
+TMS320C2000 Assembler PC v20.2.1 Tue Feb 16 00:15:55 2021
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 cpu_core.asm                                                         PAGE   27
@@ -1618,7 +1618,7 @@ cpu_core.asm                                                         PAGE   27
          000000ab 3333 
     1464 000000ac 1E46          MOVL      *-SP[6],ACC           ; [CPU_ALU] |2086| 
     1465                      .dwpsn  file "C:/ti/Workspace/PLC_certificate/Software/uC-CPU/cpu_core.c",line 2087,column 5,is_stmt,
-TMS320C2000 Assembler PC v20.2.1 Mon Feb  8 19:02:44 2021
+TMS320C2000 Assembler PC v20.2.1 Tue Feb 16 00:15:55 2021
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 cpu_core.asm                                                         PAGE   28
@@ -1678,7 +1678,7 @@ cpu_core.asm                                                         PAGE   28
     1510              
     1511              ;***************************************************************
     1512              ;* TYPE INFORMATION                                            *
-TMS320C2000 Assembler PC v20.2.1 Mon Feb  8 19:02:44 2021
+TMS320C2000 Assembler PC v20.2.1 Tue Feb 16 00:15:55 2021
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 cpu_core.asm                                                         PAGE   29
@@ -1738,7 +1738,7 @@ cpu_core.asm                                                         PAGE   29
     1565                      .dwattr $C$DW$T$9, DW_AT_name("unsigned short")
     1566                      .dwattr $C$DW$T$9, DW_AT_byte_size(0x01)
     1567              
-TMS320C2000 Assembler PC v20.2.1 Mon Feb  8 19:02:44 2021
+TMS320C2000 Assembler PC v20.2.1 Tue Feb 16 00:15:55 2021
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 cpu_core.asm                                                         PAGE   30
@@ -1798,7 +1798,7 @@ cpu_core.asm                                                         PAGE   30
     1620                      .dwattr $C$DW$T$16, DW_AT_encoding(DW_ATE_float)
     1621                      .dwattr $C$DW$T$16, DW_AT_name("float")
     1622                      .dwattr $C$DW$T$16, DW_AT_byte_size(0x02)
-TMS320C2000 Assembler PC v20.2.1 Mon Feb  8 19:02:44 2021
+TMS320C2000 Assembler PC v20.2.1 Tue Feb 16 00:15:55 2021
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 cpu_core.asm                                                         PAGE   31
@@ -1858,7 +1858,7 @@ cpu_core.asm                                                         PAGE   31
     1675              
     1676              $C$DW$73        .dwtag  DW_TAG_TI_assign_register
     1677                      .dwattr $C$DW$73, DW_AT_name("XT")
-TMS320C2000 Assembler PC v20.2.1 Mon Feb  8 19:02:44 2021
+TMS320C2000 Assembler PC v20.2.1 Tue Feb 16 00:15:55 2021
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 cpu_core.asm                                                         PAGE   32
@@ -1918,7 +1918,7 @@ cpu_core.asm                                                         PAGE   32
     1730                      .dwattr $C$DW$86, DW_AT_location[DW_OP_regx 0x4e]
     1731              
     1732              $C$DW$87        .dwtag  DW_TAG_TI_assign_register
-TMS320C2000 Assembler PC v20.2.1 Mon Feb  8 19:02:44 2021
+TMS320C2000 Assembler PC v20.2.1 Tue Feb 16 00:15:55 2021
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 cpu_core.asm                                                         PAGE   33
@@ -1978,7 +1978,7 @@ cpu_core.asm                                                         PAGE   33
     1785                      .dwattr $C$DW$100, DW_AT_name("XAR3")
     1786                      .dwattr $C$DW$100, DW_AT_location[DW_OP_reg11]
     1787              
-TMS320C2000 Assembler PC v20.2.1 Mon Feb  8 19:02:44 2021
+TMS320C2000 Assembler PC v20.2.1 Tue Feb 16 00:15:55 2021
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 cpu_core.asm                                                         PAGE   34

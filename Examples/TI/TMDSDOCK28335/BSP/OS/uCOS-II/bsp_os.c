@@ -159,8 +159,9 @@ extern INT8U cnt1;
 extern INT16U Task_Seq[10];
 extern INT16U Time_Seq[15];
 extern INT8U certification_flag1;
+extern INT8U certification_flag1_1;
 extern INT8U certification_flag2;
-extern INT8S Timer_flag[16];
+extern INT8U R_PLC[16];
 extern INT8U Reply_flag[16];
 extern INT8U psh_flag;
 interrupt void BSP_SCIA_RX(void)
@@ -183,10 +184,16 @@ interrupt void BSP_SCIA_TX(void)
 
     if (certification_flag1 == 1)
     {
-        for (i = 0; i < sizeof(Timer_flag); i++)
-            SCIA_TXBUF = Timer_flag[i];
+        for (i = 0; i < sizeof(R_PLC); i++)
+            SCIA_TXBUF = R_PLC[i];
         certification_flag1 = 0;
     }
+    else if (certification_flag1_1 == 1)
+        {
+            for (i = 0; i < sizeof(R_PLC); i++)
+                SCIA_TXBUF = R_PLC[i];
+            certification_flag1_1 = 0;
+        }
     else if (certification_flag2 == 1)
     {
         for (i = 0; i < sizeof(Reply_flag); i++)

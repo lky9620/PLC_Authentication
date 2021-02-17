@@ -81,19 +81,19 @@
 			<locationURI>PARENT-1-PROJECT_LOC/lib_cfg.h</locationURI>
 		</link>
 		<link>
-			<name>APP/md5.c</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/md5.c</locationURI>
-		</link>
-		<link>
-			<name>APP/md5.h</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/md5.h</locationURI>
-		</link>
-		<link>
 			<name>APP/os_cfg.h</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/os_cfg.h</locationURI>
+		</link>
+		<link>
+			<name>APP/prng.c</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/prng.c</locationURI>
+		</link>
+		<link>
+			<name>APP/prng.h</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/prng.h</locationURI>
 		</link>
 		<link>
 			<name>APP/sha1.c</name>
